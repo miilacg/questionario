@@ -51,34 +51,27 @@
                 
                 <div class= "card-body">
                     <?php
+                        $aspas = "\"";
+                        $nomeArquivo = "graficoSuperior.txt";
+                        $file = fopen($nomeArquivo, 'w');
+                        fwrite($file, "[");
+
                         $quantidade = array();
                         $respostas = array();
                         $alternativa = array();
                         
                         //$_POST["questao"] é o id da pergunta
-                        for ($questao = 0; $questao < 64; $questao++) {  
+                        for ($questao = 1; $questao < 64; $questao++) {                            
                             if ($questao != 21 && $questao != 29 && $questao != 31 && $questao != 45){
-                                $selecao = "SELECT * from(
-                                                            SELECT questao, opcao AS resposta, alternativa, 0 AS qtd 
-                                                            FROM alternativa NATURAL JOIN pergunta_has_alternativa NATURAL JOIN pergunta 
-                                                            WHERE id_perguntas = '$questao' AND id_alternativa 
-                                                            NOT IN (SELECT id_alternativa FROM resposta WHERE id_perguntas = '$questao') 
-                                                            GROUP BY resposta 
-                                                            UNION 
-                                                            SELECT questao, resposta, alternativa, count(*) AS qtd 
-                                                            FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa 
-                                                            WHERE id_perguntas = '$questao' 
-                                                            GROUP BY resposta 
-                                                        )AS Resultado ORDER BY Resultado.resposta;"; 
+                                $selecao = "SELECT questao, resposta, alternativa, count(*) AS qtd 
+                                            FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa 
+                                            WHERE id_perguntas = '$questao' 
+                                            GROUP BY resposta  ORDER BY resposta.resposta;"; 
                                 
                                 $resultadoSelecao = mysqli_query($conn, $selecao);
                                 $linha = mysqli_fetch_assoc($resultadoSelecao);
                                 $total = mysqli_num_rows($resultadoSelecao);//calcula quantos dados foram retornados   
-                                ?>
-                    
-                                <!--impressao da pergunta selecionada-->
-                                <h5><?php echo $linha['questao'];?></h5><?php 
-                                
+
                                 if ($total == 0){ // se a pergunta nao tiver tido respostas
                                     $selecaoN = "SELECT questao FROM pergunta where id_perguntas = '$questao';"; 
                                     $resultadoSelecaoN = mysqli_query($conn, $selecaoN);
@@ -86,28 +79,65 @@
                                     
                                     ?><h5><?php echo $linhaN['questao'];?></h5><?php
                                     echo "Essa pergunta não teve respostas.</br>";
+
                                 }else{ //se a questão tiver alguma resposta
-                                    if($total > 0){       
+                                    if($total > 0){   
+                                        $selecaoS = "SELECT * from(
+                                            SELECT questao, opcao AS resposta, alternativa, 0 AS qtd 
+                                            FROM alternativa NATURAL JOIN pergunta_has_alternativa NATURAL JOIN pergunta 
+                                            WHERE id_perguntas = '$questao' AND id_alternativa 
+                                            NOT IN (SELECT id_alternativa FROM resposta WHERE id_perguntas = '$questao') 
+                                            GROUP BY resposta 
+                                            UNION 
+                                            SELECT questao, resposta, alternativa, count(*) AS qtd 
+                                            FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa 
+                                            WHERE id_perguntas = '$questao' 
+                                            GROUP BY resposta 
+                                        )AS Resultado ORDER BY Resultado.resposta;"; 
+                
+                                        $resultadoSelecaoS = mysqli_query($conn, $selecaoS);
+                                        $linhaS = mysqli_fetch_assoc($resultadoSelecaoS);
+                                        $totalS = mysqli_num_rows($resultadoSelecaoS);//calcula quantos dados foram retornados   
+                                        ?>
+                            
+                                        <!--impressao da pergunta selecionada-->
+                                        <h5><?php echo $linhaS['questao'];?></h5><?php 
+                                        fwrite($file, "{\n".$aspas."Titulo".$aspas.": ".$aspas.$linhaS['questao'].$aspas.",");
+                                        
+                                        $cont = 0;
                                         do {  
                                             //salvando em arrays os dados colhidos do banco
-                                            ?><div id = "resposta"> <?php
-                                                $respostas[] = $linha['resposta']; 
-                                                $quantidade[] = $linha['qtd'];
-                                                $alternativa[] = $linha ['alternativa'];
-                                            ?>
-                                            </div><?php  
-                                        }while($linha = mysqli_fetch_assoc($resultadoSelecao));
+                                                $respostas[$cont] = $linhaS['resposta']; 
+                                                $quantidade[$cont] = $linhaS['qtd'];
+                                                $alternativa[$cont] = $linhaS['alternativa']; 
+                                                $cont ++;
+                                        }while($linhaS = mysqli_fetch_assoc($resultadoSelecaoS));
+
+                                        fwrite($file, "\n".$aspas."Alternativa".$aspas.": [");
+                                        for ($i = 0; $i < $totalS; $i++){
+                                            fwrite($file, $aspas.$respostas[$i].$aspas);
+                                            if ($i < $totalS - 1){
+                                                fwrite($file, ",");
+                                            }
+                                        }
+                                        fwrite($file, "}],");
+                                        fwrite($file, "\n".$aspas."Quantidade".$aspas.": [");
+                                        for ($i = 0; $i < $totalS; $i++){
+                                            fwrite($file, $aspas.$quantidade[$i].$aspas);
+                                            if ($i < $totalS - 1){
+                                                fwrite($file, ",");
+                                            }
+                                        }
+                                        fwrite($file, "]\n");
+                                        fwrite($file, "");
+    
+                                        fwrite($file, "\n");
                                         echo "</br>";
                                     }
-                                    //convertendo os arrays para uma string utilizada no JS
-                                    //os valores são separados por virgula
-                                    $string_quantidade = implode(',', $quantidade);
-                                    $string_respostas = implode(',', $respostas);
                                 }
                             }
-                        }?>  
-                        <!-- espaco em que o grafico será colocado !-->                                    
-                        <canvas id="grafico1"></canvas><?php
+                        }
+                        fwrite($file, "]");
                     ?>                 
                 </div>   
                 

@@ -17,7 +17,7 @@
 
 <script language = javascript type = "text/javascript">          
     function graficos(){
-        window.location.assign ("graficsuperior.php");
+        window.location.assign ("grafico.php");
     }
     function discursivo(){
         window.location.assign ("discursivosup.php");
