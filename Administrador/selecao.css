@@ -1,0 +1,19 @@
+a{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.caixa{
+    color: #434343;
+    border-radius: 1px;
+    background: #fff;
+    width: 350px;
+    margin: 0 auto;
+    position: relative;    
+}
+
+#botao{
+    width: 350px;
+    height: 40px;                   
+}

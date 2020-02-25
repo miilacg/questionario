@@ -71,7 +71,7 @@
 
         $verifica = mysqli_query($conn, $login);
         if (mysqli_num_rows($verifica) >= 1){
-            header("Location: selecaocurso.php");
+            header("Location: Administrador/selecaocurso.php");
         }else{
 		$_SESSION['msg'] = "<p style = 'color:red; font-family: courier new; font-size: 30px; text-align: center;'> Acesso negado </p>";
 		header("Location: index.php");

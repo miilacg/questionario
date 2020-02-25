@@ -16,11 +16,17 @@
 ?>
 
 <script language = javascript type = "text/javascript">          
-    function selecionaTecnico(){
-        window.location.assign ("selecaoopcaotec.php");
+    function graficos(){
+        window.location.assign ("graficTecnico.php");
     }
-    function selecionaSuperior(){
-        window.location.assign ("selecaoopcaosup.php");
+    function discursivo(){
+        window.location.assign ("discursivotec.php");
+    }
+    function analise(){
+        window.location.assign ("analisetec.php");
+    }
+    function voltar(){
+        window.location.assign ("selecaocurso.php");
     }
 </script>
 
@@ -48,7 +54,7 @@
             }
             #botao{
                 width:350;
-                height:40;                
+                height:40;
             }
 		</style>
 	</head>	
@@ -62,17 +68,19 @@
             <div class = "card text-center">
                 <div class = "card-header">  </div>    
                     <div class= "card-body">
-                        <br><br><br><br><br><br>
-                        <h1>Escolha a modalidade do curso</h1>	
+                        <br><br><br>
+                        <h1>Escolha uma opção</h1>	
                         <br><br>
                         <div class = "caixa">
-                            <input id = "botao" type = "button" class= "btn btn-primary" value = "Analisar dados do curso técnico" onClick = "selecionaTecnico();"/><br><br>
-                            <input id = "botao" type = "button" class= "btn btn-primary" value = "Analisar dados do curso superior" onClick = "selecionaSuperior();"/>
+                            <input id = "botao" type = "button" class= "btn btn-primary" value = "Gráficos" onClick = "graficos();"/><br><br>
+                            <input id = "botao" type = "button" class= "btn btn-primary" value = "Discursivo" onClick = "discursivo();"/><br><br>
+                            <!--<input id = "botao" type = "button" class= "btn btn-primary" value = "Analise dos dados" onClick = "analise-->
+                            <br><br><input id = "botao" type = "button" class= "btn btn-primary" value = "Voltar" onClick = "voltar();"/>
                         </div>                        
-                        <br><br><br><br>
+                        <br><br><br>
                     </div>
 
-                    <div class= "card-footer" >  </div>
+                    <div class= "card-footer">  </div>
             </div>                   
         </div>
         

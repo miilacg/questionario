@@ -1,6 +1,6 @@
 <?php
     include 'vAdministrador.php';
-    include 'acessobancosup.php';
+    include '../acessobancotec.php';
 ?>
 
 <!DOCTYPE HTML>
@@ -10,8 +10,8 @@
 
     <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity = "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
     <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin = "anonymous">  
-    <link rel = "stylesheet" href = "estilo.css">
     <link rel = "stylesheet" href = "graficos.css">
+    <link rel = "stylesheet" href = "../estilo.css">
 
     <title>Questionario</title>
 
@@ -35,8 +35,8 @@
                 <div class= "card-body" style = "padding-left: 3vw; padding-right: 3.5vw; padding-top: 2.5vw;">
                     <?php
                         $aspas = "\"";
-                        $arquivoPizza = "graficoPizzaSuperior.txt";
-                        $arquivoBarra = "graficoBarraSuperior.txt";
+                        $arquivoPizza = "graficoPizzaTecnico.txt";
+                        $arquivoBarra = "graficoBarraTecnico.txt";
                         $filePizza = fopen($arquivoPizza, 'w');
                         $fileBarra = fopen($arquivoBarra, 'w');
                         fwrite($filePizza, "[{");
@@ -48,11 +48,11 @@
                         $string_Total = array();
                         
                         //$_POST["questao"] é o id da pergunta
-                        for ($questao = 1; $questao < 64; $questao++) { 
+                        for ($questao = 1; $questao < 57; $questao++) { 
                             $string_Total[$questao] = 0;          
 
                             //questões que não tem subquestoes
-                            if ($questao < 21 || $questao == 22 || ($questao > 25 && $questao < 29) || $questao == 30 || ($questao > 31 && $questao < 42) || ($questao > 42 && $questao < 47) || ($questao > 52 && $questao < 57) || $questao == 60 || $questao == 61 || $questao == 63) {
+                            if ($questao < 13 || ($questao > 15 && $questao < 19) || $questao == 20 || ($questao > 21 && $questao < 33) || ($questao > 33 && $questao < 38) || ($questao > 43 && $questao < 48) || ($questao > 50 && $questao < 55) || $questao == 56) {
                                 $selecao = "SELECT * from(
                                                 SELECT questao, opcao AS resposta, alternativa, 0 AS qtd 
                                                 FROM alternativa NATURAL JOIN pergunta_has_alternativa NATURAL JOIN pergunta 
@@ -85,7 +85,7 @@
                                 <h5><?php echo $linha['questao'];?></h5><?php 
                                 fwrite($filePizza, "\n".$aspas."Pergunta".$aspas.": ".$aspas.$linha['questao'].$aspas.",");
                                 fwrite($filePizza, "\n".$aspas."Respondida".$aspas.": ".$aspas.$string_Total[$questao].$aspas.","); 
-        
+                                        
                                 $cont = 0;
                                 do {  
                                     //salvando em arrays os dados colhidos do banco
@@ -132,62 +132,58 @@
                                     <?php
                                 }
                                 
-                                if ($questao < 63){
+                                if ($questao < 56){
                                     fwrite($filePizza, ",\n{"); 
                                 }
                             }else{
-                                if ($questao != 21 && $questao != 29 && $questao != 31 && $questao != 64){
+                                if ($questao != 19 && $questao != 21 && $questao != 57){
                                     $selecaoConsulta = "SELECT questao, id_perguntas FROM `pergunta` NATURAL JOIN `subpergunta_has_pergunta` WHERE id_perguntas = '$questao'";
                                     $resultadoConsulta = mysqli_query($conn, $selecaoConsulta);
                                     $linhaConsulta = mysqli_fetch_assoc($resultadoConsulta);
 
                                     ?><h5><?php echo $linhaConsulta['questao'];?></h5><?php
 
-                                    if ($questao > 22 && $questao < 26){
+                                    if ($questao > 12 && $questao < 16){
                                         $contConsulta = 1;
                                     }
 
-                                    if ($questao == 42){
+                                    if ($questao == 33){
                                         $contConsulta = 5;
                                     }
 
-                                    if ($questao == 47){
+                                    if ($questao == 38){
                                         $contConsulta = 10;
                                     }
-
-                                    if ($questao == 48){
+                                    
+                                    if ($questao == 39){
                                         $contConsulta = 17;
                                     }
                                     
-                                    if ($questao == 49){
+                                    if ($questao == 40){
                                         $contConsulta = 26;
                                     }
-                                    
-                                    if ($questao == 50){
+
+                                    if ($questao == 41){
                                         $contConsulta = 45;
                                     }
 
-                                    if ($questao == 51){
+                                    if ($questao == 42){
                                         $contConsulta = 71;
                                     }
 
-                                    if ($questao == 52){
+                                    if ($questao == 43){
                                         $contConsulta = 82;
                                     }
 
-                                    if ($questao == 57){
+                                    if ($questao == 48){
                                         $contConsulta = 87;
                                     }
 
-                                    if ($questao == 58){
-                                        $contConsulta = 93;
-                                    }
-
-                                    if ($questao == 59){
+                                    if ($questao == 50){
                                         $contConsulta = 99;
                                     }
 
-                                    if ($questao == 62){
+                                    if ($questao == 55){
                                         $contConsulta = 103;
                                     }
 
@@ -213,7 +209,7 @@
                                         fwrite($fileBarra, "\n".$aspas."Pergunta".$aspas.": ".$aspas.$linhaSubPergunta['questao'].$aspas.",");
                                         fwrite($fileBarra, "\n".$aspas."SubPergunta".$aspas.": ".$aspas.$linhaSubPergunta['subquestao'].$aspas.",");
                                         fwrite($fileBarra, "\n".$aspas."Id_perg".$aspas.": ".$aspas.$linhaSubPergunta['id_perguntas'].$aspas.","); 
-                                        fwrite($fileBarra, "\n".$aspas."Id_sub".$aspas.": ".$aspas.$linhaSubPergunta['id_subpergunta'].$aspas.",");  
+                                        fwrite($fileBarra, "\n".$aspas."Id_sub".$aspas.": ".$aspas.$linhaSubPergunta['id_subpergunta'].$aspas.",");
                                         
                                         $cont = 0;
                                         do {  
@@ -251,7 +247,7 @@
                                         }
                                         fwrite($fileBarra, "]\n}");
 
-                                        if ($questao < 62 || ($questao == 62 && $contConsulta < 107 )){
+                                        if ($questao < 55 || ($questao == 55 && $contConsulta < 107 )){
                                             fwrite($fileBarra, ",\n{"); 
                                         }
 
@@ -259,34 +255,14 @@
 
                                         ?><canvas class = "grafico" id = "grafico<?php echo $indice;?>"></canvas><?php
 
-                                        if ($questao == 49){
-                                            if ($contConsulta == 32){
-                                                $contConsulta = 34;
+                                        if ($questao == 40){
+                                            if ($contConsulta == 38){
+                                                $contConsulta = 40;
                                             }else{
-                                                if ($contConsulta == 34){
-                                                    $contConsulta = 36;
-                                                }else{
-                                                    if ($contConsulta == 44){
-                                                        $contConsulta = 57;
-                                                    }else{
-                                                        if ($contConsulta == 57){
-                                                            $contConsulta = 65;
-                                                        }else{
-                                                            if ($contConsulta == 65){
-                                                                $contConsulta = 67;
-                                                            }else{
-                                                                if ($contConsulta == 67){
-                                                                    $contConsulta = 109;
-                                                                }else{
-                                                                    $contConsulta++;
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
+                                                $contConsulta++;
                                             }
                                         }else{
-                                            if ($questao == 50){
+                                            if ($questao == 41){
                                                 if ($contConsulta == 56){
                                                     $contConsulta = 58;
                                                 }else{
@@ -301,7 +277,7 @@
                                                     }
                                                 }
                                             }else{
-                                                if ($questao == 52){
+                                                if ($questao == 43){
                                                     if ($contConsulta == 84){
                                                         $contConsulta = 86;
                                                     }else{
@@ -312,16 +288,8 @@
                                                         }
                                                     }
                                                 }else{
-                                                    if ($questao == 58 && $contConsulta == 96){
-                                                        $contConsulta = 98;
-                                                    }else{
-                                                        if ($questao == 59 && $contConsulta == 102){
-                                                            $contConsulta = 136;
-                                                        }else{
-                                                            $contConsulta++;
-                                                        }
-                                                    }                                                    
-                                                }                                                
+                                                    $contConsulta++;
+                                                }                                          
                                             }
                                         } 
 
@@ -342,9 +310,9 @@
 
             </div>    
         </div>
-        <script src = "graficoSuperior.js"></script>
-        <script src = "https://code.jquery.com/jquery-3.3.1.min.js" ></script>
-        <script src= "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js" ></script>
-        <script src= "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js" ></script>
+        <script src = "graficoTecnico.js"></script>
+        <script src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
 	</body>
 </html>

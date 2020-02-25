@@ -15,7 +15,7 @@ function randomRgbBarra() {
 }
 
 //Grafico de barra
-var urlBarra = 'http://localhost/questionario/graficoBarraTecnico.txt';
+var urlBarra = 'http://localhost/questionario/Administrador/graficoBarraSuperior.txt';
 var xhttpBarra = new XMLHttpRequest();
 xhttpBarra.open("GET", urlBarra);
 xhttpBarra.send();
@@ -30,8 +30,8 @@ function createChartBarra(dadosBarra){
     var j, i, k = 0, color = [], c;
 
     for (j in dadosBarra) {                        
-        for (i = 1; i <= 57; i++) {                            
-            if (i != 19 && i != 21 && i != 57){
+        for (i = 1; i <= 64; i++) {                            
+            if ((i > 22 && i < 26) || i == 42 || (i > 46 && i < 53) || (i > 56 && i < 60) || (i == 62)){
                
                 while (dadosBarra[k].Id_perg == i){
                     var indice = dadosBarra[k].Id_perg.concat(dadosBarra[k].Id_sub);
@@ -72,7 +72,7 @@ function createChartBarra(dadosBarra){
 
 
 //Grafico de pizza
-var urlPizza = 'http://localhost/questionario/graficoPizzaTecnico.txt';
+var urlPizza = 'http://localhost/questionario/Administrador/graficoPizzaSuperior.txt';
 var xhttpPizza = new XMLHttpRequest();
 xhttpPizza.open("GET", urlPizza);
 xhttpPizza.send();
@@ -87,8 +87,8 @@ function createChartPizza(jsonObj){
     var j, i, k = 0, color = [], c;
 
     for (j in dadosPizza) {                        
-        for (i = 1; i < 57; i++) {                            
-            if (i < 13 || (i > 15 && i < 19) || i == 20 || (i > 21 && i < 33) || (i > 33 && i < 38) || (i > 43 && i < 48) || (i > 50 && i < 55) || i == 56){
+        for (i = 1; i < 64; i++) {                            
+            if (i < 21 || i == 22 || (i > 25 && i < 29) || i == 30 || (i > 31 && i < 42) || (i > 42 && i < 47) || (i > 52 && i < 57) || i == 60 || i == 61 || i == 63){
                 if (dadosPizza[k].Respondida != 0){
                     const element = document.getElementById(`grafico${i}`);
 
