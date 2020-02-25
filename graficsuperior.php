@@ -1,19 +1,5 @@
 <?php
-    session_start();
-
-    $cpf = $_SESSION['cpf'];
-    $curso = $_SESSION['curso'];
-
-    if ($curso == 'Administrador'){
-        $valor = isset($_SESSION['cpf']) ? 's' : 'n';
-
-        if ($valor == 'n'){
-            header("Location: index.php");
-        }
-    }else{
-       header("Location: index.php"); 
-    } 
-
+    include 'vAdministrador.php';
     include 'acessobancosup.php';
 ?>
 
@@ -22,26 +8,23 @@
 	<meta charset = "utf-8">
     <meta name = "viewport" content = "initial-scale=1, user-scalable = no">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
-    
+    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity = "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin = "anonymous">  
+    <link rel = "stylesheet" href = "estilo.css">
+    <link rel = "stylesheet" href = "graficos.css">
+
     <title>Questionario</title>
-    
-	<head>
-        <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin = "anonymous">  
-        
-        <script src= "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js" ></script>
-        <script src= "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js" ></script>
-        
-        <link rel = "stylesheet" href = "estilo.css">
-        
+
+	<head>         
 		<style>	
             #botao{
-                width:200;
-                height:40;
+                width: 300px;
+                height: 50px;
             }
 		</style>
 	</head>	
-	<body onload = "createChart();">
+
+	<body>
         <br>
         <div class = "corpo">
             <div class = "card text-center">
@@ -49,142 +32,319 @@
                     <br><h1>Gráficos</h1><br>
                 </div> 	
                 
-                <div class= "card-body">
+                <div class= "card-body" style = "padding-left: 3vw; padding-right: 3.5vw; padding-top: 2.5vw;">
                     <?php
                         $aspas = "\"";
-                        $nomeArquivo = "graficoSuperior.txt";
-                        $file = fopen($nomeArquivo, 'w');
-                        fwrite($file, "[");
+                        $arquivoPizza = "graficoPizzaSuperior.txt";
+                        $arquivoBarra = "graficoBarraSuperior.txt";
+                        $filePizza = fopen($arquivoPizza, 'w');
+                        $fileBarra = fopen($arquivoBarra, 'w');
+                        fwrite($filePizza, "[{");
+                        fwrite($fileBarra, "[{");
 
                         $quantidade = array();
                         $respostas = array();
                         $alternativa = array();
+                        $string_Total = array();
                         
                         //$_POST["questao"] é o id da pergunta
-                        for ($questao = 1; $questao < 64; $questao++) {                            
-                            if ($questao != 21 && $questao != 29 && $questao != 31 && $questao != 45){
-                                $selecao = "SELECT questao, resposta, alternativa, count(*) AS qtd 
-                                            FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa 
-                                            WHERE id_perguntas = '$questao' 
-                                            GROUP BY resposta  ORDER BY resposta.resposta;"; 
+                        for ($questao = 1; $questao < 64; $questao++) { 
+                            $string_Total[$questao] = 0;          
+
+                            //questões que não tem subquestoes
+                            if ($questao < 21 || $questao == 22 || ($questao > 25 && $questao < 29) || $questao == 30 || ($questao > 31 && $questao < 42) || ($questao > 42 && $questao < 47) || ($questao > 52 && $questao < 57) || $questao == 60 || $questao == 61 || $questao == 63) {
+                                $selecao = "SELECT * from(
+                                                SELECT questao, opcao AS resposta, alternativa, 0 AS qtd 
+                                                FROM alternativa NATURAL JOIN pergunta_has_alternativa NATURAL JOIN pergunta 
+                                                WHERE id_perguntas = '$questao' AND id_alternativa 
+                                                NOT IN (SELECT id_alternativa FROM resposta WHERE id_perguntas = '$questao') 
+                                                GROUP BY resposta 
+                                                UNION 
+                                                SELECT questao, resposta, alternativa, count(*) AS qtd 
+                                                FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa 
+                                                WHERE id_perguntas = '$questao' 
+                                                GROUP BY resposta 
+                                            )AS Resultado ORDER BY Resultado.resposta;";  
                                 
                                 $resultadoSelecao = mysqli_query($conn, $selecao);
                                 $linha = mysqli_fetch_assoc($resultadoSelecao);
-                                $total = mysqli_num_rows($resultadoSelecao);//calcula quantos dados foram retornados   
+                                $total = mysqli_num_rows($resultadoSelecao);//calcula quantos dados foram retornados
+                                
+                                $selecaoMarcadas = "SELECT questao, resposta, alternativa, count(*) AS qtd 
+                                                    FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa 
+                                                    WHERE id_perguntas = '$questao' 
+                                                    GROUP BY resposta ORDER BY resposta.resposta ASC;";  
+                    
+                                $resultadoSelecaoMarcadas = mysqli_query($conn, $selecaoMarcadas);
+                                $totalMarcadas = mysqli_num_rows($resultadoSelecaoMarcadas);//calcula quantos dados foram retornados
+                                
+                                $string_Total[$questao] = $totalMarcadas; 
+                                        
+                                ?>                            
+                                <!--impressao da pergunta selecionada-->
+                                <h5><?php echo $linha['questao'];?></h5><?php 
+                                fwrite($filePizza, "\n".$aspas."Pergunta".$aspas.": ".$aspas.$linha['questao'].$aspas.",");
+                                fwrite($filePizza, "\n".$aspas."Respondida".$aspas.": ".$aspas.$string_Total[$questao].$aspas.","); 
+        
+                                $cont = 0;
+                                do {  
+                                    //salvando em arrays os dados colhidos do banco
+                                        $respostas[$cont] = $linha['resposta']; 
+                                        $quantidade[$cont] = $linha['qtd'];
+                                        $alternativa[$cont] = $linha['alternativa']; 
+                                        $cont ++;
+                                }while($linha = mysqli_fetch_assoc($resultadoSelecao));
+                                
+                                fwrite($filePizza, "\n".$aspas."Resposta".$aspas.": [");
+                                for ($i = 0; $i < $total; $i++){
+                                    fwrite($filePizza, $aspas.$respostas[$i].$aspas);
+                                    if ($i < $total - 1){
+                                        fwrite($filePizza, ",");
+                                    }
+                                }
+                                fwrite($filePizza, "],");
 
-                                if ($total == 0){ // se a pergunta nao tiver tido respostas
-                                    $selecaoN = "SELECT questao FROM pergunta where id_perguntas = '$questao';"; 
-                                    $resultadoSelecaoN = mysqli_query($conn, $selecaoN);
-                                    $linhaN = mysqli_fetch_assoc($resultadoSelecaoN);
+                                fwrite($filePizza, "\n".$aspas."Alternativa".$aspas.": [");
+                                for ($i = 0; $i < $total; $i++){
+                                    fwrite($filePizza, $aspas.$alternativa[$i].$aspas);
+                                    if ($i < $total - 1){
+                                        fwrite($filePizza, ",");
+                                    }
+                                }
+                                fwrite($filePizza, "],");
+
+                                fwrite($filePizza, "\n".$aspas."Quantidade".$aspas.": [");
+                                for ($i = 0; $i < $total; $i++){
+                                    fwrite($filePizza, $aspas.$quantidade[$i].$aspas);
+                                    if ($i < $total - 1){
+                                        fwrite($filePizza, ",");
+                                    }
+                                }
+                                fwrite($filePizza, "]\n}");
+                                
+
+                                if ($totalMarcadas == 0){
+                                    echo "</br>Essa pergunta não teve respostas.</br></br>";
+                                }else{
+                                    ?>  
+                                        <!-- espaco em que o grafico será colocado !-->
+                                        <canvas class = "grafico" id = "grafico<?php echo $questao ?>"></canvas>
+                                    <?php
+                                }
+                                
+                                if ($questao < 63){
+                                    fwrite($filePizza, ",\n{"); 
+                                }
+                            }else{
+                                if ($questao != 21 && $questao != 29 && $questao != 31 && $questao != 64){
+                                    $selecaoConsulta = "SELECT questao, id_perguntas FROM `pergunta` NATURAL JOIN `subpergunta_has_pergunta` WHERE id_perguntas = '$questao'";
+                                    $resultadoConsulta = mysqli_query($conn, $selecaoConsulta);
+                                    $linhaConsulta = mysqli_fetch_assoc($resultadoConsulta);
+
+                                    ?><h5><?php echo $linhaConsulta['questao'];?></h5><?php
+
+                                    if ($questao > 22 && $questao < 26){
+                                        $contConsulta = 1;
+                                    }
+
+                                    if ($questao == 42){
+                                        $contConsulta = 5;
+                                    }
+
+                                    if ($questao == 47){
+                                        $contConsulta = 10;
+                                    }
+
+                                    if ($questao == 48){
+                                        $contConsulta = 17;
+                                    }
                                     
-                                    ?><h5><?php echo $linhaN['questao'];?></h5><?php
-                                    echo "Essa pergunta não teve respostas.</br>";
+                                    if ($questao == 49){
+                                        $contConsulta = 26;
+                                    }
+                                    
+                                    if ($questao == 50){
+                                        $contConsulta = 45;
+                                    }
 
-                                }else{ //se a questão tiver alguma resposta
-                                    if($total > 0){   
-                                        $selecaoS = "SELECT * from(
-                                            SELECT questao, opcao AS resposta, alternativa, 0 AS qtd 
-                                            FROM alternativa NATURAL JOIN pergunta_has_alternativa NATURAL JOIN pergunta 
-                                            WHERE id_perguntas = '$questao' AND id_alternativa 
-                                            NOT IN (SELECT id_alternativa FROM resposta WHERE id_perguntas = '$questao') 
-                                            GROUP BY resposta 
-                                            UNION 
-                                            SELECT questao, resposta, alternativa, count(*) AS qtd 
-                                            FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa 
-                                            WHERE id_perguntas = '$questao' 
-                                            GROUP BY resposta 
+                                    if ($questao == 51){
+                                        $contConsulta = 71;
+                                    }
+
+                                    if ($questao == 52){
+                                        $contConsulta = 82;
+                                    }
+
+                                    if ($questao == 57){
+                                        $contConsulta = 87;
+                                    }
+
+                                    if ($questao == 58){
+                                        $contConsulta = 93;
+                                    }
+
+                                    if ($questao == 59){
+                                        $contConsulta = 99;
+                                    }
+
+                                    if ($questao == 62){
+                                        $contConsulta = 103;
+                                    }
+
+                                    do { 
+                                        $selecaoSubPergunta = "SELECT * from(
+                                            SELECT questao, opcao AS resposta, alternativa, subquestao, id_subpergunta, id_perguntas, 0 AS qtd 
+                                            FROM alternativa NATURAL JOIN subpergunta_has_alternativa NATURAL JOIN subpergunta NATURAL JOIN subpergunta_has_pergunta NATURAL JOIN pergunta
+                                            WHERE id_perguntas = '$questao' AND id_subpergunta = '$contConsulta' AND id_alternativa 
+                                            NOT IN (SELECT id_alternativa FROM resposta WHERE id_perguntas = '$questao' AND id_subpergunta = '$contConsulta')    
+                                            GROUP BY resposta    
+                                            UNION
+                                            SELECT questao, resposta, alternativa, subquestao, id_subpergunta, id_perguntas, count(*) AS qtd 
+                                            FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta 
+                                            WHERE id_perguntas = '$questao' AND id_subpergunta = '$contConsulta'
+                                            GROUP BY resposta                                 
                                         )AS Resultado ORDER BY Resultado.resposta;"; 
-                
-                                        $resultadoSelecaoS = mysqli_query($conn, $selecaoS);
-                                        $linhaS = mysqli_fetch_assoc($resultadoSelecaoS);
-                                        $totalS = mysqli_num_rows($resultadoSelecaoS);//calcula quantos dados foram retornados   
-                                        ?>
+
+                                        $resultadoSubPergunta = mysqli_query($conn, $selecaoSubPergunta);
+                                        $linhaSubPergunta = mysqli_fetch_assoc($resultadoSubPergunta);
+                                        $totalSubPergunta = mysqli_num_rows($resultadoSubPergunta);//calcula quantos dados foram retornados
+                                                                               
                             
-                                        <!--impressao da pergunta selecionada-->
-                                        <h5><?php echo $linhaS['questao'];?></h5><?php 
-                                        fwrite($file, "{\n".$aspas."Titulo".$aspas.": ".$aspas.$linhaS['questao'].$aspas.",");
+                                        fwrite($fileBarra, "\n".$aspas."Pergunta".$aspas.": ".$aspas.$linhaSubPergunta['questao'].$aspas.",");
+                                        fwrite($fileBarra, "\n".$aspas."SubPergunta".$aspas.": ".$aspas.$linhaSubPergunta['subquestao'].$aspas.",");
+                                        fwrite($fileBarra, "\n".$aspas."Id_perg".$aspas.": ".$aspas.$linhaSubPergunta['id_perguntas'].$aspas.","); 
+                                        fwrite($fileBarra, "\n".$aspas."Id_sub".$aspas.": ".$aspas.$linhaSubPergunta['id_subpergunta'].$aspas.",");  
                                         
                                         $cont = 0;
                                         do {  
                                             //salvando em arrays os dados colhidos do banco
-                                                $respostas[$cont] = $linhaS['resposta']; 
-                                                $quantidade[$cont] = $linhaS['qtd'];
-                                                $alternativa[$cont] = $linhaS['alternativa']; 
+                                                $respostasSubPergunta[$cont] = $linhaSubPergunta['resposta']; 
+                                                $quantidadeSubPergunta[$cont] = $linhaSubPergunta['qtd'];
+                                                $alternativaSubPergunta[$cont] = $linhaSubPergunta['alternativa']; 
                                                 $cont ++;
-                                        }while($linhaS = mysqli_fetch_assoc($resultadoSelecaoS));
+                                        }while($linhaSubPergunta = mysqli_fetch_assoc($resultadoSubPergunta));        
+                                        
+                                        fwrite($fileBarra, "\n".$aspas."Resposta".$aspas.": [");
+                                        for ($i = 0; $i < $totalSubPergunta; $i++){
+                                            fwrite($fileBarra, $aspas.$respostasSubPergunta[$i].$aspas);
+                                            if ($i < $totalSubPergunta - 1){
+                                                fwrite($fileBarra, ",");
+                                            }
+                                        }
+                                        fwrite($fileBarra, "],");
 
-                                        fwrite($file, "\n".$aspas."Alternativa".$aspas.": [");
-                                        for ($i = 0; $i < $totalS; $i++){
-                                            fwrite($file, $aspas.$respostas[$i].$aspas);
-                                            if ($i < $totalS - 1){
-                                                fwrite($file, ",");
+                                        fwrite($fileBarra, "\n".$aspas."Alternativa".$aspas.": [");
+                                        for ($i = 0; $i < $totalSubPergunta; $i++){
+                                            fwrite($fileBarra, $aspas.$alternativaSubPergunta[$i].$aspas);
+                                            if ($i < $totalSubPergunta - 1){
+                                                fwrite($fileBarra, ",");
                                             }
                                         }
-                                        fwrite($file, "}],");
-                                        fwrite($file, "\n".$aspas."Quantidade".$aspas.": [");
-                                        for ($i = 0; $i < $totalS; $i++){
-                                            fwrite($file, $aspas.$quantidade[$i].$aspas);
-                                            if ($i < $totalS - 1){
-                                                fwrite($file, ",");
+                                        fwrite($fileBarra, "],");
+
+                                        fwrite($fileBarra, "\n".$aspas."Quantidade".$aspas.": [");
+                                        for ($i = 0; $i < $totalSubPergunta; $i++){
+                                            fwrite($fileBarra, $aspas.$quantidadeSubPergunta[$i].$aspas);
+                                            if ($i < $totalSubPergunta - 1){
+                                                fwrite($fileBarra, ",");
                                             }
                                         }
-                                        fwrite($file, "]\n");
-                                        fwrite($file, "");
-    
-                                        fwrite($file, "\n");
-                                        echo "</br>";
-                                    }
+                                        fwrite($fileBarra, "]\n}");
+
+                                        if ($questao < 62 || ($questao == 62 && $contConsulta < 107 )){
+                                            fwrite($fileBarra, ",\n{"); 
+                                        }
+
+                                        $indice = $questao.$contConsulta;
+
+                                        ?><canvas class = "grafico" id = "grafico<?php echo $indice;?>"></canvas><?php
+
+                                        if ($questao == 49){
+                                            if ($contConsulta == 32){
+                                                $contConsulta = 34;
+                                            }else{
+                                                if ($contConsulta == 34){
+                                                    $contConsulta = 36;
+                                                }else{
+                                                    if ($contConsulta == 44){
+                                                        $contConsulta = 57;
+                                                    }else{
+                                                        if ($contConsulta == 57){
+                                                            $contConsulta = 65;
+                                                        }else{
+                                                            if ($contConsulta == 65){
+                                                                $contConsulta = 67;
+                                                            }else{
+                                                                if ($contConsulta == 67){
+                                                                    $contConsulta = 109;
+                                                                }else{
+                                                                    $contConsulta++;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }else{
+                                            if ($questao == 50){
+                                                if ($contConsulta == 56){
+                                                    $contConsulta = 58;
+                                                }else{
+                                                    if ($contConsulta == 64){
+                                                        $contConsulta = 66;
+                                                    }else{
+                                                        if ($contConsulta == 66){
+                                                            $contConsulta = 68;
+                                                        }else{
+                                                            $contConsulta++;
+                                                        }
+                                                    }
+                                                }
+                                            }else{
+                                                if ($questao == 52){
+                                                    if ($contConsulta == 84){
+                                                        $contConsulta = 86;
+                                                    }else{
+                                                        if ($contConsulta == 86){
+                                                            $contConsulta = 108;
+                                                        }else{
+                                                            $contConsulta++;
+                                                        }
+                                                    }
+                                                }else{
+                                                    if ($questao == 58 && $contConsulta == 96){
+                                                        $contConsulta = 98;
+                                                    }else{
+                                                        if ($questao == 59 && $contConsulta == 102){
+                                                            $contConsulta = 136;
+                                                        }else{
+                                                            $contConsulta++;
+                                                        }
+                                                    }                                                    
+                                                }                                                
+                                            }
+                                        } 
+
+                                    }while($linhaConsulta = mysqli_fetch_assoc($resultadoConsulta));                                    
                                 }
-                            }
+                            }                                                      
                         }
-                        fwrite($file, "]");
+                        fwrite($filePizza, "]");
+                        fwrite($fileBarra, "]");
                     ?>                 
                 </div>   
                 
                 <div class = "botao">
-                    <input id = "botao" type = "button" class= "btn btn-primary" value = "Voltar" onClick = "voltar();"/>
+                    <a href = "selecaoopcaosup.php"><input id = "botao" type = "button" class= "btn btn-primary" value = "Voltar"/></a>
                 </div><br>
 
                 <div class= "card-footer">  </div>
 
             </div>    
         </div>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
+        <script src = "graficoSuperior.js"></script>
+        <script src = "https://code.jquery.com/jquery-3.3.1.min.js" ></script>
+        <script src= "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js" ></script>
+        <script src= "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js" ></script>
 	</body>
 </html>
-
-<script language = javascript type = "text/javascript"> 
-    function createChart(){         
-        var tamanho = "<?php echo $total;?>"; //quantidade de alternativas
-        
-        //recebendo os dados do php
-        var string_quantidade = "<?php echo $string_quantidade?>";
-        var string_respostas = "<?php echo $string_respostas?>";
-        
-        //transformação da string para um vetor
-        var quantidade = string_quantidade.split(',');
-        var respostas = string_respostas.split(',');
-        
-    
-        var data = {
-            labels: [respostas[0], respostas[1], respostas[2], respostas[3]],
-            datasets: [
-                {
-                    data: [quantidade[0], quantidade[1], quantidade[2], quantidade[3]],
-                    backgroundColor: ['#007bff', '#6610f2', '#17a2b8', '#4fd8e8']
-                }
-            ]
-        };
-        
-        //criação do grafico de pizza
-        var ctx = document.getElementById("grafico1"); 
-        var myChart = new Chart(ctx, {type: 'pie', data});  
-
-        var ctx = document.getElementById("grafico2"); 
-        var myChart = new Chart(ctx, {type: 'pie', data}); 
-    }   
-    
-    function voltar(){
-        window.location.assign ("graficosup.php");
-    }
-</script>
