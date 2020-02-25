@@ -20,6 +20,13 @@ a{
     font-weight: bolder;
 }
 
+.resposta{
+    color: black;
+    font-family: arial;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
 .discursivo #botao{
     width: 200px;
     height: 40px;

@@ -25,8 +25,8 @@
                         <h1>Escolha a modalidade do curso</h1>	
                         <br><br>
                         <div class = "caixa">
-                            <a href = "selecaoopcaotec.php"><input id = "botao" type = "button" class= "btn btn-primary" value = "Analisar dados do curso técnico"/></a><br><br>
-                            <a href = "selecaoopcaosup.php"><input id = "botao" type = "button" class= "btn btn-primary" value = "Analisar dados do curso superior" onClick = "selecionaSuperior();"/></a>
+                            <a href = "selecaoopcaotec.php"><input id = "botao" type = "button" class= "btn btn-primary" value = "Analisar dados do curso técnico"/></a><br><br><br>
+                            <a href = "selecaoopcaosup.php"><input id = "botao" type = "button" class= "btn btn-primary" value = "Analisar dados do curso superior"/></a>
                         </div>                        
                         <br><br><br><br>
                     </div>
