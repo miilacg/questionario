@@ -1,19 +1,5 @@
 <?php
-    session_start();
-
-    $cpf = $_SESSION['cpf'];
-    $curso = $_SESSION['curso'];
-
-    if ($curso == 'Administrador'){
-        $valor = isset($_SESSION['cpf']) ? 's' : 'n';
-
-        if ($valor == 'n'){
-            header("Location: index.php");
-        }
-    }else{
-       header("Location: index.php"); 
-    } 
-
+    include 'vAdministrador.php';
     include 'acessobancotec.php';
 ?>
 
@@ -98,6 +84,7 @@
                                 <!--impressao da pergunta selecionada-->
                                 <h5><?php echo $linha['questao'];?></h5><?php 
                                 fwrite($filePizza, "\n".$aspas."Pergunta".$aspas.": ".$aspas.$linha['questao'].$aspas.",");
+                                fwrite($filePizza, "\n".$aspas."Respondida".$aspas.": ".$aspas.$string_Total[$questao].$aspas.","); 
                                         
                                 $cont = 0;
                                 do {  
@@ -107,10 +94,6 @@
                                         $alternativa[$cont] = $linha['alternativa']; 
                                         $cont ++;
                                 }while($linha = mysqli_fetch_assoc($resultadoSelecao));
-
-                                //convertendo o array para uma string utilizada no JS
-                                //os valores são separados por virgula                               
-                                $string_total = implode(',', $string_Total);
                                 
                                 fwrite($filePizza, "\n".$aspas."Resposta".$aspas.": [");
                                 for ($i = 0; $i < $total; $i++){
@@ -226,7 +209,7 @@
                                         fwrite($fileBarra, "\n".$aspas."Pergunta".$aspas.": ".$aspas.$linhaSubPergunta['questao'].$aspas.",");
                                         fwrite($fileBarra, "\n".$aspas."SubPergunta".$aspas.": ".$aspas.$linhaSubPergunta['subquestao'].$aspas.",");
                                         fwrite($fileBarra, "\n".$aspas."Id_perg".$aspas.": ".$aspas.$linhaSubPergunta['id_perguntas'].$aspas.","); 
-                                        fwrite($fileBarra, "\n".$aspas."Id_sub".$aspas.": ".$aspas.$linhaSubPergunta['id_subpergunta'].$aspas.",");  
+                                        fwrite($fileBarra, "\n".$aspas."Id_sub".$aspas.": ".$aspas.$linhaSubPergunta['id_subpergunta'].$aspas.",");
                                         
                                         $cont = 0;
                                         do {  
@@ -320,135 +303,16 @@
                 </div>   
                 
                 <div class = "botao">
-                    <input id = "botao" type = "button" class= "btn btn-primary" value = "Voltar" onClick = "voltar();"/>
+                    <a href = "selecaoopcaosup.php"><input id = "botao" type = "button" class= "btn btn-primary" value = "Voltar"/></a>
                 </div><br>
 
                 <div class= "card-footer">  </div>
 
             </div>    
         </div>
-        <script src = "https://code.jquery.com/jquery-3.3.1.min.js" ></script>
-        <script src= "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js" ></script>
-        <script src= "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js" ></script>
+        <script src = "graficoTecnico.js"></script>
+        <script src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
 	</body>
 </html>
-
-<script language = javascript type = "text/javascript"> 
-    function randomRgbPizza() {
-        var cor = ["#000080", "#0000CD", "#0000FF", "#00FA9A", "#008B8B", "#00FFFF", "#00BFFF", "#00CED1", "#006400", "#008000",    
-                   "#191970", "#1E90FF", "#20B2AA", "#228B22", "#32CD32", "#3CB371", "#48D1CC", "#40E0D0", "#4682B4", "#4169E1",  
-                   "#483D8B", "#6495ED", "#66CDAA", "#66CDAA", "#7FFFD4", "#7FFF00", "#87CEFA", "#E0FFFF", "#B0E0E6", "#98FB98"];
-        var posicao = Math.floor(Math.random() * 29 + 1);
-        return cor[posicao];
-    }
-
-    function randomRgbBarra() {
-        var cor = ["#00FA9A", "#00CED1", "#20B2AA", "#008B8B", "#00FFFF", "#00BFFF",   
-                   "#1E90FF", "#4169E1", "#6495ED", "#66CDAA", "#7FFFD4", "#87CEFA"];
-        var posicao = Math.floor(Math.random() * 11 + 1);
-        return cor[posicao];
-    }
-
-    var urlPizza = 'http://localhost/questionario/graficoPizzaTecnico.txt';
-    var xhttpPizza = new XMLHttpRequest();
-    xhttpPizza.open("GET", urlPizza);
-    xhttpPizza.send();
-
-    xhttpPizza.onload = function(){
-        var dadosPizza = JSON.parse(xhttpPizza.responseText);  
-        createChartPizza(dadosPizza);
-    } 
-
-    var urlBarra = 'http://localhost/questionario/graficoBarraTecnico.txt';
-    var xhttpBarra = new XMLHttpRequest();
-    xhttpBarra.open("GET", urlBarra);
-    xhttpBarra.send();
-
-    xhttpBarra.onload = function(){
-        var dadosBarra = JSON.parse(xhttpBarra.responseText);  
-        createChartBarra(dadosBarra);
-    } 
-
-    function createChartPizza(jsonObj){         
-        var dadosPizza = jsonObj;
-        var string_total = "<?php echo $string_total?>";
-        var total = string_total.split(',');
-        var j, i, k = 0, color = [], c;
-
-        for (j in dadosPizza) {                        
-            for (i = 1; i < 57; i++) {                            
-                if (i < 13 || (i > 15 && i < 19) || i == 20 || (i > 21 && i < 33) || (i > 33 && i < 38) || (i > 43 && i < 48) || (i > 50 && i < 55) || i == 56){
-                    if (total[i-1] != 0){
-                        const element = document.getElementById(`grafico${i}`);
-
-                        for(c = 0; c < 30; c++){
-                            color[c] = randomRgbPizza();
-                        }
-
-                        new Chart(element, {
-                            type: "pie",
-                            data: {
-                                labels: dadosPizza[k].Alternativa,
-                                datasets: [
-                                    {
-                                        data: dadosPizza[k].Quantidade,
-                                        backgroundColor: color
-                                    }
-                                ]
-                            }
-                        });  
-                    }k++;                                    
-                }
-            }
-        }
-    } 
-
-    function createChartBarra(dadosBarra){         
-        var dadosBarra = dadosBarra;
-        var j, i, k = 0, color = [], c;
-
-        for (j in dadosBarra) {                        
-            for (i = 1; i <= 57; i++) {                            
-                if (i != 19 && i != 21 && i != 57){
-                   
-                    while (dadosBarra[k].Id_perg == i){
-                        var indice = dadosBarra[k].Id_perg.concat(dadosBarra[k].Id_sub);
-                        const elementBarra = document.getElementById(`grafico${indice}`);
-
-                        for(c = 0; c < 30; c++){
-                            color[c] = randomRgbBarra();
-                        }
-
-                        new Chart(elementBarra, {
-                            type: 'bar',
-                            data: {
-                                labels: dadosBarra[k].Alternativa,
-                                datasets: [
-                                    {
-                                        label: dadosBarra[k].SubPergunta,
-                                        data: dadosBarra[k].Quantidade,
-                                        backgroundColor: color
-                                    }
-                                ]
-                            },
-                            options: {
-                                scales: {
-                                    yAxes: [{
-                                        ticks: {
-                                            beginAtZero: true
-                                        }
-                                    }]
-                                }
-                            }
-                        });  
-                        k++;
-                    }                                    
-                }
-            }
-        }
-    }
-    
-    function voltar(){
-        window.location.assign ("selecaoopcaotec.php");
-    }
-</script>
