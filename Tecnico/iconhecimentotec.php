@@ -1,7 +1,7 @@
 <?php	
     header("Content-Type: text/html; charset=UTF-8");
-    include 'acessobancotec.php';
-    include 'vtec.php';
+    include '../acessobancotec.php';
+    include 'vTecnico.php';
 
     $teste_conhecimentotec = "SELECT * 
                               FROM resposta

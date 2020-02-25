@@ -1,6 +1,6 @@
 <?php
-	include 'acessobancotec.php';
-    include 'vtec.php';
+	include '../acessobancotec.php';
+    include 'vTecnico.php';
 
     $teste_satisfacaotec = "SELECT * 
                             FROM resposta

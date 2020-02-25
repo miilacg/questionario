@@ -1,6 +1,6 @@
 <?php
-    include 'acessobancotec.php';
-    include 'vtec.php';
+    include '../acessobancotec.php';
+    include 'vTecnico.php';
     
     $teste_dadospessoaistec = "SELECT * FROM resposta WHERE CPF = '$cpf' AND id_perguntas = (SELECT id_perguntas FROM pergunta WHERE numeracao = 1);";
 	          
