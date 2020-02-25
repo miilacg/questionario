@@ -1,20 +1,6 @@
 <?php
-    session_start();
-
-    $cpf = $_SESSION['cpf'];
-    $curso = $_SESSION['curso'];
-
-    if ($curso == 'Administrador'){
-        $valor = isset($_SESSION['cpf']) ? 's' : 'n';
-
-        if ($valor == 'n'){
-            header("Location: index.php");
-        }
-    }else{
-       header("Location: index.php"); 
-    } 
-
-    include 'acessobancosup.php';
+    include 'vAdministrador.php';
+    include '../acessobancosup.php';
 ?>
 
 <script language = javascript type = "text/javascript">          
@@ -25,34 +11,18 @@
 
 <!DOCTYPE HTML>
 <html lang="pt-br">
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
-    
-    <title>Questionario</title>
-    
-	<head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        
-        <link rel = "stylesheet" href = "estilo.css">
-        
-		<style>	
-            .resposta{
-                color: black;
-                font-family: arial;
-                font-size: 17px;
-                font-weight: bolder;
-            }
-            #botao{
-                width:200;
-                height:40;
-            }
-		</style>
+        <link rel = "stylesheet" href = "../estilo.css">
+        <link rel = "stylesheet" href = "selecao.css">
+
+        <title>Questionario</title>   
 	</head>	
 	<body>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
 		<br>
         <div class = "corpo">
             <div class = "card text-center">
@@ -106,5 +76,8 @@
 
             </div>    
         </div>
+
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity = "sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin = "anonymous"></script>
+        <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity = "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin = "anonymous"></script>
 	</body>
 </html>
