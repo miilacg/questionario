@@ -1,6 +1,6 @@
 <?php
-    include 'acessobancotec.php';
-    include 'vtec.php';
+    include '../acessobancotec.php';
+    include 'vTecnico.php';
           
     $testedados_pessoaistec = "SELECT * 
                                FROM resposta
@@ -60,7 +60,7 @@
                         if (mysqli_num_rows($verifica_satisfacaotec) < 1){
                             header("Location: satisfacaotec.php");
                         }else{
-                            header("Location: fimtec.php");
+                            header("Location: fimtec.html");
                         }
                     }
                 }else{ //se respondeu a 22 e não respondeu a 35
@@ -122,7 +122,7 @@
                                         if (mysqli_num_rows($verifica_satisfacaotec) < 1){
                                             header("Location: satisfacaotec.php");
                                         }else{
-                                            header("Location: fimtec.php");
+                                            header("Location: fimtec.html");
                                         }
                                     }
                                 }                                        
@@ -149,7 +149,7 @@
                             if (mysqli_num_rows($verifica_satisfacaotec) < 1){
                                 header("Location: satisfacaotec.php");
                             }else{
-                                header("Location: fimtec.php");
+                                header("Location: fimtec.html");
                             }
                         }                        
                     }
