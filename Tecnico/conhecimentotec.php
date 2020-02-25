@@ -1,78 +1,22 @@
 ﻿<?php
-    include 'acessobancotec.php';
-    include 'vtec.php';
+    include '../acessobancotec.php';
+    include 'vTecnico.php';
 ?>
 
-<script language = javascript type = "text/javascript">   
-    function abre9(){
-        var q8 = document.getElementsByName('perg8');
-        if (q8[0].checked){
-            var q9 = document.getElementById('nove');
-            q9.classList.remove("esconde");
-            var p9 = document.getElementById('perg9');
-            p9.setAttribute("required", "required");        
-        }else if (q8[1].checked){
-            var q9 = document.getElementById('nove');
-            q9.classList.add("esconde");
-            var p9 = document.getElementById('perg9');
-            if (p9.hasAttribute("required")){
-                p9.removeAttribute("required");
-            }
-        }
-    }
-    
-    function abre19(){
-        var q18 = document.getElementsByName('perg18');
-        if (q18[0].checked){
-            var q19 = document.getElementById('dezenove');
-            q19.classList.remove("esconde");
-            var p19 = document.getElementById('caixa');
-            p19.setAttribute("required", "required");
-        }else if (q18[1].checked){
-            var q19 = document.getElementById('dezenove');
-            q19.classList.add("esconde");
-            var p19 = document.getElementById('caixa');
-            if (p19.hasAttribute("required")){
-                p19.removeAttribute("required");
-            }
-        }
-    }
-    
-    function abre21(){
-        var q20 = document.getElementsByName('perg20');
-        if (q20[0].checked){
-            var q21 = document.getElementById('vinteeum');
-            q21.classList.remove("esconde");
-            var p21 = document.getElementById('caixa1');
-            p21.setAttribute("required", "required");
-        }else if (q20[1].checked){
-            var q20 = document.getElementById('vinteeum');
-            q20.classList.add("esconde");
-            var p21 = document.getElementById('caixa1');
-            if (p21.hasAttribute("required")){
-                p21.removeAttribute("required");
-            }
-        }
-    }
-    
-    function voltar(){
-        window.location.assign ("dados_pessoaistec.php");
-    }
-</script>
-
 <!DOCTYPE HTML>
-<html lang="pt-br">
-    <meta http-equiv="content-type" content="text/html;charset=utf-8">	
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang = "pt-br">
+    <head>
+        <meta http-equiv = "content-type" content = "text/html;charset=utf-8">	
+        <meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
-    
-    <title>Questionário</title>    
-    
-	<head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        
-        <link rel = "stylesheet" href = "estilo.css">
-            
+        <script src = "conhecimentotec.js"></script>
+
+        <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity = "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin = "anonymous"> 
+        <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin = "anonymous">        
+        <link rel = "stylesheet" href = "../estilo.css">
+
+        <title>Questionário</title>      
+	            
         <style>
             .esconde{
                 display: none;
@@ -80,10 +24,6 @@
         </style>
 	</head>	
 	<body>        
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        
 		<form accept-charset = "utf-8" method = "POST" action = "iconhecimentotec.php">
             <br>
             <div class = "corpo">
@@ -306,7 +246,7 @@
                         </div>
 
                         <div class = "botao">
-                            <input id = "botao" type = "button" class= "btn btn-primary" value = "Anterior" onClick = "voltar();"/>
+                            <a href = "dados_pessoaistec.php"><input id = "botao" type = "button" class= "btn btn-primary" value = "Anterior" onClick = "voltar();"/></a>
                             <input id = "botao" type = "submit" class= "btn btn-primary" name = "proximo" value = "Próximo"/>
                         </div><br>
                         
@@ -319,11 +259,11 @@
                     
                 </div>    
             </div>
-		</form>
+        </form>
         
-        <script src= "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity= "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin= "anonymous" ></script> 
-        <script src= "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity= "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin= "anonymous" ></script> 
-        <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity= "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin= "anonymous" ></script>
-        
+        <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity = "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin = "anonymous"></script>
+        <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin = "anonymous"></script> 
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity = "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin = "anonymous"></script> 
+        <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity = "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin = "anonymous"></script>
 	</body>
 </html>
