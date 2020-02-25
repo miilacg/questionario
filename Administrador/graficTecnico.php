@@ -5,21 +5,23 @@
 
 <!DOCTYPE HTML>
 <html lang = "pt-br">
-	<meta charset = "utf-8">
-    <meta name = "viewport" content = "initial-scale=1, user-scalable = no">
+    <head> 
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "initial-scale=1, user-scalable = no">
 
-    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity = "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
-    <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin = "anonymous">  
-    <link rel = "stylesheet" href = "graficos.css">
-    <link rel = "stylesheet" href = "../estilo.css">
+        <script src = "graficoTecnico.js"></script>
 
-    <title>Questionario</title>
+        <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity = "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+        <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin = "anonymous">  
+        <link rel = "stylesheet" href = "../estilo.css">
+        <link rel = "stylesheet" href = "graficos.css">
 
-	<head>         
+        <title>Questionario</title>
+	        
 		<style>	
             #botao{
                 width: 300px;
-                height: 50px;
+                height: 40px;
             }
 		</style>
 	</head>	
@@ -303,7 +305,7 @@
                 </div>   
                 
                 <div class = "botao">
-                    <a href = "selecaoopcaosup.php"><input id = "botao" type = "button" class= "btn btn-primary" value = "Voltar"/></a>
+                    <a href = "selecaoopcaotec.php"><input id = "botao" type = "button" class= "btn btn-primary" value = "Voltar"/></a>
                 </div><br>
 
                 <div class= "card-footer">  </div>

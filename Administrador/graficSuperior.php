@@ -5,23 +5,25 @@
 
 <!DOCTYPE HTML>
 <html lang = "pt-br">
-	<meta charset = "utf-8">
-    <meta name = "viewport" content = "initial-scale=1, user-scalable = no">
+    <head>
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "initial-scale=1, user-scalable = no">
 
-    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity = "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
-    <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin = "anonymous">  
-    <link rel = "stylesheet" href = "graficos.css">
-    <link rel = "stylesheet" href = "../estilo.css">
+        <script src = "graficoSuperior.js"></script>
+        
+        <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity = "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+        <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin = "anonymous">  
+        <link rel = "stylesheet" href = "../estilo.css">
+        <link rel = "stylesheet" href = "graficos.css">
 
-    <title>Questionario</title>
-
-	<head>         
-		<style>	
+        <title>Questionario</title>
+                
+        <style>	
             #botao{
                 width: 300px;
                 height: 50px;
             }
-		</style>
+        </style>
 	</head>	
 
 	<body>
