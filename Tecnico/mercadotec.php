@@ -1,68 +1,20 @@
 ﻿<?php
-	include 'acessobancotec.php';
-    include 'vtec.php';
+	include '../acessobancotec.php';
+    include 'vTecnico.php';
 ?>
 
-<script language = javascript type = "text/javascript">       
-    function voltar(){
-        window.location.assign ("empresatec.php");
-    }
-</script>
-
 <!DOCTYPE HTML>
-<html lang="pt-br">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang = "pt-br">
+    <head>
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
-        
-	<title>Questionário</title>
-	<head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		
-        <link rel = "stylesheet" href = "estilo.css">
-        
-        <style>
-            .slider-wrapper {
-                display: inline-block;
-                width: 60%;
-                height: 700px;
-                padding: 5;
-            }  
-            .slider-wrapper input {
-                width: 50%;
-                height: 40px;
-                margin: 0;
-                transform-origin: 75px 75px;
-            }
-            .sticky-wrap .sticky-thead {
-                box-shadow: 0 0.25em 0.1em -0.1em rgba(0,0,0,.125);
-                z-index: 100;
-                position: absolute;
-            }            
-            .sticky-wrap {
-                overflow-x: auto;
-                overflow-y: hidden;
-                position: relative;
-            }
-            #header-fixed{
-                table-layout: fixed;
-                border-collapse: collapse;
-            }
-            #header-fixed tbody{
-                display: block;
-                overflow: auto;
-                height: 500px;
-            }            
-            #header-fixed th, #header-fixed td {
-              text-align: center;
-              vertical-align: middle;
-              width: 300px;
-            }
-            #header-fixed thead tr{
-              display:block;
-            }
-        </style>
+        <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity = "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin = "anonymous"> 
+        <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity = "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin = "anonymous">
+        <link rel = "stylesheet" href = "../estilo.css">    
+        <link rel = "stylesheet" href = "tecnico.css"> 
+
+        <title>Questionário</title>
 	</head>
 	<body>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -407,7 +359,7 @@
                             </table>
 
                         <div class = "botao">
-                            <input id = "botao" type = "button" class= "btn btn-primary" value = "Anterior" onClick = "voltar();"/>
+                            <a href = "empresatec.php"><input id = "botao" type = "button" class= "btn btn-primary" value = "Anterior"/></a>
                             <input id = "botao" type = "submit" class= "btn btn-primary" name = "proximo" value = "Próximo"/>
                         </div><br>
 

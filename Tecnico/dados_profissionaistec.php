@@ -1,176 +1,23 @@
 ﻿<?php	
-    include 'acessobancotec.php';  
-    include 'vtec.php';
+    include '../acessobancotec.php';  
+    include 'vTecnico.php';
 ?>
-
-<script language = javascript type = "text/javascript">      
-    function abre22(){
-        var q22 = document.getElementsByName('perg22');
-        if (q22[0].checked){
-            var qS = document.getElementById('sim');
-            qS.classList.remove("esconde");
-            var qN = document.getElementById('nao');
-            qN.classList.add("esconde1");
-            var p23 = document.getElementById('perg23');
-            p23.setAttribute("required", "required");
-            var p24 = document.getElementById('perg24');
-            p24.setAttribute("required", "required");
-            var p25 = document.getElementById('perg25');
-            p25.setAttribute("required", "required");
-            var p26 = document.getElementById('perg26');
-            p26.setAttribute("required", "required");
-            var qN = document.getElementById('nao');
-            qN.classList.add("esconde1");
-            var p35 = document.getElementById('perg35');
-            if (p35.hasAttribute("required")){
-                p35.removeAttribute("required");
-            }
-        }else if (q22[1].checked){
-            var qS = document.getElementById('sim');
-            qS.classList.add("esconde");
-            var qN = document.getElementById('nao');
-            qN.classList.remove("esconde1");
-            var p23 = document.getElementById('perg23');
-            if (p23.hasAttribute("required")){
-                p23.removeAttribute("required");
-            }
-            var p24 = document.getElementById('perg24');
-            if (p24.hasAttribute("required")){
-                p24.removeAttribute("required");
-            }
-            var p25 = document.getElementById('perg25');
-            if (p25.hasAttribute("required")){
-                p25.removeAttribute("required");
-            }
-            var p26 = document.getElementById('perg26');
-            if (p26.hasAttribute("required")){
-                p26.removeAttribute("required");
-            }
-            var p35 = document.getElementById('perg35');
-            p35.setAttribute("required", "required");            
-        }
-    }
-    
-    function abre26(){
-        var q26 = document.getElementsByName('perg26');
-        if (q26[0].checked){
-            var q27 = document.getElementById('vinteesete');
-            q27.classList.remove("esconde");
-            var qN = document.getElementById('nao');
-            qN.classList.add("esconde1");
-            var p27 = document.getElementById('perg27');
-            p27.setAttribute("required", "required");
-            var p28 = document.getElementById('perg28');
-            p28.setAttribute("required", "required");
-            var p29 = document.getElementById('perg29');
-            p29.setAttribute("required", "required");
-            var p35 = document.getElementById('perg35');
-            if (p35.hasAttribute("required")){
-                p35.removeAttribute("required");
-            }
-        }else if (q26[1].checked){
-            var q27 = document.getElementById('vinteesete');
-            q27.classList.add("esconde");
-            var qN = document.getElementById('nao');
-            qN.classList.remove("esconde1");
-            var p27 = document.getElementById('perg27');
-            if (p27.hasAttribute("required")){
-                p27.removeAttribute("required");
-            }
-            var p28 = document.getElementById('perg28');
-            if (p28.hasAttribute("required")){
-                p28.removeAttribute("required");
-            }
-            var p29 = document.getElementById('perg29');
-            if (p29.hasAttribute("required")){
-                p29.removeAttribute("required");
-            }
-            var p35 = document.getElementById('perg35');
-            p35.setAttribute("required", "required");            
-        }
-    }
-    
-    function abre29(){
-        var q29 = document.getElementsByName('perg29');
-        if (q29[0].checked){
-            var q30 = document.getElementById('trinta');
-            q30.classList.remove("esconde");
-            var q34 = document.getElementById('trintaequatro');
-            q34.classList.add("esconde1");
-            var p30 = document.getElementById('perg30');
-            p30.setAttribute("required", "required");
-            var p31 = document.getElementById('perg31');
-            p31.setAttribute("required", "required");
-            var p32 = document.getElementById('perg32');
-            p32.setAttribute("required", "required");
-            var p34 = document.getElementById('perg34');
-            if (p34.hasAttribute("required")){
-                p34.removeAttribute("required");
-            }
-        }else if (q29[1].checked){
-            var q30 = document.getElementById('trinta');
-            q30.classList.add("esconde");
-            var q34 = document.getElementById('trintaequatro');
-            q34.classList.remove("esconde1");
-            var p30 = document.getElementById('perg30');
-            if (p30.hasAttribute("required")){
-                p30.removeAttribute("required");
-            }
-            var p31 = document.getElementById('perg31');
-            if (p31.hasAttribute("required")){
-                p31.removeAttribute("required");
-            }
-            var p32 = document.getElementById('perg32');
-            if (p32.hasAttribute("required")){
-                p32.removeAttribute("required");
-            }
-            var p34 = document.getElementById('perg34');
-            p34.setAttribute("required", "required");            
-        }
-    }
-    
-    function voltar(){
-        window.location.assign ("conhecimentotec.php");
-    }
-</script>
 
 <!DOCTYPE HTML>
 <html lang="pt-br">
 	<head>
 		<meta charset = "UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        
-        <link rel = "stylesheet" href = "estilo.css">
+        <script src = "tecnico.js"></script>
+
+        <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity = "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin = "anonymous">
+        <link rel = "stylesheet" href = "../estilo.css">
+        <link rel = "stylesheet" href = "tecnico.css">
         
 		<title>Questionário</title>
-		<style>
-            .slider-wrapper {
-                display: inline-block;
-                width: 60%;
-                height: 360px;
-                padding: 5;
-            }  
-            .slider-wrapper input {
-                width: 50%;
-                height: 40px;
-                margin: 0;
-                transform-origin: 75px 75px;
-            }
-            .esconde{
-                display: none;
-            }
-            .esconde1{
-                display: none;
-            }
-		</style>
 	</head>
 	<body>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        
 		<form method = "POST" action = "tratamentodados_profissionaistec.php">
             <br>
             <div class = "corpo">
@@ -356,7 +203,7 @@
                         </div>
 
                         <div class = "botao">
-                            <input id = "botao" type = "button" class= "btn btn-primary" value = "Anterior" onClick = "voltar();"/>
+                            <a href = "conhecimentotec.php"><input id = "botao" type = "button" class= "btn btn-primary" value = "Anterior"/></a>
                             <input id = "botao" type = "submit" class= "btn btn-primary" name = "proximo" value = "Próximo"/>
                         </div><br>	
 
@@ -371,9 +218,9 @@
             </div>	
 		</form>
         
-        <script src= "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity= "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin= "anonymous" ></script> 
-        <script src= "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity= "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin= "anonymous" ></script> 
-        <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity= "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin= "anonymous" ></script>
-        
+        <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity = "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin = "anonymous"></script>
+        <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin = "anonymous"></script> 
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity = "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin = "anonymous"></script> 
+        <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity = "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin = "anonymous"></script>
 	</body>
 </html>
