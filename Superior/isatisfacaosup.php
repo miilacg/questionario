@@ -1,12 +1,10 @@
 <?php    
-    include 'acessobancosup.php';
-    include 'vsup.php';
+    include '../acessobancosup.php';
+    include 'vSuperior.php';
 
     $teste_satisfacaosup = "SELECT * 
                             FROM resposta
-	                        WHERE CPF = '$cpf' AND id_perguntas = (SELECT id_perguntas 
-                                                                            FROM pergunta 
-                                                                            WHERE numeracao = 58)";
+	                        WHERE CPF = '$cpf' AND id_perguntas = (SELECT id_perguntas FROM pergunta  WHERE numeracao = 58)";
 	          
 	$verifica_satisfacaosup = mysqli_query($conn, $teste_satisfacaosup);
 
@@ -89,5 +87,5 @@
     
     mysqli_close($conn);
     
-    header ("Location: resultadosup.php");
+    header ("Location: resultadosup.html");
 ?>

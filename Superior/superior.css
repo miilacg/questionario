@@ -1,0 +1,61 @@
+.estado{
+    display: none;
+}
+
+.esconde{
+    display: none;
+}
+.esconde1{
+    display: none;
+}
+
+.slider-wrapper {
+    display: inline-block;
+    width: 60%;
+    height: 360px;
+    padding: 5;
+}  
+.slider-wrapper input {
+    width: 50%;
+    height: 40px;
+    margin: 0;
+    transform-origin: 75px 75px;
+}
+#q42{
+    height: 340px;  
+}
+ 
+#q59{
+    height: 400px;  
+}
+#q58{
+    height: 340px;  
+}
+
+#header-fixed{
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+#header-fixed tbody{
+    display: block;
+    overflow: auto;
+    height: 500px;
+}            
+#header-fixed th, #header-fixed td {
+  text-align: center;
+  vertical-align: middle;
+  width: 300px;
+}
+#header-fixed thead tr{
+  display:block;
+}
+
+#q50{
+    height: 1500px;
+}
+#q51{
+    height: 730px;
+}
+#q52{
+    height: 400px;
+}

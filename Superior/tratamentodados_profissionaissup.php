@@ -1,6 +1,6 @@
 <?php	
-    include 'acessobancosup.php';
-    include 'vsup.php';
+    include '../acessobancosup.php';
+    include 'vSuperior.php';
 
     $teste_dadosprofissionaissup = "SELECT * 
                                     FROM resposta

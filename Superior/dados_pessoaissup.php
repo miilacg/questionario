@@ -1,49 +1,7 @@
 <?php
-	include 'acessobancosup.php';
-    include 'vsup.php';
+	include '../acessobancosup.php';
+    include 'vSuperior.php';
 ?>
-
-<script language = javascript type = "text/javascript">
-    function testeConclusao(perg2, perg3){
-        var q2 = document.getElementById('perg2').value;
-        var q3 = document.getElementById('perg3').value;
-        
-        if (q2 >= q3){
-            alert ("Ano de conclusão menor ou igual ao de ingresso. Coloque um ano valido.");
-            document.getElementById('perg3').value = "";
-        }
-    }
-    
-    function testeConclusao1(perg2, perg3){
-        var q2 = document.getElementById('perg2').value;
-        var q3 = document.getElementById('perg3').value;
-        
-        if (q3 != ""){
-           if (q2 >= q3){
-                alert ("Ano de conclusão menor ou igual ao de ingresso. Coloque um ano valido.");
-                document.getElementById('perg3').value = "";
-            } 
-        }
-        
-    }
-    
-    function abreEstado(){
-        var q6 = document.getElementById('perg6').value;
-        if (q6 == "BR"){
-            var q7 = document.getElementById('estado7');
-            q7.classList.remove("estado");
-            var p7 = document.getElementById('perg7');
-            p7.setAttribute("required", "required");
-        }else{
-            var q7 = document.getElementById('estado7');
-            q7.classList.add("estado");
-            var p7 = document.getElementById('perg7');
-            if (p7.hasAttribute("required")){
-                p7.removeAttribute("required");
-            }
-        }
-    }
-</script>
 
 <!DOCTYPE html>	
 <html>
@@ -51,22 +9,15 @@
 		<meta charset = "UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        
-        <link rel = "stylesheet" href = "estilo.css">
-        
+        <script src = "superior.js"></script>
+
+        <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity = "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin = "anonymous">
+        <link rel = "stylesheet" href = "../estilo.css">
+        <link rel = "stylesheet" href = "superior.css">
+
 		<title>Questionário</title>
-		<style>		
-            .estado{
-                display: none;
-            }
-		</style>
 	</head>
 	<body>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        
 		<form method = "POST" action = "idados_pessoaissup.php">
             <br>
             <div class = "corpo">
@@ -212,6 +163,10 @@
                     
                  </div> 
             </div>
-		</form>
+        </form>
+        
+        <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin = "anonymous"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity = "sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin = "anonymous"></script>
+        <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity = "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin = "anonymous"></script>
 	</body>
 </html>

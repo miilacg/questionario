@@ -1,132 +1,24 @@
 ﻿<?php
-	include 'acessobancosup.php';
-    include 'vsup.php';
+	include '../acessobancosup.php';
+    include 'vSuperior.php';
 ?>
-
-<script language = javascript type = "text/javascript">
-    function abre8(){
-        var q8 = document.getElementsByName('perg8');
-        if (q8[0].checked){
-            var q9 = document.getElementById('nove');
-            q9.classList.remove("esconde");
-            var p9 = document.getElementById('perg9');
-            p9.setAttribute("required", "required");
-            var p10 = document.getElementById('perg10');
-            p10.setAttribute("required", "required");
-        }else if (q8[1].checked){
-            var q9 = document.getElementById('nove');
-            q9.classList.add("esconde");
-            var p9 = document.getElementById('perg9');
-            if (p9.hasAttribute("required")){
-                p9.removeAttribute("required");
-            }     
-            var p10 = document.getElementById('perg10');
-            if (p10.hasAttribute("required")){
-                p10.removeAttribute("required");
-            }
-        }
-    }
-    
-    function abre9(){
-        var q9 = document.getElementsByName('perg9');
-        if (q9[0].checked || q9[1].checked){
-            var q10 = document.getElementById('dez');
-            q10.classList.remove("esconde1");
-            var p10 = document.getElementById('perg10');
-            p10.setAttribute("required", "required");
-        }else if (q9[2].checked){
-            var q10 = document.getElementById('dez');
-            q10.classList.add("esconde1");
-            var p10 = document.getElementById('perg10');
-            if (p10.hasAttribute("required")){
-                p10.removeAttribute("required");
-            }         
-        }
-    }
-    
-    function abre20(){
-        var q20 = document.getElementsByName('perg20');
-        if (q20[0].checked || q20[1].checked){
-            var q21 = document.getElementById('vinteum');
-            q21.classList.remove("esconde");
-            var p21 = document.getElementById('perg21');
-            p21.setAttribute("required", "required");
-        }else if (q20[2].checked){
-            var q21 = document.getElementById('vinteum');
-            q21.classList.add("esconde");
-            var p21 = document.getElementById('perg21');
-            if (p21.hasAttribute("required")){
-                p21.removeAttribute("required");
-            }         
-        }
-    }
-    
-    function abre28(){
-        var q28 = document.getElementsByName('perg28');
-        if (q28[0].checked){
-            var q29 = document.getElementById('vintenove');
-            q29.classList.remove("esconde");
-            var p29 = document.getElementById('perg29');
-            p29.setAttribute("required", "required");
-        }else if (q28[1].checked){
-            var q29 = document.getElementById('vintenove');
-            q29.classList.add("esconde");
-            var p29 = document.getElementById('perg29');
-            if (p29.hasAttribute("required")){
-                p29.removeAttribute("required");
-            }         
-        }
-    }
-    
-    function abre30(){
-        var q30 = document.getElementsByName('perg30');
-        if (q30[0].checked){
-            var q31 = document.getElementById('trintaeum');
-            q31.classList.remove("esconde");
-            var p31 = document.getElementById('perg31');
-            p31.setAttribute("required", "required");
-        }else if (q30[1].checked){
-            var q31 = document.getElementById('trintaeum');
-            q31.classList.add("esconde");
-            var p31 = document.getElementById('perg31');
-            if (p31.hasAttribute("required")){
-                p31.removeAttribute("required");
-            }         
-        }
-    }
-    
-    function voltar(){
-        window.location.assign ("dados_pessoaissup.php");
-    }
-</script>
 
 <!DOCTYPE HTML>
 <html lang="pt-br">
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
-    
-    <title>Questionario</title>
-    
-	<head>
+        <script src = "superior.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        
-        <link rel = "stylesheet" href = "estilo.css">
-        
-		<style>	
-            .esconde{
-                display: none;
-            }
-            .esconde1{
-                display: none;
-            }
-		</style>
+        <link rel = "stylesheet" href = "../estilo.css">
+        <link rel = "stylesheet" href = "superior.css">
+
+        <title>Questionario</title>
 	</head>	
 	<body>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        
 		<form method = "POST" action = "iconhecimentosup.php">
             <br>
 			<div class = "corpo">
@@ -429,7 +321,7 @@
                         </div>
 
                         <div class = "botao">
-                            <input id = "botao" type = "button" class= "btn btn-primary" value = "Anterior" onClick = "voltar();"/>
+                            <a href = "dados_pessoaissup.php"><input id = "botao" type = "button" class= "btn btn-primary" value = "Anterior"/></a>
                             <input id = "botao" type = "submit" class= "btn btn-primary" name = "proximo" value = "Próximo"/>
                         </div><br>
                         
@@ -438,15 +330,14 @@
                         </div>
                     </div>
                     
-                    <div class= "card-footer" >  </div>
-                    
+                    <div class= "card-footer" >  </div>                    
                 </div>    
             </div>
 		</form>
         
-        <script src= "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity= "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin= "anonymous" ></script> 
-        <script src= "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity= "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin= "anonymous" ></script> 
-        <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity= "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin= "anonymous" ></script>
-        
+        <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity = "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin = "anonymous" ></script> 
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity = "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin = "anonymous" ></script> 
+        <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity = "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin = "anonymous" ></script>
 	</body>
 </html>

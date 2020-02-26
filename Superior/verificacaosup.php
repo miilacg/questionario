@@ -1,6 +1,6 @@
 <?php
-    include 'acessobancosup.php';
-    include 'vsup.php';
+    include '../acessobancosup.php';
+    include 'vSuperior.php';
           
     $testedados_pessoaissup = "SELECT * 
                                FROM resposta
@@ -60,7 +60,7 @@
                         if (mysqli_num_rows($verifica_satisfacaosup) < 1){
                             header("Location: satisfacaosup.php");
                         }else{
-                            header("Location: fimsup.php");
+                            header("Location: fimsup.html");
                         }
                     }
                 }else{
@@ -122,7 +122,7 @@
                                         if (mysqli_num_rows($verifica_satisfacaosup) < 1){
                                             header("Location: satisfacaosup.php");
                                         }else{
-                                            header("Location: fimsup.php");
+                                            header("Location: fimsup.html");
                                         }
                                     }
                                 }                                        
