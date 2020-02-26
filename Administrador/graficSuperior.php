@@ -259,7 +259,9 @@
 
                                         $indice = $questao.$contConsulta;
 
-                                        ?><canvas class = "grafico" id = "grafico<?php echo $indice;?>"></canvas><?php
+                                        ?><div class = "container-grafico">
+                                            <canvas class = "grafico" id = "grafico<?php echo $indice;?>"></canvas>
+                                        </div><?php
 
                                         if ($questao == 49){
                                             if ($contConsulta == 32){
