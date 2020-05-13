@@ -62,17 +62,17 @@
                                     echo "ola";
                                 }else{    
                                     $selecao = "SELECT * from(
-                                                                SELECT questao, opcao AS resposta, alternativa, 0 AS qtd 
-                                                                FROM alternativa NATURAL JOIN pergunta_has_alternativa NATURAL JOIN pergunta 
-                                                                WHERE id_perguntas = '$questao' AND id_alternativa 
-                                                                NOT IN (SELECT id_alternativa FROM resposta WHERE id_perguntas = '$questao') 
-                                                                GROUP BY resposta 
-                                                                UNION 
-                                                                SELECT questao, resposta, alternativa, count(*) AS qtd 
-                                                                FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa 
-                                                                WHERE id_perguntas = '$questao' 
-                                                                GROUP BY resposta 
-                                                            )AS Resultado ORDER BY Resultado.resposta;"; 
+                                                    SELECT questao, opcao AS resposta, alternativa, 0 AS qtd 
+                                                    FROM alternativa NATURAL JOIN pergunta_has_alternativa NATURAL JOIN pergunta 
+                                                    WHERE id_perguntas = '$questao' AND id_alternativa 
+                                                    NOT IN (SELECT id_alternativa FROM resposta WHERE id_perguntas = '$questao') 
+                                                    GROUP BY resposta 
+                                                    UNION 
+                                                    SELECT questao, resposta, alternativa, count(*) AS qtd 
+                                                    FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa 
+                                                    WHERE id_perguntas = '$questao' 
+                                                    GROUP BY resposta 
+                                                )AS Resultado ORDER BY Resultado.resposta;"; 
                                     
                                     $resultadoSelecao = mysqli_query($conn, $selecao);
                                     $linha = mysqli_fetch_assoc($resultadoSelecao);
