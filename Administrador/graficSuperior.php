@@ -192,18 +192,18 @@
                                     }
 
                                     do { 
-                                        $selecaoSubPergunta = "SELECT * from(
-                                            SELECT questao, opcao AS resposta, alternativa, subquestao, id_subpergunta, id_perguntas, 0 AS qtd 
-                                            FROM alternativa NATURAL JOIN subpergunta_has_alternativa NATURAL JOIN subpergunta NATURAL JOIN subpergunta_has_pergunta NATURAL JOIN pergunta
-                                            WHERE id_perguntas = '$questao' AND id_subpergunta = '$contConsulta' AND id_alternativa 
-                                            NOT IN (SELECT id_alternativa FROM resposta WHERE id_perguntas = '$questao' AND id_subpergunta = '$contConsulta')    
-                                            GROUP BY resposta    
-                                            UNION
-                                            SELECT questao, resposta, alternativa, subquestao, id_subpergunta, id_perguntas, count(*) AS qtd 
-                                            FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta 
-                                            WHERE id_perguntas = '$questao' AND id_subpergunta = '$contConsulta'
-                                            GROUP BY resposta                                 
-                                        )AS Resultado ORDER BY Resultado.resposta;"; 
+                                        $selecaoSubPergunta = "SELECT * FROM(
+                                                                    SELECT questao, opcao AS resposta, alternativa, subquestao, id_subpergunta, id_perguntas, 0 AS qtd 
+                                                                    FROM alternativa NATURAL JOIN subpergunta_has_alternativa NATURAL JOIN subpergunta NATURAL JOIN subpergunta_has_pergunta NATURAL JOIN pergunta
+                                                                    WHERE id_perguntas = '$questao' AND id_subpergunta = '$contConsulta' AND id_alternativa 
+                                                                    NOT IN (SELECT id_alternativa FROM resposta WHERE id_perguntas = '$questao' AND id_subpergunta = '$contConsulta')    
+                                                                    GROUP BY resposta    
+                                                                    UNION
+                                                                    SELECT questao, resposta, alternativa, subquestao, id_subpergunta, id_perguntas, count(*) AS qtd 
+                                                                    FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta 
+                                                                    WHERE id_perguntas = '$questao' AND id_subpergunta = '$contConsulta'
+                                                                    GROUP BY resposta                                 
+                                                                )AS Resultado ORDER BY Resultado.resposta;"; 
 
                                         $resultadoSubPergunta = mysqli_query($conn, $selecaoSubPergunta);
                                         $linhaSubPergunta = mysqli_fetch_assoc($resultadoSubPergunta);
@@ -344,7 +344,6 @@
 
             </div>    
         </div>
-        <script src = "graficoSuperior.js"></script>
         <script src = "https://code.jquery.com/jquery-3.3.1.min.js" ></script>
         <script src= "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js" ></script>
         <script src= "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js" ></script>
@@ -355,15 +354,15 @@
     //Cor do grafico
     function randomRgbPizza() {
         var cor = ["#000080", "#0000CD", "#0000FF", "#00FA9A", "#008B8B", "#00FFFF", "#00BFFF", "#00CED1", "#006400", "#008000",    
-                "#191970", "#1E90FF", "#20B2AA", "#228B22", "#32CD32", "#3CB371", "#48D1CC", "#40E0D0", "#4682B4", "#4169E1",  
-                "#483D8B", "#6495ED", "#66CDAA", "#66CDAA", "#7FFFD4", "#7FFF00", "#87CEFA", "#E0FFFF", "#B0E0E6", "#98FB98"];
+                   "#191970", "#1E90FF", "#20B2AA", "#228B22", "#32CD32", "#3CB371", "#48D1CC", "#40E0D0", "#4682B4", "#4169E1",  
+                   "#483D8B", "#6495ED", "#66CDAA", "#66CDAA", "#7FFFD4", "#7FFF00", "#87CEFA", "#E0FFFF", "#B0E0E6", "#98FB98"];
         var posicao = Math.floor(Math.random() * 29 + 1);
         return cor[posicao];
     }
 
     function randomRgbBarra() {
         var cor = ["#00FA9A", "#00CED1", "#20B2AA", "#008B8B", "#00FFFF", "#00BFFF",   
-                "#1E90FF", "#4169E1", "#6495ED", "#66CDAA", "#7FFFD4", "#87CEFA"];
+                   "#1E90FF", "#4169E1", "#6495ED", "#66CDAA", "#7FFFD4", "#87CEFA"];
         var posicao = Math.floor(Math.random() * 11 + 1);
         return cor[posicao];
     }
@@ -414,7 +413,13 @@
                                             beginAtZero: true
                                         }
                                     }]
-                                }
+                                },
+                                legend: { 
+                                    labels: { 
+                                        boxWidth: 0,
+                                        fontSize: 18 
+                                    } 
+                                } 
                             }
                         });  
                         k++;
@@ -460,6 +465,21 @@
                                         backgroundColor: color
                                     }
                                 ]
+                            },
+                            options: {
+                                scales: {
+                                    yAxes: [{
+                                        ticks: {
+                                            beginAtZero: true
+                                        }
+                                    }]
+                                },
+                                legend: { 
+                                    labels: { 
+                                        boxWidth: 45,
+                                        fontSize: 14 
+                                    } 
+                                } 
                             }
                         });  
                     }k++;                                    
