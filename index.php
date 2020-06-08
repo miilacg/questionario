@@ -17,7 +17,7 @@
 		<form method = "POST" action = "tratamentologin.php">
             <br>
             <div class="cabecalho">
-                <h1 class="display-4">PESQUISA COM EGRESSOS - UFV</h1>
+                <h1 class="display-4">SCADA - EGRESSOS UFV</h1>
             </div><br>
 			
 			<?php
@@ -40,7 +40,7 @@
                             <option value="">Escolha a modalidade</option>
                             <option value = "Tecnico">Técnico</option> 
                             <option value = "Superior">Superior</option> 
-                            <option value = "Administrador">Administrador</option>
+                            <option value = "Administrador">Gerente</option>
                         </select>
                     </div>                   
                     
