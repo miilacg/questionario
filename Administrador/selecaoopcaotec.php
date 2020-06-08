@@ -25,9 +25,8 @@
                         <h1>Escolha uma opção</h1>	
                         <br><br>
                         <div class = "caixa">
-                            <a href = "graficTecnico.php"><input id = "botao" type = "button" class= "btn btn-primary" value = "Gráficos"/></a><br><br>
-                            <a href = "discursivotec.php"><input id = "botao" type = "button" class= "btn btn-primary" value = "Discursivo"/></a><br><br>
-                            <!-- <a href = "analisetec.php"><input id = "botao" type = "button" class= "btn btn-primary" value = "Analise dos dados"/></a> --><br><br>
+                            <a href = "respostasTecnico.php"><input id = "botao" type = "button" class= "btn btn-primary" value = "Respostas"/></a><br><br>
+                            <a href = "analisetec.php"><input id = "botao" type = "button" class= "btn btn-primary" value = "Análise dos dados"/></a><br><br><br>
                             <a href = "selecaocurso.php"><input id = "botao" type = "button" class= "btn btn-primary" value = "Voltar"/></a>
                         </div>                        
                         <br><br><br>

@@ -22,11 +22,11 @@
                 <div class = "card-header">  </div>    
                     <div class = "card-body">
                         <br><br><br><br><br><br>
-                        <h1>Escolha a modalidade do curso</h1>	
+                        <h1>Escolha uma opção</h1>	
                         <br><br>
                         <div class = "caixa">
-                            <a href = "selecaoopcaotec.php"><input id = "botao" type = "button" class= "btn btn-primary" value = "Analisar dados do curso técnico"/></a><br><br><br>
-                            <a href = "selecaoopcaosup.php"><input id = "botao" type = "button" class= "btn btn-primary" value = "Analisar dados do curso superior"/></a>
+                            <a href = "selecaoopcaotec.php"><input id = "botao" type = "button" class= "btn btn-primary" value = "Visualizar dados do curso técnico"/></a><br><br><br>
+                            <a href = "selecaoopcaosup.php"><input id = "botao" type = "button" class= "btn btn-primary" value = "Visualizar dados do curso superior"/></a>
                         </div>                        
                         <br><br><br><br>
                     </div>

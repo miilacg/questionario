@@ -1,0 +1,35 @@
+[{
+"Id_Pergunta":"47",
+"Alternativas": ["Trabalho em equipe","Experiência no mercado","Fluência em línguas","Instituição de ensino","Disponibilidade para trabalhar horas extras","Mestrado/Doutorado/Especialização"],
+"Media": ["4.571","3.952","3.524","2.857","2.667","2.095"]
+},
+{
+"Id_Pergunta":"49",
+"Alternativas": ["Programação","Programação orientada a objetos","Algoritmo e estrutura de dados","Engenharia de software","Inglês ","Banco de dados","Linguagens de programação","Projeto e análise de algoritmos","Português instrumental","Arquitetura de software","Fundamentos da teoria da computação","Matematica discreta","Redes de computadores","Sistemas operacionais","Projeto de sistemas para web","Teoria e modelo de grafos","Computador e sociedade","Compiladores","Introdução aos sistemas lógicos digitais","Pesquisa operacional","Iniciação a estatística","Meta-heuristica","Cálculo diferencial e integral","Economia","Matematica financeira","Organização de computadores","Empreendedorismo e inovação","Processamento digital de imagens","Gestão da informação","Sistemas distribuidos e paralelos","Geometria analítica e álgebra linear","Gestão da diversidade nas organizações","Física","Contabilidade","Introdução a ciência dos dados","Gestão de projetos","Sistemas Embarcados","Tópicos especiais III","O ser e as organizações","Teoria geral da administração","Gestão ambiental","Libras","Tópicos especiais IV"],
+"Media": ["4.762","4.714","4.571","4.429","4.333","4.286","4.143","4.143","4.095","4.048","4","4","3.714","3.667","3.524","3.381","3.333","3.19","3.095","3","2.952","2.952","2.905","2.857","2.762","2.762","2.762","2.714","2.714","2.714","2.714","2.667","2.619","2.619","2.524","2.524","2.381","2.167","2.095","2.048","1.952","1.667","1.524"]
+},
+{
+"Id_Pergunta":"50",
+"Alternativas": ["JavaScript","Java","Python","Outras","C#","TypeScript","PHP","C","Kotlin","ASP","C++","R","ML","Ruby","Go","Verilog","Visual Basic","Cobol","Delphi","Pascal","Assembler",".Net","Objective-C"],
+"Media": ["3.619","2.619","2.619","2.476","2.286","2","1.952","1.714","1.667","1.667","1.571","1.524","1.524","1.476","1.429","1.333","1.286","1.19","1.19","1.19","1","1","1"]
+},
+{
+"Id_Pergunta":"51",
+"Alternativas": ["Microsoft Sql Server","MongoDB","Db2","Outros","PostgreSQL","Microsoft Acces","Teradata","Mysql","Paradx","Cache","Oracle"],
+"Media": ["2.619","1.952","1.667","1.571","1.524","1.19","1.095","1","1","1","1"]
+},
+{
+"Id_Pergunta":"58",
+"Alternativas": ["Interesse na área","Mercado de trabalho","Outras","Curso fácil de entrar","Curso fácil de fazer"],
+"Media": ["4.741","4.63","3.111","1.889","1.185"]
+},
+{
+"Id_Pergunta":"59",
+"Alternativas": ["Localidade","Custo de vida","Outras","Menor nota para entrar","Possibilidade de bolsa","Infraestrutura"],
+"Media": ["4.185","3.519","2.889","2.778","2.556","2.259"]
+},
+{
+"Id_Pergunta":"62",
+"Alternativas": ["Aulas","Salas de aula","Outras dependências","Laboratórios","Biblioteca"],
+"Media": ["4.407","3.704","3.333","3.296","3.259"]
+}]

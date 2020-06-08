@@ -1,0 +1,35 @@
+[{
+"Id_Pergunta":"38",
+"Alternativas": ["Instituição de ensino","Graduação","Experiência no mercado","Fluência em línguas","Trabalho em equipe","Disponibilidade para trabalhar horas extras","Mestrado/Doutorado/Especialização"],
+"Media": ["2.5","2.5","2","2","2","0.5","0.5"]
+},
+{
+"Id_Pergunta":"40",
+"Alternativas": ["Estrutura da informação na web","Contabilidade","Lógica de programação","Manutenção de computadores","Programação","Programação web","Projeto","Redação teórica","Redes de computadores","Banco de dados","Análise e projeto de sistemas","Fundamentos da administração","Informática básica","Inglês técnico","Introdução a programação","Legislação para informática","Organização de computadores e Sistemas Operacionais","Tópicos especiais em informática"],
+"Media": ["5","4.5","4.5","4.5","4.5","4.5","4.5","4.5","4.5","4","4","4","4","4","4","3.5","2.5","2.5"]
+},
+{
+"Id_Pergunta":"41",
+"Alternativas": ["JavaScript","TypeScript","C++","PHP","Kotlin","C#","Ruby","Outras","Python","Java","Go","Delphi","Objective-C","R","ASP","Pascal","Visual Basic",".Net","Assembler","Cobol","ML","Verilog","C"],
+"Media": ["4","4","3.5","3.5","3.5","3","3","3","2.5","2.5","2.5","2","2","2","2","2","2","2","2","2","2","2","2"]
+},
+{
+"Id_Pergunta":"42",
+"Alternativas": ["Outros","Mysql","Microsoft Sql Server","PostgreSQL","MongoDB","Db2","Microsoft Acces","Teradata","Paradx","Cache","Oracle"],
+"Media": ["4","3.5","2","2","2","2","2","2","2","2","2"]
+},
+{
+"Id_Pergunta":"49",
+"Alternativas": ["Interesse na área","Mercado de trabalho","Curso fácil de fazer","Outras","Falta de outra opção","Curso fácil de entrar"],
+"Media": ["3.833","3.583","3","3","2.667","2.333"]
+},
+{
+"Id_Pergunta":"50",
+"Alternativas": ["Localidade","Infraestrutura","Outras","Menor nota para entrar"],
+"Media": ["3.917","3.417","3.167","2.833"]
+},
+{
+"Id_Pergunta":"55",
+"Alternativas": ["Aulas","Salas de aula","Laboratórios","Outras dependências","Biblioteca"],
+"Media": ["3.917","3.5","3.333","3.25","3"]
+}]

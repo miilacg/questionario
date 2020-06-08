@@ -5,7 +5,7 @@
 "Id_sub": "1",
 "Resposta": ["A","B","C","D"],
 "Alternativa": ["Não sei","Básico","Intermediário","Fluente"],
-"Quantidade": ["0","4","21","10"]
+"Quantidade": ["0","3","21","10"]
 },
 {
 "Pergunta": "Língua estrangeira que sabe ler",
@@ -14,7 +14,7 @@
 "Id_sub": "2",
 "Resposta": ["A","B","C","D"],
 "Alternativa": ["Não sei","Básico","Intermediário","Fluente"],
-"Quantidade": ["6","22","7","0"]
+"Quantidade": ["6","21","7","0"]
 },
 {
 "Pergunta": "Língua estrangeira que sabe ler",
@@ -23,7 +23,7 @@
 "Id_sub": "3",
 "Resposta": ["A","B","C","D"],
 "Alternativa": ["Não sei","Básico","Intermediário","Fluente"],
-"Quantidade": ["33","2","0","0"]
+"Quantidade": ["32","2","0","0"]
 },
 {
 "Pergunta": "Língua estrangeira que sabe ler",
@@ -32,7 +32,7 @@
 "Id_sub": "4",
 "Resposta": ["A","B","C","D"],
 "Alternativa": ["Não sei","Básico","Intermediário","Fluente"],
-"Quantidade": ["32","1","1","1"]
+"Quantidade": ["31","1","1","1"]
 },
 {
 "Pergunta": "Língua estrangeira que sabe falar",
@@ -41,7 +41,7 @@
 "Id_sub": "1",
 "Resposta": ["A","B","C","D"],
 "Alternativa": ["Não sei","Básico","Intermediário","Fluente"],
-"Quantidade": ["2","11","14","8"]
+"Quantidade": ["1","11","14","8"]
 },
 {
 "Pergunta": "Língua estrangeira que sabe falar",
@@ -50,7 +50,7 @@
 "Id_sub": "2",
 "Resposta": ["A","B","C","D"],
 "Alternativa": ["Não sei","Básico","Intermediário","Fluente"],
-"Quantidade": ["16","15","4","0"]
+"Quantidade": ["15","15","4","0"]
 },
 {
 "Pergunta": "Língua estrangeira que sabe falar",
@@ -59,7 +59,7 @@
 "Id_sub": "3",
 "Resposta": ["A","B","C","D"],
 "Alternativa": ["Não sei","Básico","Intermediário","Fluente"],
-"Quantidade": ["34","1","0","0"]
+"Quantidade": ["33","1","0","0"]
 },
 {
 "Pergunta": "Língua estrangeira que sabe falar",
@@ -68,7 +68,7 @@
 "Id_sub": "4",
 "Resposta": ["A","B","C","D"],
 "Alternativa": ["Não sei","Básico","Intermediário","Fluente"],
-"Quantidade": ["33","1","1","0"]
+"Quantidade": ["32","1","1","0"]
 },
 {
 "Pergunta": "Língua estrangeira que sabe escrever",
@@ -77,7 +77,7 @@
 "Id_sub": "1",
 "Resposta": ["A","B","C","D"],
 "Alternativa": ["Não sei","Básico","Intermediário","Fluente"],
-"Quantidade": ["0","12","15","8"]
+"Quantidade": ["0","11","15","8"]
 },
 {
 "Pergunta": "Língua estrangeira que sabe escrever",
@@ -86,7 +86,7 @@
 "Id_sub": "2",
 "Resposta": ["A","B","C","D"],
 "Alternativa": ["Não sei","Básico","Intermediário","Fluente"],
-"Quantidade": ["17","15","3","0"]
+"Quantidade": ["16","15","3","0"]
 },
 {
 "Pergunta": "Língua estrangeira que sabe escrever",
@@ -95,7 +95,7 @@
 "Id_sub": "3",
 "Resposta": ["A","B","C","D"],
 "Alternativa": ["Não sei","Básico","Intermediário","Fluente"],
-"Quantidade": ["34","1","0","0"]
+"Quantidade": ["33","1","0","0"]
 },
 {
 "Pergunta": "Língua estrangeira que sabe escrever",
@@ -104,7 +104,7 @@
 "Id_sub": "4",
 "Resposta": ["A","B","C","D"],
 "Alternativa": ["Não sei","Básico","Intermediário","Fluente"],
-"Quantidade": ["33","1","1","0"]
+"Quantidade": ["32","1","1","0"]
 },
 {
 "Pergunta": "Avalie como foram as dificuldades que você encontrou na profissão",
@@ -113,7 +113,7 @@
 "Id_sub": "5",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["11","3","8","3","1"]
+"Quantidade": ["11","3","7","3","1"]
 },
 {
 "Pergunta": "Avalie como foram as dificuldades que você encontrou na profissão",
@@ -122,7 +122,7 @@
 "Id_sub": "6",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["6","5","11","2","2"]
+"Quantidade": ["6","5","10","2","2"]
 },
 {
 "Pergunta": "Avalie como foram as dificuldades que você encontrou na profissão",
@@ -131,7 +131,7 @@
 "Id_sub": "7",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["5","7","10","3","1"]
+"Quantidade": ["5","7","9","3","1"]
 },
 {
 "Pergunta": "Avalie como foram as dificuldades que você encontrou na profissão",
@@ -140,7 +140,7 @@
 "Id_sub": "8",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["4","5","12","3","2"]
+"Quantidade": ["4","5","12","3","1"]
 },
 {
 "Pergunta": "Avalie como foram as dificuldades que você encontrou na profissão",
@@ -149,7 +149,7 @@
 "Id_sub": "9",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["3","2","14","7","0"]
+"Quantidade": ["3","2","13","7","0"]
 },
 {
 "Pergunta": "Classifique os itens de acordo com a importância deles para entrada no mercado de trabalho",
@@ -158,7 +158,7 @@
 "Id_sub": "10",
 "Resposta": ["A","B","C","D","E","F"],
 "Alternativa": ["1","2","3","4","5","Não se aplica"],
-"Quantidade": ["7","3","4","4","4","0"]
+"Quantidade": ["6","3","4","4","4","0"]
 },
 {
 "Pergunta": "Classifique os itens de acordo com a importância deles para entrada no mercado de trabalho",
@@ -167,7 +167,7 @@
 "Id_sub": "11",
 "Resposta": ["A","B","C","D","E","F"],
 "Alternativa": ["1","2","3","4","5","Não se aplica"],
-"Quantidade": ["1","0","2","5","14","0"]
+"Quantidade": ["0","0","2","5","14","0"]
 },
 {
 "Pergunta": "Classifique os itens de acordo com a importância deles para entrada no mercado de trabalho",
@@ -176,7 +176,7 @@
 "Id_sub": "12",
 "Resposta": ["A","B","C","D","E","F"],
 "Alternativa": ["1","2","3","4","5","Não se aplica"],
-"Quantidade": ["2","0","7","4","9","0"]
+"Quantidade": ["1","0","7","4","9","0"]
 },
 {
 "Pergunta": "Classifique os itens de acordo com a importância deles para entrada no mercado de trabalho",
@@ -185,7 +185,7 @@
 "Id_sub": "13",
 "Resposta": ["A","B","C","D","E","F"],
 "Alternativa": ["1","2","3","4","5","Não se aplica"],
-"Quantidade": ["1","2","11","3","5","0"]
+"Quantidade": ["0","2","11","3","5","0"]
 },
 {
 "Pergunta": "Classifique os itens de acordo com a importância deles para entrada no mercado de trabalho",
@@ -194,7 +194,7 @@
 "Id_sub": "14",
 "Resposta": ["A","B","C","D","E","F"],
 "Alternativa": ["1","2","3","4","5","Não se aplica"],
-"Quantidade": ["3","5","7","2","3","2"]
+"Quantidade": ["2","5","7","2","3","2"]
 },
 {
 "Pergunta": "Classifique os itens de acordo com a importância deles para entrada no mercado de trabalho",
@@ -203,7 +203,7 @@
 "Id_sub": "15",
 "Resposta": ["A","B","C","D","E","F"],
 "Alternativa": ["1","2","3","4","5","Não se aplica"],
-"Quantidade": ["4","10","4","1","1","2"]
+"Quantidade": ["3","10","4","1","1","2"]
 },
 {
 "Pergunta": "Como os itens abaixo ofereceram uma base diferenciada comparada com os seus colegas de trabalho?",
@@ -212,7 +212,7 @@
 "Id_sub": "17",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["1","1","1","5","14"]
+"Quantidade": ["0","1","1","5","14"]
 },
 {
 "Pergunta": "Como os itens abaixo ofereceram uma base diferenciada comparada com os seus colegas de trabalho?",
@@ -221,7 +221,7 @@
 "Id_sub": "18",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["1","0","3","7","11"]
+"Quantidade": ["0","0","3","7","11"]
 },
 {
 "Pergunta": "Como os itens abaixo ofereceram uma base diferenciada comparada com os seus colegas de trabalho?",
@@ -230,7 +230,7 @@
 "Id_sub": "19",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["2","1","9","7","3"]
+"Quantidade": ["1","1","9","7","3"]
 },
 {
 "Pergunta": "Como os itens abaixo ofereceram uma base diferenciada comparada com os seus colegas de trabalho?",
@@ -239,7 +239,7 @@
 "Id_sub": "20",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["1","0","4","4","13"]
+"Quantidade": ["0","0","4","4","13"]
 },
 {
 "Pergunta": "Como os itens abaixo ofereceram uma base diferenciada comparada com os seus colegas de trabalho?",
@@ -248,7 +248,7 @@
 "Id_sub": "21",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["1","0","7","9","5"]
+"Quantidade": ["0","0","7","9","5"]
 },
 {
 "Pergunta": "Como os itens abaixo ofereceram uma base diferenciada comparada com os seus colegas de trabalho?",
@@ -257,7 +257,7 @@
 "Id_sub": "22",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["1","1","3","9","8"]
+"Quantidade": ["0","1","3","9","8"]
 },
 {
 "Pergunta": "Como os itens abaixo ofereceram uma base diferenciada comparada com os seus colegas de trabalho?",
@@ -266,7 +266,7 @@
 "Id_sub": "23",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["1","1","7","6","7"]
+"Quantidade": ["0","1","7","6","7"]
 },
 {
 "Pergunta": "Como os itens abaixo ofereceram uma base diferenciada comparada com os seus colegas de trabalho?",
@@ -275,7 +275,7 @@
 "Id_sub": "24",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["1","2","6","6","7"]
+"Quantidade": ["0","2","6","6","7"]
 },
 {
 "Pergunta": "Como os itens abaixo ofereceram uma base diferenciada comparada com os seus colegas de trabalho?",
@@ -284,7 +284,7 @@
 "Id_sub": "25",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["6","8","3","3","2"]
+"Quantidade": ["5","8","3","3","2"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -293,7 +293,7 @@
 "Id_sub": "26",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["16","5","0","0","1"]
+"Quantidade": ["15","5","0","0","1"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -302,7 +302,7 @@
 "Id_sub": "27",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["11","9","1","0","1"]
+"Quantidade": ["10","9","1","0","1"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -311,7 +311,7 @@
 "Id_sub": "28",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["3","4","3","8","4"]
+"Quantidade": ["2","4","3","8","4"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -320,7 +320,7 @@
 "Id_sub": "29",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["3","5","3","11","0"]
+"Quantidade": ["2","5","3","11","0"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -329,7 +329,7 @@
 "Id_sub": "30",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["2","9","4","7","0"]
+"Quantidade": ["1","9","4","7","0"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -338,7 +338,7 @@
 "Id_sub": "31",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["2","10","5","5","0"]
+"Quantidade": ["1","10","5","5","0"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -347,7 +347,7 @@
 "Id_sub": "32",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["14","5","1","1","1"]
+"Quantidade": ["13","5","1","1","1"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -356,7 +356,7 @@
 "Id_sub": "34",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["3","3","6","8","2"]
+"Quantidade": ["2","3","6","8","2"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -365,7 +365,7 @@
 "Id_sub": "36",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["14","6","1","0","1"]
+"Quantidade": ["13","6","1","0","1"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -374,7 +374,7 @@
 "Id_sub": "37",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["2","3","4","13","0"]
+"Quantidade": ["1","3","4","13","0"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -383,7 +383,7 @@
 "Id_sub": "38",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["20","1","0","0","1"]
+"Quantidade": ["19","1","0","0","1"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -392,7 +392,7 @@
 "Id_sub": "39",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["1","0","0","0","0"]
+"Quantidade": ["0","1","0","0","0"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -401,7 +401,7 @@
 "Id_sub": "40",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["2","5","2","13","0"]
+"Quantidade": ["1","5","2","13","0"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -410,7 +410,7 @@
 "Id_sub": "41",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["3","1","0","9","9"]
+"Quantidade": ["2","1","0","9","9"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -419,7 +419,7 @@
 "Id_sub": "42",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["5","5","0","4","8"]
+"Quantidade": ["4","5","0","4","8"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -428,7 +428,7 @@
 "Id_sub": "43",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["6","10","2","3","1"]
+"Quantidade": ["5","10","2","3","1"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -437,7 +437,7 @@
 "Id_sub": "44",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["5","4","3","2","8"]
+"Quantidade": ["4","4","3","2","8"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -446,7 +446,7 @@
 "Id_sub": "57",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["11","8","0","0","3"]
+"Quantidade": ["10","8","0","0","3"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -455,7 +455,7 @@
 "Id_sub": "65",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["3","4","4","11","0"]
+"Quantidade": ["2","4","4","11","0"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -464,7 +464,7 @@
 "Id_sub": "67",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["7","2","1","0","12"]
+"Quantidade": ["6","2","1","0","12"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -473,7 +473,7 @@
 "Id_sub": "109",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["3","5","5","8","1"]
+"Quantidade": ["2","5","5","8","1"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -482,7 +482,7 @@
 "Id_sub": "110",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["4","3","4","3","8"]
+"Quantidade": ["3","3","4","3","8"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -491,7 +491,7 @@
 "Id_sub": "111",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["4","3","8","7","0"]
+"Quantidade": ["3","3","8","7","0"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -500,7 +500,7 @@
 "Id_sub": "112",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["2","2","0","4","14"]
+"Quantidade": ["1","2","0","4","14"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -509,7 +509,7 @@
 "Id_sub": "113",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["12","6","1","2","1"]
+"Quantidade": ["11","6","1","2","1"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -518,7 +518,7 @@
 "Id_sub": "114",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["3","5","6","6","2"]
+"Quantidade": ["2","5","6","6","2"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -527,7 +527,7 @@
 "Id_sub": "115",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["8","8","5","1","0"]
+"Quantidade": ["7","8","5","1","0"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -536,7 +536,7 @@
 "Id_sub": "116",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["3","3","4","12","0"]
+"Quantidade": ["2","3","4","12","0"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -545,7 +545,7 @@
 "Id_sub": "117",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["2","3","3","4","10"]
+"Quantidade": ["1","3","3","4","10"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -554,7 +554,7 @@
 "Id_sub": "118",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["2","4","7","7","2"]
+"Quantidade": ["1","4","7","7","2"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -563,7 +563,7 @@
 "Id_sub": "119",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["2","5","8","7","0"]
+"Quantidade": ["1","5","8","7","0"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -572,7 +572,7 @@
 "Id_sub": "120",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["10","9","0","2","1"]
+"Quantidade": ["9","9","0","2","1"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -581,7 +581,7 @@
 "Id_sub": "121",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["3","2","5","12","0"]
+"Quantidade": ["2","2","5","12","0"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -590,7 +590,7 @@
 "Id_sub": "122",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["20","0","1","0","1"]
+"Quantidade": ["19","0","1","0","1"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -599,7 +599,7 @@
 "Id_sub": "123",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["13","1","1","0","7"]
+"Quantidade": ["12","1","1","0","7"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -608,7 +608,7 @@
 "Id_sub": "124",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["12","3","6","1","0"]
+"Quantidade": ["11","3","6","1","0"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -617,7 +617,7 @@
 "Id_sub": "125",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["6","4","1","2","9"]
+"Quantidade": ["5","4","1","2","9"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -626,7 +626,7 @@
 "Id_sub": "126",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["5","1","3","4","9"]
+"Quantidade": ["4","1","3","4","9"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -635,7 +635,7 @@
 "Id_sub": "127",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["5","10","4","2","1"]
+"Quantidade": ["4","10","4","2","1"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -644,7 +644,7 @@
 "Id_sub": "128",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["5","7","4","5","1"]
+"Quantidade": ["4","7","4","5","1"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -653,7 +653,7 @@
 "Id_sub": "129",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["2","2","3","6","9"]
+"Quantidade": ["1","2","3","6","9"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -662,7 +662,7 @@
 "Id_sub": "130",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Não fiz a disciplina","Não fiz a disciplina","Não fiz a disciplina","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["7","2","1","0","12"]
+"Quantidade": ["6","2","1","0","12"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
@@ -671,7 +671,7 @@
 "Id_sub": "131",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["2","1","2","0","17"]
+"Quantidade": ["1","1","2","0","17"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
@@ -680,7 +680,7 @@
 "Id_sub": "45",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["9","4","3","2","5"]
+"Quantidade": ["8","4","2","2","5"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
@@ -689,7 +689,7 @@
 "Id_sub": "46",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["4","1","4","4","10"]
+"Quantidade": ["4","1","3","4","9"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
@@ -698,7 +698,7 @@
 "Id_sub": "47",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["12","0","4","0","7"]
+"Quantidade": ["11","0","3","0","7"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
@@ -707,7 +707,7 @@
 "Id_sub": "48",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["16","0","5","1","1"]
+"Quantidade": ["15","0","4","1","1"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
@@ -716,7 +716,7 @@
 "Id_sub": "49",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["18","0","2","2","1"]
+"Quantidade": ["17","0","1","2","1"]
 },
 {
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
@@ -725,6 +725,500 @@
 "Id_sub": "50",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["14","0","3","1","5"]
+"Quantidade": ["13","0","2","1","5"]
 },
 {
+"Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
+"SubPergunta": "Ruby",
+"Id_perg": "50",
+"Id_sub": "51",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["17","0","2","2","0"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
+"SubPergunta": "PHP",
+"Id_perg": "50",
+"Id_sub": "52",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["14","0","4","0","3"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
+"SubPergunta": "R",
+"Id_perg": "50",
+"Id_sub": "53",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["16","0","4","1","0"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
+"SubPergunta": "Objective-C",
+"Id_perg": "50",
+"Id_sub": "54",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["1","0","0","0","0"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
+"SubPergunta": "Kotlin",
+"Id_perg": "50",
+"Id_sub": "55",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["16","1","1","1","2"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
+"SubPergunta": "Delphi",
+"Id_perg": "50",
+"Id_sub": "56",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["19","0","2","0","0"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
+"SubPergunta": "TypeScript",
+"Id_perg": "50",
+"Id_sub": "58",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["12","1","6","0","2"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
+"SubPergunta": "Go",
+"Id_perg": "50",
+"Id_sub": "59",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["17","0","3","1","0"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
+"SubPergunta": "ASP",
+"Id_perg": "50",
+"Id_sub": "60",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["15","1","3","1","1"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
+"SubPergunta": "Pascal",
+"Id_perg": "50",
+"Id_sub": "61",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["19","0","2","0","0"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
+"SubPergunta": "Visual Basic",
+"Id_perg": "50",
+"Id_sub": "62",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["18","0","3","0","0"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
+"SubPergunta": ".Net",
+"Id_perg": "50",
+"Id_sub": "63",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["1","0","0","0","0"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
+"SubPergunta": "Assembler",
+"Id_perg": "50",
+"Id_sub": "64",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["1","0","0","0","0"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
+"SubPergunta": "Cobol",
+"Id_perg": "50",
+"Id_sub": "66",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["19","0","2","0","0"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
+"SubPergunta": "ML",
+"Id_perg": "50",
+"Id_sub": "68",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["17","0","2","1","1"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
+"SubPergunta": "Verilog",
+"Id_perg": "50",
+"Id_sub": "69",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["18","1","1","0","1"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
+"SubPergunta": "Outras",
+"Id_perg": "50",
+"Id_sub": "70",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["9","1","7","0","4"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza os seguintes SGBD no seu trabalho?",
+"SubPergunta": "Mysql",
+"Id_perg": "51",
+"Id_sub": "71",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["1","0","0","0","0"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza os seguintes SGBD no seu trabalho?",
+"SubPergunta": "Oracle",
+"Id_perg": "51",
+"Id_sub": "72",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["1","0","0","0","0"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza os seguintes SGBD no seu trabalho?",
+"SubPergunta": "Microsoft Sql Server",
+"Id_perg": "51",
+"Id_sub": "73",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["11","0","3","0","7"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza os seguintes SGBD no seu trabalho?",
+"SubPergunta": "PostgreSQL",
+"Id_perg": "51",
+"Id_sub": "74",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["17","0","2","1","1"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza os seguintes SGBD no seu trabalho?",
+"SubPergunta": "MongoDB",
+"Id_perg": "51",
+"Id_sub": "75",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["14","1","2","1","3"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza os seguintes SGBD no seu trabalho?",
+"SubPergunta": "Db2",
+"Id_perg": "51",
+"Id_sub": "76",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["17","0","1","0","3"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza os seguintes SGBD no seu trabalho?",
+"SubPergunta": "Microsoft Acces",
+"Id_perg": "51",
+"Id_sub": "77",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["19","0","2","0","0"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza os seguintes SGBD no seu trabalho?",
+"SubPergunta": "Teradata",
+"Id_perg": "51",
+"Id_sub": "78",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["20","0","1","0","0"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza os seguintes SGBD no seu trabalho?",
+"SubPergunta": "Paradx",
+"Id_perg": "51",
+"Id_sub": "79",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["1","0","0","0","0"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza os seguintes SGBD no seu trabalho?",
+"SubPergunta": "Cache",
+"Id_perg": "51",
+"Id_sub": "80",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["1","0","0","0","0"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza os seguintes SGBD no seu trabalho?",
+"SubPergunta": "Outros",
+"Id_perg": "51",
+"Id_sub": "81",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["16","0","4","0","1"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza os seguintes sistemas operacionais no seu trabalho?",
+"SubPergunta": "Windows",
+"Id_perg": "52",
+"Id_sub": "82",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["3","2","2","1","13"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza os seguintes sistemas operacionais no seu trabalho?",
+"SubPergunta": "Linux",
+"Id_perg": "52",
+"Id_sub": "83",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["10","0","1","1","9"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza os seguintes sistemas operacionais no seu trabalho?",
+"SubPergunta": "Netware",
+"Id_perg": "52",
+"Id_sub": "84",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["20","0","1","0","0"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza os seguintes sistemas operacionais no seu trabalho?",
+"SubPergunta": "Outros",
+"Id_perg": "52",
+"Id_sub": "86",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["1","0","0","0","0"]
+},
+{
+"Pergunta": "Com qual frequência você utiliza os seguintes sistemas operacionais no seu trabalho?",
+"SubPergunta": "MacOS",
+"Id_perg": "52",
+"Id_sub": "108",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["12","0","3","0","6"]
+},
+{
+"Pergunta": "Quais esporte abaixo você pratica? ",
+"SubPergunta": "Futebol",
+"Id_perg": "57",
+"Id_sub": "87",
+"Resposta": ["A","B"],
+"Alternativa": ["Sim","Não"],
+"Quantidade": ["4","9"]
+},
+{
+"Pergunta": "Quais esporte abaixo você pratica? ",
+"SubPergunta": "Atletismo",
+"Id_perg": "57",
+"Id_sub": "88",
+"Resposta": ["A","B"],
+"Alternativa": ["Sim","Não"],
+"Quantidade": ["1","12"]
+},
+{
+"Pergunta": "Quais esporte abaixo você pratica? ",
+"SubPergunta": "Vôlei",
+"Id_perg": "57",
+"Id_sub": "89",
+"Resposta": ["A","B"],
+"Alternativa": ["Sim","Não"],
+"Quantidade": ["0","13"]
+},
+{
+"Pergunta": "Quais esporte abaixo você pratica? ",
+"SubPergunta": "Basquete",
+"Id_perg": "57",
+"Id_sub": "90",
+"Resposta": ["A","B"],
+"Alternativa": ["Sim","Não"],
+"Quantidade": ["2","11"]
+},
+{
+"Pergunta": "Quais esporte abaixo você pratica? ",
+"SubPergunta": "Musculação",
+"Id_perg": "57",
+"Id_sub": "91",
+"Resposta": ["A","B"],
+"Alternativa": ["Sim","Não"],
+"Quantidade": ["6","7"]
+},
+{
+"Pergunta": "Quais esporte abaixo você pratica? ",
+"SubPergunta": "Outro",
+"Id_perg": "57",
+"Id_sub": "92",
+"Resposta": ["A","B"],
+"Alternativa": ["Sim","Não"],
+"Quantidade": ["7","6"]
+},
+{
+"Pergunta": "Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha em cursar o Bacharel em Ciência da Computação",
+"SubPergunta": "Mercado de trabalho",
+"Id_perg": "58",
+"Id_sub": "93",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["0","0","3","4","20"]
+},
+{
+"Pergunta": "Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha em cursar o Bacharel em Ciência da Computação",
+"SubPergunta": "Interesse na área",
+"Id_perg": "58",
+"Id_sub": "94",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["0","0","2","3","22"]
+},
+{
+"Pergunta": "Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha em cursar o Bacharel em Ciência da Computação",
+"SubPergunta": "Curso fácil de entrar",
+"Id_perg": "58",
+"Id_sub": "95",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["14","7","2","3","1"]
+},
+{
+"Pergunta": "Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha em cursar o Bacharel em Ciência da Computação",
+"SubPergunta": "Curso fácil de fazer",
+"Id_perg": "58",
+"Id_sub": "96",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["23","3","1","0","0"]
+},
+{
+"Pergunta": "Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha em cursar o Bacharel em Ciência da Computação",
+"SubPergunta": "Outras",
+"Id_perg": "58",
+"Id_sub": "98",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["4","1","14","4","4"]
+},
+{
+"Pergunta": "Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha de estudar na Universidade Federal de Viçosa - Campus Florestal",
+"SubPergunta": "Localidade",
+"Id_perg": "59",
+"Id_sub": "99",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["0","3","5","3","16"]
+},
+{
+"Pergunta": "Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha de estudar na Universidade Federal de Viçosa - Campus Florestal",
+"SubPergunta": "Infraestrutura",
+"Id_perg": "59",
+"Id_sub": "100",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["7","9","9","1","1"]
+},
+{
+"Pergunta": "Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha de estudar na Universidade Federal de Viçosa - Campus Florestal",
+"SubPergunta": "Menor nota para entrar",
+"Id_perg": "59",
+"Id_sub": "101",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["7","4","7","6","3"]
+},
+{
+"Pergunta": "Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha de estudar na Universidade Federal de Viçosa - Campus Florestal",
+"SubPergunta": "Outras",
+"Id_perg": "59",
+"Id_sub": "102",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["5","2","14","3","3"]
+},
+{
+"Pergunta": "Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha de estudar na Universidade Federal de Viçosa - Campus Florestal",
+"SubPergunta": "Custo de vida",
+"Id_perg": "59",
+"Id_sub": "136",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["1","5","9","3","9"]
+},
+{
+"Pergunta": "Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha de estudar na Universidade Federal de Viçosa - Campus Florestal",
+"SubPergunta": "Possibilidade de bolsa",
+"Id_perg": "59",
+"Id_sub": "137",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["9","4","7","4","3"]
+},
+{
+"Pergunta": "Como você classifica os itens abaixo",
+"SubPergunta": "Aulas",
+"Id_perg": "62",
+"Id_sub": "103",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["Péssimo","Ruim","Indiferente","Bom","Ótimo"],
+"Quantidade": ["0","0","0","16","11"]
+},
+{
+"Pergunta": "Como você classifica os itens abaixo",
+"SubPergunta": "Laboratórios",
+"Id_perg": "62",
+"Id_sub": "104",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["Péssimo","Ruim","Indiferente","Bom","Ótimo"],
+"Quantidade": ["1","5","8","11","2"]
+},
+{
+"Pergunta": "Como você classifica os itens abaixo",
+"SubPergunta": "Biblioteca",
+"Id_perg": "62",
+"Id_sub": "105",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["Péssimo","Ruim","Indiferente","Bom","Ótimo"],
+"Quantidade": ["0","8","7","9","3"]
+},
+{
+"Pergunta": "Como você classifica os itens abaixo",
+"SubPergunta": "Salas de aula",
+"Id_perg": "62",
+"Id_sub": "106",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["Péssimo","Ruim","Indiferente","Bom","Ótimo"],
+"Quantidade": ["0","2","7","15","3"]
+},
+{
+"Pergunta": "Como você classifica os itens abaixo",
+"SubPergunta": "Outras dependências",
+"Id_perg": "62",
+"Id_sub": "107",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["Péssimo","Ruim","Indiferente","Bom","Ótimo"],
+"Quantidade": ["0","5","10","10","2"]
+}]
