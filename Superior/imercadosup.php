@@ -43,10 +43,10 @@
 	$opt49F = filter_input (INPUT_POST, '49F', FILTER_SANITIZE_STRING);
 	$opt49G = filter_input (INPUT_POST, '49G', FILTER_SANITIZE_STRING);
 	$opt49H = filter_input (INPUT_POST, '49H', FILTER_SANITIZE_STRING);	
-	$opt49I = filter_input (INPUT_POST, '49I', FILTER_SANITIZE_STRING);
+    $opt49I = filter_input (INPUT_POST, '49I', FILTER_SANITIZE_STRING);
 	$opt49K = filter_input (INPUT_POST, '49K', FILTER_SANITIZE_STRING);
 	$opt49L = filter_input (INPUT_POST, '49L', FILTER_SANITIZE_STRING);
-	$opt49M = filter_input (INPUT_POST, '49M', FILTER_SANITIZE_STRING);
+    $opt49M = filter_input (INPUT_POST, '49M', FILTER_SANITIZE_STRING);
 	$opt49N = filter_input (INPUT_POST, '49N', FILTER_SANITIZE_STRING);
 	$opt49O = filter_input (INPUT_POST, '49O', FILTER_SANITIZE_STRING);
 	$opt49P = filter_input (INPUT_POST, '49P', FILTER_SANITIZE_STRING);
@@ -77,7 +77,7 @@
     $opt49AO = filter_input (INPUT_POST, '49AO', FILTER_SANITIZE_STRING);
     $opt49AP = filter_input (INPUT_POST, '49AP', FILTER_SANITIZE_STRING);
     $opt49AQ = filter_input (INPUT_POST, '49AQ', FILTER_SANITIZE_STRING);
-    $opt49AR = filter_input (INPUT_POST, '49AR', FILTER_SANITIZE_STRING);
+    $opt49AR = filter_input (INPUT_POST, '49AR', FILTER_SANITIZE_STRING);    
 
     $insert47A = "INSERT INTO resposta(cpf, resposta, id_perguntas, id_alternativa, id_subpergunta) VALUES ('$cpf', '$opt47A', (SELECT id_perguntas FROM pergunta where numeracao = 47),(SELECT id_alternativa FROM pergunta NATURAL JOIN subpergunta_has_pergunta NATURAL JOIN subpergunta NATURAL JOIN subpergunta_has_alternativa NATURAL JOIN alternativa WHERE numeracao = 47 AND numero = 'A' AND opcao = '$opt47A'), (SELECT id_subpergunta FROM pergunta NATURAL JOIN subpergunta_has_pergunta NATURAL JOIN subpergunta WHERE numero = 'A' AND numeracao = 47));";    
     $insert47B = "INSERT INTO resposta(cpf, resposta, id_perguntas, id_alternativa, id_subpergunta) VALUES ('$cpf', '$opt47B', (SELECT id_perguntas FROM pergunta where numeracao = 47),(SELECT id_alternativa FROM pergunta NATURAL JOIN subpergunta_has_pergunta NATURAL JOIN subpergunta NATURAL JOIN subpergunta_has_alternativa NATURAL JOIN alternativa WHERE numeracao = 47 AND numero = 'B' AND opcao = '$opt47B'), (SELECT id_subpergunta FROM pergunta NATURAL JOIN subpergunta_has_pergunta NATURAL JOIN subpergunta WHERE numero = 'B' AND numeracao = 47));";
