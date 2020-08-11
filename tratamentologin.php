@@ -21,7 +21,7 @@
 
         $login = "SELECT *
                   FROM login
-                  WHERE cpf = '$cpf' AND Tipo = '$curso'";
+                  WHERE cpf = '$cpf'";
 
         $verifica = mysqli_query($conn, $login);
         if (mysqli_num_rows($verifica) >= 1){
@@ -45,7 +45,7 @@
         
         $login = "SELECT *
                   FROM login
-                  WHERE cpf = '$cpf' AND Tipo = '$curso'";
+                  WHERE cpf = '$cpf'";
 
         $verifica = mysqli_query($conn, $login);
         if (mysqli_num_rows($verifica) >= 1){
@@ -67,7 +67,7 @@
 
         $login = "SELECT *
                   FROM login
-                  WHERE cpf = '$cpf' AND Tipo = '$curso'";
+                  WHERE cpf = '$cpf'";
 
         $verifica = mysqli_query($conn, $login);
         if (mysqli_num_rows($verifica) >= 1){

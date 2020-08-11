@@ -192,7 +192,7 @@
                 <option value="5">
               </datalist><br>
               
-              Assembler<br><input type = "range" list = "tickmarks" name = "41S" min = "1" max = "5"/> 
+              Assembly<br><input type = "range" list = "tickmarks" name = "41S" min = "1" max = "5"/> 
               <datalist id="tickmarks">
                 <option value="1">
                 <option value="2">

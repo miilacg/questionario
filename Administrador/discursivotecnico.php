@@ -34,7 +34,7 @@
                     <?php
                         //$_POST["questao"] é o id da pergunta
                         if (isset($_POST["questao"])){//verifica se a variavel foi definido                                
-                            foreach($_POST["questao"] as $questao){ //percorre o vetor  
+                            foreach($_POST["questao"] as $questao){ //percorre o vetor                                  
                                 $selecao = "SELECT questao, resposta FROM pergunta NATURAL JOIN resposta where id_perguntas = '$questao'";
                                 $resultadoSelecao = mysqli_query($conn, $selecao);
                                 $linha = mysqli_fetch_assoc($resultadoSelecao);

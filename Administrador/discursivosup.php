@@ -2,7 +2,7 @@
     include 'vAdministrador.php';
     include '../acessobancosup.php';
 
-    $consulta = sprintf("SELECT questao, id_perguntas FROM `pergunta` WHERE id_perguntas not in (SELECT pergunta.id_perguntas FROM pergunta NATURAL JOIN pergunta_has_alternativa UNION SELECT pergunta.id_perguntas FROM pergunta NATURAL JOIN subpergunta_has_pergunta NATURAL JOIN subpergunta NATURAL JOIN subpergunta_has_alternativa)");
+    $consulta = sprintf("SELECT questao, id_perguntas FROM `pergunta` WHERE id_perguntas");
     $dados = mysqli_query($conn, $consulta);// transforma os dados em um array
     $linha = mysqli_fetch_assoc($dados);// calcula quantos dados retornaram
     $total = mysqli_num_rows($dados);

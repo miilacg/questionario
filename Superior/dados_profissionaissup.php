@@ -146,7 +146,7 @@
                                   <option value="5">
                                 </datalist><br>
                                 
-                                Língua estrangeira<br><input type = "range" list = "tickmarks" name = "perg42C" id = "perg42" min = "1" max = "5"/> 
+                                Fluência em línguas estrangeiras<br><input type = "range" list = "tickmarks" name = "perg42C" id = "perg42" min = "1" max = "5"/> 
                                 <datalist id="tickmarks">
                                   <option value="1">
                                   <option value="2">
