@@ -1,4 +1,173 @@
 [{
+"Tipo": "pie",
+"Pergunta": "Ano de nascimento",
+"Id_perg": "1",
+"Resposta": ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X"],
+"Alternativa": ["Antes de 1980","1980","1981","1982","1983","1984","1985","1986","1987","1988","1989","1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","2000","2001","2002"],
+"Quantidade": ["0","0","0","1","0","0","0","1","0","0","4","0","1","3","4","5","4","7","4","1","0","0","0","0"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Ano de ingresso no curso",
+"Id_perg": "2",
+"Resposta": ["A","B","C","D","E","F"],
+"Alternativa": ["2012","2013","2014","2015","2016","2017"],
+"Quantidade": ["8","6","13","8","0","0"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Ano de conclusão do curso",
+"Id_perg": "3",
+"Resposta": ["A","B","C","D","E","F","G","H"],
+"Alternativa": ["2013","2014","2015","2016","2017","2018","2019","2020"],
+"Quantidade": ["0","0","1","4","7","18","5","0"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Estado civil",
+"Id_perg": "4",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["Solteiro","União estável","Casado","Divorciado","Viúvo"],
+"Quantidade": ["29","3","3","0","0"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Sexo",
+"Id_perg": "5",
+"Resposta": ["A","B","C"],
+"Alternativa": ["Feminino","Masculino","Prefiro não informar"],
+"Quantidade": ["7","28","0"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "País onde mora",
+"Id_perg": "6",
+"Resposta": ["BR","CA","ES","EUA","FR","IT","O","PT"],
+"Alternativa": ["Brasil","Canadá","Espanha","Estados Unidos","França","Itália","Outro","Portugal"],
+"Quantidade": ["35","0","0","0","0","0","0","0"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Estado onde mora",
+"Id_perg": "7",
+"Resposta": ["AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO"],
+"Alternativa": ["Acre","Alagoas","Amazonas","Amapá","Bahia","Ceará","Distrito Federal","Espírito Santo","Goiás","Maranhão","Minas Gerais","Mato Grosso do Sul","Mato Grosso","Pará","Paraná","Pernambuco","Piauí","Paraiba","Rio de Janeiro","Rio Grande do Norte","Rondonia","Roraima","Rio Grande do Sul","Santa Catarina","Sergipe","São Paulo","Tocantins"],
+"Quantidade": ["0","0","0","0","0","0","0","0","0","0","31","0","0","0","0","0","0","0","0","0","0","0","0","0","0","4","0"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Você fez curso técnico antes da graduação?",
+"Id_perg": "8",
+"Resposta": ["A","B"],
+"Alternativa": ["Sim","Não"],
+"Quantidade": ["17","17"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "O curso técnico foi na área da computação?",
+"Id_perg": "9",
+"Resposta": ["A","B","C"],
+"Alternativa": ["Sim","Outra área, mas na área das exatas","Outra área diferente"],
+"Quantidade": ["11","3","3"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "O curso técnico auxiliou na gradução?",
+"Id_perg": "10",
+"Resposta": ["A","B","C"],
+"Alternativa": ["Ajudou muito","Ajudou pouco","Não ajudou"],
+"Quantidade": ["10","3","1"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Você publicou artigo durante a graduação?",
+"Id_perg": "11",
+"Resposta": ["A","B","C","D"],
+"Alternativa": ["Sim. Em uma revista","Sim. Em um congresso","Sim. Em uma revista e em um congresso","Não"],
+"Quantidade": ["1","12","4","17"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Qual foi o formato da sua defesa de TCC?",
+"Id_perg": "12",
+"Resposta": ["A","B"],
+"Alternativa": ["Artigo","Monografia"],
+"Quantidade": ["32","2"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Fez estágio na área da computação durante a graduação?",
+"Id_perg": "13",
+"Resposta": ["A","B"],
+"Alternativa": ["Sim","Não"],
+"Quantidade": ["8","26"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Participou da Empresa Jr. (SetApp) na graduação?",
+"Id_perg": "14",
+"Resposta": ["A","B","C","D","E","F"],
+"Alternativa": ["Sim. Como diretor","Sim. Como gerente","Sim. Efetivo","Sim. Em outro cargo","Sim. Em mais de uma função","Não."],
+"Quantidade": ["7","0","3","1","3","20"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Você participou como membro discente em entidades representativas de discentes?",
+"Id_perg": "15",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["Sim. Na comissão coordenadora do curso","Sim. No DCE","Sim. Em ambas as entidade","Sim. Em outra entidade","Não"],
+"Quantidade": ["3","0","1","4","26"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Você participou de algum projeto de iniciação científica?",
+"Id_perg": "16",
+"Resposta": ["A","B","C","D"],
+"Alternativa": ["Sim. Com bolsa","Sim. Sem bolsa","Não","Sim. Com e sem bolsa."],
+"Quantidade": ["11","7","5","11"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Você participou de algum projeto de extensão?",
+"Id_perg": "17",
+"Resposta": ["A","B","C","D"],
+"Alternativa": ["Sim. Com bolsa","Sim. Sem bolsa","Não","Sim. Com e sem bolsa."],
+"Quantidade": ["3","3","27","1"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Você participou de algum projeto de ensino?",
+"Id_perg": "18",
+"Resposta": ["A","B","C","D"],
+"Alternativa": ["Sim. Com bolsa","Sim. Sem bolsa","Não","Sim. Com e sem bolsa."],
+"Quantidade": ["2","3","28","1"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Você foi monitor ou tutor em alguma disciplina?",
+"Id_perg": "19",
+"Resposta": ["A","B","C","D"],
+"Alternativa": ["Sim. De uma matéria específica do curso","Sim. De uma matéria de outro curso","Sim. De ambos","Não"],
+"Quantidade": ["10","2","2","20"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Você fez intercâmbio durante a gradução?",
+"Id_perg": "20",
+"Resposta": ["A","B","C"],
+"Alternativa": ["Sim. No Brasil","Sim. No exterior","Não"],
+"Quantidade": ["0","3","31"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Você continuou os seus estudos?",
+"Id_perg": "22",
+"Resposta": ["A","B","C","D","E","F"],
+"Alternativa": ["Não","Outra graduação","Pós-graduação","Mestrado","Doutorado","Outra formação"],
+"Quantidade": ["18","0","2","13","1","0"]
+},
+{
+"Tipo": "bar",
 "Pergunta": "Língua estrangeira que sabe ler",
 "SubPergunta": "Inglês",
 "Id_perg": "23",
@@ -8,6 +177,7 @@
 "Quantidade": ["0","3","21","10"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Língua estrangeira que sabe ler",
 "SubPergunta": "Espanhol",
 "Id_perg": "23",
@@ -17,6 +187,7 @@
 "Quantidade": ["6","21","7","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Língua estrangeira que sabe ler",
 "SubPergunta": "Italiano",
 "Id_perg": "23",
@@ -26,6 +197,7 @@
 "Quantidade": ["32","2","0","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Língua estrangeira que sabe ler",
 "SubPergunta": "Francês",
 "Id_perg": "23",
@@ -35,6 +207,7 @@
 "Quantidade": ["31","1","1","1"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Língua estrangeira que sabe falar",
 "SubPergunta": "Inglês",
 "Id_perg": "24",
@@ -44,6 +217,7 @@
 "Quantidade": ["1","11","14","8"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Língua estrangeira que sabe falar",
 "SubPergunta": "Espanhol",
 "Id_perg": "24",
@@ -53,6 +227,7 @@
 "Quantidade": ["15","15","4","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Língua estrangeira que sabe falar",
 "SubPergunta": "Italiano",
 "Id_perg": "24",
@@ -62,6 +237,7 @@
 "Quantidade": ["33","1","0","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Língua estrangeira que sabe falar",
 "SubPergunta": "Francês",
 "Id_perg": "24",
@@ -71,6 +247,7 @@
 "Quantidade": ["32","1","1","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Língua estrangeira que sabe escrever",
 "SubPergunta": "Inglês",
 "Id_perg": "25",
@@ -80,6 +257,7 @@
 "Quantidade": ["0","11","15","8"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Língua estrangeira que sabe escrever",
 "SubPergunta": "Espanhol",
 "Id_perg": "25",
@@ -89,6 +267,7 @@
 "Quantidade": ["16","15","3","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Língua estrangeira que sabe escrever",
 "SubPergunta": "Italiano",
 "Id_perg": "25",
@@ -98,6 +277,7 @@
 "Quantidade": ["33","1","0","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Língua estrangeira que sabe escrever",
 "SubPergunta": "Francês",
 "Id_perg": "25",
@@ -107,6 +287,119 @@
 "Quantidade": ["32","1","1","0"]
 },
 {
+"Tipo": "pie",
+"Pergunta": "Quantos cursos/treinamentos você costuma fazer por ano?",
+"Id_perg": "26",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["0","1","2","3","Mais de 3"],
+"Quantidade": ["5","11","9","2","7"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Quantas palestras/congressos você costuma ir por ano?",
+"Id_perg": "27",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["0","1","2","3","Mais de 3"],
+"Quantidade": ["5","12","3","4","10"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Você estaria disposto a participar como palestrante da semana acadêmica do curso que é realizada anualmente no mês de maio?",
+"Id_perg": "28",
+"Resposta": ["A","B"],
+"Alternativa": ["Sim","Não"],
+"Quantidade": ["13","21"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Você estaria disposto a ministrar um minicurso da semana acadêmica do curso que é realizada anualmente no mês de maio?",
+"Id_perg": "30",
+"Resposta": ["A","B"],
+"Alternativa": ["Sim","Não"],
+"Quantidade": ["12","22"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Você já trabalhou?",
+"Id_perg": "32",
+"Resposta": ["A","B"],
+"Alternativa": ["Sim","Não"],
+"Quantidade": ["28","3"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Quando foi o início da sua atividade profissional?",
+"Id_perg": "33",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["Antes da graduação","Durante a graduação","Até um ano depois da formatura","1 a 3 anos depois da formatura","Mais de 3 anos depois da formatura"],
+"Quantidade": ["7","4","14","3","0"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Como obteve o primeiro emprego?",
+"Id_perg": "34",
+"Resposta": ["A","B","C","D","E","F"],
+"Alternativa": ["Abriu uma empresa","Enviou currículo e foi selecionado","Fez estágio e foi admitido ao término do mesmo","Indicação de um amigo","Indicação de um professor","Outro"],
+"Quantidade": ["1","14","1","6","4","2"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Você está trabalhando?",
+"Id_perg": "35",
+"Resposta": ["A","B"],
+"Alternativa": ["Sim","Não"],
+"Quantidade": ["25","3"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Qual o seu vínculo empregatício?",
+"Id_perg": "36",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["Autônomo","Empregado com carteira assinada","Empregado sem carteira assinada","Empregador","Outro"],
+"Quantidade": ["1","20","2","0","2"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Qual a área que você atua?",
+"Id_perg": "37",
+"Resposta": ["A","B","C","D","E","F","G","H","I","J","K"],
+"Alternativa": ["Informática/Sistemas/Tecnologia","Planejamento/Desenvolvimento/Análise","Industrial/Produção/Manutenção","Acadêmica","Administração","Comercial/Vendas","Consultoria","Jurídica/Legal","Presidência/Diretoria/Gerência Geral","Telecomunicações","Outro"],
+"Quantidade": ["12","12","0","0","0","0","1","0","0","0","0"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "A função que você exerce está alinhada com a Ciência da Computação?",
+"Id_perg": "38",
+"Resposta": ["A","B"],
+"Alternativa": ["Sim","Não"],
+"Quantidade": ["25","0"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Qual o cargo você ocupa?",
+"Id_perg": "39",
+"Resposta": ["A","B","C","D","E","F","G","H","I","J"],
+"Alternativa": ["Acadêmico","Administrador de banco de dados","Administrador de redes","Analista de sistemas","Coordenador de projetos","Diretor","Gerente","Programador","Sócio/ Proprietário","Outro"],
+"Quantidade": ["0","0","0","10","1","0","0","9","0","5"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Quantas horas você trabalha por semana?",
+"Id_perg": "40",
+"Resposta": ["A","B","C","D"],
+"Alternativa": ["Menos de 40","Entre 40 e 44","Entre 45 e 48","Mais de 48"],
+"Quantidade": ["5","20","0","0"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Qual a sua faixa salarial bruta?",
+"Id_perg": "41",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["Menos de R$2000,00","Entre R$2000,00 e R$5000,00","Entre R$5000,00 e R$8000,00","Entre R$8000,00 e R$12000,00","Mais de R$12000,00"],
+"Quantidade": ["4","16","3","1","1"]
+},
+{
+"Tipo": "bar",
 "Pergunta": "Avalie como foram as dificuldades que você encontrou na profissão",
 "SubPergunta": "Motivação da equipe",
 "Id_perg": "42",
@@ -116,6 +409,7 @@
 "Quantidade": ["11","3","7","3","1"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Avalie como foram as dificuldades que você encontrou na profissão",
 "SubPergunta": "Apresentação em público",
 "Id_perg": "42",
@@ -125,8 +419,9 @@
 "Quantidade": ["6","5","10","2","2"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Avalie como foram as dificuldades que você encontrou na profissão",
-"SubPergunta": "Língua estrangeira",
+"SubPergunta": "Fluência em línguas estrangeiras",
 "Id_perg": "42",
 "Id_sub": "7",
 "Resposta": ["A","B","C","D","E"],
@@ -134,6 +429,7 @@
 "Quantidade": ["5","7","9","3","1"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Avalie como foram as dificuldades que você encontrou na profissão",
 "SubPergunta": "Falta de cursos relacionados a área",
 "Id_perg": "42",
@@ -143,6 +439,7 @@
 "Quantidade": ["4","5","12","3","1"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Avalie como foram as dificuldades que você encontrou na profissão",
 "SubPergunta": "Outras",
 "Id_perg": "42",
@@ -152,60 +449,31 @@
 "Quantidade": ["3","2","13","7","0"]
 },
 {
-"Pergunta": "Classifique os itens de acordo com a importância deles para entrada no mercado de trabalho",
-"SubPergunta": "Instituição de ensino",
-"Id_perg": "47",
-"Id_sub": "10",
-"Resposta": ["A","B","C","D","E","F"],
-"Alternativa": ["1","2","3","4","5","Não se aplica"],
-"Quantidade": ["6","3","4","4","4","0"]
+"Tipo": "pie",
+"Pergunta": "Por que você não está empregado?",
+"Id_perg": "44",
+"Resposta": ["A","B","C"],
+"Alternativa": ["Falta de oportunidade","Não preciso/Não quero","Me dedico aos estudos"],
+"Quantidade": ["0","0","6"]
 },
 {
-"Pergunta": "Classifique os itens de acordo com a importância deles para entrada no mercado de trabalho",
-"SubPergunta": "Trabalho em equipe",
-"Id_perg": "47",
-"Id_sub": "11",
-"Resposta": ["A","B","C","D","E","F"],
-"Alternativa": ["1","2","3","4","5","Não se aplica"],
-"Quantidade": ["0","0","2","5","14","0"]
+"Tipo": "pie",
+"Pergunta": "Qual o ramo da empresa que você trabalha?",
+"Id_perg": "45",
+"Resposta": ["H","I","J"],
+"Alternativa": ["Setor público","Tecnologia da informação","Telecomunicações"],
+"Quantidade": ["3","15","1"]
 },
 {
-"Pergunta": "Classifique os itens de acordo com a importância deles para entrada no mercado de trabalho",
-"SubPergunta": "Experiência no mercado",
-"Id_perg": "47",
-"Id_sub": "12",
-"Resposta": ["A","B","C","D","E","F"],
-"Alternativa": ["1","2","3","4","5","Não se aplica"],
-"Quantidade": ["1","0","7","4","9","0"]
+"Tipo": "pie",
+"Pergunta": "Quantas pessoas trabalham na empresa?",
+"Id_perg": "46",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["Menos de 10","Entre 10 e 30","Entre 31 e 50","Entre 51 e 100","Mais de 100"],
+"Quantidade": ["0","2","1","3","18"]
 },
 {
-"Pergunta": "Classifique os itens de acordo com a importância deles para entrada no mercado de trabalho",
-"SubPergunta": "Fluência em línguas",
-"Id_perg": "47",
-"Id_sub": "13",
-"Resposta": ["A","B","C","D","E","F"],
-"Alternativa": ["1","2","3","4","5","Não se aplica"],
-"Quantidade": ["0","2","11","3","5","0"]
-},
-{
-"Pergunta": "Classifique os itens de acordo com a importância deles para entrada no mercado de trabalho",
-"SubPergunta": "Disponibilidade para trabalhar horas extras",
-"Id_perg": "47",
-"Id_sub": "14",
-"Resposta": ["A","B","C","D","E","F"],
-"Alternativa": ["1","2","3","4","5","Não se aplica"],
-"Quantidade": ["2","5","7","2","3","2"]
-},
-{
-"Pergunta": "Classifique os itens de acordo com a importância deles para entrada no mercado de trabalho",
-"SubPergunta": "Mestrado/Doutorado/Especialização",
-"Id_perg": "47",
-"Id_sub": "15",
-"Resposta": ["A","B","C","D","E","F"],
-"Alternativa": ["1","2","3","4","5","Não se aplica"],
-"Quantidade": ["3","10","4","1","1","2"]
-},
-{
+"Tipo": "bar",
 "Pergunta": "Como os itens abaixo ofereceram uma base diferenciada comparada com os seus colegas de trabalho?",
 "SubPergunta": "Aprendizado de novas técnicas",
 "Id_perg": "48",
@@ -215,6 +483,7 @@
 "Quantidade": ["0","1","1","5","14"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Como os itens abaixo ofereceram uma base diferenciada comparada com os seus colegas de trabalho?",
 "SubPergunta": "Adaptação às mudanças",
 "Id_perg": "48",
@@ -224,6 +493,7 @@
 "Quantidade": ["0","0","3","7","11"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Como os itens abaixo ofereceram uma base diferenciada comparada com os seus colegas de trabalho?",
 "SubPergunta": "Liderança",
 "Id_perg": "48",
@@ -233,6 +503,7 @@
 "Quantidade": ["1","1","9","7","3"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Como os itens abaixo ofereceram uma base diferenciada comparada com os seus colegas de trabalho?",
 "SubPergunta": "Capacidade analítica",
 "Id_perg": "48",
@@ -242,6 +513,7 @@
 "Quantidade": ["0","0","4","4","13"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Como os itens abaixo ofereceram uma base diferenciada comparada com os seus colegas de trabalho?",
 "SubPergunta": "Criatividade",
 "Id_perg": "48",
@@ -251,6 +523,7 @@
 "Quantidade": ["0","0","7","9","5"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Como os itens abaixo ofereceram uma base diferenciada comparada com os seus colegas de trabalho?",
 "SubPergunta": "Eficiência na produção",
 "Id_perg": "48",
@@ -260,6 +533,7 @@
 "Quantidade": ["0","1","3","9","8"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Como os itens abaixo ofereceram uma base diferenciada comparada com os seus colegas de trabalho?",
 "SubPergunta": "Visão ampla de organização",
 "Id_perg": "48",
@@ -269,6 +543,7 @@
 "Quantidade": ["0","1","7","6","7"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Como os itens abaixo ofereceram uma base diferenciada comparada com os seus colegas de trabalho?",
 "SubPergunta": "Visão de novas tendências",
 "Id_perg": "48",
@@ -278,6 +553,7 @@
 "Quantidade": ["0","2","6","6","7"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Como os itens abaixo ofereceram uma base diferenciada comparada com os seus colegas de trabalho?",
 "SubPergunta": "Aptidão empreendedora",
 "Id_perg": "48",
@@ -287,6 +563,7 @@
 "Quantidade": ["5","8","3","3","2"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Algoritmo e estrutura de dados",
 "Id_perg": "49",
@@ -296,6 +573,7 @@
 "Quantidade": ["15","5","0","0","1"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Banco de dados",
 "Id_perg": "49",
@@ -305,6 +583,7 @@
 "Quantidade": ["10","9","1","0","1"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Contabilidade",
 "Id_perg": "49",
@@ -314,6 +593,7 @@
 "Quantidade": ["2","4","3","8","4"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Cálculo diferencial e integral",
 "Id_perg": "49",
@@ -323,6 +603,7 @@
 "Quantidade": ["2","5","3","11","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Compiladores",
 "Id_perg": "49",
@@ -332,6 +613,7 @@
 "Quantidade": ["1","9","4","7","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Computador e sociedade",
 "Id_perg": "49",
@@ -341,6 +623,7 @@
 "Quantidade": ["1","10","5","5","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Inglês ",
 "Id_perg": "49",
@@ -350,6 +633,7 @@
 "Quantidade": ["13","5","1","1","1"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Empreendedorismo e inovação",
 "Id_perg": "49",
@@ -359,6 +643,7 @@
 "Quantidade": ["2","3","6","8","2"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Engenharia de software",
 "Id_perg": "49",
@@ -368,6 +653,7 @@
 "Quantidade": ["13","6","1","0","1"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Física",
 "Id_perg": "49",
@@ -377,6 +663,7 @@
 "Quantidade": ["1","3","4","13","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Programação",
 "Id_perg": "49",
@@ -386,6 +673,7 @@
 "Quantidade": ["19","1","0","0","1"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Fundamentos da teoria da computação",
 "Id_perg": "49",
@@ -395,6 +683,7 @@
 "Quantidade": ["0","1","0","0","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Geometria analítica e álgebra linear",
 "Id_perg": "49",
@@ -404,6 +693,7 @@
 "Quantidade": ["1","5","2","13","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Gestão ambiental",
 "Id_perg": "49",
@@ -413,6 +703,7 @@
 "Quantidade": ["2","1","0","9","9"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Gestão da diversidade nas organizações",
 "Id_perg": "49",
@@ -422,6 +713,7 @@
 "Quantidade": ["4","5","0","4","8"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Redes de computadores",
 "Id_perg": "49",
@@ -431,6 +723,7 @@
 "Quantidade": ["5","10","2","3","1"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Gestão da informação",
 "Id_perg": "49",
@@ -440,6 +733,7 @@
 "Quantidade": ["4","4","3","2","8"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Arquitetura de software",
 "Id_perg": "49",
@@ -449,6 +743,7 @@
 "Quantidade": ["10","8","0","0","3"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Economia",
 "Id_perg": "49",
@@ -458,6 +753,7 @@
 "Quantidade": ["2","4","4","11","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Gestão de projetos",
 "Id_perg": "49",
@@ -467,6 +763,7 @@
 "Quantidade": ["6","2","1","0","12"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Iniciação a estatística",
 "Id_perg": "49",
@@ -476,6 +773,7 @@
 "Quantidade": ["2","5","5","8","1"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Introdução a ciência dos dados",
 "Id_perg": "49",
@@ -485,6 +783,7 @@
 "Quantidade": ["3","3","4","3","8"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Introdução aos sistemas lógicos digitais",
 "Id_perg": "49",
@@ -494,6 +793,7 @@
 "Quantidade": ["3","3","8","7","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Libras",
 "Id_perg": "49",
@@ -503,6 +803,7 @@
 "Quantidade": ["1","2","0","4","14"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Linguagens de programação",
 "Id_perg": "49",
@@ -512,6 +813,7 @@
 "Quantidade": ["11","6","1","2","1"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Meta-heuristica",
 "Id_perg": "49",
@@ -521,6 +823,7 @@
 "Quantidade": ["2","5","6","6","2"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Matematica discreta",
 "Id_perg": "49",
@@ -530,6 +833,7 @@
 "Quantidade": ["7","8","5","1","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Matematica financeira",
 "Id_perg": "49",
@@ -539,6 +843,7 @@
 "Quantidade": ["2","3","4","12","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "O ser e as organizações",
 "Id_perg": "49",
@@ -548,6 +853,7 @@
 "Quantidade": ["1","3","3","4","10"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Organização de computadores",
 "Id_perg": "49",
@@ -557,6 +863,7 @@
 "Quantidade": ["1","4","7","7","2"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Pesquisa operacional",
 "Id_perg": "49",
@@ -566,6 +873,7 @@
 "Quantidade": ["1","5","8","7","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Português instrumental",
 "Id_perg": "49",
@@ -575,6 +883,7 @@
 "Quantidade": ["9","9","0","2","1"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Processamento digital de imagens",
 "Id_perg": "49",
@@ -584,6 +893,7 @@
 "Quantidade": ["2","2","5","12","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Programação orientada a objetos",
 "Id_perg": "49",
@@ -593,6 +903,7 @@
 "Quantidade": ["19","0","1","0","1"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Projeto de sistemas para web",
 "Id_perg": "49",
@@ -602,6 +913,7 @@
 "Quantidade": ["12","1","1","0","7"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Projeto e análise de algoritmos",
 "Id_perg": "49",
@@ -611,6 +923,7 @@
 "Quantidade": ["11","3","6","1","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Sistemas distribuidos e paralelos",
 "Id_perg": "49",
@@ -620,6 +933,7 @@
 "Quantidade": ["5","4","1","2","9"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Sistemas Embarcados",
 "Id_perg": "49",
@@ -629,6 +943,7 @@
 "Quantidade": ["4","1","3","4","9"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Sistemas operacionais",
 "Id_perg": "49",
@@ -638,6 +953,7 @@
 "Quantidade": ["4","10","4","2","1"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Teoria e modelo de grafos",
 "Id_perg": "49",
@@ -647,6 +963,7 @@
 "Quantidade": ["4","7","4","5","1"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Teoria geral da administração",
 "Id_perg": "49",
@@ -656,6 +973,7 @@
 "Quantidade": ["1","2","3","6","9"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Tópicos especiais III",
 "Id_perg": "49",
@@ -665,6 +983,7 @@
 "Quantidade": ["6","2","1","0","12"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
 "SubPergunta": "Tópicos especiais IV",
 "Id_perg": "49",
@@ -674,24 +993,27 @@
 "Quantidade": ["1","1","2","0","17"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
 "SubPergunta": "Java",
 "Id_perg": "50",
 "Id_sub": "45",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["8","4","2","2","5"]
+"Quantidade": ["9","4","2","2","4"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
 "SubPergunta": "JavaScript",
 "Id_perg": "50",
 "Id_sub": "46",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["4","1","3","4","9"]
+"Quantidade": ["5","1","2","4","9"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
 "SubPergunta": "Python",
 "Id_perg": "50",
@@ -701,15 +1023,17 @@
 "Quantidade": ["11","0","3","0","7"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
 "SubPergunta": "C",
 "Id_perg": "50",
 "Id_sub": "48",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["15","0","4","1","1"]
+"Quantidade": ["16","0","3","1","1"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
 "SubPergunta": "C++",
 "Id_perg": "50",
@@ -719,6 +1043,7 @@
 "Quantidade": ["17","0","1","2","1"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
 "SubPergunta": "C#",
 "Id_perg": "50",
@@ -728,6 +1053,7 @@
 "Quantidade": ["13","0","2","1","5"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
 "SubPergunta": "Ruby",
 "Id_perg": "50",
@@ -737,6 +1063,7 @@
 "Quantidade": ["17","0","2","2","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
 "SubPergunta": "PHP",
 "Id_perg": "50",
@@ -746,6 +1073,7 @@
 "Quantidade": ["14","0","4","0","3"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
 "SubPergunta": "R",
 "Id_perg": "50",
@@ -755,15 +1083,17 @@
 "Quantidade": ["16","0","4","1","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
 "SubPergunta": "Objective-C",
 "Id_perg": "50",
 "Id_sub": "54",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["1","0","0","0","0"]
+"Quantidade": ["3","0","0","0","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
 "SubPergunta": "Kotlin",
 "Id_perg": "50",
@@ -773,6 +1103,7 @@
 "Quantidade": ["16","1","1","1","2"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
 "SubPergunta": "Delphi",
 "Id_perg": "50",
@@ -782,15 +1113,17 @@
 "Quantidade": ["19","0","2","0","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
 "SubPergunta": "TypeScript",
 "Id_perg": "50",
 "Id_sub": "58",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["12","1","6","0","2"]
+"Quantidade": ["11","1","7","0","2"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
 "SubPergunta": "Go",
 "Id_perg": "50",
@@ -800,6 +1133,7 @@
 "Quantidade": ["17","0","3","1","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
 "SubPergunta": "ASP",
 "Id_perg": "50",
@@ -809,6 +1143,7 @@
 "Quantidade": ["15","1","3","1","1"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
 "SubPergunta": "Pascal",
 "Id_perg": "50",
@@ -818,6 +1153,7 @@
 "Quantidade": ["19","0","2","0","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
 "SubPergunta": "Visual Basic",
 "Id_perg": "50",
@@ -827,24 +1163,27 @@
 "Quantidade": ["18","0","3","0","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
 "SubPergunta": ".Net",
 "Id_perg": "50",
 "Id_sub": "63",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["1","0","0","0","0"]
+"Quantidade": ["3","0","0","0","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
-"SubPergunta": "Assembler",
+"SubPergunta": "Assembly",
 "Id_perg": "50",
 "Id_sub": "64",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["1","0","0","0","0"]
+"Quantidade": ["3","0","0","0","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
 "SubPergunta": "Cobol",
 "Id_perg": "50",
@@ -854,6 +1193,7 @@
 "Quantidade": ["19","0","2","0","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
 "SubPergunta": "ML",
 "Id_perg": "50",
@@ -863,6 +1203,7 @@
 "Quantidade": ["17","0","2","1","1"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
 "SubPergunta": "Verilog",
 "Id_perg": "50",
@@ -872,6 +1213,7 @@
 "Quantidade": ["18","1","1","0","1"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
 "SubPergunta": "Outras",
 "Id_perg": "50",
@@ -881,105 +1223,7 @@
 "Quantidade": ["9","1","7","0","4"]
 },
 {
-"Pergunta": "Com qual frequência você utiliza os seguintes SGBD no seu trabalho?",
-"SubPergunta": "Mysql",
-"Id_perg": "51",
-"Id_sub": "71",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["1","0","0","0","0"]
-},
-{
-"Pergunta": "Com qual frequência você utiliza os seguintes SGBD no seu trabalho?",
-"SubPergunta": "Oracle",
-"Id_perg": "51",
-"Id_sub": "72",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["1","0","0","0","0"]
-},
-{
-"Pergunta": "Com qual frequência você utiliza os seguintes SGBD no seu trabalho?",
-"SubPergunta": "Microsoft Sql Server",
-"Id_perg": "51",
-"Id_sub": "73",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["11","0","3","0","7"]
-},
-{
-"Pergunta": "Com qual frequência você utiliza os seguintes SGBD no seu trabalho?",
-"SubPergunta": "PostgreSQL",
-"Id_perg": "51",
-"Id_sub": "74",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["17","0","2","1","1"]
-},
-{
-"Pergunta": "Com qual frequência você utiliza os seguintes SGBD no seu trabalho?",
-"SubPergunta": "MongoDB",
-"Id_perg": "51",
-"Id_sub": "75",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["14","1","2","1","3"]
-},
-{
-"Pergunta": "Com qual frequência você utiliza os seguintes SGBD no seu trabalho?",
-"SubPergunta": "Db2",
-"Id_perg": "51",
-"Id_sub": "76",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["17","0","1","0","3"]
-},
-{
-"Pergunta": "Com qual frequência você utiliza os seguintes SGBD no seu trabalho?",
-"SubPergunta": "Microsoft Acces",
-"Id_perg": "51",
-"Id_sub": "77",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["19","0","2","0","0"]
-},
-{
-"Pergunta": "Com qual frequência você utiliza os seguintes SGBD no seu trabalho?",
-"SubPergunta": "Teradata",
-"Id_perg": "51",
-"Id_sub": "78",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["20","0","1","0","0"]
-},
-{
-"Pergunta": "Com qual frequência você utiliza os seguintes SGBD no seu trabalho?",
-"SubPergunta": "Paradx",
-"Id_perg": "51",
-"Id_sub": "79",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["1","0","0","0","0"]
-},
-{
-"Pergunta": "Com qual frequência você utiliza os seguintes SGBD no seu trabalho?",
-"SubPergunta": "Cache",
-"Id_perg": "51",
-"Id_sub": "80",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["1","0","0","0","0"]
-},
-{
-"Pergunta": "Com qual frequência você utiliza os seguintes SGBD no seu trabalho?",
-"SubPergunta": "Outros",
-"Id_perg": "51",
-"Id_sub": "81",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["16","0","4","0","1"]
-},
-{
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza os seguintes sistemas operacionais no seu trabalho?",
 "SubPergunta": "Windows",
 "Id_perg": "52",
@@ -989,6 +1233,7 @@
 "Quantidade": ["3","2","2","1","13"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza os seguintes sistemas operacionais no seu trabalho?",
 "SubPergunta": "Linux",
 "Id_perg": "52",
@@ -998,6 +1243,7 @@
 "Quantidade": ["10","0","1","1","9"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza os seguintes sistemas operacionais no seu trabalho?",
 "SubPergunta": "Netware",
 "Id_perg": "52",
@@ -1007,15 +1253,17 @@
 "Quantidade": ["20","0","1","0","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza os seguintes sistemas operacionais no seu trabalho?",
 "SubPergunta": "Outros",
 "Id_perg": "52",
 "Id_sub": "86",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["1","0","0","0","0"]
+"Quantidade": ["3","0","0","0","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza os seguintes sistemas operacionais no seu trabalho?",
 "SubPergunta": "MacOS",
 "Id_perg": "52",
@@ -1025,6 +1273,39 @@
 "Quantidade": ["12","0","3","0","6"]
 },
 {
+"Tipo": "pie",
+"Pergunta": "Você fuma?",
+"Id_perg": "53",
+"Resposta": ["A","B"],
+"Alternativa": ["Sim","Não"],
+"Quantidade": ["1","26"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Você faz algum trabalho voluntário?",
+"Id_perg": "54",
+"Resposta": ["A","B"],
+"Alternativa": ["Sim","Não"],
+"Quantidade": ["6","21"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Qual a sua média de sono?",
+"Id_perg": "55",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["Menos de 2 horas","2 a 4 horas","5 a 7 horas","8 a 10 horas","Mais de 10 horas"],
+"Quantidade": ["0","2","16","9","0"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Você pratica esporte?",
+"Id_perg": "56",
+"Resposta": ["A","B"],
+"Alternativa": ["Sim","Não"],
+"Quantidade": ["13","14"]
+},
+{
+"Tipo": "bar",
 "Pergunta": "Quais esporte abaixo você pratica? ",
 "SubPergunta": "Futebol",
 "Id_perg": "57",
@@ -1034,6 +1315,7 @@
 "Quantidade": ["4","9"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Quais esporte abaixo você pratica? ",
 "SubPergunta": "Atletismo",
 "Id_perg": "57",
@@ -1043,6 +1325,7 @@
 "Quantidade": ["1","12"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Quais esporte abaixo você pratica? ",
 "SubPergunta": "Vôlei",
 "Id_perg": "57",
@@ -1052,6 +1335,7 @@
 "Quantidade": ["0","13"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Quais esporte abaixo você pratica? ",
 "SubPergunta": "Basquete",
 "Id_perg": "57",
@@ -1061,6 +1345,7 @@
 "Quantidade": ["2","11"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Quais esporte abaixo você pratica? ",
 "SubPergunta": "Musculação",
 "Id_perg": "57",
@@ -1070,6 +1355,7 @@
 "Quantidade": ["6","7"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Quais esporte abaixo você pratica? ",
 "SubPergunta": "Outro",
 "Id_perg": "57",
@@ -1079,6 +1365,7 @@
 "Quantidade": ["7","6"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha em cursar o Bacharel em Ciência da Computação",
 "SubPergunta": "Mercado de trabalho",
 "Id_perg": "58",
@@ -1088,6 +1375,7 @@
 "Quantidade": ["0","0","3","4","20"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha em cursar o Bacharel em Ciência da Computação",
 "SubPergunta": "Interesse na área",
 "Id_perg": "58",
@@ -1097,6 +1385,7 @@
 "Quantidade": ["0","0","2","3","22"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha em cursar o Bacharel em Ciência da Computação",
 "SubPergunta": "Curso fácil de entrar",
 "Id_perg": "58",
@@ -1106,6 +1395,7 @@
 "Quantidade": ["14","7","2","3","1"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha em cursar o Bacharel em Ciência da Computação",
 "SubPergunta": "Curso fácil de fazer",
 "Id_perg": "58",
@@ -1115,6 +1405,7 @@
 "Quantidade": ["23","3","1","0","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha em cursar o Bacharel em Ciência da Computação",
 "SubPergunta": "Outras",
 "Id_perg": "58",
@@ -1124,101 +1415,76 @@
 "Quantidade": ["4","1","14","4","4"]
 },
 {
-"Pergunta": "Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha de estudar na Universidade Federal de Viçosa - Campus Florestal",
-"SubPergunta": "Localidade",
-"Id_perg": "59",
-"Id_sub": "99",
+"Tipo": "pie",
+"Pergunta": "Como foi atendida suas expectativas do curso em relação à formação profissional?",
+"Id_perg": "60",
 "Resposta": ["A","B","C","D","E"],
-"Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["0","3","5","3","16"]
+"Alternativa": ["Péssima","Ruim","Regular","Bom","Ótimo"],
+"Quantidade": ["0","0","3","15","9"]
 },
 {
-"Pergunta": "Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha de estudar na Universidade Federal de Viçosa - Campus Florestal",
-"SubPergunta": "Infraestrutura",
-"Id_perg": "59",
-"Id_sub": "100",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["7","9","9","1","1"]
+"Tipo": "pie",
+"Pergunta": "As disciplinas específicas foram adequadas para o bom desempenho da atividade profissional?",
+"Id_perg": "61",
+"Resposta": ["A","B","C"],
+"Alternativa": ["Um pouco","Muito","Não"],
+"Quantidade": ["8","19","0"]
 },
 {
-"Pergunta": "Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha de estudar na Universidade Federal de Viçosa - Campus Florestal",
-"SubPergunta": "Menor nota para entrar",
-"Id_perg": "59",
-"Id_sub": "101",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["7","4","7","6","3"]
-},
-{
-"Pergunta": "Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha de estudar na Universidade Federal de Viçosa - Campus Florestal",
-"SubPergunta": "Outras",
-"Id_perg": "59",
-"Id_sub": "102",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["5","2","14","3","3"]
-},
-{
-"Pergunta": "Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha de estudar na Universidade Federal de Viçosa - Campus Florestal",
-"SubPergunta": "Custo de vida",
-"Id_perg": "59",
-"Id_sub": "136",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["1","5","9","3","9"]
-},
-{
-"Pergunta": "Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha de estudar na Universidade Federal de Viçosa - Campus Florestal",
-"SubPergunta": "Possibilidade de bolsa",
-"Id_perg": "59",
-"Id_sub": "137",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["9","4","7","4","3"]
-},
-{
+"Tipo": "bar",
 "Pergunta": "Como você classifica os itens abaixo",
 "SubPergunta": "Aulas",
 "Id_perg": "62",
 "Id_sub": "103",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Péssimo","Ruim","Indiferente","Bom","Ótimo"],
-"Quantidade": ["0","0","0","16","11"]
+"Quantidade": ["1","0","0","0","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Como você classifica os itens abaixo",
 "SubPergunta": "Laboratórios",
 "Id_perg": "62",
 "Id_sub": "104",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Péssimo","Ruim","Indiferente","Bom","Ótimo"],
-"Quantidade": ["1","5","8","11","2"]
+"Quantidade": ["1","0","0","0","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Como você classifica os itens abaixo",
 "SubPergunta": "Biblioteca",
 "Id_perg": "62",
 "Id_sub": "105",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Péssimo","Ruim","Indiferente","Bom","Ótimo"],
-"Quantidade": ["0","8","7","9","3"]
+"Quantidade": ["1","0","0","0","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Como você classifica os itens abaixo",
 "SubPergunta": "Salas de aula",
 "Id_perg": "62",
 "Id_sub": "106",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Péssimo","Ruim","Indiferente","Bom","Ótimo"],
-"Quantidade": ["0","2","7","15","3"]
+"Quantidade": ["1","0","0","0","0"]
 },
 {
+"Tipo": "bar",
 "Pergunta": "Como você classifica os itens abaixo",
 "SubPergunta": "Outras dependências",
 "Id_perg": "62",
 "Id_sub": "107",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Péssimo","Ruim","Indiferente","Bom","Ótimo"],
-"Quantidade": ["0","5","10","10","2"]
+"Quantidade": ["1","0","0","0","0"]
+},
+{
+"Tipo": "pie",
+"Pergunta": "Como você avalia a importância dessa pesquisa?",
+"Id_perg": "63",
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["Muito importante","Importante","Indiferente","Pouco importante","Sem importância"],
+"Quantidade": ["16","7","2","2","0"]
 }]
