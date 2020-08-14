@@ -38,17 +38,13 @@
                 <div class= "card-body" style = "padding-left: 3vw; padding-right: 3.5vw; padding-top: 2.5vw;">
                     <?php
                         $aspas = "\"";
-                        $arquivoPizza = "graficoPizzaSuperior.txt";
-                        $arquivoBarra = "graficoBarraSuperior.txt";
-                        $filePizza = fopen($arquivoPizza, 'w');
-                        $fileBarra = fopen($arquivoBarra, 'w');
-                        fwrite($filePizza, "[{");
-                        fwrite($fileBarra, "[{");
+                        $arquivo = "superior.txt";                    
+                        $file = fopen($arquivo, 'w');
+                        fwrite($file, "[{");
 
                         $quantidade = array();
                         $respostas = array();
                         $alternativa = array();
-                        $string_Total = array();
                         
                         //$_POST["questao"] é o id da pergunta
                         for ($questao = 1; $questao < 64; $questao++) { 
@@ -56,87 +52,102 @@
 
                             //questões que não tem subquestoes (grafico de pizza)
                             if ($questao < 21 || $questao == 22 || ($questao > 25 && $questao < 29) || $questao == 30 || ($questao > 31 && $questao < 42) || ($questao > 42 && $questao < 47) || ($questao > 52 && $questao < 57) || $questao == 60 || $questao == 61 || $questao == 63) {
-                                $selecao = "SELECT * from(
-                                                SELECT questao, opcao AS resposta, alternativa, 0 AS qtd 
-                                                FROM alternativa NATURAL JOIN pergunta_has_alternativa NATURAL JOIN pergunta 
-                                                WHERE id_perguntas = '$questao' AND id_alternativa 
-                                                NOT IN (SELECT id_alternativa FROM resposta WHERE id_perguntas = '$questao') 
-                                                GROUP BY resposta 
-                                                UNION 
-                                                SELECT questao, resposta, alternativa, count(*) AS qtd 
-                                                FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa 
-                                                WHERE id_perguntas = '$questao' 
-                                                GROUP BY resposta 
-                                            )AS Resultado ORDER BY Resultado.resposta;";  
-                                
-                                $resultadoSelecao = mysqli_query($conn, $selecao);
-                                $linha = mysqli_fetch_assoc($resultadoSelecao);
-                                $total = mysqli_num_rows($resultadoSelecao);//calcula quantos dados foram retornados
-                                
-                                $selecaoMarcadas = "SELECT questao, resposta, alternativa, count(*) AS qtd 
+                                $selecaoVerificaco = "SELECT questao FROM `pergunta` NATURAL JOIN `resposta` WHERE id_perguntas = '$questao'";
+                                $resultadoVerificaco = mysqli_query($conn, $selecaoVerificaco);
+                                $linhaVerificaco = mysqli_fetch_assoc($resultadoVerificaco);
+                                $totalVerificaco = mysqli_num_rows($resultadoVerificaco);  //calcula quantos dados foram retornados
+
+                                if ($totalVerificaco == 0){
+                                    $selecaoN = "SELECT questao FROM pergunta where id_perguntas = '$questao';";
+                                    $resultadoSelecaoN = mysqli_query($conn, $selecaoN);
+                                    $linhaN = mysqli_fetch_assoc($resultadoSelecaoN);
+                                    
+                                    ?><h5><?php echo $linhaN['questao'];?></h5>
+                                    <h6 style = "padding-top: 3px; padding-bottom: 6px;">Essa pergunta ainda não teve respostas.<h6><?php
+                                }else{
+                                    $selecao = "SELECT * from(
+                                                    SELECT id_perguntas, questao, opcao AS resposta, alternativa, 0 AS qtd 
+                                                    FROM alternativa NATURAL JOIN pergunta_has_alternativa NATURAL JOIN pergunta 
+                                                    WHERE id_perguntas = '$questao' AND id_alternativa 
+                                                    NOT IN (SELECT id_alternativa FROM resposta WHERE id_perguntas = '$questao') 
+                                                    GROUP BY resposta 
+                                                    UNION 
+                                                    SELECT id_perguntas, questao, resposta, alternativa, count(*) AS qtd 
                                                     FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa 
                                                     WHERE id_perguntas = '$questao' 
-                                                    GROUP BY resposta ORDER BY resposta.resposta ASC;";  
-                    
-                                $resultadoSelecaoMarcadas = mysqli_query($conn, $selecaoMarcadas);
-                                $totalMarcadas = mysqli_num_rows($resultadoSelecaoMarcadas);//calcula quantos dados foram retornados
-                                
-                                $string_Total[$questao] = $totalMarcadas; 
-                                        
-                                ?>                            
-                                <!--impressao da pergunta selecionada-->
-                                <h5><?php echo $linha['questao'];?></h5><?php 
-                                fwrite($filePizza, "\n".$aspas."Pergunta".$aspas.": ".$aspas.$linha['questao'].$aspas.",");
-                                fwrite($filePizza, "\n".$aspas."Respondida".$aspas.": ".$aspas.$string_Total[$questao].$aspas.","); 
-        
-                                $cont = 0;
-                                do {  
-                                    //salvando em arrays os dados colhidos do banco
-                                        $respostas[$cont] = $linha['resposta']; 
-                                        $quantidade[$cont] = $linha['qtd'];
-                                        $alternativa[$cont] = $linha['alternativa']; 
-                                        $cont ++;
-                                }while($linha = mysqli_fetch_assoc($resultadoSelecao));
-                                
-                                fwrite($filePizza, "\n".$aspas."Resposta".$aspas.": [");
-                                for ($i = 0; $i < $total; $i++){
-                                    fwrite($filePizza, $aspas.$respostas[$i].$aspas);
-                                    if ($i < $total - 1){
-                                        fwrite($filePizza, ",");
-                                    }
-                                }
-                                fwrite($filePizza, "],");
-
-                                fwrite($filePizza, "\n".$aspas."Alternativa".$aspas.": [");
-                                for ($i = 0; $i < $total; $i++){
-                                    fwrite($filePizza, $aspas.$alternativa[$i].$aspas);
-                                    if ($i < $total - 1){
-                                        fwrite($filePizza, ",");
-                                    }
-                                }
-                                fwrite($filePizza, "],");
-
-                                fwrite($filePizza, "\n".$aspas."Quantidade".$aspas.": [");
-                                for ($i = 0; $i < $total; $i++){
-                                    fwrite($filePizza, $aspas.$quantidade[$i].$aspas);
-                                    if ($i < $total - 1){
-                                        fwrite($filePizza, ",");
-                                    }
-                                }
-                                fwrite($filePizza, "]\n}");
-                                
-
-                                if ($totalMarcadas == 0){
-                                    ?><h6 style = "padding-top: 3px; padding-bottom: 6px;">Essa pergunta ainda não teve respostas.<h6><?php
-                                }else{
+                                                    GROUP BY resposta 
+                                                )AS Resultado ORDER BY Resultado.resposta;";  
+                                    
+                                    $resultadoSelecao = mysqli_query($conn, $selecao);
+                                    $linha = mysqli_fetch_assoc($resultadoSelecao);
+                                    $total = mysqli_num_rows($resultadoSelecao);//calcula quantos dados foram retornados
+                                    
+                                    $selecaoMarcadas = "SELECT id_perguntas, questao, resposta, alternativa, count(*) AS qtd 
+                                                        FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa 
+                                                        WHERE id_perguntas = '$questao' 
+                                                        GROUP BY resposta ORDER BY resposta.resposta ASC;";  
+                        
+                                    $resultadoSelecaoMarcadas = mysqli_query($conn, $selecaoMarcadas);
+                                    $totalMarcadas = mysqli_num_rows($resultadoSelecaoMarcadas);//calcula quantos dados foram retornados 
+                                    
                                     ?>
-                                        <!-- espaco em que o grafico será colocado !-->
-                                        <canvas class = "grafico" id = "grafico<?php echo $questao ?>"></canvas>
-                                    <?php
-                                }
+                                        <!--impressao da pergunta selecionada-->
+                                        <h5><?php echo $linha['questao'];?></h5>
+                                    <?php 
+
+                                    fwrite($file, "\n".$aspas."Tipo".$aspas.": ".$aspas."pie".$aspas.",");
+                                    fwrite($file, "\n".$aspas."Pergunta".$aspas.": ".$aspas.$linha['questao'].$aspas.",");
+                                    fwrite($file, "\n".$aspas."Id_perg".$aspas.": ".$aspas.$linha['id_perguntas'].$aspas.",");   
+        
+                                    $cont = 0;
+                                    do {  
+                                        //salvando em arrays os dados colhidos do banco
+                                            $respostas[$cont] = $linha['resposta']; 
+                                            $quantidade[$cont] = $linha['qtd'];
+                                            $alternativa[$cont] = $linha['alternativa']; 
+                                            $cont ++;
+                                    }while($linha = mysqli_fetch_assoc($resultadoSelecao));
+                                    
+                                    fwrite($file, "\n".$aspas."Resposta".$aspas.": [");
+                                    for ($i = 0; $i < $total; $i++){
+                                        fwrite($file, $aspas.$respostas[$i].$aspas);
+                                        if ($i < $total - 1){
+                                            fwrite($file, ",");
+                                        }
+                                    }
+                                    fwrite($file, "],");
+
+                                    fwrite($file, "\n".$aspas."Alternativa".$aspas.": [");
+                                    for ($i = 0; $i < $total; $i++){
+                                        fwrite($file, $aspas.$alternativa[$i].$aspas);
+                                        if ($i < $total - 1){
+                                            fwrite($file, ",");
+                                        }
+                                    }
+                                    fwrite($file, "],");
+
+                                    fwrite($file, "\n".$aspas."Quantidade".$aspas.": [");
+                                    for ($i = 0; $i < $total; $i++){
+                                        fwrite($file, $aspas.$quantidade[$i].$aspas);
+                                        if ($i < $total - 1){
+                                            fwrite($file, ",");
+                                        }
+                                    }
+                                    fwrite($file, "]\n}");
                                 
-                                if ($questao < 63){
-                                    fwrite($filePizza, ",\n{"); 
+
+                                    if ($totalMarcadas == 0){
+                                        ?><h6 style = "padding-top: 3px; padding-bottom: 6px;">Essa pergunta ainda não teve respostas.<h6><?php
+                                    }else{
+                                        ?>
+                                            <!-- espaco em que o grafico será colocado !-->
+                                            <canvas class = "grafico" id = "grafico<?php echo $questao ?>"></canvas>
+                                        <?php
+                                    }
+                                    
+                                    if ($questao < 63){
+                                        fwrite($file, ",\n{"); 
+                                    }
                                 }
                             }else{
                                 if ($questao != 21 && $questao != 29 && $questao != 31 && $questao != 64){
@@ -226,10 +237,11 @@
                                             $linhaSubPergunta = mysqli_fetch_assoc($resultadoSubPergunta);
                                             $totalSubPergunta = mysqli_num_rows($resultadoSubPergunta);//calcula quantos dados foram retornados
                                                         
-                                            fwrite($fileBarra, "\n".$aspas."Pergunta".$aspas.": ".$aspas.$linhaSubPergunta['questao'].$aspas.",");
-                                            fwrite($fileBarra, "\n".$aspas."SubPergunta".$aspas.": ".$aspas.$linhaSubPergunta['subquestao'].$aspas.",");
-                                            fwrite($fileBarra, "\n".$aspas."Id_perg".$aspas.": ".$aspas.$linhaSubPergunta['id_perguntas'].$aspas.","); 
-                                            fwrite($fileBarra, "\n".$aspas."Id_sub".$aspas.": ".$aspas.$linhaSubPergunta['id_subpergunta'].$aspas.",");  
+                                            fwrite($file, "\n".$aspas."Tipo".$aspas.": ".$aspas."bar".$aspas.",");
+                                            fwrite($file, "\n".$aspas."Pergunta".$aspas.": ".$aspas.$linhaSubPergunta['questao'].$aspas.",");
+                                            fwrite($file, "\n".$aspas."SubPergunta".$aspas.": ".$aspas.$linhaSubPergunta['subquestao'].$aspas.",");
+                                            fwrite($file, "\n".$aspas."Id_perg".$aspas.": ".$aspas.$linhaSubPergunta['id_perguntas'].$aspas.","); 
+                                            fwrite($file, "\n".$aspas."Id_sub".$aspas.": ".$aspas.$linhaSubPergunta['id_subpergunta'].$aspas.",");  
                                             
                                             $cont = 0;
                                             do {  
@@ -240,32 +252,32 @@
                                                     $cont ++;
                                             }while($linhaSubPergunta = mysqli_fetch_assoc($resultadoSubPergunta));        
                                             
-                                            fwrite($fileBarra, "\n".$aspas."Resposta".$aspas.": [");
+                                            fwrite($file, "\n".$aspas."Resposta".$aspas.": [");
                                             for ($i = 0; $i < $totalSubPergunta; $i++){
-                                                fwrite($fileBarra, $aspas.$respostasSubPergunta[$i].$aspas);
+                                                fwrite($file, $aspas.$respostasSubPergunta[$i].$aspas);
                                                 if ($i < $totalSubPergunta - 1){
-                                                    fwrite($fileBarra, ",");
+                                                    fwrite($file, ",");
                                                 }
                                             }
-                                            fwrite($fileBarra, "],");
+                                            fwrite($file, "],");
 
-                                            fwrite($fileBarra, "\n".$aspas."Alternativa".$aspas.": [");
+                                            fwrite($file, "\n".$aspas."Alternativa".$aspas.": [");
                                             for ($i = 0; $i < $totalSubPergunta; $i++){
-                                                fwrite($fileBarra, $aspas.$alternativaSubPergunta[$i].$aspas);
+                                                fwrite($file, $aspas.$alternativaSubPergunta[$i].$aspas);
                                                 if ($i < $totalSubPergunta - 1){
-                                                    fwrite($fileBarra, ",");
+                                                    fwrite($file, ",");
                                                 }
                                             }
-                                            fwrite($fileBarra, "],");
+                                            fwrite($file, "],");
 
-                                            fwrite($fileBarra, "\n".$aspas."Quantidade".$aspas.": [");
+                                            fwrite($file, "\n".$aspas."Quantidade".$aspas.": [");
                                             for ($i = 0; $i < $totalSubPergunta; $i++){
-                                                fwrite($fileBarra, $aspas.$quantidadeSubPergunta[$i].$aspas);
+                                                fwrite($file, $aspas.$quantidadeSubPergunta[$i].$aspas);
                                                 if ($i < $totalSubPergunta - 1){
-                                                    fwrite($fileBarra, ",");
+                                                    fwrite($file, ",");
                                                 }
                                             }
-                                            fwrite($fileBarra, "]\n}");
+                                            fwrite($file, "]\n}");
 
 
                                             //testa as questoes pra inserir corretamente no arquivo
@@ -273,9 +285,9 @@
                                             $resultado62 = mysqli_query($conn, $teste62);
                                             $total62 = mysqli_num_rows($resultado62);  //calcula quantos dados foram retornados
 
-                                            //se a questao 62 tiver sido respondida e eu estiver na ultima subequestao dela
-                                            if ($total62 != 0 && $questao <= 62 && $contConsulta <= 106){  
-                                                fwrite($fileBarra, ",\n{");
+                                            //se a questao 63 tiver sido respondida e eu estiver na ultima subequestao dela
+                                            if ($total62 != 0 && $questao <= 63 ){  
+                                                fwrite($file, ",\n{");
                                             //se não tiver, testa a 57
                                             }else{ //57 é a última pergunta da seção anterior
                                                 $teste57 = "SELECT questao FROM `pergunta` NATURAL JOIN `resposta` WHERE id_perguntas = 57;";
@@ -283,28 +295,28 @@
                                                 $total57 = mysqli_num_rows($resultado57);  
 
                                                 if ($total57!= 0 && $questao <= 52 && $contConsulta <= 133){ //se a questao 57 tiver sido respondida e eu estiver na questao 52
-                                                    fwrite($fileBarra, ",\n{");
+                                                    fwrite($file, ",\n{");
                                                 }else{ //se não tiver, testa a 52
                                                     $teste52 = "SELECT questao FROM `pergunta` NATURAL JOIN `resposta` WHERE id_perguntas = 52;";
                                                     $resultado52 = mysqli_query($conn, $teste52);
                                                     $total52 = mysqli_num_rows($resultado52);  
 
                                                     if ($total52!= 0 && $questao <= 49 && $contConsulta <= 133){ //se a questao 52 tiver sido respondida e eu estiver na questao 49
-                                                        fwrite($fileBarra, ",\n{");
+                                                        fwrite($file, ",\n{");
                                                     }else{ //se não tiver, testa a 49
                                                         $teste49 = "SELECT questao FROM `pergunta` NATURAL JOIN `resposta` WHERE id_perguntas = 49;";
                                                         $resultado49 = mysqli_query($conn, $teste49);
                                                         $total49 = mysqli_num_rows($resultado49);  
 
                                                         if ($total49!= 0 && $questao <= 42 && $contConsulta <= 9){ //se a questao 49 tiver sido respondida e eu estiver na questao 42
-                                                            fwrite($fileBarra, ",\n{");
+                                                            fwrite($file, ",\n{");
                                                         }else{ //se não tiver, testa a 42
                                                             $teste42 = "SELECT questao FROM `pergunta` NATURAL JOIN `resposta` WHERE id_perguntas = 42;";
                                                             $resultado42 = mysqli_query($conn, $teste42);
                                                             $total42 = mysqli_num_rows($resultado42); 
                                                             
                                                             if ($total42!= 0 && $questao <= 25 && $contConsulta <= 4){ //se a questao 42 tiver sido respondida e eu estiver na questao 25
-                                                                fwrite($fileBarra, ",\n{");
+                                                                fwrite($file, ",\n{");
                                                             }
 
                                                             $teste25 = "SELECT questao FROM `pergunta` NATURAL JOIN `resposta` WHERE id_perguntas = 25;";
@@ -312,7 +324,7 @@
                                                             $total25 = mysqli_num_rows($resultado25); 
                                                             
                                                             if ($total25!= 0 && $questao <= 25 && $contConsulta <= 4){ //testa a 25 pq a 42 não é todo mundo que responde
-                                                                fwrite($fileBarra, ",\n{");
+                                                                fwrite($file, ",\n{");
                                                             }
                                                         }
                                                     }
@@ -423,8 +435,8 @@
                                 }
                             }                                                      
                         }
-                        fwrite($filePizza, "]");
-                        fwrite($fileBarra, "]");
+                        fwrite($file, "]");
+                        
                     ?>                 
                 </div>   
                 
@@ -444,139 +456,93 @@
 
 <script>
     //Cor do grafico
-    function randomRgbPizza() {
+    function randomRgb() {
         var cor = ["#000080", "#0000CD", "#0000FF", "#00FA9A", "#008B8B", "#00FFFF", "#00BFFF", "#00CED1", "#006400", "#008000",    
                    "#191970", "#1E90FF", "#20B2AA", "#228B22", "#32CD32", "#3CB371", "#48D1CC", "#40E0D0", "#4682B4", "#4169E1",  
-                   "#483D8B", "#6495ED", "#66CDAA", "#66CDAA", "#7FFFD4", "#7FFF00", "#87CEFA", "#E0FFFF", "#B0E0E6", "#98FB98"];
-        var posicao = Math.floor(Math.random() * 29 + 1);
-        return cor[posicao];
-    }
-
-    function randomRgbBarra() {
-        var cor = ["#00FA9A", "#00CED1", "#20B2AA", "#008B8B", "#00FFFF", "#00BFFF",   
-                   "#1E90FF", "#4169E1", "#6495ED", "#66CDAA", "#7FFFD4", "#87CEFA"];
-        var posicao = Math.floor(Math.random() * 11 + 1);
+                   "#483D8B", "#6495ED", "#66CDAA", "#7FFFD4", "#7FFF00", "#87CEFA", "#E0FFFF", "#B0E0E6", "#98FB98"];
+        var posicao = Math.floor(Math.random() * 28 + 1);
         return cor[posicao];
     }
 
     //Grafico de barra
-    var urlBarra = 'http://localhost/questionario/Administrador/graficoBarraSuperior.txt';
-    var xhttpBarra = new XMLHttpRequest();
-    xhttpBarra.open("GET", urlBarra);
-    xhttpBarra.send();
+    var url = 'http://localhost/questionario/Administrador/superior.txt';
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", url);
+    xhttp.send();
 
-    xhttpBarra.onload = function(){
-        var dadosBarra = JSON.parse(xhttpBarra.responseText);  
-        createChartBarra(dadosBarra);
+    xhttp.onload = function(){
+        var dados = JSON.parse(xhttp.responseText);  
+        createChart(dados);
     } 
 
-    function createChartBarra(dadosBarra){         
-        var dadosBarra = dadosBarra;
+    function createChart(dados){         
+        var dados = dados;
         var j, i, k = 0, color = [], c;
 
-        for (j in dadosBarra) {                        
-            for (i = 1; i <= 64; i++) {                            
-                if ((i > 22 && i < 26) || i == 42 || (i > 46 && i < 53) || (i > 56 && i < 60) || (i == 62)){
-                
-                    while (dadosBarra[k].Id_perg == i){
-                        var indice = dadosBarra[k].Id_perg.concat(dadosBarra[k].Id_sub);
-                        const elementBarra = document.getElementById(`grafico${indice}`);
-
-                        for(c = 0; c < 30; c++){
-                            color[c] = randomRgbBarra();
-                        }
-
-                        new Chart(elementBarra, {
-                            type: 'bar',
-                            data: {
-                                labels: dadosBarra[k].Alternativa,
-                                datasets: [
-                                    {
-                                        label: dadosBarra[k].SubPergunta,
-                                        data: dadosBarra[k].Quantidade,
-                                        backgroundColor: color
-                                    }
-                                ]
-                            },
-                            options: {
-                                scales: {
-                                    yAxes: [{
-                                        ticks: {
-                                            beginAtZero: true
-                                        }
-                                    }]
-                                },
-                                legend: { 
-                                    labels: { 
-                                        boxWidth: 0,
-                                        fontSize: 18 
-                                    } 
-                                } 
-                            }
-                        });  
-                        k++;
-                    }                                    
+        for (j in dados) {                        
+            for (i = 1; i <= 64; i++) {   
+                for(c = 0; c < 30; c++){
+                    color[c] = randomRgb();
                 }
+
+                if(dados[k].Tipo == 'bar'){
+                    var indice = dados[k].Id_perg.concat(dados[k].Id_sub);
+                    const elementBarra = document.getElementById(`grafico${indice}`);
+                    new Chart(elementBarra, {
+                        type: dados[k].Tipo,
+                        data: {
+                            labels: dados[k].Alternativa,
+                            datasets: [
+                                {
+                                    label: dados[k].SubPergunta,
+                                    data: dados[k].Quantidade,
+                                    backgroundColor: color
+                                }
+                            ]
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
+                                }]
+                            },
+                            legend: { 
+                                labels: { 
+                                    boxWidth: 0,
+                                    fontSize: 18 
+                                } 
+                            } 
+                        }
+                    }); 
+                }else{
+                    var indice = dados[k].Id_perg;
+                    const elementBarra = document.getElementById(`grafico${indice}`);
+                    new Chart(elementBarra, {
+                        type: dados[k].Tipo,
+                        data: {
+                            labels: dados[k].Alternativa,
+                            datasets: [
+                                {
+                                    data: dados[k].Quantidade,
+                                    backgroundColor: color
+                                }
+                            ]
+                        },
+                        options: {
+                            scales: false,
+                            legend: { 
+                                labels: { 
+                                    boxWidth: 45,
+                                    fontSize: 14 
+                                } 
+                            } 
+                        }
+                    });  
+                }                 
+                k++;
             }
         }
-    }
-
-
-    //Grafico de pizza
-    var urlPizza = 'http://localhost/questionario/Administrador/graficoPizzaSuperior.txt';
-    var xhttpPizza = new XMLHttpRequest();
-    xhttpPizza.open("GET", urlPizza);
-    xhttpPizza.send();
-
-    xhttpPizza.onload = function(){
-        var dadosPizza = JSON.parse(xhttpPizza.responseText);  
-        createChartPizza(dadosPizza);
-    } 
-
-    function createChartPizza(jsonObj){         
-        var dadosPizza = jsonObj;
-        var j, i, k = 0, color = [], c;
-
-        for (j in dadosPizza) {                        
-            for (i = 1; i < 64; i++) {                            
-                if (i < 21 || i == 22 || (i > 25 && i < 29) || i == 30 || (i > 31 && i < 42) || (i > 42 && i < 47) || (i > 52 && i < 57) || i == 60 || i == 61 || i == 63){
-                    if (dadosPizza[k].Respondida != 0){
-                        const element = document.getElementById(`grafico${i}`);
-
-                        for(c = 0; c < 30; c++){
-                            color[c] = randomRgbPizza();
-                        }
-
-                        new Chart(element, {
-                            type: "pie",
-                            data: {
-                                labels: dadosPizza[k].Alternativa,
-                                datasets: [
-                                    {
-                                        data: dadosPizza[k].Quantidade,
-                                        backgroundColor: color
-                                    }
-                                ]
-                            },
-                            options: {
-                                scales: {
-                                    yAxes: [{
-                                        ticks: {
-                                            beginAtZero: true
-                                        }
-                                    }]
-                                },
-                                legend: { 
-                                    labels: { 
-                                        boxWidth: 45,
-                                        fontSize: 14 
-                                    } 
-                                } 
-                            }
-                        });  
-                    }k++;                                    
-                }
-            }
-        }
-    } 
+    }    
 </script>
