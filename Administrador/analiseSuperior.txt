@@ -1,0 +1,80 @@
+[{
+"Tipo":"bar",
+"Id_Pergunta":"23",
+"Alternativas": ["Inglês","Espanhol","Francês","Italiano"],
+"Media": ["2.2","1.029","0.171","0.057"]
+},
+{
+"Tipo":"bar",
+"Id_Pergunta":"24",
+"Alternativas": ["Inglês","Espanhol","Francês","Italiano"],
+"Media": ["1.829","0.657","0.086","0.029"]
+},
+{
+"Tipo":"bar",
+"Id_Pergunta":"25",
+"Alternativas": ["Inglês","Espanhol","Francês","Italiano"],
+"Media": ["1.886","0.6","0.086","0.029"]
+},
+{
+"Tipo":"bar",
+"Id_Pergunta":"0",
+"Alternativas": ["Inglês","Espanhol","Fracês","Italiano"],
+"Media": ["1.971","0.762","0.114","0.038"]
+},
+{
+"Tipo": "line",
+"Id_Pergunta": "39",
+"Alternativas": ["Analista de sistemas","Outro","Programador","Coordenador de projetos","Diretor","Gerente","Sócio/ Proprietário","Acadêmico","Administrador de banco de dados","Administrador de redes"],
+"Mulher": ["2","2","1","1","0","0","0","0","0","0"],
+"Homem": ["9","8","3","0","0","0","0","0","0","0"],
+"naoInformar": []
+},
+{
+"Tipo": "bar",
+"Id_Pergunta": "41",
+"Alternativas": ["Mulher","Homem","Media Geral"],
+"Media": ["4666.67","4050.00","4192.31"]
+},
+{
+"Tipo":"bar",
+"Id_Pergunta":"47",
+"Alternativas": ["Trabalho em equipe","Experiência no mercado","Fluência em línguas","Instituição de ensino","Disponibilidade para trabalhar horas extras","Mestrado/Doutorado/Especialização"],
+"Media": ["4.591","3.955","3.5","2.864","2.591","2.182"]
+},
+{
+"Tipo":"bar",
+"Id_Pergunta":"49",
+"Alternativas": ["Programação","Programação orientada a objetos","Algoritmo e estrutura de dados","Engenharia de software","Inglês ","Banco de dados","Linguagens de programação","Português instrumental","Arquitetura de software","Matematica discreta","Projeto e análise de algoritmos","Fundamentos da teoria da computação","Redes de computadores","Sistemas operacionais","Projeto de sistemas para web","Teoria e modelo de grafos","Computador e sociedade","Compiladores","Introdução aos sistemas lógicos digitais","Iniciação a estatística","Pesquisa operacional","Meta-heuristica","Cálculo diferencial e integral","Economia","Sistemas distribuidos e paralelos","Gestão da informação","Matematica financeira","Organização de computadores","Empreendedorismo e inovação","Processamento digital de imagens","Geometria analítica e álgebra linear","Gestão da diversidade nas organizações","Física","Introdução a ciência dos dados","Contabilidade","Gestão de projetos","Sistemas Embarcados","Tópicos especiais III","O ser e as organizações","Teoria geral da administração","Gestão ambiental","Libras","Tópicos especiais IV"],
+"Media": ["4.773","4.727","4.591","4.409","4.364","4.273","4.136","4.136","4.045","4.045","4.045","4","3.727","3.727","3.591","3.318","3.273","3.136","3.091","3.045","2.955","2.909","2.864","2.818","2.818","2.773","2.727","2.727","2.727","2.682","2.682","2.636","2.591","2.591","2.591","2.5","2.364","2.143","2.091","2.045","1.955","1.682","1.545"]
+},
+{
+"Tipo":"bar",
+"Id_Pergunta":"50",
+"Alternativas": ["JavaScript","Python","Outras","Java","C#","TypeScript","PHP","Kotlin","ASP","C","C++","R","ML","Ruby","Go","Verilog","Visual Basic","Cobol","Delphi","Pascal","Assembly",".Net","Objective-C"],
+"Media": ["3.591","2.545","2.409","2.364","2.227","2.091","1.909","1.636","1.636","1.591","1.545","1.5","1.5","1.455","1.409","1.318","1.273","1.182","1.182","1.182","1","1","1"]
+},
+{
+"Tipo":"bar",
+"Id_Pergunta":"51",
+"Alternativas": ["Microsoft Sql Server","MongoDB","Db2","Outros","Mysql","PostgreSQL","Microsoft Acces","Teradata","Paradx","Cache","Oracle"],
+"Media": ["2.545","1.909","1.636","1.545","1.5","1.5","1.182","1.091","1","1","1"]
+},
+{
+"Tipo":"bar",
+"Id_Pergunta":"58",
+"Alternativas": ["Interesse na área","Mercado de trabalho","Outras","Curso fácil de entrar","Curso fácil de fazer"],
+"Media": ["4.75","4.643","3.036","1.857","1.179"]
+},
+{
+"Tipo":"bar",
+"Id_Pergunta":"59",
+"Alternativas": ["Localidade","Custo de vida","Outras","Menor nota para entrar","Possibilidade de bolsa","Infraestrutura"],
+"Media": ["4.179","3.536","2.964","2.821","2.607","2.25"]
+},
+{
+"Tipo":"bar",
+"Id_Pergunta":"62",
+"Alternativas": ["Aulas","Salas de aula","Outras dependências","Laboratórios","Biblioteca"],
+"Media": ["4.429","3.679","3.321","3.286","3.214"]
+}]

@@ -102,10 +102,10 @@
                                     $cont = 0;
                                     do {  
                                         //salvando em arrays os dados colhidos do banco
-                                            $respostas[$cont] = $linha['resposta']; 
-                                            $quantidade[$cont] = $linha['qtd'];
-                                            $alternativa[$cont] = $linha['alternativa']; 
-                                            $cont ++;
+                                        $respostas[$cont] = $linha['resposta']; 
+                                        $quantidade[$cont] = $linha['qtd'];
+                                        $alternativa[$cont] = $linha['alternativa']; 
+                                        $cont ++;
                                     }while($linha = mysqli_fetch_assoc($resultadoSelecao));
                                     
                                     fwrite($file, "\n".$aspas."Resposta".$aspas.": [");
@@ -464,7 +464,6 @@
         return cor[posicao];
     }
 
-    //Grafico de barra
     var url = 'http://localhost/questionario/Administrador/superior.txt';
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", url);
