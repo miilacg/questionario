@@ -93,7 +93,7 @@
                                                                     FROM `resposta` NATURAL JOIN sexo NATURAL JOIN alternativa   
                                                                     WHERE id_perguntas = 30 
                                                                     GROUP BY alternativa
-                                                                )Resultado ORDER BY Resultado.qtd DESC;";
+                                                                )Resultado ORDER BY Resultado.alternativa;";
                                             $resultadoConsulta = mysqli_query($conn, $selecaoConsulta);
                                             $linhaConsulta = mysqli_fetch_assoc($resultadoConsulta);
                                             $totalConsulta = mysqli_num_rows($resultadoConsulta);
@@ -137,7 +137,6 @@
                                                 }else{
                                                     fwrite($fileLinha, "\n".$aspas."naoInformar".$aspas.": [");                                                    
                                                     for ($j = 0; $j < $totalConsulta; $j++){
-                                                        echo ("io");
                                                         fwrite($fileLinha, $aspas.$quantidade[$j].$aspas);
                                                         if ($j < ($totalConsulta - 1)){
                                                             fwrite($fileLinha, ",");
@@ -1068,7 +1067,153 @@
                                         ?>
                                             <h5>Idade dos egressos</h5>
                                             <canvas class = "grafico" id = "grafico<?php echo $questao;?>"></canvas>
+                                            <h6>Média da idade dos egressos: <?php echo number_format((float)$mediaIdade, 2, '.', '');?> anos<h6>
                                         <?php
+                                    }
+                                }else{
+                                    if($questao == 51){ //ano de formatura por satisfação com o curso
+                                        $selecaoVerificaco = "SELECT questao FROM `pergunta` NATURAL JOIN `resposta` WHERE id_perguntas = '$questao' or id_perguntas = 3";
+                                        $resultadoVerificaco = mysqli_query($conn, $selecaoVerificaco);
+                                        $linhaVerificaco = mysqli_fetch_assoc($resultadoVerificaco);
+                                        $totalVerificaco = mysqli_num_rows($resultadoVerificaco);  //calcula quantos dados foram retornados
+                                                
+                                        if ($totalVerificaco < 2){
+                                            $selecaoN = "SELECT questao FROM pergunta where id_perguntas = '$questao';";
+                                            $resultadoSelecaoN = mysqli_query($conn, $selecaoN);
+                                            $linhaN = mysqli_fetch_assoc($resultadoSelecaoN);
+                                            
+                                            ?><h5>Nível de satisfação com o curso X Ano de formatura</h5>
+                                            <h6>Essa análise não pode ser feita por falta de respostas.<h6><?php
+                                        }else{    
+                                            for ($i = 0; $i < 8; $i++){  
+                                                $id_alternativa = 0;     
+                                                $id_alternativa = 21 + $i;                                                                                                     
+                                                    
+                                                $criarTabela = "CREATE TABLE ano(cpf varchar(45));";
+                                                $resultadoCriacao = mysqli_query($conn, $criarTabela);
+    
+                                                $insereTabela = "INSERT INTO ano(`cpf`) SELECT cpf FROM resposta WHERE id_alternativa = '$id_alternativa';";
+                                                $resultadoInsercao = mysqli_query($conn, $insereTabela);
+    
+                                                $selecaoAlternativa = "SELECT alternativa FROM alternativa WHERE id_alternativa = '$id_alternativa';";
+                                                $resultadoAlternativa = mysqli_query($conn, $selecaoAlternativa);
+                                                $linhaAlternativa = mysqli_fetch_assoc($resultadoAlternativa);
+    
+                                                $selecaoConsulta = "SELECT ROUND((SUM(qtd * alternativa)/ SUM(qtd)),2) AS media 
+                                                                    FROM(        
+                                                                        SELECT resposta, alternativa, id_perguntas, id_alternativa, qtd     
+                                                                        FROM(
+                                                                            SELECT resposta, id_perguntas, 1 AS alternativa, id_alternativa, COUNT(*) AS qtd
+                                                                            FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa natural join ano
+                                                                            WHERE id_perguntas = 51 AND id_alternativa = 193
+                                                                            GROUP BY resposta
+                                                                            UNION  
+                                                                            SELECT resposta, id_perguntas, 2 AS alternativa, id_alternativa, COUNT(*) AS qtd 
+                                                                            FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa   natural join ano
+                                                                            WHERE id_perguntas = 51 AND id_alternativa = 194
+                                                                            GROUP BY resposta
+                                                                            UNION 
+                                                                            SELECT resposta, id_perguntas, 3 AS alternativa, id_alternativa, COUNT(*) AS qtd
+                                                                            FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa natural join ano
+                                                                            WHERE id_perguntas = 51 AND id_alternativa = 195
+                                                                            GROUP BY resposta
+                                                                            UNION
+                                                                            SELECT resposta, id_perguntas, 4 AS alternativa, id_alternativa, COUNT(*) AS qtd
+                                                                            FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa  natural join ano
+                                                                            WHERE id_perguntas = 51 AND id_alternativa = 196
+                                                                            GROUP BY resposta
+                                                                            UNION
+                                                                            SELECT resposta, id_perguntas, 5 AS alternativa, id_alternativa, COUNT(*) AS qtd 
+                                                                            FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa   natural join ano
+                                                                            WHERE id_perguntas = 51 AND id_alternativa = 197
+                                                                            GROUP BY resposta
+                                                                        ) AS Media 
+                                                                    )AS Resultado ORDER BY Resultado.resposta";
+                                                $resultadoConsulta = mysqli_query($conn, $selecaoConsulta);
+                                                $linhaConsulta = mysqli_fetch_assoc($resultadoConsulta);
+                                                $totalConsulta = mysqli_num_rows($resultadoConsulta);
+                                                                                                
+                                                $ano[$i] = $linhaAlternativa['alternativa'];
+                                                $mediaSatisfacao[$i] = $linhaConsulta['media'];
+                                                                                    
+                                                $deletaTabela = "DROP TABLE ano;";
+                                                $resultadoExclusão = mysqli_query($conn, $deletaTabela);                                                                                               
+                                            } 
+
+                                            $selecaoConsulta = "SELECT ROUND((SUM(qtd * alternativa)/ SUM(qtd)),2) AS media 
+                                                                FROM(        
+                                                                    SELECT resposta, alternativa, id_perguntas, id_alternativa, qtd     
+                                                                    FROM(
+                                                                        SELECT resposta, id_perguntas, 1 AS alternativa, id_alternativa, COUNT(*) AS qtd
+                                                                        FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa 
+                                                                        WHERE id_perguntas = 51 AND id_alternativa = 193
+                                                                        GROUP BY resposta
+                                                                        UNION  
+                                                                        SELECT resposta, id_perguntas, 2 AS alternativa, id_alternativa, COUNT(*) AS qtd 
+                                                                        FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa
+                                                                        WHERE id_perguntas = 51 AND id_alternativa = 194
+                                                                        GROUP BY resposta
+                                                                        UNION 
+                                                                        SELECT resposta, id_perguntas, 3 AS alternativa, id_alternativa, COUNT(*) AS qtd
+                                                                        FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa
+                                                                        WHERE id_perguntas = 51 AND id_alternativa = 195
+                                                                        GROUP BY resposta
+                                                                        UNION
+                                                                        SELECT resposta, id_perguntas, 4 AS alternativa, id_alternativa, COUNT(*) AS qtd
+                                                                        FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa  
+                                                                        WHERE id_perguntas = 51 AND id_alternativa = 196
+                                                                        GROUP BY resposta
+                                                                        UNION
+                                                                        SELECT resposta, id_perguntas, 5 AS alternativa, id_alternativa, COUNT(*) AS qtd 
+                                                                        FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa
+                                                                        WHERE id_perguntas = 51 AND id_alternativa = 197
+                                                                        GROUP BY resposta
+                                                                    ) AS Media 
+                                                                )AS Resultado ORDER BY Resultado.resposta";
+                                            $resultadoConsulta = mysqli_query($conn, $selecaoConsulta);
+                                            $linhaConsulta = mysqli_fetch_assoc($resultadoConsulta);
+                                            $totalConsulta = mysqli_num_rows($resultadoConsulta);
+                                                 
+                                            $mediaGeral = $linhaConsulta['media'];
+                                            
+                                            fwrite($fileLinha, ",\n{\n".$aspas."Tipo".$aspas.": ".$aspas."line".$aspas.",");
+                                            fwrite($fileLinha, "\n".$aspas."Id_Pergunta".$aspas.": ".$aspas.$questao.$aspas.",");
+
+                                            fwrite($fileLinha, "\n".$aspas."Alternativas".$aspas.": [");
+                                            for ($j = 0; $j < 8; $j++){
+                                                fwrite($fileLinha, $aspas.$ano[$j].$aspas);
+                                                if ($j < 7){
+                                                    fwrite($fileLinha, ",");
+                                                }
+                                            }
+                                            fwrite($fileLinha, "],");
+    
+                                            fwrite($fileLinha, "\n".$aspas."Respostas".$aspas.": [");
+                                            for ($j = 0; $j < 8; $j++){
+                                                fwrite($fileLinha, $aspas.$mediaSatisfacao[$j].$aspas);
+                                                if ($j < 7){
+                                                    fwrite($fileLinha, ",");
+                                                }
+                                            }
+                                            fwrite($fileLinha, "],"); 
+                                            fwrite($fileLinha, "\n".$aspas."Media".$aspas.": [");
+                                            for ($j = 0; $j < 8; $j++){
+                                                fwrite($fileLinha, $aspas.$mediaGeral.$aspas);
+                                                if ($j < 7){
+                                                    fwrite($fileLinha, ",");
+                                                }
+                                            }      
+                                            fwrite($fileLinha, "]");                                                       
+                                            fwrite($fileLinha, "\n}"); 
+
+                                            ?>
+                                                <h5>Nível de satisfação com o curso X Ano de formatura</h5>
+                                                <canvas class = "grafico" id = "grafico<?php echo $questao;?>"></canvas>
+                                                <p>Obs: para esse calculo foi considerado 1 para péssimo, 
+                                                    2 para ruim, 3 regular, 4 bom e 5 ótimo.
+                                                </p>
+                                            <?php    
+                                        }      
                                     }
                                 }
                             }
@@ -1211,55 +1356,84 @@
 
     function createChartLinha(dadosLinha){         
         var dadosLinha = dadosLinha;
-        var j, i, k = 0, color = [], c;
+        var j;
 
         for (j in dadosLinha) {                                   
-            var questao = dadosLinha[k].Id_Pergunta;
-            const elementLinha = document.getElementById(`grafico${questao}`);
-
-            for(c = 0; c < 50; c++){
-                color[c] = randomRgbBarra();
-            }
+            var questao = dadosLinha[j].Id_Pergunta;
+            const elementLinha = document.getElementById(`grafico${questao}`);            
             
-            new Chart(elementLinha, {                           
-                type: 'line',
-                data: {
-                    labels: dadosLinha[k].Alternativas,
-                    datasets: [
-                        {                                
-                            label: 'Homem',
-                            fill: false,
-                            backgroundColor: '#000080',
-                            borderColor: '#000080',
-                            data: dadosLinha[k].Homem
-                        },
-                        {
-                            label: 'Mulher',
-                            fill: false,
-                            backgroundColor: '#0000FF',
-                            borderColor: '#0000FF',
-                            data: dadosLinha[k].Mulher
-                        },            
-                        {
-                            label: 'Preferiu não informar',
-                            fill: false,
-                            backgroundColor: '#00BFFF',
-                            borderColor: '#00BFFF',
-                            data: dadosLinha[k].naoInformar
-                        }
-                    ]   
-                },
-                options: {
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true
+            if(questao == 30){
+                new Chart(elementLinha, {                          
+                    type: 'line',
+                    data: {
+                        labels: dadosLinha[j].Alternativas,
+                        datasets: [
+                            {                                
+                                label: 'Homem',
+                                fill: false,
+                                backgroundColor: '#000080',
+                                borderColor: '#000080',
+                                data: dadosLinha[j].Homem
+                            },
+                            {
+                                label: 'Mulher',
+                                fill: false,
+                                backgroundColor: '#0000FF',
+                                borderColor: '#0000FF',
+                                data: dadosLinha[j].Mulher
+                            },            
+                            {
+                                label: 'Preferiu não informar',
+                                fill: false,
+                                backgroundColor: '#00BFFF',
+                                borderColor: '#00BFFF',
+                                data: dadosLinha[j].naoInformar
                             }
-                        }]
-                    }
-                }  
-            }); 
-            k++;    
+                        ]   
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }                   
+                });
+            }else{
+                new Chart(elementLinha, {                           
+                    type: 'line',
+                    data: {
+                        labels: dadosLinha[j].Alternativas,
+                        datasets: [
+                            {                                
+                                label: 'Média por ano',
+                                fill: false,
+                                backgroundColor: '#000080',
+                                borderColor: '#000080',
+                                data: dadosLinha[j].Respostas
+                            },           
+                            {
+                                label: 'Média geral',
+                                fill: false,
+                                backgroundColor: '#00BFFF',
+                                borderColor: '#00BFFF',
+                                data: dadosLinha[j].Media
+                            }
+                        ]   
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }  
+                });
+            }                 
         }
     }
 
