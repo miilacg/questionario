@@ -1,0 +1,8 @@
+[{
+"Tipo": "line",
+"Id_Pergunta": "30",
+"Alternativas": ["Programador","Coordenador de projetos","Outro","Gerente","Suporte técnico","Diretor","Administrador de redes","Administrador de banco de dados","Analista de sistemas","Sócio/ Proprietário","Acadêmico"],
+"Mulher": ["1","0","0","0","0","0","0","0","0","0","0"],
+"Homem": ["0","0","0","0","0","0","0","0","0","0","0"],
+"naoInformar": []
+}]

@@ -1,0 +1,61 @@
+[{
+"Id_Pergunta":"13",
+"Alternativas": ["Inglês","Espanhol","Francês","Italiano"],
+"Media": ["2","0.818","0.091","0"]
+},
+{
+"Id_Pergunta":"14",
+"Alternativas": ["Inglês","Espanhol","Francês","Italiano"],
+"Media": ["1.636","0.364","0.091","0"]
+},
+{
+"Id_Pergunta":"15",
+"Alternativas": ["Inglês","Espanhol","Francês","Italiano"],
+"Media": ["1.727","0.364","0.091","0"]
+},
+{
+"Id_Pergunta":"0",
+"Alternativas": ["Inglês","Espanhol","Fracês","Italiano"],
+"Media": ["1.788","0.515","0.091","0"]
+},
+{
+"Tipo": "bar",
+"Id_Pergunta": "32",
+"Alternativas": ["Mulher","Media Geral"],
+"Media": ["1000.00","1000.00"]
+},
+{
+"Id_Pergunta":"38",
+"Alternativas": ["Instituição de ensino","Graduação","Experiência no mercado","Fluência em línguas","Trabalho em equipe","Disponibilidade para trabalhar horas extras","Mestrado/Doutorado/Especialização"],
+"Media": ["4","4","3","3","3","0","0"]
+},
+{
+"Id_Pergunta":"40",
+"Alternativas": ["Análise e projeto de sistemas","Banco de dados","Estrutura da informação na web","Informática básica","Inglês técnico","Introdução a programação","Lógica de programação","Manutenção de computadores","Programação","Programação web","Projeto","Redação teórica","Redes de computadores","Fundamentos da administração","Contabilidade","Legislação para informática","Organização de computadores e Sistemas Operacionais","Tópicos especiais em informática"],
+"Media": ["5","5","5","5","5","5","5","5","5","5","5","5","5","4","4","4","1","1"]
+},
+{
+"Id_Pergunta":"41",
+"Alternativas": ["JavaScript","TypeScript","C++","PHP","Kotlin","C#","Ruby","Outras","Python","Java","Go","Delphi","Objective-C","R","ASP","Pascal","Visual Basic",".Net","Assembly","Cobol","ML","Verilog","C"],
+"Media": ["5","5","4","4","4","3","3","3","2","2","2","1","1","1","1","1","1","1","1","1","1","1","1"]
+},
+{
+"Id_Pergunta":"42",
+"Alternativas": ["Outros","Mysql","Microsoft Sql Server","PostgreSQL","MongoDB","Db2","Microsoft Acces","Teradata","Paradx","Cache","Oracle"],
+"Media": ["5","4","1","1","1","1","1","1","1","1","1"]
+},
+{
+"Id_Pergunta":"49",
+"Alternativas": ["Interesse na área","Mercado de trabalho","Curso fácil de fazer","Outras","Falta de outra opção","Curso fácil de entrar"],
+"Media": ["3.909","3.636","3","3","2.636","2.273"]
+},
+{
+"Id_Pergunta":"50",
+"Alternativas": ["Localidade","Infraestrutura","Outras","Menor nota para entrar"],
+"Media": ["4","3.455","3.182","2.818"]
+},
+{
+"Id_Pergunta":"55",
+"Alternativas": ["Aulas","Salas de aula","Laboratórios","Outras dependências","Biblioteca"],
+"Media": ["4.182","3.727","3.545","3.455","3.182"]
+}]
