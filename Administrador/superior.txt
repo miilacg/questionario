@@ -163,7 +163,7 @@
 "Pergunta": "Você continuou os seus estudos?",
 "Id_perg": "22",
 "Resposta": ["A","B","C","D","E","F"],
-"Alternativa": ["Não","Outra graduação","Pós-graduação","Mestrado","Doutorado","Outra formação"],
+"Alternativa": ["Não possui outra formação","Outra graduação","Pós-graduação","Mestrado","Doutorado","Outra formação"],
 "Quantidade": ["19","0","2","13","1","0"]
 },
 {
@@ -515,7 +515,7 @@
 {
 "Tipo": "bar",
 "Pergunta": "Classifique os itens de acordo com a importância deles para entrada no mercado de trabalho",
-"SubPergunta": "Disponibilidade para trabalhar horas extras",
+"SubPergunta": "Disponibilidade para hora extra",
 "Id_perg": "47",
 "Id_sub": "14",
 "Resposta": ["A","B","C","D","E","F"],
@@ -1035,7 +1035,7 @@
 {
 "Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
-"SubPergunta": "Tópicos especiais III",
+"SubPergunta": "Projeto de Software Orientado a Dados",
 "Id_perg": "49",
 "Id_sub": "130",
 "Resposta": ["A","B","C","D","E"],

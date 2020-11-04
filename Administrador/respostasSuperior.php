@@ -511,7 +511,7 @@
                                 labels: { 
                                     boxWidth: 0,
                                     fontSize: 18 
-                                } 
+                                }                               
                             } 
                         }
                     }); 
@@ -535,7 +535,9 @@
                                 labels: { 
                                     boxWidth: 45,
                                     fontSize: 14 
-                                } 
+                                },
+                                position: 'right',
+                                align: 'center'                            
                             } 
                         }
                     });  

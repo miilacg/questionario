@@ -1,4 +1,24 @@
 [{
+"Id_Pergunta":"13",
+"Alternativas": ["Italiano","Inglês","Francês","Espanhol"],
+"Media": ["0","2","0.091","0.818"]
+},
+{
+"Id_Pergunta":"14",
+"Alternativas": ["Italiano","Inglês","Francês","Espanhol"],
+"Media": ["0","1.636","0.091","0.364"]
+},
+{
+"Id_Pergunta":"15",
+"Alternativas": ["Italiano","Inglês","Francês","Espanhol"],
+"Media": ["0","1.727","0.091","0.364"]
+},
+{
+"Id_Pergunta":"0",
+"Alternativas": ["Italiano","Inglês","Fracês","Espanhol"],
+"Media": ["0","1.788","0.091","0.515"]
+},
+{
 "Tipo": "line",
 "Id_Pergunta": "30",
 "Alternativas": ["Acadêmico","Administrador de banco de dados","Administrador de redes","Analista de sistemas","Coordenador de projetos","Diretor","Gerente","Outro","Programador","Sócio/ Proprietário","Suporte técnico"],
@@ -8,8 +28,51 @@
 },
 {
 "Tipo": "line",
+"Id_Pergunta":"38",
+"Alternativas": ["Disponibilidade para trabalhar horas extras","Experiência no mercado","Fluência em línguas","Graduação","Instituição de ensino","Mestrado/Doutorado/Especialização","Trabalho em equipe"],
+"Media": ["0","3","3","4","4","0","3"]
+},
+{
+"Tipo": "line",
+"Id_Pergunta":"41",
+"Alternativas": [".Net","ASP","Assembly","C","C#","C++","Cobol","Delphi","Go","Java","JavaScript","Kotlin","ML","Objective-C","Outras","PHP","Pascal","Python","R","Ruby","TypeScript","Verilog","Visual Basic"],
+"Media": ["1","1","1","1","3","4","1","1","2","2","5","4","1","1","3","4","1","2","1","3","5","1","1"]
+},
+{
+"Tipo": "line",
+"Id_Pergunta":"42",
+"Alternativas": ["Cache","Db2","Microsoft Acces","Microsoft Sql Server","MongoDB","Mysql","Oracle","Outros","Paradx","PostgreSQL","Teradata"],
+"Media": ["1","1","1","1","1","4","1","5","1","1","1"]
+},
+{
+"Tipo": "line",
+"Id_Pergunta":"49",
+"Alternativas": ["Curso fácil de entrar","Curso fácil de fazer","Falta de outra opção","Interesse na área","Mercado de trabalho","Outras"],
+"Media": ["2.273","3","2.636","3.909","3.636","3"]
+},
+{
+"Tipo": "line",
+"Id_Pergunta":"50",
+"Alternativas": ["Infraestrutura","Localidade","Menor nota para entrar","Outras"],
+"Media": ["3.455","4","2.818","3.182"]
+},
+{
+"Tipo": "line",
 "Id_Pergunta": "51",
 "Alternativas": ["2012","2013","2014","2015","2016","2017","2018","2019"],
 "Respostas": ["","3.67","","4.00","4.00","4.00","3.50",""],
 "Media": ["3.82","3.82","3.82","3.82","3.82","3.82","3.82","3.82"]
+},
+{
+"Tipo": "line",
+"Id_Pergunta": "54",
+"Alternativas": ["2012","2013","2014","2015","2016","2017","2018"],
+"Respostas": ["","3.46","","4.10","3.62","4.00","4.00"],
+"Media": ["3.78","3.78","3.78","3.78","3.78","3.78","3.78"]
+},
+{
+"Tipo": "line",
+"Id_Pergunta":"55",
+"Alternativas": ["Aulas","Laboratórios","Biblioteca","Salas de aula","Outras dependências"],
+"Media": ["4.182","3.545","3.182","3.727","3.455"]
 }]

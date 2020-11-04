@@ -1,280 +1,280 @@
 [{
 "Pergunta": "Ano de nascimento",
-"Respondida": "1",
-"Resposta": ["A","B","C","D","E","F","G","H","I","J","K","L","M","N"],
+"Respondida": "5",
+"Resposta": ["A","B","C","D","E","F","G","H","I","j","K","L","M","N"],
 "Alternativa": ["Antes de 1990","1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","2000","2001","2002"],
-"Quantidade": ["0","0","0","0","0","0","0","0","0","0","0","1","0","0"]
+"Quantidade": ["0","0","0","0","0","1","0","2","0","5","4","2","0","0"]
 },
 {
 "Pergunta": "Ano de ingresso no curso",
-"Respondida": "1",
+"Respondida": "5",
 "Resposta": ["A","B","C","D","E","F","G","O","P","Q","R"],
 "Alternativa": ["2011","2012","2013","2014","2015","2016","2017","2007","2008","2009","2010"],
-"Quantidade": ["0","0","0","0","1","0","0","0","0","0","0"]
+"Quantidade": ["3","0","2","4","2","3","0","0","0","0","0"]
 },
 {
 "Pergunta": "Ano de conclusão do curso",
-"Respondida": "1",
+"Respondida": "5",
 "Resposta": ["A","B","C","D","E","F","G","H"],
 "Alternativa": ["2012","2013","2014","2015","2016","2017","2018","2019"],
-"Quantidade": ["0","0","0","0","1","0","0","0"]
+"Quantidade": ["0","3","0","2","4","2","3","0"]
 },
 {
 "Pergunta": "Estado civil",
-"Respondida": "1",
+"Respondida": "2",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Solteiro","União estável","Casado","Divorciado","Viúvo"],
-"Quantidade": ["1","0","0","0","0"]
+"Quantidade": ["13","1","0","0","0"]
 },
 {
 "Pergunta": "Sexo",
-"Respondida": "1",
+"Respondida": "2",
 "Resposta": ["A","B","C"],
 "Alternativa": ["Feminino","Masculino","Prefiro não informar"],
-"Quantidade": ["1","0","0"]
+"Quantidade": ["5","9","0"]
 },
 {
 "Pergunta": "País onde mora",
 "Respondida": "1",
 "Resposta": ["BR","CA","ES","EUA","FR","IT","O","PT"],
 "Alternativa": ["Brasil","Canadá","Espanha","Estados Unidos","França","Itália","Outro","Portugal"],
-"Quantidade": ["0","0","1","0","0","0","0","0"]
+"Quantidade": ["14","0","0","0","0","0","0","0"]
 },
 {
 "Pergunta": "Estado onde mora",
-"Respondida": "0",
+"Respondida": "2",
 "Resposta": ["AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG","MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR","RS","SC","SE","SP","TO"],
 "Alternativa": ["Acre","Alagoas","Amazonas","Amapá","Bahia","Ceará","Distrito Federal","Espírito Santo","Goiás","Maranhão","Minas Gerais","Mato Grosso do Sul","Mato Grosso","Pará","Paraná","Pernambuco","Piauí","Paraiba","Rio de Janeiro","Rio Grande do Norte","Rondonia","Roraima","Rio Grande do Sul","Santa Catarina","Sergipe","São Paulo","Tocantins"],
-"Quantidade": ["0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"]
+"Quantidade": ["0","0","0","0","0","0","0","0","0","0","13","0","0","0","0","0","0","0","0","0","0","0","1","0","0","0","0"]
 },
 {
 "Pergunta": "Já iniciou outro curso técnico?",
 "Respondida": "1",
 "Resposta": ["A","B"],
 "Alternativa": ["Sim","Não"],
-"Quantidade": ["1","0"]
+"Quantidade": ["0","11"]
 },
 {
 "Pergunta": "Já concluiu outro curso técnico?",
-"Respondida": "1",
+"Respondida": "0",
 "Resposta": ["A","B"],
 "Alternativa": ["Sim","Não"],
-"Quantidade": ["1","0"]
+"Quantidade": ["0","0"]
 },
 {
 "Pergunta": "Você teve bolsa do Pibic ou Pibex?",
-"Respondida": "1",
+"Respondida": "3",
 "Resposta": ["A","B","C","D"],
 "Alternativa": ["Não","Sim. Pibic","Sim. Pibex","Sim. Ambas"],
-"Quantidade": ["0","1","0","0"]
+"Quantidade": ["8","1","2","0"]
 },
 {
 "Pergunta": "Você fez o técnico concomitante ou subsequente?",
 "Respondida": "1",
 "Resposta": ["A","B"],
 "Alternativa": ["Concomitante","Subsequente"],
-"Quantidade": ["0","1"]
+"Quantidade": ["11","0"]
 },
 {
 "Pergunta": "Você continuou os seus estudos?",
-"Respondida": "1",
+"Respondida": "2",
 "Resposta": ["A","B","C","D","E","F"],
 "Alternativa": ["Não","Outro técnico","Graduação","Mestrado","Doutorado","Pós-graduação"],
-"Quantidade": ["1","0","0","0","0","0"]
+"Quantidade": ["0","1","10","0","0","0"]
 },
 {
 "Pergunta": "Quantos cursos/treinamentos você costuma fazer por ano?",
-"Respondida": "1",
+"Respondida": "3",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["0","1","2","3","Mais de 3"],
-"Quantidade": ["0","0","0","0","1"]
+"Quantidade": ["0","6","4","0","1"]
 },
 {
 "Pergunta": "Quantas palestras/congressos você costuma ir por ano?",
-"Respondida": "1",
+"Respondida": "5",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["0","1","2","3","Mais de 3"],
-"Quantidade": ["1","0","0","0","0"]
+"Quantidade": ["2","1","4","2","2"]
 },
 {
 "Pergunta": "Você estaria disposto a participar como palestrante da semana acadêmica do curso que é realizada anualmente no mês de maio?",
-"Respondida": "1",
+"Respondida": "2",
 "Resposta": ["A","B"],
 "Alternativa": ["Sim","Não"],
-"Quantidade": ["0","1"]
+"Quantidade": ["1","10"]
 },
 {
 "Pergunta": "Você estaria disposto a ministrar um minicurso da semana acadêmica do curso que é realizada anualmente no mês de maio?",
-"Respondida": "1",
+"Respondida": "2",
 "Resposta": ["A","B"],
 "Alternativa": ["Sim","Não"],
-"Quantidade": ["0","1"]
+"Quantidade": ["4","7"]
 },
 {
 "Pergunta": "Você já trabalhou?",
-"Respondida": "1",
+"Respondida": "2",
 "Resposta": ["A","B"],
 "Alternativa": ["Sim","Não"],
-"Quantidade": ["0","1"]
+"Quantidade": ["6","5"]
 },
 {
 "Pergunta": "Você já atuou como técnico em informática?",
-"Respondida": "0",
+"Respondida": "2",
 "Resposta": ["A","B"],
 "Alternativa": ["Sim","Não"],
-"Quantidade": ["0","0"]
+"Quantidade": ["3","3"]
 },
 {
 "Pergunta": "Quando foi o início da sua atividade profissional?",
-"Respondida": "0",
+"Respondida": "4",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Antes de começar o técnico","Durante o técnico","Até um ano depois da formatura","1 a 3 anos depois da formatura","Mais de 3 anos depois da formatura"],
-"Quantidade": ["0","0","0","0","0"]
+"Quantidade": ["0","1","2","2","1"]
 },
 {
 "Pergunta": "Como obteve o primeiro emprego?",
-"Respondida": "0",
+"Respondida": "4",
 "Resposta": ["A","B","C","D","E","F"],
 "Alternativa": ["Abriu uma empresa","Enviou currículo e foi selecionado","Fez estágio e foi admitido ao término do mesmo","Indicação de um amigo","Indicação de um professor","Outro"],
-"Quantidade": ["0","0","0","0","0","0"]
+"Quantidade": ["1","2","0","1","0","2"]
 },
 {
 "Pergunta": "Você está trabalhando?",
-"Respondida": "0",
+"Respondida": "2",
 "Resposta": ["A","B"],
 "Alternativa": ["Sim","Não"],
-"Quantidade": ["0","0"]
+"Quantidade": ["4","2"]
 },
 {
 "Pergunta": "Qual o seu vínculo empregatício?",
-"Respondida": "0",
+"Respondida": "3",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Autônomo","Empregado com carteira assinada","Empregado sem carteira assinada","Empregador","Outro"],
-"Quantidade": ["0","0","0","0","0"]
+"Quantidade": ["1","1","2","0","0"]
 },
 {
 "Pergunta": "Qual a área que você atua?",
-"Respondida": "0",
+"Respondida": "2",
 "Resposta": ["A","B","C","D","E","F","G","H","I","J","K"],
 "Alternativa": ["Informática/Sistemas/Tecnologia","Planejamento/Desenvolvimento/Análise","Industrial/Produção/Manutenção","Acadêmica","Administração","Comercial/Vendas","Consultoria","Jurídica/Legal","Presidência/Diretoria/Gerência Geral","Telecomunicações","Outro"],
-"Quantidade": ["0","0","0","0","0","0","0","0","0","0","0"]
+"Quantidade": ["2","0","2","0","0","0","0","0","0","0","0"]
 },
 {
 "Pergunta": "A função que você exerce está alinhada a área de técnico em informática?",
-"Respondida": "0",
+"Respondida": "2",
 "Resposta": ["A","B"],
 "Alternativa": ["Sim","Não"],
-"Quantidade": ["0","0"]
+"Quantidade": ["1","3"]
 },
 {
 "Pergunta": "Qual o cargo você ocupa?",
-"Respondida": "0",
+"Respondida": "1",
 "Resposta": ["A","B","C","D","E","F","G","H","I","J","K"],
 "Alternativa": ["Acadêmico","Administrador de banco de dados","Administrador de redes","Analista de sistemas","Coordenador de projetos","Diretor","Gerente","Programador","Sócio/ Proprietário","Suporte técnico","Outro"],
-"Quantidade": ["0","0","0","0","0","0","0","0","0","0","0"]
+"Quantidade": ["0","0","0","0","0","0","0","1","0","0","0"]
 },
 {
 "Pergunta": "Quantas horas você trabalha por semana?",
-"Respondida": "0",
+"Respondida": "1",
 "Resposta": ["A","B","C","D"],
 "Alternativa": ["Menos de 40","Entre 40 e 44","Entre 45 e 48","Mais de 48"],
-"Quantidade": ["0","0","0","0"]
+"Quantidade": ["1","0","0","0"]
 },
 {
 "Pergunta": "Qual a sua faixa salarial bruta?",
-"Respondida": "0",
+"Respondida": "1",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Menos de R$1000,00","Entre R$1000,00 e R$2000,00","Entre R$2000,00 e R$4000,00","Entre R$4000,00 e R$6000,00","Mais de R$6000,00"],
-"Quantidade": ["0","0","0","0","0"]
+"Quantidade": ["1","0","0","0","0"]
 },
 {
 "Pergunta": "Qual o principal motivo para você não atuar na área de informática?",
-"Respondida": "0",
+"Respondida": "2",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Falta de perspectiva de carreira","Mercado de trabalho atual saturado","Melhor oportunidade em outra profissão","Trabalho na área da minha segunda formação","Outro"],
-"Quantidade": ["0","0","0","0","0"]
+"Quantidade": ["0","0","2","0","1"]
 },
 {
 "Pergunta": "Por que você não está empregado?",
-"Respondida": "1",
+"Respondida": "2",
 "Resposta": ["A","B","C"],
 "Alternativa": ["Falta de oportunidade","Não preciso/Não quero","Me dedico aos estudos"],
-"Quantidade": ["1","0","0"]
+"Quantidade": ["1","0","6"]
 },
 {
 "Pergunta": "Qual o ramo da empresa que você trabalha?",
-"Respondida": "0",
+"Respondida": "1",
 "Resposta": ["A","B","C","D","E","F","G","H","I","J","K"],
 "Alternativa": ["Aeroespacial e defesa","Automobilísticas","Fundos de aposentadoria e de pensão","Indústria farmacêutica","Maquinas e equipamentos","Organização sem fins lucrativos","Setor público","Serviços","Tecnologia da informação","Telecomunicações","Outro"],
-"Quantidade": ["0","0","0","0","0","0","0","0","0","0","0"]
+"Quantidade": ["0","0","0","0","0","0","0","0","1","0","0"]
 },
 {
 "Pergunta": "Quantas pessoas trabalham na empresa?",
-"Respondida": "0",
+"Respondida": "1",
 "Resposta": ["A","B","C","D","E","F"],
 "Alternativa": ["Menos de 10","Entre 10 e 20","Entre 21 e 35","Entre 36 e 50","Entre 51 e 100","Mais de 100"],
-"Quantidade": ["0","0","0","0","0","0"]
-},
-{
-"Pergunta": "Você fuma?",
-"Respondida": "1",
-"Resposta": ["A","B"],
-"Alternativa": ["Sim","Não"],
-"Quantidade": ["0","1"]
-},
-{
-"Pergunta": "Você faz algum trabalho voluntário?",
-"Respondida": "1",
-"Resposta": ["A","B"],
-"Alternativa": ["Sim","Não"],
-"Quantidade": ["1","0"]
-},
-{
-"Pergunta": "Qual a sua média de sono?",
-"Respondida": "1",
-"Resposta": ["A","B","C","D","E","F"],
-"Alternativa": ["Menos de 2 horas","2 a 4 horas","4 a 6 horas","6 a 8 horas","8 a 10 horas","Mais de 10 horas"],
 "Quantidade": ["1","0","0","0","0","0"]
 },
 {
-"Pergunta": "Você pratica esporte?",
-"Respondida": "1",
+"Pergunta": "Você fuma?",
+"Respondida": "2",
 "Resposta": ["A","B"],
 "Alternativa": ["Sim","Não"],
-"Quantidade": ["1","0"]
+"Quantidade": ["1","9"]
+},
+{
+"Pergunta": "Você faz algum trabalho voluntário?",
+"Respondida": "2",
+"Resposta": ["A","B"],
+"Alternativa": ["Sim","Não"],
+"Quantidade": ["2","8"]
+},
+{
+"Pergunta": "Qual a sua média de sono?",
+"Respondida": "2",
+"Resposta": ["C","D"],
+"Alternativa": ["4 a 6 horas","6 a 8 horas"],
+"Quantidade": ["3","7"]
+},
+{
+"Pergunta": "Você pratica esporte?",
+"Respondida": "2",
+"Resposta": ["A","B"],
+"Alternativa": ["Sim","Não"],
+"Quantidade": ["6","4"]
 },
 {
 "Pergunta": "Como foi atendida suas expectativas do curso em relação à formação profissional?",
-"Respondida": "1",
+"Respondida": "3",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Péssima","Ruim","Regular","Bom","Ótimo"],
-"Quantidade": ["0","0","0","1","0"]
+"Quantidade": ["0","0","3","7","1"]
 },
 {
 "Pergunta": "As disciplinas específicas foram adequadas para o bom desempenho da atividade profissional?",
-"Respondida": "1",
+"Respondida": "3",
 "Resposta": ["A","B","C"],
 "Alternativa": ["Um pouco","Muito","Não"],
-"Quantidade": ["1","0","0"]
+"Quantidade": ["8","2","1"]
 },
 {
 "Pergunta": "Você acha que o estágio de pelo menos 150h (além das disciplinas obrigatórias) deve ser obrigatório para receber o diploma do curso?",
-"Respondida": "1",
+"Respondida": "3",
 "Resposta": ["A","B","C"],
 "Alternativa": ["Sim","Não","Indiferente"],
-"Quantidade": ["1","0","0"]
+"Quantidade": ["7","3","1"]
 },
 {
 "Pergunta": "Você acha que o curso deve ter 120h em atividades complementares obrigatórias?",
-"Respondida": "1",
+"Respondida": "3",
 "Resposta": ["A","B","C"],
 "Alternativa": ["Sim","Não","Indiferente"],
-"Quantidade": ["1","0","0"]
+"Quantidade": ["8","2","1"]
 },
 {
 "Pergunta": "Como você avalia a importância dessa pesquisa?",
-"Respondida": "1",
+"Respondida": "2",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Muito importante","Importante","Indiferente","Pouco importante","Sem importância"],
-"Quantidade": ["1","0","0","0","0"]
+"Quantidade": ["6","5","0","0","0"]
 }]
