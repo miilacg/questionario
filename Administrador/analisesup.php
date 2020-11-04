@@ -206,22 +206,32 @@
                                             $media[$i] = $linhaConsulta['media'];
                                                                                 
                                             $deletaTabela = "DROP TABLE ano;";
-                                            $resultadoExclusão = mysqli_query($conn, $deletaTabela);                                                                                               
+                                            $resultadoExclusao = mysqli_query($conn, $deletaTabela);                                                                                               
                                         } 
                                         
                                         fwrite($file, "\n".$aspas."Alternativas".$aspas.": [");
+                                        $contador = 0;
                                         for ($j = 0; $j < 7; $j++){
-                                            fwrite($file, $aspas.$ano[$j].$aspas);
-                                            if ($j < 6){
+                                            if($media[$j] > 0) {
+                                                fwrite($file, $aspas.$ano[$j].$aspas);                                                
+                                            }else{
+                                                $contador++;
+                                            }                                            
+                                            if (($j < 6) && ($j != ($contador-1))){
                                                 fwrite($file, ",");
                                             }
                                         }
                                         fwrite($file, "],");
 
+                                        $contador = 0;
                                         fwrite($file, "\n".$aspas."Respostas".$aspas.": [");
                                         for ($j = 0; $j < 7; $j++){
-                                            fwrite($file, $aspas.$media[$j].$aspas);
-                                            if ($j < 6){
+                                            if($media[$j] > 0) {
+                                                fwrite($file, $aspas.$media[$j].$aspas);                                                
+                                            }else{
+                                                $contador++;
+                                            }                                            
+                                            if (($j < 6) && ($j != ($contador-1))){
                                                 fwrite($file, ",");
                                             }
                                         }
@@ -299,7 +309,6 @@
                                                 $resultadoExclusão = mysqli_query($conn, $deletaTabela);                                                                                               
                                             } 
 
-                                            $mediaIdiomas = 0;
                                             //calcular a média geral
                                             $selecaoConsulta = "SELECT (SUM(qtd * alternativa)/ SUM(qtd)) AS media 
                                                                 FROM( 
@@ -330,29 +339,37 @@
                                             $linhaConsulta = mysqli_fetch_assoc($resultadoConsulta);
                                             $totalConsulta = mysqli_num_rows($resultadoConsulta);
                                                 
-                                            $mediaIdiomas = $linhaConsulta['media'];  
-                                            $Respostas[2] = $mediaIdiomas;
+                                            $mediaIdiomas = $linhaConsulta['media']; 
                                             
-                                            $alternativa = array("Intercâmbio no exterior", "Não fez intercâmbio para o exterior", "Média geral");
+                                            $alternativa = array("Fez intercâmbio no exterior", "Não fez intercâmbio no exterior");
 
-                                            fwrite($file, ",\n{\n".$aspas."Tipo".$aspas.":".$aspas."bar".$aspas.",");
+                                            fwrite($file, ",\n{\n".$aspas."Tipo".$aspas.":".$aspas."line".$aspas.",");
                                             fwrite($file, "\n".$aspas."Id_Pergunta".$aspas.":".$aspas.$questao.$aspas.",");
                                             fwrite($file, "\n".$aspas."Alternativas".$aspas.": [");
-                                            for ($j = 0; $j < 3; $j++){
+                                            for ($j = 0; $j < 2; $j++){
                                                 fwrite($file, $aspas.$alternativa[$j].$aspas);
-                                                if ($j < 2){
+                                                if ($j < 1){
                                                     fwrite($file, ",");
                                                 }
                                             }
                                             fwrite($file, "],");
 
                                             fwrite($file, "\n".$aspas."Respostas".$aspas.": [");
-                                            for ($j = 0; $j < 3; $j++){
+                                            for ($j = 0; $j < 2; $j++){
                                                 fwrite($file, $aspas.$Respostas[$j].$aspas);
-                                                if ($j < 2){
+                                                if ($j < 1){
                                                     fwrite($file, ",");
                                                 }
                                             }
+                                            fwrite($file, "],"); 
+
+                                            fwrite($file, "\n".$aspas."Media".$aspas.": [");
+                                            for ($j = 0; $j < 2; $j++){
+                                                fwrite($file, $aspas.$mediaIdiomas.$aspas);
+                                                if ($j < 1){
+                                                    fwrite($file, ",");
+                                                }
+                                            }      
                                             fwrite($file, "]\n}");  
 
                                             ?>
@@ -450,7 +467,12 @@
 
                                                 fwrite($file, "\n".$aspas."Respostas".$aspas.": [");
                                                 for ($j = 0; $j < 6; $j++){
-                                                    fwrite($file, $aspas.$media[$j].$aspas);
+                                                    if($media[$j] == ''){
+                                                        fwrite($file, $aspas.'0'.$aspas);
+                                                    }else{
+                                                        fwrite($file, $aspas.$media[$j].$aspas);
+                                                    }
+                                                    
                                                     if ($j < 5){
                                                         fwrite($file, ",");
                                                     }
@@ -553,7 +575,7 @@
                                                                 }
                                                                 fwrite($file, "],");
                                                             }else{
-                                                                fwrite($file, "\n".$aspas."naoInformar".$aspas.": [");                                                    
+                                                                fwrite($file, "\n".$aspas."naoInformar".$aspas.": [");                                                
                                                                 for ($j = 0; $j < $totalConsulta; $j++){
                                                                     fwrite($file, $aspas.$quantidade[$j].$aspas);
                                                                     if ($j < ($totalConsulta - 1)){
@@ -589,7 +611,7 @@
                                                         ?><h5>Média salarial X Gênero</h5>
                                                         <h6>Essa análise não pode ser feita por falta de respostas.<h6><?php
                                                     }else{
-                                                        fwrite($file, "\n".$aspas."Tipo".$aspas.": ".$aspas."bar".$aspas.",");
+                                                        fwrite($file, "\n".$aspas."Tipo".$aspas.": ".$aspas."line".$aspas.",");
                                                         fwrite($file, "\n".$aspas."Id_Pergunta".$aspas.": ".$aspas.$questao.$aspas.",");
                                                         
                                                         $count = 0;
@@ -644,7 +666,6 @@
                                                                 $mediaSalario = $linhaMediaSalarial['media'];
 
                                                                 $mediaSalarial[$count] = $mediaSalario;
-                                                                $alternativa[$count] = "Media Geral";
                                                             }else{    
                                                                 $id_alternativa = 34 + $i;                                                     
                                                                 
@@ -707,21 +728,30 @@
                                                         }                                                                          
                                                                                         
                                                         fwrite($file, "\n".$aspas."Alternativas".$aspas.": [");
-                                                        for ($j = 0; $j <= $count; $j++){
+                                                        for ($j = 0; $j < $count; $j++){
                                                             fwrite($file, $aspas.$alternativa[$j].$aspas);
-                                                            if ($j < $count){
+                                                            if ($j < $count - 1){
                                                                 fwrite($file, ",");
                                                             }
                                                         }
                                                         fwrite($file, "],");
                         
                                                         fwrite($file, "\n".$aspas."Respostas".$aspas.": [");
-                                                        for ($j = 0; $j <= $count; $j++){
+                                                        for ($j = 0; $j < $count; $j++){
                                                             fwrite($file, $aspas.$mediaSalarial[$j].$aspas);
-                                                            if ($j < $count){
+                                                            if ($j < $count - 1){
                                                                 fwrite($file, ",");
                                                             }
                                                         }
+
+                                                        fwrite($file, "],"); 
+                                                        fwrite($file, "\n".$aspas."Media".$aspas.": [");
+                                                        for ($j = 0; $j < $count; $j++){
+                                                            fwrite($file, $aspas.$mediaSalarial[$count].$aspas);
+                                                            if ($j < $count - 1){
+                                                                fwrite($file, ",");
+                                                            }
+                                                        }      
                                                         fwrite($file, "]\n},\n{");     
                                                         
                                                         ?>
@@ -739,7 +769,7 @@
                                                             R$12000,00 para salários acima de R$12000,00.
                                                         </p><?php 
 
-                                                }else{
+                                                }else{                                                    
                                                     if ($questao == 49){ //utilização das as disciplinas
                                                         $selecaoVerificaco = "SELECT questao FROM `pergunta` NATURAL JOIN `resposta` WHERE id_perguntas = '$questao'";
                                                         $resultadoVerificaco = mysqli_query($conn, $selecaoVerificaco);
@@ -774,29 +804,24 @@
                                                                                     UNION        
                                                                                     SELECT resposta, alternativa, subquestao, id_subpergunta, id_perguntas, qtd     
                                                                                     FROM( /*convertendo a resposta para numero*/
-                                                                                        SELECT resposta, subquestao, id_subpergunta, id_perguntas, 2 AS alternativa, COUNT(*) AS qtd
+                                                                                        SELECT resposta, subquestao, id_subpergunta, id_perguntas, 0 AS alternativa, COUNT(*) AS qtd
                                                                                         FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta  
                                                                                         WHERE id_perguntas = 49 AND id_alternativa = 181 AND id_subpergunta = '$contConsulta'
                                                                                         GROUP BY resposta
                                                                                         UNION  
-                                                                                        SELECT resposta, subquestao, id_subpergunta, id_perguntas, 3 AS alternativa, COUNT(*) AS qtd 
+                                                                                        SELECT resposta, subquestao, id_subpergunta, id_perguntas, 1 AS alternativa, COUNT(*) AS qtd 
                                                                                         FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta   
                                                                                         WHERE id_perguntas = 49 AND id_alternativa = 180 AND id_subpergunta = '$contConsulta'
                                                                                         GROUP BY resposta
                                                                                         UNION 
-                                                                                        SELECT resposta, subquestao, id_subpergunta, id_perguntas, 4 AS alternativa, COUNT(*) AS qtd
+                                                                                        SELECT resposta, subquestao, id_subpergunta, id_perguntas, 2 AS alternativa, COUNT(*) AS qtd
                                                                                         FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta 
                                                                                         WHERE id_perguntas = 49 AND id_alternativa = 179 AND id_subpergunta = '$contConsulta'
                                                                                         GROUP BY resposta
                                                                                         UNION
-                                                                                        SELECT resposta, subquestao, id_subpergunta, id_perguntas, 5 AS alternativa, COUNT(*) AS qtd
+                                                                                        SELECT resposta, subquestao, id_subpergunta, id_perguntas, 3 AS alternativa, COUNT(*) AS qtd
                                                                                         FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta  
                                                                                         WHERE id_perguntas = 49 AND id_alternativa = 178 AND id_subpergunta = '$contConsulta'
-                                                                                        GROUP BY resposta
-                                                                                        UNION
-                                                                                        SELECT resposta, subquestao, id_subpergunta, id_perguntas, 1 AS alternativa, COUNT(*) AS qtd 
-                                                                                        FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta   
-                                                                                        WHERE id_perguntas = 49 AND id_alternativa = 182 AND id_subpergunta = '$contConsulta'
                                                                                         GROUP BY resposta
                                                                                     )AS Media GROUP BY resposta 
                                                                                 )AS Resultado ORDER BY Resultado.resposta;"; 
@@ -813,7 +838,7 @@
                             
                                                                 if (count($subPergunta) == $totalConsulta){
                                                                     //ordenacao do vetor usando selecao
-                                                                    for ($i = 0; $i < ($totalConsulta - 1); $i++){ 
+                                                                    /*for ($i = 0; $i < ($totalConsulta - 1); $i++){ 
                                                                         $menor = $i; 
                                                                         for ($j = ($i + 1); $j < $totalConsulta; $j++){ 
                                                                             if($mediaSubPergunta[$j] > $mediaSubPergunta[$menor]) { 
@@ -828,24 +853,24 @@
                                                                             $mediaSubPergunta[$menor] = $auxValor; 
                                                                             $subPergunta[$menor] = $auxPergunta;
                                                                         } 
-                                                                    }
+                                                                    }*/
                                                                     
-                                                                    fwrite($file, "\n".$aspas."Tipo".$aspas.":".$aspas."bar".$aspas.",");
+                                                                    fwrite($file, "\n".$aspas."Tipo".$aspas.":".$aspas."line".$aspas.",");
                                                                     fwrite($file, "\n".$aspas."Id_Pergunta".$aspas.":".$aspas.$linhaMedia['id_perguntas'].$aspas.",");
                                                                     fwrite($file, "\n".$aspas."Alternativas".$aspas.": [");
-                                                                    for ($i = 0; $i < $totalConsulta; $i++){
+                                                                    for ($i = 0; $i < $totalConsulta - 1; $i++){
                                                                         fwrite($file, $aspas.$subPergunta[$i].$aspas);
-                                                                        if ($i < $totalConsulta - 1){
+                                                                        if ($i < $totalConsulta - 2){
                                                                             fwrite($file, ",");
                                                                         }
                                                                     }
                                                                     fwrite($file, "],");
                                 
                                                                     fwrite($file, "\n".$aspas."Respostas".$aspas.": [");
-                                                                    for ($i = 0; $i < $totalConsulta; $i++){
+                                                                    for ($i = 0; $i < $totalConsulta - 1; $i++){
                                                                         $media = round($mediaSubPergunta[$i], 3); //arredondamento para 3 casas decimais
                                                                         fwrite($file, $aspas.$media.$aspas);
-                                                                        if ($i < $totalConsulta - 1){
+                                                                        if ($i < $totalConsulta - 2){
                                                                             fwrite($file, ",");
                                                                         }
                                                                     }
@@ -859,8 +884,7 @@
                                                                 }
                             
                                                                 if ($contConsulta == 32){
-                                                                    $contConsulta = 34;
-                                                                
+                                                                    $contConsulta = 34;                                                                
                                                                 }else{
                                                                     if ($contConsulta == 34){
                                                                         $contConsulta = 36;
@@ -877,7 +901,8 @@
                                                                                     if ($contConsulta == 67){
                                                                                         $contConsulta = 109;
                                                                                     }else{
-                                                                                        $contConsulta++;
+                                                                                        if($contConsulta < 130)
+                                                                                            $contConsulta++;
                                                                                     }
                                                                                 }
                                                                             }
@@ -989,33 +1014,51 @@
                                                                 $resultadoConsulta = mysqli_query($conn, $selecaoConsulta);
                                                                 $linhaConsulta = mysqli_fetch_assoc($resultadoConsulta);
                                                                 $totalConsulta = mysqli_num_rows($resultadoConsulta);
-                                                                     
+                                                                    
                                                                 $mediaGeral = $linhaConsulta['media'];
                                                                 
                                                                 fwrite($file, "\n".$aspas."Tipo".$aspas.": ".$aspas."line".$aspas.",");
                                                                 fwrite($file, "\n".$aspas."Id_Pergunta".$aspas.": ".$aspas.$questao.$aspas.",");
 
                                                                 fwrite($file, "\n".$aspas."Alternativas".$aspas.": [");
+                                                                $contador = 0;
                                                                 for ($j = 0; $j < 7; $j++){
-                                                                    fwrite($file, $aspas.$ano[$j].$aspas);
-                                                                    if ($j < 6){
+                                                                    if($mediaSatisfacao[$j] > 0) {
+                                                                        fwrite($file, $aspas.$ano[$j].$aspas);                                                
+                                                                    }else{
+                                                                        $contador++;
+                                                                    }                                            
+                                                                    if (($j < 6) && ($j != ($contador-1))){
                                                                         fwrite($file, ",");
                                                                     }
                                                                 }
                                                                 fwrite($file, "],");
-                        
+
                                                                 fwrite($file, "\n".$aspas."Respostas".$aspas.": [");
+                                                                $contador = 0;
                                                                 for ($j = 0; $j < 7; $j++){
-                                                                    fwrite($file, $aspas.$mediaSatisfacao[$j].$aspas);
-                                                                    if ($j < 6){
+                                                                    if($mediaSatisfacao[$j] > 0) {
+                                                                        fwrite($file, $aspas.$mediaSatisfacao[$j].$aspas);                                                
+                                                                    }else{
+                                                                        $contador++;
+                                                                    }  
+
+                                                                    if (($j < 6) && ($j != ($contador-1))){
                                                                         fwrite($file, ",");
                                                                     }
                                                                 }
                                                                 fwrite($file, "],"); 
+
                                                                 fwrite($file, "\n".$aspas."Media".$aspas.": [");
+                                                                $contador = 0;
                                                                 for ($j = 0; $j < 7; $j++){
-                                                                    fwrite($file, $aspas.$mediaGeral.$aspas);
-                                                                    if ($j < 6){
+                                                                    if($mediaSatisfacao[$j] > 0) {
+                                                                        fwrite($file, $aspas.$mediaGeral.$aspas);                                                
+                                                                    }else{
+                                                                        $contador++;
+                                                                    } 
+                                                                    
+                                                                    if (($j < 6) && ($j != ($contador-1))){
                                                                         fwrite($file, ",");
                                                                     }
                                                                 }      
@@ -1026,135 +1069,156 @@
                                                                     <h5>Nível de satisfação com o curso X Ano de formatura</h5>
                                                                     <canvas class = "grafico" id = "grafico<?php echo $questao;?>"></canvas>
                                                                     <p>Obs: para esse calculo foi considerado 1 para péssimo, 
-                                                                       2 para ruim, 3 regular, 4 bom e 5 ótimo.
+                                                                    2 para ruim, 3 regular, 4 bom e 5 ótimo.
                                                                     </p>
                                                                 <?php    
                                                             }      
                                                         }else{
-                                                            if ($questao == 62){ //Como você classifica os itens abaixo
-                                                                $selecaoVerificaco = "SELECT questao FROM `pergunta` NATURAL JOIN `resposta` WHERE id_perguntas = '$questao'";
+                                                            if($questao == 61){ //ano de formatura por satisfação com a instituição
+                                                                $selecaoVerificaco = "SELECT questao FROM `pergunta` NATURAL JOIN `resposta` WHERE id_perguntas = 62 or id_perguntas = 3";
                                                                 $resultadoVerificaco = mysqli_query($conn, $selecaoVerificaco);
                                                                 $linhaVerificaco = mysqli_fetch_assoc($resultadoVerificaco);
                                                                 $totalVerificaco = mysqli_num_rows($resultadoVerificaco);  //calcula quantos dados foram retornados
-                                                                
-                                                                if ($totalVerificaco == 0){
-                                                                    $selecaoN = "SELECT questao FROM pergunta where id_perguntas = '$questao';";
+                                                                        
+                                                                if ($totalVerificaco < 2){
+                                                                    $selecaoN = "SELECT questao FROM pergunta where id_perguntas = 62;";
                                                                     $resultadoSelecaoN = mysqli_query($conn, $selecaoN);
                                                                     $linhaN = mysqli_fetch_assoc($resultadoSelecaoN);
                                                                     
-                                                                    ?><h5>Grau de satisfação com as estruturas da instituição</h5>
+                                                                    ?><h5>Nível de satisfação com a instituição X Ano de formatura</h5>
                                                                     <h6>Essa análise não pode ser feita por falta de respostas.<h6><?php
-                                                                }else{
-                                                                    $selecaoConsulta = "SELECT questao, id_perguntas FROM `pergunta` NATURAL JOIN `subpergunta_has_pergunta` WHERE id_perguntas = 62";
-                                                                    $resultadoConsulta = mysqli_query($conn, $selecaoConsulta);
-                                                                    $linhaConsulta = mysqli_fetch_assoc($resultadoConsulta);
-                                                                    $totalConsulta = mysqli_num_rows($resultadoConsulta);  //calcula quantos dados foram retornados
-                                    
-                                                                    ?><h5>Grau de satisfação com as estruturas da instituição</h5><?php
-                        
-                                                                    $contConsulta = 103;
-                                    
-                                                                    $i = 0;
-                                                                    do { 
-                                                                        $selecaoMedia = "SELECT subquestao, id_subpergunta, id_perguntas, (SUM(qtd * alternativa)/ SUM(qtd)) AS media FROM( 
-                                                                                            SELECT opcao AS resposta, alternativa, subquestao, id_subpergunta, id_perguntas, 0 AS qtd 
-                                                                                            FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta 
-                                                                                            WHERE id_perguntas = 62 AND id_subpergunta = '$contConsulta' AND id_alternativa 
-                                                                                            NOT IN (SELECT id_alternativa FROM resposta WHERE id_perguntas = 62 AND id_subpergunta = '$contConsulta')
-                                                                                            GROUP BY resposta 
-                                                                                            UNION        
-                                                                                            SELECT resposta, alternativa, subquestao, id_subpergunta, id_perguntas, qtd     
-                                                                                            FROM( /*convertendo a resposta para numero*/
-                                                                                                SELECT resposta, subquestao, id_subpergunta, id_perguntas, 2 AS alternativa, COUNT(*) AS qtd
-                                                                                                FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta  
-                                                                                                WHERE id_perguntas = 62 AND id_alternativa = 190 AND id_subpergunta = '$contConsulta'
+                                                                }else{    
+                                                                    for ($i = 0; $i < 7; $i++){  
+                                                                        $id_alternativa = 0;     
+                                                                        $id_alternativa = 20 + $i;                                                                                                     
+                                                                            
+                                                                        $criarTabela = "CREATE TABLE ano(cpf varchar(45));";
+                                                                        $resultadoCriacao = mysqli_query($conn, $criarTabela);
+                            
+                                                                        $insereTabela = "INSERT INTO ano(`cpf`) SELECT cpf FROM resposta WHERE id_alternativa = '$id_alternativa';";
+                                                                        $resultadoInsercao = mysqli_query($conn, $insereTabela);
+                            
+                                                                        $selecaoAlternativa = "SELECT alternativa FROM alternativa WHERE id_alternativa = '$id_alternativa';";
+                                                                        $resultadoAlternativa = mysqli_query($conn, $selecaoAlternativa);
+                                                                        $linhaAlternativa = mysqli_fetch_assoc($resultadoAlternativa);
+                            
+                                                                        $selecaoConsulta = "SELECT ROUND((SUM(qtd * alternativa)/ SUM(qtd)),2) AS media 
+                                                                                            FROM(        
+                                                                                                SELECT resposta, alternativa, id_perguntas, id_alternativa, qtd     
+                                                                                                FROM(
+                                                                                                    SELECT resposta, id_perguntas, 1 AS alternativa, id_alternativa, COUNT(*) AS qtd
+                                                                                                    FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa natural join ano
+                                                                                                    WHERE id_perguntas = 62 AND id_alternativa = 189
+                                                                                                    GROUP BY resposta
+                                                                                                    UNION  
+                                                                                                    SELECT resposta, id_perguntas, 2 AS alternativa, id_alternativa, COUNT(*) AS qtd 
+                                                                                                    FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa   natural join ano
+                                                                                                    WHERE id_perguntas = 62 AND id_alternativa = 190
+                                                                                                    GROUP BY resposta
+                                                                                                    UNION 
+                                                                                                    SELECT resposta, id_perguntas, 3 AS alternativa, id_alternativa, COUNT(*) AS qtd
+                                                                                                    FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa natural join ano
+                                                                                                    WHERE id_perguntas = 62 AND id_alternativa = 191
+                                                                                                    GROUP BY resposta
+                                                                                                    UNION
+                                                                                                    SELECT resposta, id_perguntas, 4 AS alternativa, id_alternativa, COUNT(*) AS qtd
+                                                                                                    FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa  natural join ano
+                                                                                                    WHERE id_perguntas = 62 AND id_alternativa = 192
+                                                                                                    GROUP BY resposta
+                                                                                                    UNION
+                                                                                                    SELECT resposta, id_perguntas, 5 AS alternativa, id_alternativa, COUNT(*) AS qtd 
+                                                                                                    FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa   natural join ano
+                                                                                                    WHERE id_perguntas = 62 AND id_alternativa = 193
+                                                                                                    GROUP BY resposta
+                                                                                                ) AS Media 
+                                                                                            )AS Resultado ORDER BY Resultado.resposta";
+                                                                        $resultadoConsulta = mysqli_query($conn, $selecaoConsulta);
+                                                                        $linhaConsulta = mysqli_fetch_assoc($resultadoConsulta);
+                                                                        $totalConsulta = mysqli_num_rows($resultadoConsulta);
+                                                                                                                        
+                                                                        $ano[$i] = $linhaAlternativa['alternativa'];
+                                                                        $mediaSatisfacao[$i] = $linhaConsulta['media'];
+                                                                                                            
+                                                                        $deletaTabela = "DROP TABLE ano;";
+                                                                        $resultadoExclusão = mysqli_query($conn, $deletaTabela);                                                                                               
+                                                                    } 
+    
+                                                                    $selecaoConsulta = "SELECT ROUND((SUM(qtd * alternativa)/ SUM(qtd)),2) AS media 
+                                                                                        FROM(        
+                                                                                            SELECT resposta, alternativa, id_perguntas, id_alternativa, qtd     
+                                                                                            FROM(
+                                                                                                SELECT resposta, id_perguntas, 1 AS alternativa, id_alternativa, COUNT(*) AS qtd
+                                                                                                FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa 
+                                                                                                WHERE id_perguntas = 62 AND id_alternativa = 189
                                                                                                 GROUP BY resposta
                                                                                                 UNION  
-                                                                                                SELECT resposta, subquestao, id_subpergunta, id_perguntas, 3 AS alternativa, COUNT(*) AS qtd 
-                                                                                                FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta   
-                                                                                                WHERE id_perguntas = 62 AND id_alternativa = 194 AND id_subpergunta = '$contConsulta'
+                                                                                                SELECT resposta, id_perguntas, 2 AS alternativa, id_alternativa, COUNT(*) AS qtd 
+                                                                                                FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa
+                                                                                                WHERE id_perguntas = 62 AND id_alternativa = 190
                                                                                                 GROUP BY resposta
                                                                                                 UNION 
-                                                                                                SELECT resposta, subquestao, id_subpergunta, id_perguntas, 4 AS alternativa, COUNT(*) AS qtd
-                                                                                                FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta 
-                                                                                                WHERE id_perguntas = 62 AND id_alternativa = 192 AND id_subpergunta = '$contConsulta'
+                                                                                                SELECT resposta, id_perguntas, 3 AS alternativa, id_alternativa, COUNT(*) AS qtd
+                                                                                                FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa
+                                                                                                WHERE id_perguntas = 62 AND id_alternativa = 191
                                                                                                 GROUP BY resposta
                                                                                                 UNION
-                                                                                                SELECT resposta, subquestao, id_subpergunta, id_perguntas, 5 AS alternativa, COUNT(*) AS qtd
-                                                                                                FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta  
-                                                                                                WHERE id_perguntas = 62 AND id_alternativa = 193 AND id_subpergunta = '$contConsulta'
+                                                                                                SELECT resposta, id_perguntas, 4 AS alternativa, id_alternativa, COUNT(*) AS qtd
+                                                                                                FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa  
+                                                                                                WHERE id_perguntas = 62 AND id_alternativa = 192
                                                                                                 GROUP BY resposta
                                                                                                 UNION
-                                                                                                SELECT resposta, subquestao, id_subpergunta, id_perguntas, 1 AS alternativa, COUNT(*) AS qtd 
-                                                                                                FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta   
-                                                                                                WHERE id_perguntas = 62 AND id_alternativa = 195 AND id_subpergunta = '$contConsulta'
+                                                                                                SELECT resposta, id_perguntas, 5 AS alternativa, id_alternativa, COUNT(*) AS qtd 
+                                                                                                FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa
+                                                                                                WHERE id_perguntas = 62 AND id_alternativa = 193
                                                                                                 GROUP BY resposta
-                                                                                            )AS Media GROUP BY resposta 
-                                                                                        )AS Resultado ORDER BY Resultado.resposta;"; 
-                        
-                                                                        $resultadoMedia = mysqli_query($conn, $selecaoMedia);
-                                                                        $linhaMedia = mysqli_fetch_assoc($resultadoMedia);
-                                                                        $totalMedia = mysqli_num_rows($resultadoMedia);  
+                                                                                            ) AS Media 
+                                                                                        )AS Resultado ORDER BY Resultado.resposta";
+                                                                    $resultadoConsulta = mysqli_query($conn, $selecaoConsulta);
+                                                                    $linhaConsulta = mysqli_fetch_assoc($resultadoConsulta);
+                                                                    $totalConsulta = mysqli_num_rows($resultadoConsulta);
                                                                         
-                                                                        if ($i < $totalConsulta) {
-                                                                            $subPergunta[$i] = $linhaMedia['subquestao'];
-                                                                            $mediaSubPergunta[$i] = $linhaMedia['media'];
-                                                                            $i++;
-                                                                        }   
-                                    
-                                                                        if (count($subPergunta) == $totalConsulta){
-                                                                            //ordenacao do vetor usando selecao
-                                                                            for ($i = 0; $i < ($totalConsulta - 1); $i++){ 
-                                                                                $menor = $i; 
-                                                                                for ($j = ($i + 1); $j < $totalConsulta; $j++){ 
-                                                                                    if($mediaSubPergunta[$j] > $mediaSubPergunta[$menor]) { 
-                                                                                        $menor = $j; 
-                                                                                    } 
-                                                                                } 
-                                                                                if ($i != $menor){ 
-                                                                                    $auxValor = $mediaSubPergunta[$i]; 
-                                                                                    $auxPergunta = $subPergunta[$i];
-                                                                                    $mediaSubPergunta[$i] = $mediaSubPergunta[$menor]; 
-                                                                                    $subPergunta[$i] = $subPergunta[$menor];
-                                                                                    $mediaSubPergunta[$menor] = $auxValor; 
-                                                                                    $subPergunta[$menor] = $auxPergunta;
-                                                                                } 
-                                                                            }
-                                
-                                                                            fwrite($file, "\n".$aspas."Tipo".$aspas.":".$aspas."bar".$aspas.",");
-                                                                            fwrite($file, "\n".$aspas."Id_Pergunta".$aspas.":".$aspas.$linhaMedia['id_perguntas'].$aspas.",");
-                                                                            fwrite($file, "\n".$aspas."Alternativas".$aspas.": [");
-                                                                            for ($i = 0; $i < $totalConsulta; $i++){
-                                                                                fwrite($file, $aspas.$subPergunta[$i].$aspas);
-                                                                                if ($i < $totalConsulta - 1){
-                                                                                    fwrite($file, ",");
-                                                                                }
-                                                                            }
-                                                                            fwrite($file, "],");
-                                        
-                                                                            fwrite($file, "\n".$aspas."Respostas".$aspas.": [");
-                                                                            for ($i = 0; $i < $totalConsulta; $i++){
-                                                                                $media = round($mediaSubPergunta[$i], 3); //arredondamento para 3 casas decimais
-                                                                                fwrite($file, $aspas.$media.$aspas);
-                                                                                if ($i < $totalConsulta - 1){
-                                                                                    fwrite($file, ",");
-                                                                                }
-                                                                            }
-                                                                            fwrite($file, "]\n}");
-                                    
-                                                                            $subPergunta = array(); //limpar array para reiniciar a contagem do tamanho
-                                    
-                                                                            ?>
-                                                                                <canvas class = "grafico" id = "grafico<?php echo $questao;?>"></canvas>
-                                                                            <?php
-                                                                        }   
-                        
-                                                                        $contConsulta++;
-                                                                                
-                                                                    }while($linhaMedia = mysqli_fetch_assoc($resultadoConsulta));
-                                                                } 
-                                                            }else{                                        
-                                                                if ($questao == 23 || $questao == 24 || $questao == 25){ //perguntas das linguas estrangeiras
+                                                                    $mediaGeral = $linhaConsulta['media'];
+                                                                    
+                                                                    fwrite($file, "\n".$aspas."Tipo".$aspas.": ".$aspas."line".$aspas.",");
+                                                                    fwrite($file, "\n".$aspas."Id_Pergunta".$aspas.": ".$aspas.$questao.$aspas.",");
+    
+                                                                    fwrite($file, "\n".$aspas."Alternativas".$aspas.": [");
+                                                                    for ($j = 0; $j < 7; $j++){
+                                                                        fwrite($file, $aspas.$ano[$j].$aspas);
+                                                                        if ($j < 6){
+                                                                            fwrite($file, ",");
+                                                                        }
+                                                                    }
+                                                                    fwrite($file, "],");
+                            
+                                                                    fwrite($file, "\n".$aspas."Respostas".$aspas.": [");
+                                                                    for ($j = 0; $j < 7; $j++){
+                                                                        fwrite($file, $aspas.$mediaSatisfacao[$j].$aspas);
+                                                                        if ($j < 6){
+                                                                            fwrite($file, ",");
+                                                                        }
+                                                                    }
+                                                                    fwrite($file, "],"); 
+                                                                    fwrite($file, "\n".$aspas."Media".$aspas.": [");
+                                                                    for ($j = 0; $j < 7; $j++){
+                                                                        fwrite($file, $aspas.$mediaGeral.$aspas);
+                                                                        if ($j < 6){
+                                                                            fwrite($file, ",");
+                                                                        }
+                                                                    }      
+                                                                    fwrite($file, "]");                                                       
+                                                                    fwrite($file, "\n},\n{"); 
+    
+                                                                    ?>
+                                                                        <h5>Nível de satisfação com a instituição X Ano de formatura</h5>
+                                                                        <canvas class = "grafico" id = "grafico<?php echo $questao;?>"></canvas>
+                                                                        <p>Obs: para esse calculo foi considerado 1 para péssimo, 
+                                                                        2 para ruim, 3 regular, 4 bom e 5 ótimo.
+                                                                        </p>
+                                                                    <?php    
+                                                                }      
+                                                            }else{
+                                                                if ($questao == 62){ //Como você classifica os itens abaixo
                                                                     $selecaoVerificaco = "SELECT questao FROM `pergunta` NATURAL JOIN `resposta` WHERE id_perguntas = '$questao'";
                                                                     $resultadoVerificaco = mysqli_query($conn, $selecaoVerificaco);
                                                                     $linhaVerificaco = mysqli_fetch_assoc($resultadoVerificaco);
@@ -1165,67 +1229,56 @@
                                                                         $resultadoSelecaoN = mysqli_query($conn, $selecaoN);
                                                                         $linhaN = mysqli_fetch_assoc($resultadoSelecaoN);
                                                                         
-                                                                        if ($questao == 23){
-                                                                            ?><h5>Média do nível de leitura por língua estrangeira<h5><?php
-                                                                        }else{
-                                                                            if ($questao == 24){
-                                                                                ?><h5>Média do nível de fala por língua estrangeira<h5><?php
-                                                                            }else{
-                                                                                ?><h5>Média do nível de escrita por língua estrangeira<h5><?php
-                                                                            }
-                                                                        }
-                                                                        ?><h6>Essa análise não pode ser feita por falta de respostas.<h6><?php
+                                                                        ?><h5>Grau de satisfação com as estruturas da instituição</h5>
+                                                                        <h6>Essa análise não pode ser feita por falta de respostas.<h6><?php
                                                                     }else{
-                                                                        $selecaoConsulta = "SELECT questao, id_perguntas FROM `pergunta` NATURAL JOIN `subpergunta_has_pergunta` WHERE id_perguntas = '$questao'";
+                                                                        $selecaoConsulta = "SELECT questao, id_perguntas FROM `pergunta` NATURAL JOIN `subpergunta_has_pergunta` WHERE id_perguntas = 62";
                                                                         $resultadoConsulta = mysqli_query($conn, $selecaoConsulta);
                                                                         $linhaConsulta = mysqli_fetch_assoc($resultadoConsulta);
                                                                         $totalConsulta = mysqli_num_rows($resultadoConsulta);  //calcula quantos dados foram retornados
                                         
-                                                                        if ($questao == 23){
-                                                                            ?><h5>Média do nível de leitura por língua estrangeira<h5><?php
-                                                                        }else{
-                                                                            if ($questao == 24){
-                                                                                ?><h5>Média do nível de fala por língua estrangeira<h5><?php
-                                                                            }else{
-                                                                                ?><h5>Média do nível de escrita por língua estrangeira<h5><?php
-                                                                            }
-                                                                        }
-                        
-                                                                        $contConsulta = 1;
+                                                                        ?><h5>Grau de satisfação com as estruturas da instituição</h5><?php
+                            
+                                                                        $contConsulta = 103;
                                         
                                                                         $i = 0;
                                                                         do { 
                                                                             $selecaoMedia = "SELECT subquestao, id_subpergunta, id_perguntas, (SUM(qtd * alternativa)/ SUM(qtd)) AS media FROM( 
                                                                                                 SELECT opcao AS resposta, alternativa, subquestao, id_subpergunta, id_perguntas, 0 AS qtd 
                                                                                                 FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta 
-                                                                                                WHERE id_perguntas = '$questao' AND id_subpergunta = '$contConsulta' AND id_alternativa 
-                                                                                                NOT IN (SELECT id_alternativa FROM resposta WHERE id_perguntas = '$questao' AND id_subpergunta = '$contConsulta')
+                                                                                                WHERE id_perguntas = 62 AND id_subpergunta = '$contConsulta' AND id_alternativa 
+                                                                                                NOT IN (SELECT id_alternativa FROM resposta WHERE id_perguntas = 62 AND id_subpergunta = '$contConsulta')
                                                                                                 GROUP BY resposta 
                                                                                                 UNION        
                                                                                                 SELECT resposta, alternativa, subquestao, id_subpergunta, id_perguntas, qtd     
-                                                                                                FROM(                                                                             
-                                                                                                    SELECT resposta, subquestao, id_subpergunta, id_perguntas, 0 AS alternativa, COUNT(*) AS qtd 
-                                                                                                    FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta   
-                                                                                                    WHERE id_perguntas = '$questao' AND id_alternativa = 83 AND id_subpergunta = '$contConsulta'
-                                                                                                    GROUP BY resposta
-                                                                                                    UNION
-                                                                                                    SELECT resposta, subquestao, id_subpergunta, id_perguntas, 1 AS alternativa, COUNT(*) AS qtd
+                                                                                                FROM( /*convertendo a resposta para numero*/
+                                                                                                    SELECT resposta, subquestao, id_subpergunta, id_perguntas, 2 AS alternativa, COUNT(*) AS qtd
                                                                                                     FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta  
-                                                                                                    WHERE id_perguntas = '$questao' AND id_alternativa = 84 AND id_subpergunta = '$contConsulta'
+                                                                                                    WHERE id_perguntas = 62 AND id_alternativa = 190 AND id_subpergunta = '$contConsulta'
                                                                                                     GROUP BY resposta
                                                                                                     UNION  
-                                                                                                    SELECT resposta, subquestao, id_subpergunta, id_perguntas, 2 AS alternativa, COUNT(*) AS qtd 
+                                                                                                    SELECT resposta, subquestao, id_subpergunta, id_perguntas, 3 AS alternativa, COUNT(*) AS qtd 
                                                                                                     FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta   
-                                                                                                    WHERE id_perguntas = '$questao' AND id_alternativa = 85 AND id_subpergunta = '$contConsulta'
+                                                                                                    WHERE id_perguntas = 62 AND id_alternativa = 194 AND id_subpergunta = '$contConsulta'
                                                                                                     GROUP BY resposta
                                                                                                     UNION 
-                                                                                                    SELECT resposta, subquestao, id_subpergunta, id_perguntas, 3 AS alternativa, COUNT(*) AS qtd
+                                                                                                    SELECT resposta, subquestao, id_subpergunta, id_perguntas, 4 AS alternativa, COUNT(*) AS qtd
                                                                                                     FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta 
-                                                                                                    WHERE id_perguntas = '$questao' AND id_alternativa = 86 AND id_subpergunta = '$contConsulta'
-                                                                                                    GROUP BY resposta                                            
+                                                                                                    WHERE id_perguntas = 62 AND id_alternativa = 192 AND id_subpergunta = '$contConsulta'
+                                                                                                    GROUP BY resposta
+                                                                                                    UNION
+                                                                                                    SELECT resposta, subquestao, id_subpergunta, id_perguntas, 5 AS alternativa, COUNT(*) AS qtd
+                                                                                                    FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta  
+                                                                                                    WHERE id_perguntas = 62 AND id_alternativa = 193 AND id_subpergunta = '$contConsulta'
+                                                                                                    GROUP BY resposta
+                                                                                                    UNION
+                                                                                                    SELECT resposta, subquestao, id_subpergunta, id_perguntas, 1 AS alternativa, COUNT(*) AS qtd 
+                                                                                                    FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta   
+                                                                                                    WHERE id_perguntas = 62 AND id_alternativa = 195 AND id_subpergunta = '$contConsulta'
+                                                                                                    GROUP BY resposta
                                                                                                 )AS Media GROUP BY resposta 
                                                                                             )AS Resultado ORDER BY Resultado.resposta;"; 
-                        
+                            
                                                                             $resultadoMedia = mysqli_query($conn, $selecaoMedia);
                                                                             $linhaMedia = mysqli_fetch_assoc($resultadoMedia);
                                                                             $totalMedia = mysqli_num_rows($resultadoMedia);  
@@ -1241,7 +1294,7 @@
                                                                                 for ($i = 0; $i < ($totalConsulta - 1); $i++){ 
                                                                                     $menor = $i; 
                                                                                     for ($j = ($i + 1); $j < $totalConsulta; $j++){ 
-                                                                                        if($mediaSubPergunta[$j] > $mediaSubPergunta[$menor]) { 
+                                                                                        if($subPergunta[$j] < $subPergunta[$menor]) { 
                                                                                             $menor = $j; 
                                                                                         } 
                                                                                     } 
@@ -1255,7 +1308,7 @@
                                                                                     } 
                                                                                 }
                                     
-                                                                                fwrite($file, "\n".$aspas."Tipo".$aspas.":".$aspas."bar".$aspas.",");
+                                                                                fwrite($file, "\n".$aspas."Tipo".$aspas.":".$aspas."line".$aspas.",");
                                                                                 fwrite($file, "\n".$aspas."Id_Pergunta".$aspas.":".$aspas.$linhaMedia['id_perguntas'].$aspas.",");
                                                                                 fwrite($file, "\n".$aspas."Alternativas".$aspas.": [");
                                                                                 for ($i = 0; $i < $totalConsulta; $i++){
@@ -1274,156 +1327,39 @@
                                                                                         fwrite($file, ",");
                                                                                     }
                                                                                 }
-                                                                                fwrite($file, "]\n},\n{");
+                                                                                fwrite($file, "]\n}");
                                         
                                                                                 $subPergunta = array(); //limpar array para reiniciar a contagem do tamanho
                                         
                                                                                 ?>
                                                                                     <canvas class = "grafico" id = "grafico<?php echo $questao;?>"></canvas>
-                                                                                                                                        
-                                                                                    <p>Obs: para esse calculo foi considerado 0 para 'Não sei', 
-                                                                                    1 para 'Básico', 2 para 'Intermediário', 3 para 'Fluente'.</p>
-                                                                                <?php 
-                                                                            }                                                    
-                                                                            
+                                                                                <?php
+                                                                            }   
+                            
                                                                             $contConsulta++;
                                                                                     
                                                                         }while($linhaMedia = mysqli_fetch_assoc($resultadoConsulta));
-                                                                    }
-                        
-                                                                    if ($questao == 25){ /*media de todas as linguas*/                                            
-                                                                        $selecaoVerificaco = "SELECT questao FROM `pergunta` NATURAL JOIN `resposta` WHERE id_perguntas = 23 OR id_perguntas = 24 OR id_perguntas = 25";
+                                                                    } 
+                                                                }else{                                        
+                                                                    if ($questao == 23 || $questao == 24 || $questao == 25){ //perguntas das linguas estrangeiras
+                                                                        $selecaoVerificaco = "SELECT questao FROM `pergunta` NATURAL JOIN `resposta` WHERE id_perguntas = '$questao'";
                                                                         $resultadoVerificaco = mysqli_query($conn, $selecaoVerificaco);
                                                                         $linhaVerificaco = mysqli_fetch_assoc($resultadoVerificaco);
                                                                         $totalVerificaco = mysqli_num_rows($resultadoVerificaco);  //calcula quantos dados foram retornados
                                                                         
-                                                                        if ($totalVerificaco == 0){                                                   
-                                                                            ?><h5>Média de conhecimento por língua estrangeira</h5>
-                                                                            <h6>Essa análise não pode ser feita por falta de respostas.<h6><?php
-                                                                        }else{
-                                                                            ?><h5>Média de conhecimento por língua estrangeira</h5><?php
-                        
-                                                                            for ($contConsulta = 1; $contConsulta < 5; $contConsulta++){       
-                                                                                $selecaoMedia = "SELECT subquestao, id_subpergunta, (SUM(qtd * alternativa)/ SUM(qtd)) AS media FROM( 
-                                                                                                    SELECT opcao AS resposta, alternativa, subquestao, id_subpergunta, 0 AS qtd 
-                                                                                                    FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta 
-                                                                                                    WHERE id_subpergunta = '$contConsulta' AND id_alternativa 
-                                                                                                    NOT IN (SELECT id_alternativa FROM resposta WHERE id_subpergunta = '$contConsulta')
-                                                                                                    GROUP BY resposta 
-                                                                                                    UNION        
-                                                                                                    SELECT resposta, alternativa, subquestao, id_subpergunta, qtd     
-                                                                                                    FROM(                                                                             
-                                                                                                        SELECT resposta, subquestao, id_subpergunta, 0 AS alternativa, COUNT(*) AS qtd 
-                                                                                                        FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta   
-                                                                                                        WHERE id_alternativa = 83 AND id_subpergunta = '$contConsulta'
-                                                                                                        GROUP BY resposta
-                                                                                                        UNION
-                                                                                                        SELECT resposta, subquestao, id_subpergunta, 1 AS alternativa, COUNT(*) AS qtd
-                                                                                                        FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta  
-                                                                                                        WHERE id_alternativa = 84 AND id_subpergunta = '$contConsulta'
-                                                                                                        GROUP BY resposta
-                                                                                                        UNION  
-                                                                                                        SELECT resposta, subquestao, id_subpergunta, 2 AS alternativa, COUNT(*) AS qtd 
-                                                                                                        FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta   
-                                                                                                        WHERE id_alternativa = 85 AND id_subpergunta = '$contConsulta'
-                                                                                                        GROUP BY resposta
-                                                                                                        UNION 
-                                                                                                        SELECT resposta, subquestao, id_subpergunta, 3 AS alternativa, COUNT(*) AS qtd
-                                                                                                        FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta 
-                                                                                                        WHERE id_alternativa = 86 AND id_subpergunta = '$contConsulta'
-                                                                                                        GROUP BY resposta                                            
-                                                                                                    )AS Media GROUP BY resposta 
-                                                                                                )AS Resultado ORDER BY Resultado.resposta;"; 
-                        
-                                                                                $resultadoMedia = mysqli_query($conn, $selecaoMedia);
-                                                                                $linhaMedia = mysqli_fetch_assoc($resultadoMedia);
-                                                                                $totalMedia = mysqli_num_rows($resultadoMedia);  
-                                                                                
-                                                                                $mediaSubPergunta[$contConsulta - 1] = $linhaMedia['media'];
-                                                                                                                                        
-                                                                                if ($contConsulta == 4){                                                            
-                                                                                    $subPergunta = array("Inglês", "Espanhol", "Italiano", "Fracês");
-                                                                                    //ordenacao do vetor usando selecao
-                                                                                    for ($i = 0; $i < 4; $i++){ 
-                                                                                        $menor = $i; 
-                                                                                        for ($j = ($i + 1); $j < 4; $j++){ 
-                                                                                            if($mediaSubPergunta[$j] > $mediaSubPergunta[$menor]) { 
-                                                                                                $menor = $j; 
-                                                                                            } 
-                                                                                        } 
-                                                                                        if ($i != $menor){ 
-                                                                                            $auxValor = $mediaSubPergunta[$i]; 
-                                                                                            $auxPergunta = $subPergunta[$i];
-                                                                                            $mediaSubPergunta[$i] = $mediaSubPergunta[$menor]; 
-                                                                                            $subPergunta[$i] = $subPergunta[$menor];
-                                                                                            $mediaSubPergunta[$menor] = $auxValor; 
-                                                                                            $subPergunta[$menor] = $auxPergunta;
-                                                                                        } 
-                                                                                    }
-
-                                                                                    fwrite($file, "\n".$aspas."Tipo".$aspas.":".$aspas."bar".$aspas.",");
-                                                                                    fwrite($file, "\n".$aspas."Id_Pergunta".$aspas.":".$aspas.'Idiomas'.$aspas.",");
-                                                                                    fwrite($file, "\n".$aspas."Alternativas".$aspas.": [");
-                                                                                    for ($i = 0; $i < 4; $i++){
-                                                                                        fwrite($file, $aspas.$subPergunta[$i].$aspas);
-                                                                                        if ($i < 3){
-                                                                                            fwrite($file, ",");
-                                                                                        }
-                                                                                    }
-                                                                                    fwrite($file, "],");
-                                                
-                                                                                    fwrite($file, "\n".$aspas."Respostas".$aspas.": [");
-                                                                                    for ($i = 0; $i < 4; $i++){
-                                                                                        $media = round($mediaSubPergunta[$i], 3); //arredondamento para 3 casas decimais
-                                                                                        fwrite($file, $aspas.$media.$aspas);
-                                                                                        if ($i < 3){
-                                                                                            fwrite($file, ",");
-                                                                                        }
-                                                                                    }
-                                                                                    fwrite($file, "]\n},\n{");
-                                            
-                                                                                    $subPergunta = array(); //limpar array para reiniciar a contagem do tamanho
-                                                                                        
-                                                                                    $idiomas = 'Idiomas';
-                        
-                                                                                    ?>
-                                                                                        <canvas class = "grafico" id = "grafico<?php echo $idiomas;?>"></canvas>
-
-                                                                                        <p>Obs: para esse calculo foi considerado 0 para 'Não sei', 
-                                                                                        1 para 'Básico', 2 para 'Intermediário', 3 para 'Fluente'.</p>
-                                                                                    <?php
-                                                                                }                                    
-                                                                            }
-                                                                        }
-                                                                    }
-                                                                    
-                                                                }else{ //outras perguntas que não precisaram de tratamento
-                                                                    if ($questao == 47 || $questao == 51 || $questao == 58 || $questao == 59){
-                                                                        $selecaoVerificaco = "SELECT questao FROM `pergunta` NATURAL JOIN `resposta` WHERE id_perguntas = '$questao'";
-                                                                        $resultadoVerificaco = mysqli_query($conn, $selecaoVerificaco);
-                                                                        $totalVerificaco = mysqli_num_rows($resultadoVerificaco);  //calcula quantos dados foram retornados
-                            
                                                                         if ($totalVerificaco == 0){
                                                                             $selecaoN = "SELECT questao FROM pergunta where id_perguntas = '$questao';";
                                                                             $resultadoSelecaoN = mysqli_query($conn, $selecaoN);
                                                                             $linhaN = mysqli_fetch_assoc($resultadoSelecaoN);
                                                                             
-                                                                            if ($questao == 47){
-                                                                                ?><h5>Importância das competências em relação ao mercado de trabalho<h5><?php
+                                                                            if ($questao == 23){
+                                                                                ?><h5>Média do nível de leitura por língua estrangeira<h5><?php
                                                                             }else{
-                                                                                if ($questao == 50){
-                                                                                    ?><h5>Frequência de utilização das linguagens de programação no mercado de trabalho</h5><?php
+                                                                                if ($questao == 24){
+                                                                                    ?><h5>Média do nível de fala por língua estrangeira<h5><?php
                                                                                 }else{
-                                                                                    if ($questao == 51){
-                                                                                        ?><h5>Frequência de utilização dos SGBDs no mercado de trabalho</h5><?php
-                                                                                    }else{
-                                                                                        if ($questao == 58){
-                                                                                            ?><h5>Motivação para escolher do curso</h5><?php
-                                                                                        }else{                                                                                
-                                                                                            ?><h5>Motivação para escolher a Universidade/<i>Campus</i><h5><?php
-                                                                                        }
-                                                                                    }                                                        
-                                                                                } 
+                                                                                    ?><h5>Média do nível de escrita por língua estrangeira<h5><?php
+                                                                                }
                                                                             }
                                                                             ?><h6>Essa análise não pode ser feita por falta de respostas.<h6><?php
                                                                         }else{
@@ -1431,76 +1367,68 @@
                                                                             $resultadoConsulta = mysqli_query($conn, $selecaoConsulta);
                                                                             $linhaConsulta = mysqli_fetch_assoc($resultadoConsulta);
                                                                             $totalConsulta = mysqli_num_rows($resultadoConsulta);  //calcula quantos dados foram retornados
-                            
-                                                                            if ($questao == 47){
-                                                                                ?><h5>Importância das competências em relação ao mercado de trabalho<h5><?php
+                                            
+                                                                            if ($questao == 23){
+                                                                                ?><h5>Média do nível de leitura por língua estrangeira<h5><?php
                                                                             }else{
-                                                                                if ($questao == 50){
-                                                                                    ?><h5>Frequência de utilização das linguagens de programação no mercado de trabalho</h5><?php
+                                                                                if ($questao == 24){
+                                                                                    ?><h5>Média do nível de fala por língua estrangeira<h5><?php
                                                                                 }else{
-                                                                                    if ($questao == 51){
-                                                                                        ?><h5>Frequência de utilização dos SGBDs no mercado de trabalho</h5><?php
-                                                                                    }else{
-                                                                                        if ($questao == 58){
-                                                                                            ?><h5>Motivação para escolher do curso</h5><?php
-                                                                                        }else{
-                                                                                            ?><h5>Motivação para escolher a Universidade/<i>Campus</i><h5><?php
-                                                                                        }
-                                                                                    }                                                      
-                                                                                } 
+                                                                                    ?><h5>Média do nível de escrita por língua estrangeira<h5><?php
+                                                                                }
                                                                             }
                             
-                                                                            if ($questao == 47){
-                                                                                $contConsulta = 10;
-                                                                            }
-                            
-                                                                            if ($questao == 50){
-                                                                                $contConsulta = 45;
-                                                                            }
-                            
-                                                                            if ($questao == 51){
-                                                                                $contConsulta = 71;
-                                                                            }
-                                                                            
-                                                                            if ($questao == 58){
-                                                                                $contConsulta = 93;
-                                                                            }
-                                                                            
-                                                                            if ($questao == 59){
-                                                                                $contConsulta = 99;
-                                                                            }
-                            
+                                                                            $contConsulta = 1;
+                                            
                                                                             $i = 0;
                                                                             do { 
-                                                                                $selecaoMedia = "SELECT subquestao, id_subpergunta, id_perguntas, (SUM(qtd * alternativa)/ SUM(qtd)) AS media 
-                                                                                                FROM( 
+                                                                                $selecaoMedia = "SELECT subquestao, id_subpergunta, id_perguntas, (SUM(qtd * alternativa)/ SUM(qtd)) AS media FROM( 
                                                                                                     SELECT opcao AS resposta, alternativa, subquestao, id_subpergunta, id_perguntas, 0 AS qtd 
-                                                                                                    FROM alternativa NATURAL JOIN subpergunta_has_alternativa NATURAL JOIN subpergunta NATURAL JOIN subpergunta_has_pergunta NATURAL JOIN pergunta 
+                                                                                                    FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta 
                                                                                                     WHERE id_perguntas = '$questao' AND id_subpergunta = '$contConsulta' AND id_alternativa 
                                                                                                     NOT IN (SELECT id_alternativa FROM resposta WHERE id_perguntas = '$questao' AND id_subpergunta = '$contConsulta')
                                                                                                     GROUP BY resposta 
-                                                                                                    UNION 
-                                                                                                    SELECT resposta, alternativa, subquestao, id_subpergunta, id_perguntas, count(*) AS qtd 
-                                                                                                    FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta WHERE id_perguntas = '$questao' AND id_subpergunta = '$contConsulta' 
-                                                                                                    GROUP BY resposta 
+                                                                                                    UNION        
+                                                                                                    SELECT resposta, alternativa, subquestao, id_subpergunta, id_perguntas, qtd     
+                                                                                                    FROM(                                                                             
+                                                                                                        SELECT resposta, subquestao, id_subpergunta, id_perguntas, 0 AS alternativa, COUNT(*) AS qtd 
+                                                                                                        FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta   
+                                                                                                        WHERE id_perguntas = '$questao' AND id_alternativa = 83 AND id_subpergunta = '$contConsulta'
+                                                                                                        GROUP BY resposta
+                                                                                                        UNION
+                                                                                                        SELECT resposta, subquestao, id_subpergunta, id_perguntas, 1 AS alternativa, COUNT(*) AS qtd
+                                                                                                        FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta  
+                                                                                                        WHERE id_perguntas = '$questao' AND id_alternativa = 84 AND id_subpergunta = '$contConsulta'
+                                                                                                        GROUP BY resposta
+                                                                                                        UNION  
+                                                                                                        SELECT resposta, subquestao, id_subpergunta, id_perguntas, 2 AS alternativa, COUNT(*) AS qtd 
+                                                                                                        FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta   
+                                                                                                        WHERE id_perguntas = '$questao' AND id_alternativa = 85 AND id_subpergunta = '$contConsulta'
+                                                                                                        GROUP BY resposta
+                                                                                                        UNION 
+                                                                                                        SELECT resposta, subquestao, id_subpergunta, id_perguntas, 3 AS alternativa, COUNT(*) AS qtd
+                                                                                                        FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta 
+                                                                                                        WHERE id_perguntas = '$questao' AND id_alternativa = 86 AND id_subpergunta = '$contConsulta'
+                                                                                                        GROUP BY resposta                                            
+                                                                                                    )AS Media GROUP BY resposta 
                                                                                                 )AS Resultado ORDER BY Resultado.resposta;"; 
                             
                                                                                 $resultadoMedia = mysqli_query($conn, $selecaoMedia);
                                                                                 $linhaMedia = mysqli_fetch_assoc($resultadoMedia);
-                                                                                $totalMedia = mysqli_num_rows($resultadoMedia);  //calcula quantos dados foram retornados
+                                                                                $totalMedia = mysqli_num_rows($resultadoMedia);  
                                                                                 
                                                                                 if ($i < $totalConsulta) {
                                                                                     $subPergunta[$i] = $linhaMedia['subquestao'];
                                                                                     $mediaSubPergunta[$i] = $linhaMedia['media'];
                                                                                     $i++;
                                                                                 }   
-                            
+                                            
                                                                                 if (count($subPergunta) == $totalConsulta){
                                                                                     //ordenacao do vetor usando selecao
                                                                                     for ($i = 0; $i < ($totalConsulta - 1); $i++){ 
                                                                                         $menor = $i; 
                                                                                         for ($j = ($i + 1); $j < $totalConsulta; $j++){ 
-                                                                                            if($mediaSubPergunta[$j] > $mediaSubPergunta[$menor]) { 
+                                                                                            if($subPergunta[$j] < $subPergunta[$menor]) { 
                                                                                                 $menor = $j; 
                                                                                             } 
                                                                                         } 
@@ -1513,8 +1441,8 @@
                                                                                             $subPergunta[$menor] = $auxPergunta;
                                                                                         } 
                                                                                     }
-                            
-                                                                                    fwrite($file, "\n".$aspas."Tipo".$aspas.":".$aspas."bar".$aspas.",");
+                                        
+                                                                                    fwrite($file, "\n".$aspas."Tipo".$aspas.":".$aspas."line".$aspas.",");
                                                                                     fwrite($file, "\n".$aspas."Id_Pergunta".$aspas.":".$aspas.$linhaMedia['id_perguntas'].$aspas.",");
                                                                                     fwrite($file, "\n".$aspas."Alternativas".$aspas.": [");
                                                                                     for ($i = 0; $i < $totalConsulta; $i++){
@@ -1533,56 +1461,328 @@
                                                                                             fwrite($file, ",");
                                                                                         }
                                                                                     }
-                            
-                                                                                    $teste62 = "SELECT questao FROM `pergunta` NATURAL JOIN `resposta` WHERE id_perguntas = 62;";
-                                                                                    $resultado62 = mysqli_query($conn, $teste62);
-                                                                                    $total62 = mysqli_num_rows($resultado62);  //calcula quantos dados foram retornados
-                            
-                                                                                    if ($total62 == 0 && $questao == 59){
-                                                                                        fwrite($file, "]\n}");
-                                                                                    }else{
-                                                                                        fwrite($file, "]\n},\n{");
-                                                                                    }
-                                                                                    
+                                                                                    fwrite($file, "]\n},\n{");
+                                            
                                                                                     $subPergunta = array(); //limpar array para reiniciar a contagem do tamanho
-                            
+                                            
                                                                                     ?>
                                                                                         <canvas class = "grafico" id = "grafico<?php echo $questao;?>"></canvas>
-                                                                                    <?php
-                                                                                }
+                                                                                                                                            
+                                                                                        <p>Obs: para esse calculo foi considerado 0 para 'Não sei', 
+                                                                                        1 para 'Básico', 2 para 'Intermediário', 3 para 'Fluente'.</p>
+                                                                                    <?php 
+                                                                                }                                                    
+                                                                                
+                                                                                $contConsulta++;
+                                                                                        
+                                                                            }while($linhaMedia = mysqli_fetch_assoc($resultadoConsulta));
+                                                                        }
                             
-                                                                                if ($questao == 50){
-                                                                                    if ($contConsulta == 56){
-                                                                                        $contConsulta = 58;
+                                                                        if ($questao == 25){ /*media de todas as linguas*/                                            
+                                                                            $selecaoVerificaco = "SELECT questao FROM `pergunta` NATURAL JOIN `resposta` WHERE id_perguntas = 23 OR id_perguntas = 24 OR id_perguntas = 25";
+                                                                            $resultadoVerificaco = mysqli_query($conn, $selecaoVerificaco);
+                                                                            $linhaVerificaco = mysqli_fetch_assoc($resultadoVerificaco);
+                                                                            $totalVerificaco = mysqli_num_rows($resultadoVerificaco);  //calcula quantos dados foram retornados
+                                                                            
+                                                                            if ($totalVerificaco == 0){                                                   
+                                                                                ?><h5>Média de conhecimento por língua estrangeira</h5>
+                                                                                <h6>Essa análise não pode ser feita por falta de respostas.<h6><?php
+                                                                            }else{
+                                                                                ?><h5>Média de conhecimento por língua estrangeira</h5><?php
+                            
+                                                                                for ($contConsulta = 1; $contConsulta < 5; $contConsulta++){       
+                                                                                    $selecaoMedia = "SELECT subquestao, id_subpergunta, (SUM(qtd * alternativa)/ SUM(qtd)) AS media FROM( 
+                                                                                                        SELECT opcao AS resposta, alternativa, subquestao, id_subpergunta, 0 AS qtd 
+                                                                                                        FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta 
+                                                                                                        WHERE id_subpergunta = '$contConsulta' AND id_alternativa 
+                                                                                                        NOT IN (SELECT id_alternativa FROM resposta WHERE id_subpergunta = '$contConsulta')
+                                                                                                        GROUP BY resposta 
+                                                                                                        UNION        
+                                                                                                        SELECT resposta, alternativa, subquestao, id_subpergunta, qtd     
+                                                                                                        FROM(                                                                             
+                                                                                                            SELECT resposta, subquestao, id_subpergunta, 0 AS alternativa, COUNT(*) AS qtd 
+                                                                                                            FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta   
+                                                                                                            WHERE id_alternativa = 83 AND id_subpergunta = '$contConsulta'
+                                                                                                            GROUP BY resposta
+                                                                                                            UNION
+                                                                                                            SELECT resposta, subquestao, id_subpergunta, 1 AS alternativa, COUNT(*) AS qtd
+                                                                                                            FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta  
+                                                                                                            WHERE id_alternativa = 84 AND id_subpergunta = '$contConsulta'
+                                                                                                            GROUP BY resposta
+                                                                                                            UNION  
+                                                                                                            SELECT resposta, subquestao, id_subpergunta, 2 AS alternativa, COUNT(*) AS qtd 
+                                                                                                            FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta   
+                                                                                                            WHERE id_alternativa = 85 AND id_subpergunta = '$contConsulta'
+                                                                                                            GROUP BY resposta
+                                                                                                            UNION 
+                                                                                                            SELECT resposta, subquestao, id_subpergunta, 3 AS alternativa, COUNT(*) AS qtd
+                                                                                                            FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta 
+                                                                                                            WHERE id_alternativa = 86 AND id_subpergunta = '$contConsulta'
+                                                                                                            GROUP BY resposta                                            
+                                                                                                        )AS Media GROUP BY resposta 
+                                                                                                    )AS Resultado ORDER BY Resultado.resposta;"; 
+                            
+                                                                                    $resultadoMedia = mysqli_query($conn, $selecaoMedia);
+                                                                                    $linhaMedia = mysqli_fetch_assoc($resultadoMedia);
+                                                                                    $totalMedia = mysqli_num_rows($resultadoMedia);  
+                                                                                    
+                                                                                    $mediaSubPergunta[$contConsulta - 1] = $linhaMedia['media'];
+                                                                                                                                            
+                                                                                    if ($contConsulta == 4){                                                            
+                                                                                        $subPergunta = array("Inglês", "Espanhol", "Italiano", "Francês");
+                                                                                        //ordenacao do vetor usando selecao
+                                                                                        for ($i = 0; $i < 4; $i++){ 
+                                                                                            $menor = $i; 
+                                                                                            for ($j = ($i + 1); $j < 4; $j++){ 
+                                                                                                if($subPergunta[$j] < $subPergunta[$menor]) { 
+                                                                                                    $menor = $j; 
+                                                                                                } 
+                                                                                            } 
+                                                                                            if ($i != $menor){ 
+                                                                                                $auxValor = $mediaSubPergunta[$i]; 
+                                                                                                $auxPergunta = $subPergunta[$i];
+                                                                                                $mediaSubPergunta[$i] = $mediaSubPergunta[$menor]; 
+                                                                                                $subPergunta[$i] = $subPergunta[$menor];
+                                                                                                $mediaSubPergunta[$menor] = $auxValor; 
+                                                                                                $subPergunta[$menor] = $auxPergunta;
+                                                                                            } 
+                                                                                        }
+
+                                                                                        fwrite($file, "\n".$aspas."Tipo".$aspas.":".$aspas."line".$aspas.",");
+                                                                                        fwrite($file, "\n".$aspas."Id_Pergunta".$aspas.":".$aspas.'Idiomas'.$aspas.",");
+                                                                                        fwrite($file, "\n".$aspas."Alternativas".$aspas.": [");
+                                                                                        for ($i = 0; $i < 4; $i++){
+                                                                                            fwrite($file, $aspas.$subPergunta[$i].$aspas);
+                                                                                            if ($i < 3){
+                                                                                                fwrite($file, ",");
+                                                                                            }
+                                                                                        }
+                                                                                        fwrite($file, "],");
+                                                    
+                                                                                        fwrite($file, "\n".$aspas."Respostas".$aspas.": [");
+                                                                                        for ($i = 0; $i < 4; $i++){
+                                                                                            $media = round($mediaSubPergunta[$i], 3); //arredondamento para 3 casas decimais
+                                                                                            fwrite($file, $aspas.$media.$aspas);
+                                                                                            if ($i < 3){
+                                                                                                fwrite($file, ",");
+                                                                                            }
+                                                                                        }
+                                                                                        fwrite($file, "]\n},\n{");                                                                                                                        
+                                                                                                                            
+                                                                                        $subPergunta = array(); //limpar array para reiniciar a contagem do tamanho
+                                                                                            
+                                                                                        $idiomas = 'Idiomas';
+                            
+                                                                                        ?>
+                                                                                            <canvas class = "grafico" id = "grafico<?php echo $idiomas;?>"></canvas>
+
+                                                                                            <p>Obs: para esse calculo foi considerado 0 para 'Não sei', 
+                                                                                            1 para 'Básico', 2 para 'Intermediário', 3 para 'Fluente'.</p>
+                                                                                        <?php
+                                                                                    }                                    
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                        
+                                                                    }else{ //outras perguntas que não precisaram de tratamento
+                                                                        if ($questao == 42 || $questao == 47 || $questao == 50 || $questao == 51 || $questao == 58 || $questao == 59){
+                                                                            $selecaoVerificaco = "SELECT questao FROM `pergunta` NATURAL JOIN `resposta` WHERE id_perguntas = '$questao'";
+                                                                            $resultadoVerificaco = mysqli_query($conn, $selecaoVerificaco);
+                                                                            $totalVerificaco = mysqli_num_rows($resultadoVerificaco);  //calcula quantos dados foram retornados
+                                
+                                                                            if ($totalVerificaco == 0){
+                                                                                $selecaoN = "SELECT questao FROM pergunta where id_perguntas = '$questao';";
+                                                                                $resultadoSelecaoN = mysqli_query($conn, $selecaoN);
+                                                                                $linhaN = mysqli_fetch_assoc($resultadoSelecaoN);
+                                                                                
+                                                                                if ($questao == 42){
+                                                                                    ?><h5>Dificuldades encontradas na profissão<h5><?php
+                                                                                }else{
+                                                                                    if ($questao == 47){
+                                                                                        ?><h5>Importância das competências em relação ao mercado de trabalho<h5><?php
                                                                                     }else{
-                                                                                        if ($contConsulta == 64){
-                                                                                            $contConsulta = 66;
+                                                                                        if ($questao == 50){
+                                                                                            ?><h5>Frequência de utilização das linguagens de programação no mercado de trabalho</h5><?php
                                                                                         }else{
-                                                                                            if ($contConsulta == 66){
-                                                                                                $contConsulta = 68;
+                                                                                            if ($questao == 51){
+                                                                                                ?><h5>Frequência de utilização dos SGBDs no mercado de trabalho</h5><?php
+                                                                                            }else{
+                                                                                                if ($questao == 58){
+                                                                                                    ?><h5>Motivação para escolher do curso</h5><?php
+                                                                                                }else{                                                                                
+                                                                                                    ?><h5>Motivação para escolher a Universidade/<i>Campus</i><h5><?php
+                                                                                                }
+                                                                                            }                                                        
+                                                                                        } 
+                                                                                    }
+                                                                                }
+                                                                                ?><h6>Essa análise não pode ser feita por falta de respostas.<h6><?php
+                                                                            }else{
+                                                                                $selecaoConsulta = "SELECT questao, id_perguntas FROM `pergunta` NATURAL JOIN `subpergunta_has_pergunta` WHERE id_perguntas = '$questao'";
+                                                                                $resultadoConsulta = mysqli_query($conn, $selecaoConsulta);
+                                                                                $linhaConsulta = mysqli_fetch_assoc($resultadoConsulta);
+                                                                                $totalConsulta = mysqli_num_rows($resultadoConsulta);  //calcula quantos dados foram retornados
+                                
+                                                                                if ($questao == 42){
+                                                                                    ?><h5>Dificuldades encontradas na profissão<h5><?php
+                                                                                }else{
+                                                                                    if ($questao == 47){
+                                                                                        ?><h5>Importância das competências em relação ao mercado de trabalho<h5><?php
+                                                                                    }else{
+                                                                                        if ($questao == 50){
+                                                                                            ?><h5>Frequência de utilização das linguagens de programação no mercado de trabalho</h5><?php
+                                                                                        }else{
+                                                                                            if ($questao == 51){
+                                                                                                ?><h5>Frequência de utilização dos SGBDs no mercado de trabalho</h5><?php
+                                                                                            }else{
+                                                                                                if ($questao == 58){
+                                                                                                    ?><h5>Motivação para escolher do curso</h5><?php
+                                                                                                }else{                                                                                
+                                                                                                    ?><h5>Motivação para escolher a Universidade/<i>Campus</i><h5><?php
+                                                                                                }
+                                                                                            }                                                        
+                                                                                        } 
+                                                                                    }
+                                                                                }
+
+                                                                                if ($questao == 42){
+                                                                                    $contConsulta = 5;
+                                                                                }
+                                
+                                                                                if ($questao == 47){
+                                                                                    $contConsulta = 10;
+                                                                                }
+                                
+                                                                                if ($questao == 50){
+                                                                                    $contConsulta = 45;
+                                                                                }
+                                
+                                                                                if ($questao == 51){
+                                                                                    $contConsulta = 71;
+                                                                                }
+                                                                                
+                                                                                if ($questao == 58){
+                                                                                    $contConsulta = 93;
+                                                                                }
+                                                                                
+                                                                                if ($questao == 59){
+                                                                                    $contConsulta = 99;
+                                                                                }
+                                
+                                                                                $i = 0;
+                                                                                do { 
+                                                                                    $selecaoMedia = "SELECT subquestao, id_subpergunta, id_perguntas, (SUM(qtd * alternativa)/ SUM(qtd)) AS media 
+                                                                                                    FROM( 
+                                                                                                        SELECT opcao AS resposta, alternativa, subquestao, id_subpergunta, id_perguntas, 0 AS qtd 
+                                                                                                        FROM alternativa NATURAL JOIN subpergunta_has_alternativa NATURAL JOIN subpergunta NATURAL JOIN subpergunta_has_pergunta NATURAL JOIN pergunta 
+                                                                                                        WHERE id_perguntas = '$questao' AND id_subpergunta = '$contConsulta' AND id_alternativa 
+                                                                                                        NOT IN (SELECT id_alternativa FROM resposta WHERE id_perguntas = '$questao' AND id_subpergunta = '$contConsulta')
+                                                                                                        GROUP BY resposta 
+                                                                                                        UNION 
+                                                                                                        SELECT resposta, alternativa, subquestao, id_subpergunta, id_perguntas, count(*) AS qtd 
+                                                                                                        FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa NATURAL JOIN subpergunta WHERE id_perguntas = '$questao' AND id_subpergunta = '$contConsulta' 
+                                                                                                        GROUP BY resposta 
+                                                                                                    )AS Resultado ORDER BY Resultado.resposta;"; 
+                                
+                                                                                    $resultadoMedia = mysqli_query($conn, $selecaoMedia);
+                                                                                    $linhaMedia = mysqli_fetch_assoc($resultadoMedia);
+                                                                                    $totalMedia = mysqli_num_rows($resultadoMedia);  //calcula quantos dados foram retornados
+                                                                                    
+                                                                                    if ($i < $totalConsulta) {
+                                                                                        $subPergunta[$i] = $linhaMedia['subquestao'];
+                                                                                        $mediaSubPergunta[$i] = $linhaMedia['media'];
+                                                                                        $i++;
+                                                                                    }   
+                                
+                                                                                    if (count($subPergunta) == $totalConsulta){
+                                                                                        //ordenacao do vetor usando selecao
+                                                                                        for ($i = 0; $i < ($totalConsulta - 1); $i++){ 
+                                                                                            $menor = $i; 
+                                                                                            for ($j = ($i + 1); $j < $totalConsulta; $j++){ 
+                                                                                                if($subPergunta[$j] < $subPergunta[$menor]) { 
+                                                                                                    $menor = $j; 
+                                                                                                } 
+                                                                                            } 
+                                                                                            if ($i != $menor){ 
+                                                                                                $auxValor = $mediaSubPergunta[$i]; 
+                                                                                                $auxPergunta = $subPergunta[$i];
+                                                                                                $mediaSubPergunta[$i] = $mediaSubPergunta[$menor]; 
+                                                                                                $subPergunta[$i] = $subPergunta[$menor];
+                                                                                                $mediaSubPergunta[$menor] = $auxValor; 
+                                                                                                $subPergunta[$menor] = $auxPergunta;
+                                                                                            } 
+                                                                                        }
+                                
+                                                                                        fwrite($file, "\n".$aspas."Tipo".$aspas.":".$aspas."line".$aspas.",");
+                                                                                        fwrite($file, "\n".$aspas."Id_Pergunta".$aspas.":".$aspas.$linhaMedia['id_perguntas'].$aspas.",");
+                                                                                        fwrite($file, "\n".$aspas."Alternativas".$aspas.": [");
+                                                                                        for ($i = 0; $i < $totalConsulta; $i++){
+                                                                                            fwrite($file, $aspas.$subPergunta[$i].$aspas);
+                                                                                            if ($i < $totalConsulta - 1){
+                                                                                                fwrite($file, ",");
+                                                                                            }
+                                                                                        }
+                                                                                        fwrite($file, "],");
+                                                    
+                                                                                        fwrite($file, "\n".$aspas."Respostas".$aspas.": [");
+                                                                                        for ($i = 0; $i < $totalConsulta; $i++){
+                                                                                            $media = round($mediaSubPergunta[$i], 3); //arredondamento para 3 casas decimais
+                                                                                            fwrite($file, $aspas.$media.$aspas);
+                                                                                            if ($i < $totalConsulta - 1){
+                                                                                                fwrite($file, ",");
+                                                                                            }
+                                                                                        }
+                                
+                                                                                        $teste62 = "SELECT questao FROM `pergunta` NATURAL JOIN `resposta` WHERE id_perguntas = 62;";
+                                                                                        $resultado62 = mysqli_query($conn, $teste62);
+                                                                                        $total62 = mysqli_num_rows($resultado62);  //calcula quantos dados foram retornados
+                                
+                                                                                        if ($total62 == 0 && $questao == 59){
+                                                                                            fwrite($file, "]\n}");
+                                                                                        }else{
+                                                                                            fwrite($file, "]\n},\n{");
+                                                                                        }
+                                                                                        
+                                                                                        $subPergunta = array(); //limpar array para reiniciar a contagem do tamanho
+                                
+                                                                                        ?>
+                                                                                            <canvas class = "grafico" id = "grafico<?php echo $questao;?>"></canvas>
+                                                                                        <?php
+                                                                                    }
+                                
+                                                                                    if ($questao == 50){
+                                                                                        if ($contConsulta == 56){
+                                                                                            $contConsulta = 58;
+                                                                                        }else{
+                                                                                            if ($contConsulta == 64){
+                                                                                                $contConsulta = 66;
+                                                                                            }else{
+                                                                                                if ($contConsulta == 66){
+                                                                                                    $contConsulta = 68;
+                                                                                                }else{
+                                                                                                    $contConsulta++;
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }else{                                          
+                                                                                        if ($questao == 58 && $contConsulta == 96){
+                                                                                            $contConsulta = 98;
+                                                                                        }else{
+                                                                                            if ($questao == 59 && $contConsulta == 102){
+                                                                                                $contConsulta = 136;
                                                                                             }else{
                                                                                                 $contConsulta++;
                                                                                             }
-                                                                                        }
-                                                                                    }
-                                                                                }else{                                          
-                                                                                    if ($questao == 58 && $contConsulta == 96){
-                                                                                        $contConsulta = 98;
-                                                                                    }else{
-                                                                                        if ($questao == 59 && $contConsulta == 102){
-                                                                                            $contConsulta = 136;
-                                                                                        }else{
-                                                                                            $contConsulta++;
-                                                                                        }
-                                                                                    }                                              
-                                                                                }     
-                                                                            }while($linhaMedia = mysqli_fetch_assoc($resultadoConsulta));                               
-                                                                        } 
-                                                                    }
-                                                                }                                      
+                                                                                        }                                              
+                                                                                    }     
+                                                                                }while($linhaMedia = mysqli_fetch_assoc($resultadoConsulta));                               
+                                                                            } 
+                                                                        }
+                                                                    }                                      
+                                                                }
                                                             }
                                                         }
-                                                    }
+                                                    }                                                    
                                                 }
                                             }
                                         }
@@ -1683,7 +1883,7 @@
                         }                   
                     });                    
                 }else{
-                    if (questao == 60){
+                    if ((questao == 60) || (questao == 61)){
                         new Chart(element, {                          
                             type: 'line',
                             data: {
@@ -1716,33 +1916,100 @@
                             }                   
                         });   
                     }else{
-                        new Chart(element, {                          
-                            type: 'line',
-                            data: {
-                                labels: dados[j].Alternativas,
-                                datasets: [
-                                    {                                
-                                        label: 'Media salarial',
-                                        fill: false,
-                                        backgroundColor: '#000080',
-                                        borderColor: '#000080',
-                                        data: dados[j].Respostas
-                                    }
-                                ]   
-                            },
-                            options: {
-                                scales: {
-                                    yAxes: [{
-                                        ticks: {
-                                            beginAtZero: true
+                        if (questao == 20){
+                            new Chart(element, {                          
+                                type: 'line',
+                                data: {
+                                    labels: dados[j].Alternativas,
+                                    datasets: [
+                                        {                                
+                                            label: 'Média de proeficiência',
+                                            fill: false,
+                                            backgroundColor: '#000080',
+                                            borderColor: '#000080',
+                                            data: dados[j].Respostas
+                                        },           
+                                        {
+                                            label: 'Média geral',
+                                            fill: false,
+                                            backgroundColor: '#00BFFF',
+                                            borderColor: '#00BFFF',
+                                            data: dados[j].Media
                                         }
-                                    }]
+                                    ]   
                                 },
-                                legend: {
-                                    display: false //retira a legenda superior dos graficos
-                                }
-                            }                   
-                        });
+                                options: {
+                                    scales: {
+                                        yAxes: [{
+                                            ticks: {
+                                                beginAtZero: true
+                                            }
+                                        }]
+                                    }
+                                }                   
+                            });   
+                        }else{
+                            if (questao == 41){
+                                new Chart(element, {                          
+                                    type: 'line',
+                                    data: {
+                                        labels: dados[j].Alternativas,
+                                        datasets: [
+                                            {                                
+                                                label: 'Média salarial por gênero',
+                                                fill: false,
+                                                backgroundColor: '#000080',
+                                                borderColor: '#000080',
+                                                data: dados[j].Respostas
+                                            },           
+                                            {
+                                                label: 'Média geral',
+                                                fill: false,
+                                                backgroundColor: '#00BFFF',
+                                                borderColor: '#00BFFF',
+                                                data: dados[j].Media
+                                            }
+                                        ]   
+                                    },
+                                    options: {
+                                        scales: {
+                                            yAxes: [{
+                                                ticks: {
+                                                    beginAtZero: true
+                                                }
+                                            }]
+                                        }
+                                    }                   
+                                });   
+                            }else{
+                                new Chart(element, {                          
+                                    type: 'line',
+                                    data: {
+                                        labels: dados[j].Alternativas,
+                                        datasets: [
+                                            {               
+                                                fill: false,
+                                                backgroundColor: '#000080',
+                                                borderColor: '#000080',
+                                                data: dados[j].Respostas
+                                            }
+                                        ]   
+                                    },
+                                    options: {
+                                        scales: {
+                                            yAxes: [{
+                                                ticks: {
+                                                    beginAtZero: true
+                                                }
+                                            }]
+                                        },
+                                        legend: {
+                                            display: false //retira a legenda superior dos graficos
+                                        }
+                                    }                   
+                                });
+                            }
+                        }
                     }
                 }
             }else{                   
