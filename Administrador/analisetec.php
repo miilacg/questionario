@@ -142,7 +142,7 @@
                                                             fwrite($fileLinha, ",");
                                                         }
                                                     }
-                                                    fwrite($fileLinha, "]\n}");
+                                                    fwrite($fileLinha, "]\n},\n{");
                                                 }
                                             }   
 
@@ -424,7 +424,7 @@
                                                                 fwrite($fileMedia, ",");
                                                             }
                                                         }
-                                                        fwrite($fileMedia, "]\n},\n{"); 
+                                                        fwrite($fileMedia, "]\n}"); 
                 
                                                         $subPergunta = array(); //limpar array para reiniciar a contagem do tamanho
                 
@@ -511,44 +511,27 @@
                                                             $i++;
                                                         }   
                     
-                                                        if (count($subPergunta) == $totalConsulta){
-                                                            //ordenacao do vetor usando selecao
-                                                            for ($i = 0; $i < ($totalConsulta - 1); $i++){ 
-                                                                $menor = $i; 
-                                                                for ($j = ($i + 1); $j < $totalConsulta; $j++){ 
-                                                                    if($mediaSubPergunta[$j] > $mediaSubPergunta[$menor]) { 
-                                                                        $menor = $j; 
-                                                                    } 
-                                                                } 
-                                                                if ($i != $menor){ 
-                                                                    $auxValor = $mediaSubPergunta[$i]; 
-                                                                    $auxPergunta = $subPergunta[$i];
-                                                                    $mediaSubPergunta[$i] = $mediaSubPergunta[$menor]; 
-                                                                    $subPergunta[$i] = $subPergunta[$menor];
-                                                                    $mediaSubPergunta[$menor] = $auxValor; 
-                                                                    $subPergunta[$menor] = $auxPergunta;
-                                                                } 
-                                                            }
-                
-                                                            fwrite($fileMedia, "\n".$aspas."Id_Pergunta".$aspas.":".$aspas.$linhaMedia['id_perguntas'].$aspas.",");
-                                                            fwrite($fileMedia, "\n".$aspas."Alternativas".$aspas.": [");
+                                                        if (count($subPergunta) == $totalConsulta){   
+                                                            fwrite($fileLinha, ",\n{\n".$aspas."Tipo".$aspas.": ".$aspas."line".$aspas.",");
+                                                            fwrite($fileLinha, "\n".$aspas."Id_Pergunta".$aspas.":".$aspas.$linhaMedia['id_perguntas'].$aspas.",");
+                                                            fwrite($fileLinha, "\n".$aspas."Alternativas".$aspas.": [");
                                                             for ($i = 0; $i < $totalConsulta; $i++){
-                                                                fwrite($fileMedia, $aspas.$subPergunta[$i].$aspas);
+                                                                fwrite($fileLinha, $aspas.$subPergunta[$i].$aspas);
                                                                 if ($i < $totalConsulta - 1){
-                                                                    fwrite($fileMedia, ",");
+                                                                    fwrite($fileLinha, ",");
                                                                 }
                                                             }
-                                                            fwrite($fileMedia, "],");
+                                                            fwrite($fileLinha, "],");
                         
-                                                            fwrite($fileMedia, "\n".$aspas."Media".$aspas.": [");
+                                                            fwrite($fileLinha, "\n".$aspas."Media".$aspas.": [");
                                                             for ($i = 0; $i < $totalConsulta; $i++){
                                                                 $media = round($mediaSubPergunta[$i], 3); //arredondamento para 3 casas decimais
-                                                                fwrite($fileMedia, $aspas.$media.$aspas);
+                                                                fwrite($fileLinha, $aspas.$media.$aspas);
                                                                 if ($i < $totalConsulta - 1){
-                                                                    fwrite($fileMedia, ",");
+                                                                    fwrite($fileLinha, ",");
                                                                 }
                                                             }
-                                                            fwrite($fileMedia, "]\n}");
+                                                            fwrite($fileLinha, "]\n}");
                     
                                                             $subPergunta = array(); //limpar array para reiniciar a contagem do tamanho
                     
@@ -649,7 +632,7 @@
                                                                 for ($i = 0; $i < ($totalConsulta - 1); $i++){ 
                                                                     $menor = $i; 
                                                                     for ($j = ($i + 1); $j < $totalConsulta; $j++){ 
-                                                                        if($mediaSubPergunta[$j] > $mediaSubPergunta[$menor]) { 
+                                                                        if($subPergunta[$j] > $subPergunta[$menor]) { 
                                                                             $menor = $j; 
                                                                         } 
                                                                     } 
@@ -663,25 +646,25 @@
                                                                     } 
                                                                 }
                     
-                                                                fwrite($fileMedia, "\n".$aspas."Id_Pergunta".$aspas.":".$aspas.$linhaMedia['id_perguntas'].$aspas.",");
-                                                                fwrite($fileMedia, "\n".$aspas."Alternativas".$aspas.": [");
+                                                                fwrite($fileLinha, "\n".$aspas."Id_Pergunta".$aspas.":".$aspas.$linhaMedia['id_perguntas'].$aspas.",");
+                                                                fwrite($fileLinha, "\n".$aspas."Alternativas".$aspas.": [");
                                                                 for ($i = 0; $i < $totalConsulta; $i++){
-                                                                    fwrite($fileMedia, $aspas.$subPergunta[$i].$aspas);
+                                                                    fwrite($fileLinha, $aspas.$subPergunta[$i].$aspas);
                                                                     if ($i < $totalConsulta - 1){
-                                                                        fwrite($fileMedia, ",");
+                                                                        fwrite($fileLinha, ",");
                                                                     }
                                                                 }
-                                                                fwrite($fileMedia, "],");
+                                                                fwrite($fileLinha, "],");
                             
-                                                                fwrite($fileMedia, "\n".$aspas."Media".$aspas.": [");
+                                                                fwrite($fileLinha, "\n".$aspas."Media".$aspas.": [");
                                                                 for ($i = 0; $i < $totalConsulta; $i++){
                                                                     $media = round($mediaSubPergunta[$i], 3); //arredondamento para 3 casas decimais
-                                                                    fwrite($fileMedia, $aspas.$media.$aspas);
+                                                                    fwrite($fileLinha, $aspas.$media.$aspas);
                                                                     if ($i < $totalConsulta - 1){
-                                                                        fwrite($fileMedia, ",");
+                                                                        fwrite($fileLinha, ",");
                                                                     }
                                                                 }
-                                                                fwrite($fileMedia, "]\n},\n{");
+                                                                fwrite($fileLinha, "]\n},\n{");
                         
                                                                 $subPergunta = array(); //limpar array para reiniciar a contagem do tamanho
                         
@@ -754,7 +737,7 @@
                                                                     for ($i = 0; $i < 4; $i++){ 
                                                                         $menor = $i; 
                                                                         for ($j = ($i + 1); $j < 4; $j++){ 
-                                                                            if($mediaSubPergunta[$j] > $mediaSubPergunta[$menor]) { 
+                                                                            if($subPergunta[$j] > $subPergunta[$menor]) { 
                                                                                 $menor = $j; 
                                                                             } 
                                                                         } 
@@ -768,25 +751,25 @@
                                                                         } 
                                                                     }
                         
-                                                                    fwrite($fileMedia, "\n".$aspas."Id_Pergunta".$aspas.":".$aspas.'0'.$aspas.",");
-                                                                    fwrite($fileMedia, "\n".$aspas."Alternativas".$aspas.": [");
+                                                                    fwrite($fileLinha, "\n".$aspas."Id_Pergunta".$aspas.":".$aspas.'0'.$aspas.",");
+                                                                    fwrite($fileLinha, "\n".$aspas."Alternativas".$aspas.": [");
                                                                     for ($i = 0; $i < 4; $i++){
-                                                                        fwrite($fileMedia, $aspas.$subPergunta[$i].$aspas);
+                                                                        fwrite($fileLinha, $aspas.$subPergunta[$i].$aspas);
                                                                         if ($i < 3){
-                                                                            fwrite($fileMedia, ",");
+                                                                            fwrite($fileLinha, ",");
                                                                         }
                                                                     }
-                                                                    fwrite($fileMedia, "],");
+                                                                    fwrite($fileLinha, "],");
                                 
-                                                                    fwrite($fileMedia, "\n".$aspas."Media".$aspas.": [");
+                                                                    fwrite($fileLinha, "\n".$aspas."Media".$aspas.": [");
                                                                     for ($i = 0; $i < 4; $i++){
                                                                         $media = round($mediaSubPergunta[$i], 3); //arredondamento para 3 casas decimais
-                                                                        fwrite($fileMedia, $aspas.$media.$aspas);
+                                                                        fwrite($fileLinha, $aspas.$media.$aspas);
                                                                         if ($i < 3){
-                                                                            fwrite($fileMedia, ",");
+                                                                            fwrite($fileLinha, ",");
                                                                         }
                                                                     }
-                                                                    fwrite($fileMedia, "]\n},\n{");
+                                                                    fwrite($fileLinha, "]\n},\n{");
                             
                                                                     $subPergunta = array(); //limpar array para reiniciar a contagem do tamanho
                                                                         
@@ -905,7 +888,7 @@
                                                                 for ($i = 0; $i < ($totalConsulta - 1); $i++){ 
                                                                     $menor = $i; 
                                                                     for ($j = ($i + 1); $j < $totalConsulta; $j++){ 
-                                                                        if($mediaSubPergunta[$j] > $mediaSubPergunta[$menor]) { 
+                                                                        if($subPergunta[$j] < $subPergunta[$menor]) { 
                                                                             $menor = $j; 
                                                                         } 
                                                                     } 
@@ -919,22 +902,23 @@
                                                                     } 
                                                                 }
 
-                                                                fwrite($fileMedia, "\n".$aspas."Id_Pergunta".$aspas.":".$aspas.$linhaMedia['id_perguntas'].$aspas.",");
-                                                                fwrite($fileMedia, "\n".$aspas."Alternativas".$aspas.": [");
+                                                                fwrite($fileLinha, "\n".$aspas."Tipo".$aspas.": ".$aspas."line".$aspas.",");
+                                                                fwrite($fileLinha, "\n".$aspas."Id_Pergunta".$aspas.":".$aspas.$linhaMedia['id_perguntas'].$aspas.",");
+                                                                fwrite($fileLinha, "\n".$aspas."Alternativas".$aspas.": [");
                                                                 for ($i = 0; $i < $totalConsulta; $i++){
-                                                                    fwrite($fileMedia, $aspas.$subPergunta[$i].$aspas);
+                                                                    fwrite($fileLinha, $aspas.$subPergunta[$i].$aspas);
                                                                     if ($i < $totalConsulta - 1){
-                                                                        fwrite($fileMedia, ",");
+                                                                        fwrite($fileLinha, ",");
                                                                     }
                                                                 }
-                                                                fwrite($fileMedia, "],");
+                                                                fwrite($fileLinha, "],");
                             
-                                                                fwrite($fileMedia, "\n".$aspas."Media".$aspas.": [");
+                                                                fwrite($fileLinha, "\n".$aspas."Media".$aspas.": [");
                                                                 for ($i = 0; $i < $totalConsulta; $i++){
                                                                     $media = round($mediaSubPergunta[$i], 3); //arredondamento para 3 casas decimais
-                                                                    fwrite($fileMedia, $aspas.$media.$aspas);
+                                                                    fwrite($fileLinha, $aspas.$media.$aspas);
                                                                     if ($i < $totalConsulta - 1){
-                                                                        fwrite($fileMedia, ",");
+                                                                        fwrite($fileLinha, ",");
                                                                     }
                                                                 }
                                                                 
@@ -943,9 +927,9 @@
                                                                 $total55 = mysqli_num_rows($resultado55);  //calcula quantos dados foram retornados
 
                                                                 if ($total55 == 0 && $questao == 50){
-                                                                    fwrite($fileMedia, "]\n}");
+                                                                    fwrite($fileLinha, "]\n}");
                                                                 }else{
-                                                                    fwrite($fileMedia, "]\n},\n{");
+                                                                    fwrite($fileLinha, "]\n},\n{");
                                                                 }
 
                                                                 $subPergunta = array(); //limpar array para reiniciar a contagem do tamanho
@@ -1176,7 +1160,7 @@
                                                  
                                             $mediaGeral = $linhaConsulta['media'];
                                             
-                                            fwrite($fileLinha, ",\n{\n".$aspas."Tipo".$aspas.": ".$aspas."line".$aspas.",");
+                                            fwrite($fileLinha, "\n".$aspas."Tipo".$aspas.": ".$aspas."line".$aspas.",");
                                             fwrite($fileLinha, "\n".$aspas."Id_Pergunta".$aspas.": ".$aspas.$questao.$aspas.",");
 
                                             fwrite($fileLinha, "\n".$aspas."Alternativas".$aspas.": [");
@@ -1214,6 +1198,151 @@
                                                 </p>
                                             <?php    
                                         }      
+                                    }else{
+                                        if($questao == 54){ //ano de formatura por satisfação com a instituição
+                                            $selecaoVerificaco = "SELECT questao FROM `pergunta` NATURAL JOIN `resposta` WHERE id_perguntas = 55 or id_perguntas = 3";
+                                            $resultadoVerificaco = mysqli_query($conn, $selecaoVerificaco);
+                                            $linhaVerificaco = mysqli_fetch_assoc($resultadoVerificaco);
+                                            $totalVerificaco = mysqli_num_rows($resultadoVerificaco);  //calcula quantos dados foram retornados
+                                                                        
+                                            if ($totalVerificaco < 2){
+                                                $selecaoN = "SELECT questao FROM pergunta where id_perguntas = 55;";
+                                                $resultadoSelecaoN = mysqli_query($conn, $selecaoN);
+                                                $linhaN = mysqli_fetch_assoc($resultadoSelecaoN);
+                                                
+                                                ?><h5>Nível de satisfação com a instituição X Ano de formatura</h5>
+                                                <h6>Essa análise não pode ser feita por falta de respostas.<h6><?php
+                                            }else{    
+                                                for ($i = 0; $i < 7; $i++){  
+                                                    $id_alternativa = 0;     
+                                                    $id_alternativa = 21 + $i;                                                                                                     
+                                                        
+                                                    $criarTabela = "CREATE TABLE ano(cpf varchar(45));";
+                                                    $resultadoCriacao = mysqli_query($conn, $criarTabela);
+        
+                                                    $insereTabela = "INSERT INTO ano(`cpf`) SELECT cpf FROM resposta WHERE id_alternativa = '$id_alternativa';";
+                                                    $resultadoInsercao = mysqli_query($conn, $insereTabela);
+        
+                                                    $selecaoAlternativa = "SELECT alternativa FROM alternativa WHERE id_alternativa = '$id_alternativa';";
+                                                    $resultadoAlternativa = mysqli_query($conn, $selecaoAlternativa);
+                                                    $linhaAlternativa = mysqli_fetch_assoc($resultadoAlternativa);
+                            
+                                                    $selecaoConsulta = "SELECT ROUND((SUM(qtd * alternativa)/ SUM(qtd)),2) AS media 
+                                                                        FROM(        
+                                                                            SELECT resposta, alternativa, id_perguntas, id_alternativa, qtd     
+                                                                            FROM(
+                                                                                SELECT resposta, id_perguntas, 1 AS alternativa, id_alternativa, COUNT(*) AS qtd
+                                                                                FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa natural join ano
+                                                                                WHERE id_perguntas = 55 AND id_alternativa = 204
+                                                                                GROUP BY resposta
+                                                                                UNION  
+                                                                                SELECT resposta, id_perguntas, 2 AS alternativa, id_alternativa, COUNT(*) AS qtd 
+                                                                                FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa   natural join ano
+                                                                                WHERE id_perguntas = 55 AND id_alternativa = 1904
+                                                                                GROUP BY resposta
+                                                                                UNION 
+                                                                                SELECT resposta, id_perguntas, 3 AS alternativa, id_alternativa, COUNT(*) AS qtd
+                                                                                FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa natural join ano
+                                                                                WHERE id_perguntas = 55 AND id_alternativa = 198
+                                                                                GROUP BY resposta
+                                                                                UNION
+                                                                                SELECT resposta, id_perguntas, 4 AS alternativa, id_alternativa, COUNT(*) AS qtd
+                                                                                FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa  natural join ano
+                                                                                WHERE id_perguntas = 55 AND id_alternativa = 196
+                                                                                GROUP BY resposta
+                                                                                UNION
+                                                                                SELECT resposta, id_perguntas, 5 AS alternativa, id_alternativa, COUNT(*) AS qtd 
+                                                                                FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa   natural join ano
+                                                                                WHERE id_perguntas = 55 AND id_alternativa = 197
+                                                                                GROUP BY resposta
+                                                                            ) AS Media 
+                                                                        )AS Resultado ORDER BY Resultado.resposta";
+                                                    $resultadoConsulta = mysqli_query($conn, $selecaoConsulta);
+                                                    $linhaConsulta = mysqli_fetch_assoc($resultadoConsulta);
+                                                    $totalConsulta = mysqli_num_rows($resultadoConsulta);
+                                                                                                    
+                                                    $ano[$i] = $linhaAlternativa['alternativa'];
+                                                    $mediaSatisfacao[$i] = $linhaConsulta['media'];
+                                                                                        
+                                                    $deletaTabela = "DROP TABLE ano;";
+                                                    $resultadoExclusão = mysqli_query($conn, $deletaTabela);                                                                                               
+                                                } 
+
+                                                $selecaoConsulta = "SELECT ROUND((SUM(qtd * alternativa)/ SUM(qtd)),2) AS media 
+                                                                    FROM(        
+                                                                        SELECT resposta, alternativa, id_perguntas, id_alternativa, qtd     
+                                                                        FROM(
+                                                                            SELECT resposta, id_perguntas, 1 AS alternativa, id_alternativa, COUNT(*) AS qtd
+                                                                            FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa
+                                                                            WHERE id_perguntas = 55 AND id_alternativa = 204
+                                                                            GROUP BY resposta
+                                                                            UNION  
+                                                                            SELECT resposta, id_perguntas, 2 AS alternativa, id_alternativa, COUNT(*) AS qtd 
+                                                                            FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa 
+                                                                            WHERE id_perguntas = 55 AND id_alternativa = 1904
+                                                                            GROUP BY resposta
+                                                                            UNION 
+                                                                            SELECT resposta, id_perguntas, 3 AS alternativa, id_alternativa, COUNT(*) AS qtd
+                                                                            FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa
+                                                                            WHERE id_perguntas = 55 AND id_alternativa = 198
+                                                                            GROUP BY resposta
+                                                                            UNION
+                                                                            SELECT resposta, id_perguntas, 4 AS alternativa, id_alternativa, COUNT(*) AS qtd
+                                                                            FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa 
+                                                                            WHERE id_perguntas = 55 AND id_alternativa = 196
+                                                                            GROUP BY resposta
+                                                                            UNION
+                                                                            SELECT resposta, id_perguntas, 5 AS alternativa, id_alternativa, COUNT(*) AS qtd 
+                                                                            FROM pergunta NATURAL JOIN resposta NATURAL JOIN alternativa
+                                                                            WHERE id_perguntas = 55 AND id_alternativa = 197
+                                                                            GROUP BY resposta
+                                                                        ) AS Media 
+                                                                    )AS Resultado ORDER BY Resultado.resposta";
+                                                $resultadoConsulta = mysqli_query($conn, $selecaoConsulta);
+                                                $linhaConsulta = mysqli_fetch_assoc($resultadoConsulta);
+                                                $totalConsulta = mysqli_num_rows($resultadoConsulta);
+                                                        
+                                                $mediaGeral = $linhaConsulta['media'];
+                                                
+                                                fwrite($fileLinha, ",\n{\n".$aspas."Tipo".$aspas.": ".$aspas."line".$aspas.",");
+                                                fwrite($fileLinha, "\n".$aspas."Id_Pergunta".$aspas.": ".$aspas.$questao.$aspas.",");
+
+                                                fwrite($fileLinha, "\n".$aspas."Alternativas".$aspas.": [");
+                                                for ($j = 0; $j < 7; $j++){
+                                                    fwrite($fileLinha, $aspas.$ano[$j].$aspas);
+                                                    if ($j < 6){
+                                                        fwrite($fileLinha, ",");
+                                                    }
+                                                }
+                                                fwrite($fileLinha, "],");
+        
+                                                fwrite($fileLinha, "\n".$aspas."Respostas".$aspas.": [");
+                                                for ($j = 0; $j < 7; $j++){
+                                                    fwrite($fileLinha, $aspas.$mediaSatisfacao[$j].$aspas);
+                                                    if ($j < 6){
+                                                        fwrite($fileLinha, ",");
+                                                    }
+                                                }
+                                                fwrite($fileLinha, "],"); 
+                                                fwrite($fileLinha, "\n".$aspas."Media".$aspas.": [");
+                                                for ($j = 0; $j < 7; $j++){
+                                                    fwrite($fileLinha, $aspas.$mediaGeral.$aspas);
+                                                    if ($j < 6){
+                                                        fwrite($fileLinha, ",");
+                                                    }
+                                                }      
+                                                fwrite($fileLinha, "]");                                                       
+                                                fwrite($fileLinha, "\n}"); 
+
+                                                ?>
+                                                    <h5>Nível de satisfação com a instituição X Ano de formatura</h5>
+                                                    <canvas class = "grafico" id = "grafico<?php echo $questao;?>"></canvas>
+                                                    <p>Obs: para esse calculo foi considerado 1 para péssimo, 
+                                                        2 para ruim, 3 regular, 4 bom e 5 ótimo.
+                                                    </p>
+                                                <?php    
+                                            }    
+                                        }
                                     }
                                 }
                             }
@@ -1402,37 +1531,66 @@
                     }                   
                 });
             }else{
-                new Chart(elementLinha, {                           
-                    type: 'line',
-                    data: {
-                        labels: dadosLinha[j].Alternativas,
-                        datasets: [
-                            {                                
-                                label: 'Média por ano',
-                                fill: false,
-                                backgroundColor: '#000080',
-                                borderColor: '#000080',
-                                data: dadosLinha[j].Respostas
-                            },           
-                            {
-                                label: 'Média geral',
-                                fill: false,
-                                backgroundColor: '#00BFFF',
-                                borderColor: '#00BFFF',
-                                data: dadosLinha[j].Media
-                            }
-                        ]   
-                    },
-                    options: {
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    beginAtZero: true
+                if ((questao == 51) || (questao == 54)){
+                    new Chart(elementLinha, {                           
+                        type: 'line',
+                        data: {
+                            labels: dadosLinha[j].Alternativas,
+                            datasets: [
+                                {                                
+                                    label: 'Média por ano',
+                                    fill: false,
+                                    backgroundColor: '#000080',
+                                    borderColor: '#000080',
+                                    data: dadosLinha[j].Respostas
+                                },           
+                                {
+                                    label: 'Média geral',
+                                    fill: false,
+                                    backgroundColor: '#00BFFF',
+                                    borderColor: '#00BFFF',
+                                    data: dadosLinha[j].Media
                                 }
-                            }]
-                        }
-                    }  
-                });
+                            ]   
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
+                                }]
+                            }
+                        }  
+                    });
+                }else{
+                    new Chart(elementLinha, {                          
+                        type: 'line',
+                        data: {
+                            labels: dadosLinha[j].Alternativas,
+                            datasets: [
+                                {               
+                                    fill: false,
+                                    backgroundColor: '#000080',
+                                    borderColor: '#000080',
+                                    data: dadosLinha[j].Media
+                                }
+                            ]   
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
+                                }]
+                            },
+                            legend: {
+                                display: false //retira a legenda superior dos graficos
+                            }
+                        }                   
+                    });
+                }
             }                 
         }
     }
