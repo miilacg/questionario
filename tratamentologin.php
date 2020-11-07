@@ -12,7 +12,7 @@
         //criar conexao
         $servidor = "localhost";
         $usuario = "root";
-        $senha = "mila";
+        $senha = "";
         $dbname = "tecnico";
 
         ini_set('default_charset', 'UTF-8'); //esta linha antes de criar a variavel conexao	
@@ -36,7 +36,7 @@
         //criar conexao
         $servidor = "localhost";
         $usuario = "root";
-        $senha = "mila";
+        $senha = "";
         $dbname = "superior";
 
         ini_set('default_charset', 'UTF-8'); //esta linha antes de criar a variavel conexao	
@@ -60,7 +60,7 @@
         //criar conexao
         $servidor = "localhost";
         $usuario = "root";
-        $senha = "mila";
+        $senha = "";
         $dbname = "administrador";
 
         $conn = mysqli_connect($servidor,  $usuario, $senha, $dbname); //conexao com o bd

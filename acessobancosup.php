@@ -4,7 +4,7 @@
     //criar conexao
 	$servidor = "localhost";
 	$usuario = "root";
-	$senha = "mila";
+	$senha = "";
 	$dbname = "superior";
 
     ini_set('default_charset', 'UTF-8'); //esta linha antes de criar a variavel conexao	
