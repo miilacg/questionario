@@ -632,7 +632,7 @@
                                                                 for ($i = 0; $i < ($totalConsulta - 1); $i++){ 
                                                                     $menor = $i; 
                                                                     for ($j = ($i + 1); $j < $totalConsulta; $j++){ 
-                                                                        if($subPergunta[$j] > $subPergunta[$menor]) { 
+                                                                        if($subPergunta[$j] < $subPergunta[$menor]) { 
                                                                             $menor = $j; 
                                                                         } 
                                                                     } 
@@ -1164,28 +1164,65 @@
                                             fwrite($fileLinha, "\n".$aspas."Id_Pergunta".$aspas.": ".$aspas.$questao.$aspas.",");
 
                                             fwrite($fileLinha, "\n".$aspas."Alternativas".$aspas.": [");
-                                            for ($j = 0; $j < 8; $j++){
-                                                fwrite($fileLinha, $aspas.$ano[$j].$aspas);
-                                                if ($j < 7){
-                                                    fwrite($fileLinha, ",");
-                                                }
+                                            $contador = 0;
+                                            for ($j = 0; $j < 8; $j++){ 
+                                                if($mediaSatisfacao[$j] > 0) {
+                                                    fwrite($fileLinha, $aspas.$ano[$j].$aspas);                                                
+                                                }else{
+                                                    $contador = $contador + $j;
+                                                } 
+                                                
+                                                if($mediaSatisfacao[7] > 0){
+                                                    if (($j < 7) && ($j != ($contador))){
+                                                        fwrite($fileLinha, ",");
+                                                    }
+                                                }else{
+                                                    if (($j < 6) && ($j != ($contador))){
+                                                        fwrite($fileLinha, ",");
+                                                    } 
+                                                }                                                
                                             }
                                             fwrite($fileLinha, "],");
     
                                             fwrite($fileLinha, "\n".$aspas."Respostas".$aspas.": [");
+                                            $contador = 0;
                                             for ($j = 0; $j < 8; $j++){
-                                                fwrite($fileLinha, $aspas.$mediaSatisfacao[$j].$aspas);
-                                                if ($j < 7){
-                                                    fwrite($fileLinha, ",");
-                                                }
+                                                if($mediaSatisfacao[$j] > 0) {
+                                                    fwrite($fileLinha, $aspas.$mediaSatisfacao[$j].$aspas);                                                
+                                                }else{
+                                                    $contador = $contador + $j;
+                                                } 
+                                                
+                                                if($mediaSatisfacao[7] > 0){
+                                                    if (($j < 7) && ($j != ($contador))){
+                                                        fwrite($fileLinha, ",");
+                                                    }
+                                                }else{
+                                                    if (($j < 6) && ($j != ($contador))){
+                                                        fwrite($fileLinha, ",");
+                                                    } 
+                                                }  
                                             }
                                             fwrite($fileLinha, "],"); 
+
                                             fwrite($fileLinha, "\n".$aspas."Media".$aspas.": [");
+                                            $contador = 0;
                                             for ($j = 0; $j < 8; $j++){
-                                                fwrite($fileLinha, $aspas.$mediaGeral.$aspas);
-                                                if ($j < 7){
-                                                    fwrite($fileLinha, ",");
-                                                }
+                                                if($mediaSatisfacao[$j] > 0) {
+                                                    fwrite($fileLinha, $aspas.$mediaGeral.$aspas);                                                
+                                                }else{
+                                                    $contador = $contador + $j;
+                                                } 
+                                                
+                                                if($mediaSatisfacao[7] > 0){
+                                                    if (($j < 7) && ($j != ($contador))){
+                                                        fwrite($fileLinha, ",");
+                                                    }
+                                                }else{
+                                                    if (($j < 6) && ($j != ($contador))){
+                                                        fwrite($fileLinha, ",");
+                                                    } 
+                                                }  
                                             }      
                                             fwrite($fileLinha, "]");                                                       
                                             fwrite($fileLinha, "\n}"); 
@@ -1308,29 +1345,66 @@
                                                 fwrite($fileLinha, "\n".$aspas."Id_Pergunta".$aspas.": ".$aspas.$questao.$aspas.",");
 
                                                 fwrite($fileLinha, "\n".$aspas."Alternativas".$aspas.": [");
-                                                for ($j = 0; $j < 7; $j++){
-                                                    fwrite($fileLinha, $aspas.$ano[$j].$aspas);
-                                                    if ($j < 6){
-                                                        fwrite($fileLinha, ",");
-                                                    }
+                                                $contador = 0;
+                                                for ($j = 0; $j < 8; $j++){ 
+                                                    if($mediaSatisfacao[$j] > 0) {
+                                                        fwrite($fileLinha, $aspas.$ano[$j].$aspas);                                                
+                                                    }else{
+                                                        $contador = $contador + $j;
+                                                    } 
+                                                    
+                                                    if($mediaSatisfacao[7] > 0){
+                                                        if (($j < 7) && ($j != ($contador))){
+                                                            fwrite($fileLinha, ",");
+                                                        }
+                                                    }else{
+                                                        if (($j < 6) && ($j != ($contador))){
+                                                            fwrite($fileLinha, ",");
+                                                        } 
+                                                    }                                                
                                                 }
                                                 fwrite($fileLinha, "],");
-        
+
                                                 fwrite($fileLinha, "\n".$aspas."Respostas".$aspas.": [");
-                                                for ($j = 0; $j < 7; $j++){
-                                                    fwrite($fileLinha, $aspas.$mediaSatisfacao[$j].$aspas);
-                                                    if ($j < 6){
-                                                        fwrite($fileLinha, ",");
-                                                    }
+                                                $contador = 0;
+                                                for ($j = 0; $j < 8; $j++){
+                                                    if($mediaSatisfacao[$j] > 0) {
+                                                        fwrite($fileLinha, $aspas.$mediaSatisfacao[$j].$aspas);                                                
+                                                    }else{
+                                                        $contador = $contador + $j;
+                                                    } 
+                                                    
+                                                    if($mediaSatisfacao[7] > 0){
+                                                        if (($j < 7) && ($j != ($contador))){
+                                                            fwrite($fileLinha, ",");
+                                                        }
+                                                    }else{
+                                                        if (($j < 6) && ($j != ($contador))){
+                                                            fwrite($fileLinha, ",");
+                                                        } 
+                                                    }  
                                                 }
                                                 fwrite($fileLinha, "],"); 
+
                                                 fwrite($fileLinha, "\n".$aspas."Media".$aspas.": [");
-                                                for ($j = 0; $j < 7; $j++){
-                                                    fwrite($fileLinha, $aspas.$mediaGeral.$aspas);
-                                                    if ($j < 6){
-                                                        fwrite($fileLinha, ",");
-                                                    }
-                                                }      
+                                                $contador = 0;
+                                                for ($j = 0; $j < 8; $j++){
+                                                    if($mediaSatisfacao[$j] > 0) {
+                                                        fwrite($fileLinha, $aspas.$mediaGeral.$aspas);                                                
+                                                    }else{
+                                                        $contador = $contador + $j;
+                                                    } 
+                                                    
+                                                    if($mediaSatisfacao[7] > 0){
+                                                        if (($j < 7) && ($j != ($contador))){
+                                                            fwrite($fileLinha, ",");
+                                                        }
+                                                    }else{
+                                                        if (($j < 6) && ($j != ($contador))){
+                                                            fwrite($fileLinha, ",");
+                                                        } 
+                                                    }  
+                                                }
                                                 fwrite($fileLinha, "]");                                                       
                                                 fwrite($fileLinha, "\n}"); 
 
