@@ -15,26 +15,26 @@
 "Tipo":"line",
 "Id_Pergunta":"20",
 "Alternativas": ["Fez intercâmbio no exterior","Não fez intercâmbio no exterior"],
-"Respostas": ["1.2500","0.6675"],
-"Media": ["0.7214","0.7214"]
+"Respostas": ["1.2500","0.6605"],
+"Media": ["0.7167","0.7167"]
 },
 {
 "Tipo": "line",
 "Id_Pergunta": "22",
-"Alternativas": ["Outra graduação","Pós-graduação","Mestrado","Doutorado","Outra formação","Não possui outra formação"],
+"Alternativas": ["Outra graduação","Pós-graduação","Mestrado","Doutorado","Outra formação","Não"],
 "Respostas": ["0","3500.0000","4375.0000","0","0","4187.5000"]
 },
 {
 "Tipo":"line",
 "Id_Pergunta":"23",
 "Alternativas": ["Espanhol","Francês","Inglês","Italiano"],
-"Respostas": ["1.029","0.171","2.2","0.057"]
+"Respostas": ["1.029","0.171","2.171","0.057"]
 },
 {
 "Tipo":"line",
 "Id_Pergunta":"24",
 "Alternativas": ["Espanhol","Francês","Inglês","Italiano"],
-"Respostas": ["0.657","0.086","1.829","0.029"]
+"Respostas": ["0.657","0.086","1.8","0.029"]
 },
 {
 "Tipo":"line",
@@ -46,14 +46,14 @@
 "Tipo":"line",
 "Id_Pergunta":"Idiomas",
 "Alternativas": ["Espanhol","Francês","Inglês","Italiano"],
-"Respostas": ["0.762","0.114","1.971","0.038"]
+"Respostas": ["0.762","0.114","1.952","0.038"]
 },
 {
 "Tipo": "line",
 "Id_Pergunta": "39",
 "Alternativas": ["Acadêmico","Administrador de banco de dados","Administrador de redes","Analista de sistemas","Coordenador de projetos","Diretor","Gerente","Outro","Programador","Sócio/ Proprietário"],
 "Mulher": ["0","0","0","2","1","0","0","2","1","0"],
-"Homem": ["0","0","0","8","0","0","0","3","9","0"],
+"Homem": ["0","0","0","8","0","0","0","4","8","0"],
 "naoInformar": []
 },
 {
@@ -66,44 +66,44 @@
 {
 "Tipo":"line",
 "Id_Pergunta":"42",
-"Alternativas": ["Apresentação em público","Falta de cursos relacionados a área","Fluência em línguas estrangeiras","Motivação da equipe","Outras"],
-"Respostas": ["2.615","2.692","2.462","2.154","2.885"]
+"Alternativas": ["Apresentação em público","Falta de cursos relacionados a área","Língua estrangeira","Motivação da equipe","Outras"],
+"Respostas": ["2.577","2.769","2.538","2.231","2.962"]
 },
 {
 "Tipo":"line",
 "Id_Pergunta":"47",
-"Alternativas": ["Disponibilidade para hora extra","Experiência no mercado","Fluência em línguas","Instituição de ensino","Mestrado/Doutorado/Especialização","Trabalho em equipe"],
-"Respostas": ["2.591","3.955","3.5","2.864","2.182","4.591"]
+"Alternativas": ["Disponibilidade para trabalhar horas extras","Experiência no mercado","Fluência em línguas","Instituição de ensino","Mestrado/Doutorado/Especialização","Trabalho em equipe"],
+"Respostas": ["2.667","3.952","3.524","2.857","2.095","4.571"]
 },
 {
 "Tipo":"line",
 "Id_Pergunta":"49",
-"Alternativas": ["Algoritmo e estrutura de dados","Banco de dados","Contabilidade","Cálculo diferencial e integral","Compiladores","Computador e sociedade","Inglês ","Empreendedorismo e inovação","Engenharia de software","Física","Programação","Fundamentos da teoria da computação","Geometria analítica e álgebra linear","Gestão ambiental","Gestão da diversidade nas organizações","Redes de computadores","Gestão da informação","Arquitetura de software","Economia","Gestão de projetos","Iniciação a estatística","Introdução a ciência dos dados","Introdução aos sistemas lógicos digitais","Libras","Linguagens de programação","Meta-heuristica","Matematica discreta","Matematica financeira","O ser e as organizações","Organização de computadores","Pesquisa operacional","Português instrumental","Processamento digital de imagens","Programação orientada a objetos","Projeto de sistemas para web","Projeto e análise de algoritmos","Sistemas distribuidos e paralelos","Sistemas Embarcados","Sistemas operacionais","Teoria e modelo de grafos","Teoria geral da administração","Projeto de Software Orientado a Dados"],
-"Respostas": ["2.762","2.429","0.944","0.864","1.136","1.273","2.524","0.9","2.571","0.591","2.952","2","0.682","0.615","1.571","1.857","1.786","2.526","0.818","2.3","1.143","1.5","1.091","0.875","2.286","1.1","2.045","0.727","1","0.9","0.955","2.286","0.682","2.905","2.8","2.045","2.077","1.308","1.857","1.429","0.769","1"]
+"Alternativas": ["Algoritmo e estrutura de dados","Banco de dados","Contabilidade","Cálculo diferencial e integral","Compiladores","Computador e sociedade","Inglês ","Empreendedorismo e inovação","Engenharia de software","Física","Programação","","Geometria analítica e álgebra linear","Gestão ambiental","Gestão da diversidade nas organizações","Redes de computadores","Gestão da informação","Arquitetura de software","Economia","Gestão de projetos","Iniciação a estatística","Introdução a ciência dos dados","Introdução aos sistemas lógicos digitais","Libras","Linguagens de programação","Meta-heuristica","Matematica discreta","Matematica financeira","O ser e as organizações","Organização de computadores","Pesquisa operacional","Português instrumental","Processamento digital de imagens","Programação orientada a objetos","Projeto de sistemas para web","Projeto e análise de algoritmos","Sistemas distribuidos e paralelos","Sistemas Embarcados","Sistemas operacionais","Teoria e modelo de grafos","Teoria geral da administração","Tópicos especiais III"],
+"Respostas": ["2.75","2.45","1","0.905","1.19","1.333","2.5","0.947","2.6","0.619","2.95","0","0.714","0.667","1.692","1.85","1.769","2.556","0.857","2.556","1.05","1.462","1.095","1","2.3","1.158","2","0.762","1.091","0.947","1","2.25","0.714","2.9","2.786","2.143","2","1.417","1.8","1.5","0.833","1.333"]
 },
 {
 "Tipo":"line",
 "Id_Pergunta":"50",
-"Alternativas": [".Net","ASP","Assembly","C","C#","C++","Cobol","Delphi","Go","Java","JavaScript","Kotlin","ML","Objective-C","Outras","PHP","Pascal","Python","R","Ruby","TypeScript","Verilog","Visual Basic"],
-"Respostas": ["1","1.636","1","1.591","2.227","1.545","1.182","1.182","1.409","2.364","3.591","1.636","1.5","1","2.409","1.909","1.182","2.545","1.5","1.455","2.091","1.318","1.273"]
+"Alternativas": [".Net","ASP","Assembler","C","C#","C++","Cobol","Delphi","Go","Java","JavaScript","Kotlin","ML","Objective-C","Outras","PHP","Pascal","Python","R","Ruby","TypeScript","Verilog","Visual Basic"],
+"Respostas": ["0","1.636","0","1.682","2.227","1.545","1.182","1.182","1.409","2.545","3.682","1.636","1.5","0","2.5","2.091","1.182","2.545","1.5","1.455","1.955","1.318","1.273"]
 },
 {
 "Tipo":"line",
 "Id_Pergunta":"51",
 "Alternativas": ["Cache","Db2","Microsoft Acces","Microsoft Sql Server","MongoDB","Mysql","Oracle","Outros","Paradx","PostgreSQL","Teradata"],
-"Respostas": ["1","1.636","1.182","2.545","1.909","1.5","1","1.545","1","1.5","1.091"]
+"Respostas": ["0","1.636","1.182","2.545","1.909","0","0","1.545","0","1.5","1.091"]
 },
 {
 "Tipo":"line",
 "Id_Pergunta":"58",
 "Alternativas": ["Curso fácil de entrar","Curso fácil de fazer","Interesse na área","Mercado de trabalho","Outras"],
-"Respostas": ["1.857","1.179","4.75","4.643","3.036"]
+"Respostas": ["1.857","1.179","4.75","4.607","3.107"]
 },
 {
 "Tipo":"line",
 "Id_Pergunta":"59",
 "Alternativas": ["Custo de vida","Infraestrutura","Localidade","Menor nota para entrar","Outras","Possibilidade de bolsa"],
-"Respostas": ["3.536","2.25","4.179","2.821","2.964","2.607"]
+"Respostas": ["3.536","2.214","4.179","2.857","2.893","2.607"]
 },
 {
 "Tipo": "line",
@@ -115,13 +115,13 @@
 {
 "Tipo": "line",
 "Id_Pergunta": "61",
-"Alternativas": ["2013","2014","2015","2016","2017","2018","2019"],
-"Respostas": ["","","4.00","4.00","3.66","4.02","2.90"],
-"Media": ["3.81","3.81","3.81","3.81","3.81","3.81","3.81"]
+"Alternativas": ["2015","2016","2017","2018","2019"],
+"Respostas": ["4.00","4.00","3.66","4.02","2.83"],
+"Media": ["3.78","3.78","3.78","3.78","3.78"]
 },
 {
 "Tipo":"line",
 "Id_Pergunta":"62",
 "Alternativas": ["Aulas","Biblioteca","Laboratórios","Outras dependências","Salas de aula"],
-"Respostas": ["4.429","3.214","3.286","3.321","3.679"]
+"Respostas": ["4.393","3.25","3.25","3.286","3.714"]
 }]

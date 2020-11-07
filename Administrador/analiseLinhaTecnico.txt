@@ -1,17 +1,17 @@
 [{
 "Id_Pergunta":"13",
-"Alternativas": ["Italiano","Inglês","Francês","Espanhol"],
-"Media": ["0","2","0.091","0.818"]
+"Alternativas": ["Espanhol","Francês","Inglês","Italiano"],
+"Media": ["0.818","0.091","2","0"]
 },
 {
 "Id_Pergunta":"14",
-"Alternativas": ["Italiano","Inglês","Francês","Espanhol"],
-"Media": ["0","1.636","0.091","0.364"]
+"Alternativas": ["Espanhol","Francês","Inglês","Italiano"],
+"Media": ["0.364","0.091","1.636","0"]
 },
 {
 "Id_Pergunta":"15",
-"Alternativas": ["Italiano","Inglês","Francês","Espanhol"],
-"Media": ["0","1.727","0.091","0.364"]
+"Alternativas": ["Espanhol","Francês","Inglês","Italiano"],
+"Media": ["0.364","0.091","1.727","0"]
 },
 {
 "Id_Pergunta":"0",
@@ -35,7 +35,7 @@
 {
 "Tipo": "line",
 "Id_Pergunta":"41",
-"Alternativas": [".Net","ASP","Assembly","C","C#","C++","Cobol","Delphi","Go","Java","JavaScript","Kotlin","ML","Objective-C","Outras","PHP","Pascal","Python","R","Ruby","TypeScript","Verilog","Visual Basic"],
+"Alternativas": [".Net","ASP","Assembler","C","C#","C++","Cobol","Delphi","Go","Java","JavaScript","Kotlin","ML","Objective-C","Outras","PHP","Pascal","Python","R","Ruby","TypeScript","Verilog","Visual Basic"],
 "Media": ["1","1","1","1","3","4","1","1","2","2","5","4","1","1","3","4","1","2","1","3","5","1","1"]
 },
 {
@@ -59,16 +59,16 @@
 {
 "Tipo": "line",
 "Id_Pergunta": "51",
-"Alternativas": ["2012","2013","2014","2015","2016","2017","2018","2019"],
-"Respostas": ["","3.67","","4.00","4.00","4.00","3.50",""],
-"Media": ["3.82","3.82","3.82","3.82","3.82","3.82","3.82","3.82"]
+"Alternativas": ["2013","2015","2016","2017","2018"],
+"Respostas": ["3.67","4.00","4.00","4.00","3.50"],
+"Media": ["3.82","3.82","3.82","3.82","3.82"]
 },
 {
 "Tipo": "line",
 "Id_Pergunta": "54",
-"Alternativas": ["2012","2013","2014","2015","2016","2017","2018"],
-"Respostas": ["","3.46","","4.10","3.62","4.00","4.00"],
-"Media": ["3.78","3.78","3.78","3.78","3.78","3.78","3.78"]
+"Alternativas": ["2013","2015","2016","2017","2018"],
+"Respostas": ["3.46","4.10","3.62","4.00","4.00"],
+"Media": ["3.78","3.78","3.78","3.78","3.78"]
 },
 {
 "Tipo": "line",

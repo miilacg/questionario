@@ -1183,26 +1183,43 @@
                                                                     fwrite($file, "\n".$aspas."Id_Pergunta".$aspas.": ".$aspas.$questao.$aspas.",");
     
                                                                     fwrite($file, "\n".$aspas."Alternativas".$aspas.": [");
-                                                                    for ($j = 0; $j < 7; $j++){
-                                                                        fwrite($file, $aspas.$ano[$j].$aspas);
-                                                                        if ($j < 6){
+                                                                    $contador = 0;
+                                                                    for ($j = 0; $j < 7; $j++){                                                                       
+                                                                        if($mediaSatisfacao[$j] > 0) {
+                                                                            fwrite($file, $aspas.$ano[$j].$aspas);                                                
+                                                                        }else{
+                                                                            $contador++;
+                                                                        } 
+                                                                        
+                                                                        if (($j < 6) && ($j != ($contador-1))){
                                                                             fwrite($file, ",");
                                                                         }
                                                                     }
                                                                     fwrite($file, "],");
-                            
+                                                         
                                                                     fwrite($file, "\n".$aspas."Respostas".$aspas.": [");
-                                                                    for ($j = 0; $j < 7; $j++){
-                                                                        fwrite($file, $aspas.$mediaSatisfacao[$j].$aspas);
-                                                                        if ($j < 6){
+                                                                    $contador = 0;
+                                                                    for ($j = 0; $j < 7; $j++){ 
+                                                                        if($mediaSatisfacao[$j] > 0) {
+                                                                            fwrite($file, $aspas.$mediaSatisfacao[$j].$aspas);                                                
+                                                                        }else{
+                                                                            $contador++;
+                                                                        } 
+                                                                        
+                                                                        if (($j < 6) && ($j != ($contador-1))){
                                                                             fwrite($file, ",");
                                                                         }
                                                                     }
                                                                     fwrite($file, "],"); 
                                                                     fwrite($file, "\n".$aspas."Media".$aspas.": [");
-                                                                    for ($j = 0; $j < 7; $j++){
-                                                                        fwrite($file, $aspas.$mediaGeral.$aspas);
-                                                                        if ($j < 6){
+                                                                    $contador = 0;
+                                                                    for ($j = 0; $j < 7; $j++){                                                                      
+                                                                        if($mediaSatisfacao[$j] > 0) {
+                                                                            fwrite($file, $aspas.$mediaGeral.$aspas);                                                
+                                                                        }else{
+                                                                            $contador++;
+                                                                        }                                                                         
+                                                                        if (($j < 6) && ($j != ($contador-1))){
                                                                             fwrite($file, ",");
                                                                         }
                                                                     }      
@@ -2012,50 +2029,52 @@
                         }
                     }
                 }
-            }else{                   
-                if(dados[j].Tipo == 'bar'){  
-                    new Chart(element, {
-                        type: 'bar',
-                        data: {
-                            labels: dados[j].Alternativas,
-                            datasets: [
-                                {
-                                    data: dados[j].Respostas,
-                                    backgroundColor: color
-                                }
-                            ]
-                        },
-                        options: {
-                            scales: {
-                                yAxes: [{
-                                    ticks: {
-                                        beginAtZero: true
+            }else{
+                                  
+                    if(dados[j].Tipo == 'bar'){  
+                        new Chart(element, {
+                            type: 'bar',
+                            data: {
+                                labels: dados[j].Alternativas,
+                                datasets: [
+                                    {
+                                        data: dados[j].Respostas,
+                                        backgroundColor: color
                                     }
-                                }]
+                                ]
                             },
-                            legend: {
-                                display: false //retira a legenda superior dos graficos
-                            }
-                        }
-                    }); 
-                }else{
-                    console.log(element);
-                    new Chart(element, { 
-                        type: dados[j].Tipo,
-                        data: {
-                            labels: dados[j].Alternativas,
-                            datasets: [
-                                {
-                                    data: dados[j].Quantidade,
-                                    backgroundColor: color
+                            options: {
+                                scales: {
+                                    yAxes: [{
+                                        ticks: {
+                                            beginAtZero: true
+                                        }
+                                    }]
+                                },
+                                legend: {
+                                    display: false //retira a legenda superior dos graficos
                                 }
-                            ]
-                        },
-                        options: {
-                            scales: false
-                        }
-                    }); 
-                } 
+                            }
+                        }); 
+                    }else{
+                        console.log(element);
+                        new Chart(element, { 
+                            type: dados[j].Tipo,
+                            data: {
+                                labels: dados[j].Alternativas,
+                                datasets: [
+                                    {
+                                        data: dados[j].Quantidade,
+                                        backgroundColor: color
+                                    }
+                                ]
+                            },
+                            options: {
+                                scales: false
+                            }
+                        }); 
+                    } 
+            
             }
         }
     }

@@ -60,7 +60,7 @@
 "Id_perg": "8",
 "Resposta": ["A","B"],
 "Alternativa": ["Sim","Não"],
-"Quantidade": ["18","17"]
+"Quantidade": ["17","18"]
 },
 {
 "Tipo": "pie",
@@ -68,7 +68,7 @@
 "Id_perg": "9",
 "Resposta": ["A","B","C"],
 "Alternativa": ["Sim","Outra área, mas na área das exatas","Outra área diferente"],
-"Quantidade": ["11","3","4"]
+"Quantidade": ["11","3","3"]
 },
 {
 "Tipo": "pie",
@@ -108,7 +108,7 @@
 "Id_perg": "14",
 "Resposta": ["A","B","C","D","E","F"],
 "Alternativa": ["Sim. Como diretor","Sim. Como gerente","Sim. Efetivo","Sim. Em outro cargo","Sim. Em mais de uma função","Não."],
-"Quantidade": ["7","0","3","1","3","21"]
+"Quantidade": ["7","1","3","1","3","20"]
 },
 {
 "Tipo": "pie",
@@ -148,7 +148,7 @@
 "Id_perg": "19",
 "Resposta": ["A","B","C","D"],
 "Alternativa": ["Sim. De uma matéria específica do curso","Sim. De uma matéria de outro curso","Sim. De ambos","Não"],
-"Quantidade": ["10","3","2","20"]
+"Quantidade": ["11","2","2","20"]
 },
 {
 "Tipo": "pie",
@@ -163,7 +163,7 @@
 "Pergunta": "Você continuou os seus estudos?",
 "Id_perg": "22",
 "Resposta": ["A","B","C","D","E","F"],
-"Alternativa": ["Não possui outra formação","Outra graduação","Pós-graduação","Mestrado","Doutorado","Outra formação"],
+"Alternativa": ["Não","Outra graduação","Pós-graduação","Mestrado","Doutorado","Outra formação"],
 "Quantidade": ["19","0","2","13","1","0"]
 },
 {
@@ -174,7 +174,7 @@
 "Id_sub": "1",
 "Resposta": ["A","B","C","D"],
 "Alternativa": ["Não sei","Básico","Intermediário","Fluente"],
-"Quantidade": ["0","3","22","10"]
+"Quantidade": ["0","4","21","10"]
 },
 {
 "Tipo": "bar",
@@ -214,7 +214,7 @@
 "Id_sub": "1",
 "Resposta": ["A","B","C","D"],
 "Alternativa": ["Não sei","Básico","Intermediário","Fluente"],
-"Quantidade": ["1","12","14","8"]
+"Quantidade": ["2","11","14","8"]
 },
 {
 "Tipo": "bar",
@@ -292,7 +292,7 @@
 "Id_perg": "26",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["0","1","2","3","Mais de 3"],
-"Quantidade": ["5","11","10","2","7"]
+"Quantidade": ["6","11","9","2","7"]
 },
 {
 "Tipo": "pie",
@@ -300,7 +300,7 @@
 "Id_perg": "27",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["0","1","2","3","Mais de 3"],
-"Quantidade": ["5","12","3","5","10"]
+"Quantidade": ["5","13","3","4","10"]
 },
 {
 "Tipo": "pie",
@@ -332,7 +332,7 @@
 "Id_perg": "33",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Antes da graduação","Durante a graduação","Até um ano depois da formatura","1 a 3 anos depois da formatura","Mais de 3 anos depois da formatura"],
-"Quantidade": ["8","4","14","3","0"]
+"Quantidade": ["7","4","15","3","0"]
 },
 {
 "Tipo": "pie",
@@ -340,7 +340,7 @@
 "Id_perg": "34",
 "Resposta": ["A","B","C","D","E","F"],
 "Alternativa": ["Abriu uma empresa","Enviou currículo e foi selecionado","Fez estágio e foi admitido ao término do mesmo","Indicação de um amigo","Indicação de um professor","Outro"],
-"Quantidade": ["1","14","1","7","4","2"]
+"Quantidade": ["1","15","1","6","4","2"]
 },
 {
 "Tipo": "pie",
@@ -364,7 +364,7 @@
 "Id_perg": "37",
 "Resposta": ["A","B","C","D","E","F","G","H","I","J","K"],
 "Alternativa": ["Informática/Sistemas/Tecnologia","Planejamento/Desenvolvimento/Análise","Industrial/Produção/Manutenção","Acadêmica","Administração","Comercial/Vendas","Consultoria","Jurídica/Legal","Presidência/Diretoria/Gerência Geral","Telecomunicações","Outro"],
-"Quantidade": ["12","13","0","0","0","0","1","0","0","0","0"]
+"Quantidade": ["13","12","0","0","0","0","1","0","0","0","0"]
 },
 {
 "Tipo": "pie",
@@ -380,7 +380,7 @@
 "Id_perg": "39",
 "Resposta": ["A","B","C","D","E","F","G","H","I","J"],
 "Alternativa": ["Acadêmico","Administrador de banco de dados","Administrador de redes","Analista de sistemas","Coordenador de projetos","Diretor","Gerente","Programador","Sócio/ Proprietário","Outro"],
-"Quantidade": ["0","0","0","10","1","0","0","10","0","5"]
+"Quantidade": ["0","0","0","10","1","0","0","9","0","6"]
 },
 {
 "Tipo": "pie",
@@ -388,7 +388,7 @@
 "Id_perg": "40",
 "Resposta": ["A","B","C","D"],
 "Alternativa": ["Menos de 40","Entre 40 e 44","Entre 45 e 48","Mais de 48"],
-"Quantidade": ["6","20","0","0"]
+"Quantidade": ["5","21","0","0"]
 },
 {
 "Tipo": "pie",
@@ -406,7 +406,7 @@
 "Id_sub": "5",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["12","3","7","3","1"]
+"Quantidade": ["11","3","8","3","1"]
 },
 {
 "Tipo": "bar",
@@ -416,17 +416,17 @@
 "Id_sub": "6",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["6","5","10","3","2"]
+"Quantidade": ["6","5","11","2","2"]
 },
 {
 "Tipo": "bar",
 "Pergunta": "Avalie como foram as dificuldades que você encontrou na profissão",
-"SubPergunta": "Fluência em línguas estrangeiras",
+"SubPergunta": "Língua estrangeira",
 "Id_perg": "42",
 "Id_sub": "7",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["6","7","9","3","1"]
+"Quantidade": ["5","7","10","3","1"]
 },
 {
 "Tipo": "bar",
@@ -436,7 +436,7 @@
 "Id_sub": "8",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["4","5","13","3","1"]
+"Quantidade": ["4","5","12","3","2"]
 },
 {
 "Tipo": "bar",
@@ -446,7 +446,7 @@
 "Id_sub": "9",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["4","2","13","7","0"]
+"Quantidade": ["3","2","14","7","0"]
 },
 {
 "Tipo": "pie",
@@ -470,7 +470,7 @@
 "Id_perg": "46",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Menos de 10","Entre 10 e 30","Entre 31 e 50","Entre 51 e 100","Mais de 100"],
-"Quantidade": ["0","2","1","3","19"]
+"Quantidade": ["0","3","1","3","18"]
 },
 {
 "Tipo": "bar",
@@ -478,9 +478,9 @@
 "SubPergunta": "Instituição de ensino",
 "Id_perg": "47",
 "Id_sub": "10",
-"Resposta": ["A","B","C","D","E","F"],
-"Alternativa": ["1","2","3","4","5","Não se aplica"],
-"Quantidade": ["6","3","5","4","4","0"]
+"Resposta": ["A","B","C","D","E"],
+"Alternativa": ["1","2","3","4","5"],
+"Quantidade": ["6","3","4","4","4"]
 },
 {
 "Tipo": "bar",
@@ -488,9 +488,9 @@
 "SubPergunta": "Trabalho em equipe",
 "Id_perg": "47",
 "Id_sub": "11",
-"Resposta": ["A","B","C","D","E","F"],
-"Alternativa": ["1","2","3","4","5","Não se aplica"],
-"Quantidade": ["0","0","2","5","15","0"]
+"Resposta": ["C","D","E"],
+"Alternativa": ["3","4","5"],
+"Quantidade": ["2","5","14"]
 },
 {
 "Tipo": "bar",
@@ -498,9 +498,9 @@
 "SubPergunta": "Experiência no mercado",
 "Id_perg": "47",
 "Id_sub": "12",
-"Resposta": ["A","B","C","D","E","F"],
-"Alternativa": ["1","2","3","4","5","Não se aplica"],
-"Quantidade": ["1","0","7","5","9","0"]
+"Resposta": ["A","C","D","E"],
+"Alternativa": ["1","3","4","5"],
+"Quantidade": ["1","7","4","9"]
 },
 {
 "Tipo": "bar",
@@ -508,19 +508,19 @@
 "SubPergunta": "Fluência em línguas",
 "Id_perg": "47",
 "Id_sub": "13",
-"Resposta": ["A","B","C","D","E","F"],
-"Alternativa": ["1","2","3","4","5","Não se aplica"],
-"Quantidade": ["0","2","12","3","5","0"]
+"Resposta": ["B","C","D","E"],
+"Alternativa": ["2","3","4","5"],
+"Quantidade": ["2","11","3","5"]
 },
 {
 "Tipo": "bar",
 "Pergunta": "Classifique os itens de acordo com a importância deles para entrada no mercado de trabalho",
-"SubPergunta": "Disponibilidade para hora extra",
+"SubPergunta": "Disponibilidade para trabalhar horas extras",
 "Id_perg": "47",
 "Id_sub": "14",
 "Resposta": ["A","B","C","D","E","F"],
 "Alternativa": ["1","2","3","4","5","Não se aplica"],
-"Quantidade": ["3","5","7","2","3","2"]
+"Quantidade": ["2","5","7","2","3","2"]
 },
 {
 "Tipo": "bar",
@@ -530,7 +530,7 @@
 "Id_sub": "15",
 "Resposta": ["A","B","C","D","E","F"],
 "Alternativa": ["1","2","3","4","5","Não se aplica"],
-"Quantidade": ["3","10","4","2","1","2"]
+"Quantidade": ["3","10","4","1","1","2"]
 },
 {
 "Tipo": "bar",
@@ -538,9 +538,9 @@
 "SubPergunta": "Aprendizado de novas técnicas",
 "Id_perg": "48",
 "Id_sub": "17",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["0","1","1","6","14"]
+"Resposta": ["B","C","D","E"],
+"Alternativa": ["2","3","4","5"],
+"Quantidade": ["1","1","5","14"]
 },
 {
 "Tipo": "bar",
@@ -548,9 +548,9 @@
 "SubPergunta": "Adaptação às mudanças",
 "Id_perg": "48",
 "Id_sub": "18",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["0","0","3","8","11"]
+"Resposta": ["C","D","E"],
+"Alternativa": ["3","4","5"],
+"Quantidade": ["3","7","11"]
 },
 {
 "Tipo": "bar",
@@ -560,7 +560,7 @@
 "Id_sub": "19",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["2","1","9","7","3"]
+"Quantidade": ["1","1","9","7","3"]
 },
 {
 "Tipo": "bar",
@@ -568,9 +568,9 @@
 "SubPergunta": "Capacidade analítica",
 "Id_perg": "48",
 "Id_sub": "20",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["0","0","4","5","13"]
+"Resposta": ["C","D","E"],
+"Alternativa": ["3","4","5"],
+"Quantidade": ["4","4","13"]
 },
 {
 "Tipo": "bar",
@@ -578,9 +578,9 @@
 "SubPergunta": "Criatividade",
 "Id_perg": "48",
 "Id_sub": "21",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["0","0","8","9","5"]
+"Resposta": ["C","D","E"],
+"Alternativa": ["3","4","5"],
+"Quantidade": ["7","9","5"]
 },
 {
 "Tipo": "bar",
@@ -588,9 +588,9 @@
 "SubPergunta": "Eficiência na produção",
 "Id_perg": "48",
 "Id_sub": "22",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["0","1","3","10","8"]
+"Resposta": ["B","C","D","E"],
+"Alternativa": ["2","3","4","5"],
+"Quantidade": ["1","3","9","8"]
 },
 {
 "Tipo": "bar",
@@ -598,9 +598,9 @@
 "SubPergunta": "Visão ampla de organização",
 "Id_perg": "48",
 "Id_sub": "23",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["0","1","8","6","7"]
+"Resposta": ["B","C","D","E"],
+"Alternativa": ["2","3","4","5"],
+"Quantidade": ["1","7","6","7"]
 },
 {
 "Tipo": "bar",
@@ -608,9 +608,9 @@
 "SubPergunta": "Visão de novas tendências",
 "Id_perg": "48",
 "Id_sub": "24",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["0","2","7","6","7"]
+"Resposta": ["B","C","D","E"],
+"Alternativa": ["2","3","4","5"],
+"Quantidade": ["2","6","6","7"]
 },
 {
 "Tipo": "bar",
@@ -620,7 +620,7 @@
 "Id_sub": "25",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["5","9","3","3","2"]
+"Quantidade": ["5","8","3","3","2"]
 },
 {
 "Tipo": "bar",
@@ -628,9 +628,9 @@
 "SubPergunta": "Algoritmo e estrutura de dados",
 "Id_perg": "49",
 "Id_sub": "26",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["16","5","0","0","1"]
+"Resposta": ["A","B","E"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Não fiz a disciplina"],
+"Quantidade": ["15","5","1"]
 },
 {
 "Tipo": "bar",
@@ -638,9 +638,9 @@
 "SubPergunta": "Banco de dados",
 "Id_perg": "49",
 "Id_sub": "27",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["10","10","1","0","1"]
+"Resposta": ["A","B","C","E"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Não fiz a disciplina"],
+"Quantidade": ["10","9","1","1"]
 },
 {
 "Tipo": "bar",
@@ -650,7 +650,7 @@
 "Id_sub": "28",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["2","4","3","9","4"]
+"Quantidade": ["2","4","3","8","4"]
 },
 {
 "Tipo": "bar",
@@ -658,9 +658,9 @@
 "SubPergunta": "Cálculo diferencial e integral",
 "Id_perg": "49",
 "Id_sub": "29",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["2","5","3","12","0"]
+"Resposta": ["A","B","C","D"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou"],
+"Quantidade": ["2","5","3","11"]
 },
 {
 "Tipo": "bar",
@@ -668,9 +668,9 @@
 "SubPergunta": "Compiladores",
 "Id_perg": "49",
 "Id_sub": "30",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["1","9","4","8","0"]
+"Resposta": ["A","B","C","D"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou"],
+"Quantidade": ["1","9","4","7"]
 },
 {
 "Tipo": "bar",
@@ -678,9 +678,9 @@
 "SubPergunta": "Computador e sociedade",
 "Id_perg": "49",
 "Id_sub": "31",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["1","10","5","6","0"]
+"Resposta": ["A","B","C","D"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou"],
+"Quantidade": ["1","10","5","5"]
 },
 {
 "Tipo": "bar",
@@ -690,7 +690,7 @@
 "Id_sub": "32",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["14","5","1","1","1"]
+"Quantidade": ["13","5","1","1","1"]
 },
 {
 "Tipo": "bar",
@@ -700,7 +700,7 @@
 "Id_sub": "34",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["2","3","6","9","2"]
+"Quantidade": ["2","3","6","8","2"]
 },
 {
 "Tipo": "bar",
@@ -708,9 +708,9 @@
 "SubPergunta": "Engenharia de software",
 "Id_perg": "49",
 "Id_sub": "36",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["13","7","1","0","1"]
+"Resposta": ["A","B","C","E"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Não fiz a disciplina"],
+"Quantidade": ["13","6","1","1"]
 },
 {
 "Tipo": "bar",
@@ -718,9 +718,9 @@
 "SubPergunta": "Física",
 "Id_perg": "49",
 "Id_sub": "37",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["1","3","4","14","0"]
+"Resposta": ["A","B","C","D"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou"],
+"Quantidade": ["1","3","4","13"]
 },
 {
 "Tipo": "bar",
@@ -728,9 +728,9 @@
 "SubPergunta": "Programação",
 "Id_perg": "49",
 "Id_sub": "38",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["20","1","0","0","1"]
+"Resposta": ["A","B","E"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Não fiz a disciplina"],
+"Quantidade": ["19","1","1"]
 },
 {
 "Tipo": "bar",
@@ -740,7 +740,7 @@
 "Id_sub": "39",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["0","2","0","0","0"]
+"Quantidade": ["0","1","0","0","0"]
 },
 {
 "Tipo": "bar",
@@ -748,9 +748,9 @@
 "SubPergunta": "Geometria analítica e álgebra linear",
 "Id_perg": "49",
 "Id_sub": "40",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["1","5","2","14","0"]
+"Resposta": ["A","B","C","D"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou"],
+"Quantidade": ["1","5","2","13"]
 },
 {
 "Tipo": "bar",
@@ -758,9 +758,9 @@
 "SubPergunta": "Gestão ambiental",
 "Id_perg": "49",
 "Id_sub": "41",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["2","1","0","10","9"]
+"Resposta": ["A","B","D","E"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Nunca usou","Não fiz a disciplina"],
+"Quantidade": ["2","1","9","9"]
 },
 {
 "Tipo": "bar",
@@ -768,9 +768,9 @@
 "SubPergunta": "Gestão da diversidade nas organizações",
 "Id_perg": "49",
 "Id_sub": "42",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["4","5","0","5","8"]
+"Resposta": ["A","B","D","E"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Nunca usou","Não fiz a disciplina"],
+"Quantidade": ["4","5","4","8"]
 },
 {
 "Tipo": "bar",
@@ -780,7 +780,7 @@
 "Id_sub": "43",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["5","11","2","3","1"]
+"Quantidade": ["5","10","2","3","1"]
 },
 {
 "Tipo": "bar",
@@ -790,7 +790,7 @@
 "Id_sub": "44",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["4","5","3","2","8"]
+"Quantidade": ["4","4","3","2","8"]
 },
 {
 "Tipo": "bar",
@@ -798,9 +798,9 @@
 "SubPergunta": "Arquitetura de software",
 "Id_perg": "49",
 "Id_sub": "57",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["10","9","0","0","3"]
+"Resposta": ["A","B","E"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Não fiz a disciplina"],
+"Quantidade": ["10","8","3"]
 },
 {
 "Tipo": "bar",
@@ -808,9 +808,9 @@
 "SubPergunta": "Economia",
 "Id_perg": "49",
 "Id_sub": "65",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["2","4","4","12","0"]
+"Resposta": ["A","B","C","D"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou"],
+"Quantidade": ["2","4","4","11"]
 },
 {
 "Tipo": "bar",
@@ -818,9 +818,9 @@
 "SubPergunta": "Gestão de projetos",
 "Id_perg": "49",
 "Id_sub": "67",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["6","2","1","1","12"]
+"Resposta": ["A","B","C","E"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Não fiz a disciplina"],
+"Quantidade": ["6","2","1","12"]
 },
 {
 "Tipo": "bar",
@@ -830,7 +830,7 @@
 "Id_sub": "109",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["3","5","5","8","1"]
+"Quantidade": ["2","5","5","8","1"]
 },
 {
 "Tipo": "bar",
@@ -840,7 +840,7 @@
 "Id_sub": "110",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["3","4","4","3","8"]
+"Quantidade": ["3","3","4","3","8"]
 },
 {
 "Tipo": "bar",
@@ -848,9 +848,9 @@
 "SubPergunta": "Introdução aos sistemas lógicos digitais",
 "Id_perg": "49",
 "Id_sub": "111",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["3","3","9","7","0"]
+"Resposta": ["A","B","C","D"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou"],
+"Quantidade": ["3","3","8","7"]
 },
 {
 "Tipo": "bar",
@@ -858,9 +858,9 @@
 "SubPergunta": "Libras",
 "Id_perg": "49",
 "Id_sub": "112",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["1","2","0","5","14"]
+"Resposta": ["A","B","D","E"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Nunca usou","Não fiz a disciplina"],
+"Quantidade": ["1","2","4","14"]
 },
 {
 "Tipo": "bar",
@@ -870,7 +870,7 @@
 "Id_sub": "113",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["11","7","1","2","1"]
+"Quantidade": ["11","6","1","2","1"]
 },
 {
 "Tipo": "bar",
@@ -880,7 +880,7 @@
 "Id_sub": "114",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["2","5","6","7","2"]
+"Quantidade": ["2","5","6","6","2"]
 },
 {
 "Tipo": "bar",
@@ -888,9 +888,9 @@
 "SubPergunta": "Matematica discreta",
 "Id_perg": "49",
 "Id_sub": "115",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["8","8","5","1","0"]
+"Resposta": ["A","B","C","D"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou"],
+"Quantidade": ["7","8","5","1"]
 },
 {
 "Tipo": "bar",
@@ -898,9 +898,9 @@
 "SubPergunta": "Matematica financeira",
 "Id_perg": "49",
 "Id_sub": "116",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["2","3","4","13","0"]
+"Resposta": ["A","B","C","D"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou"],
+"Quantidade": ["2","3","4","12"]
 },
 {
 "Tipo": "bar",
@@ -910,7 +910,7 @@
 "Id_sub": "117",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["1","3","3","5","10"]
+"Quantidade": ["1","3","3","4","10"]
 },
 {
 "Tipo": "bar",
@@ -920,7 +920,7 @@
 "Id_sub": "118",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["1","4","7","8","2"]
+"Quantidade": ["1","4","7","7","2"]
 },
 {
 "Tipo": "bar",
@@ -928,9 +928,9 @@
 "SubPergunta": "Pesquisa operacional",
 "Id_perg": "49",
 "Id_sub": "119",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["1","5","8","8","0"]
+"Resposta": ["A","B","C","D"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou"],
+"Quantidade": ["1","5","8","7"]
 },
 {
 "Tipo": "bar",
@@ -938,9 +938,9 @@
 "SubPergunta": "Português instrumental",
 "Id_perg": "49",
 "Id_sub": "120",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["10","9","0","2","1"]
+"Resposta": ["A","B","D","E"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Nunca usou","Não fiz a disciplina"],
+"Quantidade": ["9","9","2","1"]
 },
 {
 "Tipo": "bar",
@@ -948,9 +948,9 @@
 "SubPergunta": "Processamento digital de imagens",
 "Id_perg": "49",
 "Id_sub": "121",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["2","2","5","13","0"]
+"Resposta": ["A","B","C","D"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou"],
+"Quantidade": ["2","2","5","12"]
 },
 {
 "Tipo": "bar",
@@ -958,9 +958,9 @@
 "SubPergunta": "Programação orientada a objetos",
 "Id_perg": "49",
 "Id_sub": "122",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["20","0","1","0","1"]
+"Resposta": ["A","C","E"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é dispensável","Não fiz a disciplina"],
+"Quantidade": ["19","1","1"]
 },
 {
 "Tipo": "bar",
@@ -968,9 +968,9 @@
 "SubPergunta": "Projeto de sistemas para web",
 "Id_perg": "49",
 "Id_sub": "123",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["13","1","1","0","7"]
+"Resposta": ["A","B","C","E"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Não fiz a disciplina"],
+"Quantidade": ["12","1","1","7"]
 },
 {
 "Tipo": "bar",
@@ -978,9 +978,9 @@
 "SubPergunta": "Projeto e análise de algoritmos",
 "Id_perg": "49",
 "Id_sub": "124",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["11","3","6","2","0"]
+"Resposta": ["A","B","C","D"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou"],
+"Quantidade": ["11","3","6","1"]
 },
 {
 "Tipo": "bar",
@@ -990,7 +990,7 @@
 "Id_sub": "125",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["6","4","1","2","9"]
+"Quantidade": ["5","4","1","2","9"]
 },
 {
 "Tipo": "bar",
@@ -1000,7 +1000,7 @@
 "Id_sub": "126",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["4","1","3","5","9"]
+"Quantidade": ["4","1","3","4","9"]
 },
 {
 "Tipo": "bar",
@@ -1010,7 +1010,7 @@
 "Id_sub": "127",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["5","10","4","2","1"]
+"Quantidade": ["4","10","4","2","1"]
 },
 {
 "Tipo": "bar",
@@ -1020,7 +1020,7 @@
 "Id_sub": "128",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["4","7","4","6","1"]
+"Quantidade": ["4","7","4","5","1"]
 },
 {
 "Tipo": "bar",
@@ -1030,17 +1030,17 @@
 "Id_sub": "129",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["1","2","3","7","9"]
+"Quantidade": ["1","2","3","6","9"]
 },
 {
 "Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as disciplinas abaixo no seu ambiente de trabalho?",
-"SubPergunta": "Projeto de Software Orientado a Dados",
+"SubPergunta": "Tópicos especiais III",
 "Id_perg": "49",
 "Id_sub": "130",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Não fiz a disciplina","Não fiz a disciplina","Não fiz a disciplina","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["6","2","1","1","12"]
+"Resposta": ["A","B","C","E"],
+"Alternativa": ["Não fiz a disciplina","Não fiz a disciplina","Não fiz a disciplina","Não fiz a disciplina"],
+"Quantidade": ["6","2","1","12"]
 },
 {
 "Tipo": "bar",
@@ -1048,9 +1048,9 @@
 "SubPergunta": "Tópicos especiais IV",
 "Id_perg": "49",
 "Id_sub": "131",
-"Resposta": ["A","B","C","D","E"],
-"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Nunca usou","Não fiz a disciplina"],
-"Quantidade": ["1","1","2","1","17"]
+"Resposta": ["A","B","C","E"],
+"Alternativa": ["Usa efetivamente","Usa indiretamente e é indispensável","Usa indiretamente e é dispensável","Não fiz a disciplina"],
+"Quantidade": ["1","1","2","17"]
 },
 {
 "Tipo": "bar",
@@ -1060,7 +1060,7 @@
 "Id_sub": "45",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["10","4","2","2","4"]
+"Quantidade": ["9","4","2","2","5"]
 },
 {
 "Tipo": "bar",
@@ -1070,7 +1070,7 @@
 "Id_sub": "46",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["5","1","2","4","10"]
+"Quantidade": ["4","1","3","4","10"]
 },
 {
 "Tipo": "bar",
@@ -1090,7 +1090,7 @@
 "Id_sub": "48",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["17","0","3","1","1"]
+"Quantidade": ["16","0","4","1","1"]
 },
 {
 "Tipo": "bar",
@@ -1130,7 +1130,7 @@
 "Id_sub": "52",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["15","0","4","0","3"]
+"Quantidade": ["14","0","4","0","4"]
 },
 {
 "Tipo": "bar",
@@ -1150,7 +1150,7 @@
 "Id_sub": "54",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["4","0","0","0","0"]
+"Quantidade": ["1","0","0","0","0"]
 },
 {
 "Tipo": "bar",
@@ -1180,7 +1180,7 @@
 "Id_sub": "58",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["11","2","7","0","2"]
+"Quantidade": ["13","1","6","0","2"]
 },
 {
 "Tipo": "bar",
@@ -1230,17 +1230,17 @@
 "Id_sub": "63",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["4","0","0","0","0"]
+"Quantidade": ["1","0","0","0","0"]
 },
 {
 "Tipo": "bar",
 "Pergunta": "Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?",
-"SubPergunta": "Assembly",
+"SubPergunta": "Assembler",
 "Id_perg": "50",
 "Id_sub": "64",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["4","0","0","0","0"]
+"Quantidade": ["1","0","0","0","0"]
 },
 {
 "Tipo": "bar",
@@ -1280,7 +1280,7 @@
 "Id_sub": "70",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["10","1","7","0","4"]
+"Quantidade": ["9","1","8","0","4"]
 },
 {
 "Tipo": "bar",
@@ -1290,7 +1290,7 @@
 "Id_sub": "71",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["3","0","1","0","0"]
+"Quantidade": ["1","0","0","0","0"]
 },
 {
 "Tipo": "bar",
@@ -1300,7 +1300,7 @@
 "Id_sub": "72",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["4","0","0","0","0"]
+"Quantidade": ["1","0","0","0","0"]
 },
 {
 "Tipo": "bar",
@@ -1370,7 +1370,7 @@
 "Id_sub": "79",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["4","0","0","0","0"]
+"Quantidade": ["1","0","0","0","0"]
 },
 {
 "Tipo": "bar",
@@ -1380,7 +1380,7 @@
 "Id_sub": "80",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["4","0","0","0","0"]
+"Quantidade": ["1","0","0","0","0"]
 },
 {
 "Tipo": "bar",
@@ -1410,7 +1410,7 @@
 "Id_sub": "83",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["11","0","1","1","9"]
+"Quantidade": ["10","0","1","1","10"]
 },
 {
 "Tipo": "bar",
@@ -1430,7 +1430,7 @@
 "Id_sub": "86",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["4","0","0","0","0"]
+"Quantidade": ["1","0","0","0","0"]
 },
 {
 "Tipo": "bar",
@@ -1448,7 +1448,7 @@
 "Id_perg": "53",
 "Resposta": ["A","B"],
 "Alternativa": ["Sim","Não"],
-"Quantidade": ["2","26"]
+"Quantidade": ["1","27"]
 },
 {
 "Tipo": "pie",
@@ -1464,7 +1464,7 @@
 "Id_perg": "55",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Menos de 2 horas","2 a 4 horas","5 a 7 horas","8 a 10 horas","Mais de 10 horas"],
-"Quantidade": ["0","2","17","9","0"]
+"Quantidade": ["0","2","16","10","0"]
 },
 {
 "Tipo": "pie",
@@ -1542,7 +1542,7 @@
 "Id_sub": "93",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["0","0","3","4","21"]
+"Quantidade": ["0","0","3","5","20"]
 },
 {
 "Tipo": "bar",
@@ -1582,7 +1582,7 @@
 "Id_sub": "98",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["5","1","14","4","4"]
+"Quantidade": ["4","1","15","4","4"]
 },
 {
 "Tipo": "bar",
@@ -1602,7 +1602,7 @@
 "Id_sub": "100",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["7","10","9","1","1"]
+"Quantidade": ["8","9","9","1","1"]
 },
 {
 "Tipo": "bar",
@@ -1612,7 +1612,7 @@
 "Id_sub": "101",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["7","4","7","7","3"]
+"Quantidade": ["7","4","7","6","4"]
 },
 {
 "Tipo": "bar",
@@ -1622,7 +1622,7 @@
 "Id_sub": "102",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["1","2","3","4","5"],
-"Quantidade": ["5","2","14","3","4"]
+"Quantidade": ["5","2","15","3","3"]
 },
 {
 "Tipo": "bar",
@@ -1668,7 +1668,7 @@
 "Id_sub": "103",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Péssimo","Ruim","Indiferente","Bom","Ótimo"],
-"Quantidade": ["0","0","0","16","12"]
+"Quantidade": ["0","0","0","17","11"]
 },
 {
 "Tipo": "bar",
@@ -1678,7 +1678,7 @@
 "Id_sub": "104",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Péssimo","Ruim","Indiferente","Bom","Ótimo"],
-"Quantidade": ["1","5","9","11","2"]
+"Quantidade": ["1","6","8","11","2"]
 },
 {
 "Tipo": "bar",
@@ -1688,7 +1688,7 @@
 "Id_sub": "105",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Péssimo","Ruim","Indiferente","Bom","Ótimo"],
-"Quantidade": ["0","9","7","9","3"]
+"Quantidade": ["0","8","8","9","3"]
 },
 {
 "Tipo": "bar",
@@ -1698,7 +1698,7 @@
 "Id_sub": "106",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Péssimo","Ruim","Indiferente","Bom","Ótimo"],
-"Quantidade": ["0","2","8","15","3"]
+"Quantidade": ["0","2","7","16","3"]
 },
 {
 "Tipo": "bar",
@@ -1708,7 +1708,7 @@
 "Id_sub": "107",
 "Resposta": ["A","B","C","D","E"],
 "Alternativa": ["Péssimo","Ruim","Indiferente","Bom","Ótimo"],
-"Quantidade": ["0","5","11","10","2"]
+"Quantidade": ["0","6","10","10","2"]
 },
 {
 "Tipo": "pie",
