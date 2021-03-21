@@ -174,6 +174,9 @@ INSERT INTO `login`(`cpf`, `tipo`, `nome`) VALUES
 (8002296656, 'Tecnico', ''),
 (15339199681, 'Tecnico', ''),
 (11955464677, 'Tecnico', 'Vinícius Neisser Romanelli');
+
+UPDATE `login` SET `tipo`= 'Ciência da computação' WHERE `tipo` = "Superior";
+UPDATE `login` SET `tipo`= 'Informática' WHERE `tipo` = "Técnico";
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
