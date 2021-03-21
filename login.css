@@ -1,4 +1,4 @@
-body{
+/*body{
     background: #dff0f6;
     font-family: 'Varela Round', sans-serif;
 }
@@ -79,4 +79,78 @@ body{
     border: 1px solid #f3f3f3;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     padding: 20px;
+}*/
+
+/*novo layout*/
+body{
+    width: 100%;
+    height: 100%;
+}
+
+#triangulos{
+    width: auto;
+    height: 100vh;
+
+    top: 0;
+    left: 0;
+    
+    background: url('./images/triangulos.svg') no-repeat; 
+}
+
+#brasao{
+    width: auto;
+    height: 100vh;
+
+    top: 0;
+    right: 0;
+    
+    background: url('./images/brasao.svg') no-repeat; 
+}
+
+form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 1000;
+}
+
+main {
+    width: 537px;
+    height: 643px;
+    padding: 2.75rem 3.4375rem;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.85); 
+    box-shadow: 3px 11px 19px rgb(0 0 0 / 37%);   
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    width: 23.8125rem;
+    height: auto;
+}
+
+.btn#botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    
+    width: 13.5rem;
+    height: 3.875rem;
+
+    background: #B70F0A;
+    border-radius: .3125rem;
+
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.875rem;
+
+    color: #FFFFFF;
 }

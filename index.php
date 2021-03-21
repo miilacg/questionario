@@ -8,13 +8,16 @@
 		<meta charset = "UTF-8">
         <meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap" rel="stylesheet">
+
         <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity = "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin = "anonymous">
         <link rel = "stylesheet" href = "login.css">
 		<title>Questionário</title>
 	</head>
 	
 	<body>		
-		<form method = "POST" action = "tratamentologin.php">
+		<!-- <form method="POST" action="tratamentologin.php">
             <br>
             <div class="cabecalho">
                 <h1 class="display-4">SCADA-E - EGRESSOS UFV</h1>
@@ -51,6 +54,16 @@
                 </div>   
             </div>
             
+        </form> -->
+
+        <div id="triangulos"></div>
+        <!-- <div id="brasao"></div> -->
+
+        <form method="POST" action="tratamentologin.php">            
+            <main>
+                <img id="logo" src="./images/logo.svg" alt="logo scada-e">
+                <input id="botao" class="btn" type="submit"  name="entrar" value="Entrar"/>
+            </main>           
         </form>
 	</body>
 </html>
