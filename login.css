@@ -82,29 +82,27 @@
 }*/
 
 /*novo layout*/
-body{
+body {
     width: 100%;
     height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
 }
 
-#triangulos{
-    width: auto;
+#triangulos {
     height: 100vh;
+}
 
-    top: 0;
-    left: 0;
-    
-    background: url('./images/triangulos.svg') no-repeat; 
+#triangulos img {
+    width: auto;
+    height: 100%;
 }
 
 #brasao{
     width: auto;
     height: 100vh;
-
-    top: 0;
-    right: 0;
-    
-    background: url('./images/brasao.svg') no-repeat; 
 }
 
 form{
@@ -117,14 +115,72 @@ form{
 }
 
 main {
-    width: 537px;
-    height: 643px;
-    padding: 2.75rem 3.4375rem;
+    width: 33.5625rem;
+    height: 40.1875rem;
+    padding: 2.75rem 3.1875rem;
 
-    border-radius: 20px;
+    border-radius: 1.25rem;
 
     background: rgba(255, 255, 255, 0.85); 
     box-shadow: 3px 11px 19px rgb(0 0 0 / 37%);   
+}
+
+.formulario{
+    margin: 2.3125rem auto;
+    padding: .5625rem 0;
+}
+
+.formulario .form-group {
+    margin: 1.5rem 0;
+}
+
+.formulario label {
+    margin-bottom: .4375rem;
+    padding-left: .9375rem;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    color: #000000;
+}
+
+.formulario input,
+.formulario select {
+    width: 100%;
+    height: 2.875rem;
+    padding: 0px .9375rem;
+
+    background: #EBEBEB;
+    border: 2px solid #E5DDDD;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    font-family: Roboto;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    display: flex;
+    align-items: center;
+
+    color: #667F92;
+}
+
+.formulario input:-internal-autofill-selected {
+    background: #EBEBEB !important;
+}
+
+select.form-control:not([size]):not([multiple]) {
+    height: 2.875rem;
+}
+
+.form-control:focus {
+    font-family: Roboto;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    color: #667F92;
+
+    background-color: #EBEBEB;
+    border-color: #E5DDDD;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 #logo {
