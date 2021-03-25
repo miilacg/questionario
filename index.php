@@ -18,45 +18,6 @@
 	</head>
 	
 	<body>		
-		<!-- <form method="POST" action="tratamentologin.php">
-            <br>
-            <div class="cabecalho">
-                <h1 class="display-4">SCADA-E - EGRESSOS UFV</h1>
-            </div><br>
-			
-			<?php
-                if (isset ($_SESSION['msg'])){
-    				echo $_SESSION['msg'];
-    				unset ($_SESSION['msg']);
-				}	
-    		?>
-    			
-            <div class = "corpo">                 
-                <div class = "login-form"> 
-                    <h4 class="modal-title">Entre com seu CPF e modalidade</h4><br>
-                        
-                    <div class="form-group">
-                        <input type = "number" min="1" name = "cpf" placeholder = "Digite apenas os numeros do seu CPF" id = "number" class = "form-control" required = "required">
-                    </div>
-
-                    <div class="form-group">
-                        <select class= "form-control" name = "curso" id = "curso" required>
-                            <option value="">Escolha a modalidade</option>
-                            <option value = "Tecnico">Técnico</option> 
-                            <option value = "Superior">Superior</option> 
-                            <option value = "Administrador">Gerente</option>
-                        </select>
-                    </div>                   
-                    
-                </div>
-                
-                <div class = "botao">
-                    <input id = "botao" type = "submit" class= "btn btn-primary" name = "entrar" value = "Entrar"/>
-                </div>   
-            </div>
-            
-        </form> -->
-
         <div id="triangulos">
             <img src="./images/triangulos.png">
         </div>
@@ -84,10 +45,50 @@
                             <option value="Administrador">Gerente</option>
                         </select>
                     </div> 
-                </div>
-                    
+                </div>                    
                 <input id="botao" class="btn" type="submit" name="entrar" value="Entrar"/>
             </main>           
-        </form>        
+        </form>   
+        
+
+        <!-- Mensagens de erro -->
+        <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js" type="text/javascript"></script>
+
+        <?php
+            if (isset ($_SESSION['msg'])){ 
+                if (($_SESSION['msg']) == "error"){ ?>
+                    <script type="text/javascript">
+                        Swal.fire({
+                            title: "Acesso negado",
+                            text: "CPF incorreto ou não cadastrado",
+                            icon: 'error',        
+                            iconColor: 'rgb(76, 252, 157)',   
+                            confirmButtonBorderColor: 'rgb(76, 252, 157)', 
+                            confirmButtonColor: 'white', 
+                            confirmButtonTextColor: 'black',  
+                        })
+                    </script>
+
+                <?php  } else{ ?>
+                    <script type="text/javascript">
+                        Swal.fire({
+                            title: "Acesso negado",
+                            text: "CPF ou senha incorretos ou não cadastrado",
+                            icon: 'error',        
+                            iconColor: 'rgb(76, 252, 157)',   
+                            confirmButtonBorderColor: 'rgb(76, 252, 157)', 
+                            confirmButtonColor: 'white', 
+                            confirmButtonTextColor: 'black',  
+                        })
+                    </script>
+                    
+                <?php }
+
+                unset ($_SESSION['msg']);
+            }
+        ?>
 	</body>
 </html>

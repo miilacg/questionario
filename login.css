@@ -1,87 +1,3 @@
-/*body{
-    background: #dff0f6;
-    font-family: 'Varela Round', sans-serif;
-}
-
-.corpo{
-    color: #434343;
-    border-radius: 1px;
-    background: #fff;
-    border: 1px solid #f3f3f3;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    padding: 30px;
-    width: 400px;
-    margin: 0 auto;
-}
-
-.botao{
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 10px 0;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    float: none;
-}
-
-#botao{
-    width: 330px;
-}
-
-.display-4{
-    font-size: 25px;
-    text-align: center;
-}
-
-.form-control{
-    box-shadow: none;
-    border-color: #ddd;
-}
-
-.form-control:focus{
-    border-color: #4aba70;
-}
-
-.login-form{
-    width: 330px;                
-    padding: 10px 0;
-}
-
-.login-form form{
-    color: #434343;
-    border-radius: 1px;
-    margin-bottom: 15px;
-    background: #fff;
-    border: 1px solid #f3f3f3;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    padding: 30px;
-}
-
-.login-form h4{
-    text-align: center;
-    font-size: 26px;
-}
-.login-form .form-group{
-    margin-bottom: 20px;
-}
-
-.login-form .form-control, .login-form .btn {
-    min-height: 40px;
-    border-radius: 2px;
-    transition: all 0.5s;
-}
-
-.cabecalho{
-    color: #434343;
-    border-radius: 1px;
-    margin-bottom: 15px;
-    background: #fff;
-    border: 1px solid #f3f3f3;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    padding: 20px;
-}*/
-
-/*novo layout*/
 * {
     box-sizing: border-box;
 }
@@ -98,12 +14,23 @@ html {
     overflow-x: hidden;
 }
 
+/*tiras as setinhas dos inputs*/
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;    
+ }
+  
+ input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+ }
+
 #triangulos {
     height: 100vh;
+    max-width: 69.5%;
 }
 
 #triangulos img {
-    width: auto;
+    width: 100%;
     height: 100%;
 }
 
@@ -115,7 +42,6 @@ html {
 #brasao img{
     width: auto;
     height: 38.75rem;
-    right: 1rem;
     
     position: relative;
     top: 50%;
@@ -148,6 +74,16 @@ main {
     padding: .5625rem 0;
 }
 
+#logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    width: 23.8125rem;
+    height: auto;
+}
+
 .formulario .form-group {
     margin: 1.9375rem 0;
 }
@@ -167,7 +103,7 @@ main {
 .formulario select {
     width: 100%;
     height: 2.875rem;
-    padding: 0px .9375rem;
+    padding: 0 .9375rem;
 
     background: #EBEBEB;
     border: 2px solid #E5DDDD;
@@ -185,6 +121,10 @@ main {
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
+select.form-control:not([size]):not([multiple]) {
+    height: 2.875rem;
+}
+
 .formulario input:-internal-autofill-selected {
     background: #EBEBEB !important;
 }
@@ -198,16 +138,6 @@ main {
     background-color: #EBEBEB;
     border-color: #E5DDDD;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-}
-
-#logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-
-    width: 23.8125rem;
-    height: auto;
 }
 
 .btn#botao {
@@ -236,4 +166,81 @@ main {
 
 .btn#botao:hover {
     background: #900500;
+}
+
+
+/********************* Mensagem de erro *********************/
+/********************* CARD *********************/
+.swal2-popup.swal2-modal.swal2-show {
+  height: 24.562rem;
+  padding: 2.05rem;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  z-index: 99999;
+  border-radius: 1.875rem;
+}
+
+/********************* SIMBOLO ERRO *********************/
+.swal2-popup .swal2-icon.swal2-icon-show.swal2-error {  
+  margin: 2.125rem auto .125rem;
+  border-color: #ff3c3c;
+}
+
+.swal2-popup.swal2-modal.swal2-show .swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+  background-color: #ff3c3c;
+}
+
+/********************* TEXTOS *********************/
+.swal2-popup h2.swal2-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.25rem;
+  line-height: 1.23;
+  color: #000;
+  margin: 2.188rem 0 0.625rem 0;
+}
+
+.swal2-popup div.swal2-content {
+  color: #000;
+  font-size: 1.125rem;
+  line-height: 1.25;
+  opacity: 0.8;
+}
+
+/********************* BOTOES *********************/
+.swal2-popup.swal2-modal.swal2-icon-success.swal2-show .swal2-actions{
+  margin: 0px;
+}
+
+.swal2-popup button.swal2-confirm.swal2-styled {
+  width: 12.625rem;
+  height: 3.25rem;
+
+  margin: 1.687rem auto;
+  border-radius: 0.625rem;
+
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.swal2-popup button.swal2-confirm.swal2-styled {
+  border: 2px solid #4DFF9F;  
+}
+
+.swal2-popup .swal2-actions:not(.swal2-loading) button.swal2-confirm.swal2-styled:hover {
+  background: #4DFF9F;
+}
+
+
+
+/********************* Responsividade *********************/
+@media (min-width: 1300px) {
+    html {
+        font-size: 106.25%;
+    }
 }
