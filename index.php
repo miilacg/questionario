@@ -61,9 +61,9 @@
             <img src="./images/triangulos.png">
         </div>
 
-        <!-- <div id="brasao">
+        <div id="brasao">
             <img src="./images/brasao.svg">
-        </div> -->
+        </div> 
 
         <form method="POST" action="tratamentologin.php">            
             <main>

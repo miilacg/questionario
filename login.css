@@ -82,9 +82,16 @@
 }*/
 
 /*novo layout*/
-body {
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
 
     display: flex;
     flex-direction: row;
@@ -105,6 +112,16 @@ body {
     height: 100vh;
 }
 
+#brasao img{
+    width: auto;
+    height: 38.75rem;
+    right: 1rem;
+    
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 form{
     position: absolute;
     top: 50%;
@@ -118,6 +135,7 @@ main {
     width: 33.5625rem;
     height: 40.1875rem;
     padding: 2.75rem 3.1875rem;
+    box-sizing: border-box;
 
     border-radius: 1.25rem;
 
@@ -131,12 +149,14 @@ main {
 }
 
 .formulario .form-group {
-    margin: 1.5rem 0;
+    margin: 1.9375rem 0;
 }
 
 .formulario label {
     margin-bottom: .4375rem;
     padding-left: .9375rem;
+
+    display: inline-block;
 
     font-family: 'Roboto', sans-serif;
     font-size: 1.25rem;
@@ -151,7 +171,6 @@ main {
 
     background: #EBEBEB;
     border: 2px solid #E5DDDD;
-    box-sizing: border-box;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 
@@ -162,14 +181,12 @@ main {
     align-items: center;
 
     color: #667F92;
+
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .formulario input:-internal-autofill-selected {
     background: #EBEBEB !important;
-}
-
-select.form-control:not([size]):not([multiple]) {
-    height: 2.875rem;
 }
 
 .form-control:focus {
@@ -194,19 +211,29 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .btn#botao {
+    --altura: 3.875rem;
+    --fonte: 1.875rem;;
+
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    
+    padding: calc((var(--altura) - var(--fonte))/2);
+
     width: 13.5rem;
-    height: 3.875rem;
+    height: var(--altura);
 
     background: #B70F0A;
     border-radius: .3125rem;
+    border: 1px solid transparent;
 
     font-family: 'Exo 2', sans-serif;
-    font-size: 1.875rem;
+    font-size: var(--fonte);
+    line-height: 0;
 
     color: #FFFFFF;
+}
+
+.btn#botao:hover {
+    background: #900500;
 }
