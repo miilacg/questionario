@@ -18,12 +18,9 @@
 	</head>
 	
 	<body>		
-        <div id="triangulos">
-            <img src="./images/triangulos.png">
-        </div>
-
-        <div id="brasao">
-            <img src="./images/brasao.svg">
+        <div id="background">
+            <img id="triangulos" src="./images/triangulos.png">   
+            <img id="brasao" src="./images/brasao.svg">
         </div> 
 
         <form method="POST" action="tratamentologin.php">            
@@ -65,10 +62,6 @@
                             title: "Acesso negado",
                             text: "CPF incorreto ou não cadastrado",
                             icon: 'error',        
-                            iconColor: 'rgb(76, 252, 157)',   
-                            confirmButtonBorderColor: 'rgb(76, 252, 157)', 
-                            confirmButtonColor: 'white', 
-                            confirmButtonTextColor: 'black',  
                         })
                     </script>
 
@@ -77,11 +70,7 @@
                         Swal.fire({
                             title: "Acesso negado",
                             text: "CPF ou senha incorretos ou não cadastrado",
-                            icon: 'error',        
-                            iconColor: 'rgb(76, 252, 157)',   
-                            confirmButtonBorderColor: 'rgb(76, 252, 157)', 
-                            confirmButtonColor: 'white', 
-                            confirmButtonTextColor: 'black',  
+                            icon: 'error',         
                         })
                     </script>
                     
