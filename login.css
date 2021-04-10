@@ -170,7 +170,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 
-/********************* Mensagem de erro *********************/
+/********************* Mensagem *********************/
 /********************* CARD *********************/
 .swal2-popup.swal2-modal.swal2-show {
   height: 24.562rem;
@@ -184,14 +184,37 @@ select.form-control:not([size]):not([multiple]) {
   border-radius: 1.875rem;
 }
 
+.swal2-popup.swal2-modal.swal2-show.swal2-icon-warning .swal2-header {
+    padding: 0;
+}
+
 /********************* SIMBOLO ERRO *********************/
+.swal2-popup .swal2-icon {
+    font-family: 'Petrona', serif;
+    margin: 2.125rem auto .125rem;
+}
+
+.swal2-popup .swal2-icon.swal2-warning {
+    margin: 0.8rem auto .125rem;
+}
+
 .swal2-popup .swal2-icon.swal2-icon-show.swal2-error {  
-  margin: 2.125rem auto .125rem;
-  border-color: #ff3c3c;
+    margin: 2.125rem auto .125rem;
+    border-color: #ff3c3c;
 }
 
 .swal2-popup.swal2-modal.swal2-show .swal2-icon.swal2-error [class^=swal2-x-mark-line] {
-  background-color: #ff3c3c;
+    background-color: #ff3c3c;
+}
+
+.swal2-popup .swal2-icon.swal2-icon-show.swal2-warning {
+    border-color: #E5AE02;
+    color: #E5AE02;
+}
+
+.swal2-popup .swal2-icon .swal2-icon-content {
+    font-size: 5rem;
+    margin-top: .5rem;
 }
 
 /********************* TEXTOS *********************/
@@ -201,6 +224,10 @@ select.form-control:not([size]):not([multiple]) {
   line-height: 1.23;
   color: #000;
   margin: 2.188rem 0 0.625rem 0;
+}
+
+.swal2-popup.swal2-modal.swal2-icon-warning h2.swal2-title {
+    font-size: 1.9rem;
 }
 
 .swal2-popup div.swal2-content {
@@ -215,7 +242,11 @@ select.form-control:not([size]):not([multiple]) {
   margin: 0px;
 }
 
-.swal2-popup button.swal2-confirm.swal2-styled {
+.swal2-popup.swal2-modal.swal2-icon-warning.swal2-show .swal2-actions {
+    margin: 2.25rem auto 0;
+}
+
+.swal2-popup button {
   width: 12.625rem;
   height: 3.25rem;
 
@@ -225,24 +256,40 @@ select.form-control:not([size]):not([multiple]) {
   font-family: 'Roboto', sans-serif;
   color: black;
   font-weight: bold;
+  line-height: revert;
 
   cursor: pointer;
-
-  border: 2px solid #4DFF9F;  
+  
   background: white;
+  border: .125rem solid #4DFF9F;
 }
 
-.swal2-popup .swal2-actions:not(.swal2-loading) button.swal2-confirm.swal2-styled:hover {
+.swal2-popup.swal2-modal.swal2-icon-warning button.swal2-confirm {
+    width: 9.9375rem;
+    margin: .687rem auto;
+
+    border: .125rem solid #4DFF9F;
+}
+
+.swal2-popup.swal2-modal.swal2-icon-warning button.swal2-cancel {
+    width: 9.9375rem;
+    margin: .687rem auto;
+
+    border: .125rem solid #FF4D4D;
+}
+
+.swal2-popup .swal2-actions:not(.swal2-loading) button.swal2-confirm:hover,
+.swal2-popup .swal2-actions:not(.swal2-loading) .swal2-confirm:active {
   background: #4DFF9F;
-  border: 2px solid #4DFF9F; 
 }
 
-.swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled:active {
-    background: #4DFF9F;
-    border: 2px solid #4DFF9F; 
+.swal2-popup .swal2-actions:not(.swal2-loading) button.swal2-cancel:hover,
+.swal2-popup .swal2-actions:not(.swal2-loading) .swal2-cancel:active {
+    background: #FF4D4D;
 }
 
-.swal2-popup .swal2-styled:focus {
+.swal2-popup .swal2-confirm:focus,
+.swal2-popup .swal2-cancel:focus {
     outline: 0;
     box-shadow: none;
 }
@@ -253,6 +300,22 @@ select.form-control:not([size]):not([multiple]) {
 @media (min-width: 1400px) {
     html {
         font-size: 106.25%;
+    }
+
+    .swal2-popup div.swal2-content {
+        font-size: 1.3rem;
+    }
+
+    .swal2-popup button {
+        border: .15rem solid #4DFF9F;
+    }
+      
+    .swal2-popup.swal2-modal.swal2-icon-warning button.swal2-confirm {    
+        border: .15rem solid #4DFF9F;
+    }
+      
+    .swal2-popup.swal2-modal.swal2-icon-warning button.swal2-cancel {    
+        border: .125rem solid #FF4D4D;
     }
 }
 
@@ -319,6 +382,21 @@ select.form-control:not([size]):not([multiple]) {
     select.form-control:not([size]):not([multiple]) {
         height: 2.9rem;
     }
+
+    .swal2-popup button {
+        line-height: 2.7;
+        font-size: 1.1rem;
+    }
+      
+    .swal2-popup.swal2-modal.swal2-icon-warning button.swal2-confirm {    
+        line-height: 2.7;
+        font-size: 1.1rem;    
+    }
+      
+    .swal2-popup.swal2-modal.swal2-icon-warning button.swal2-cancel {    
+        line-height: 2.8;
+        font-size: 1.1rem;    
+    }
 }
 
 @media (min-width: 1600px) and (min-height: 1080px) {
@@ -362,8 +440,16 @@ select.form-control:not([size]):not([multiple]) {
         height: 24.562rem;
     }
 
+    .swal2-popup .swal2-icon.swal2-warning {
+        margin: 1rem auto .125rem;
+    }
+
     .swal2-popup h2.swal2-title {
-        margin: 1.5rem 0 0.625rem 0;
+        margin: 2rem 0 0.625rem 0;
+    }
+
+    .swal2-popup.swal2-icon-warning div.swal2-content {
+        font-size: 1.3rem;
     }
 
     .swal2-popup div.swal2-content {
@@ -412,6 +498,14 @@ select.form-control:not([size]):not([multiple]) {
     .formulario label {
         margin-bottom: .1rem;
     }
+
+    .swal2-icon {
+        border: .28rem solid transparent;
+    }
+
+    .swal2-popup button {
+        font-size: 1.1rem;
+    }
 }
 
 @media (max-width: 1100px) and (min-height: 815px) { 
@@ -435,6 +529,45 @@ select.form-control:not([size]):not([multiple]) {
     .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right] {
         right: 1.1rem;
     }
+
+    .swal2-popup .swal2-icon.swal2-warning {
+        margin: 0.95rem auto .125rem;
+    }
+
+    .swal2-popup .swal2-icon .swal2-icon-content {
+        font-size: 4.8rem;
+    }
+
+    .swal2-popup h2.swal2-title {
+        margin: 2rem 0 0.625rem 0;
+    }
+
+    .swal2-popup button {
+        border: .18rem solid #4DFF9F
+    }
+      
+    .swal2-popup.swal2-modal.swal2-icon-warning button.swal2-confirm {    
+        border: .18rem solid #4DFF9F   
+    }
+      
+    .swal2-popup.swal2-modal.swal2-icon-warning button.swal2-cancel {    
+        border: .18rem solid #FF4D4D    
+    }
+}
+
+/*iPad Pro*/
+@media (orientation: portrait) and (max-width: 1024px) {
+    html {
+        font-size: 130.75%;
+    }
+
+    img#triangulos {
+        max-width: 100%;
+    }
+
+    .swal2-popup button.swal2-confirm.swal2-styled {
+        border: 0.15rem solid #4DFF9F;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -454,6 +587,26 @@ select.form-control:not([size]):not([multiple]) {
         width: 28rem;
         height: 23.5rem;
     }
+
+    .swal2-popup h2.swal2-title {
+        margin: 2rem 0 0.4rem 0;
+    }
+
+    .swal2-popup.swal2-modal.swal2-icon-warning h2.swal2-title {
+        font-size: 1.75rem;
+    }   
+
+    .swal2-popup.swal2-modal.swal2-icon-warning .swal2-icon {
+        border: .3rem solid #E5AE02;
+    }
+
+    .swal2-popup.swal2-modal.swal2-icon-warning button.swal2-cancel {
+        border: .15rem solid #FF4D4D;
+    }
+
+    .swal2-popup.swal2-modal.swal2-icon-warning button.swal2-confirm {
+        border: .15rem solid #4DFF9F;
+    }
 }
 
 @media (max-width: 1000px) and (min-height: 730px) { 
@@ -472,21 +625,6 @@ select.form-control:not([size]):not([multiple]) {
 
     select.form-control:not([size]):not([multiple]) {
         height: 3.5rem;
-    }
-}
-
-/*iPad Pro*/
-@media (orientation: portrait) and (max-width: 1024px) {
-    html {
-        font-size: 130.75%;
-    }
-
-    img#triangulos {
-        max-width: 100%;
-    }
-
-    .swal2-popup button.swal2-confirm.swal2-styled {
-        border: 0.15rem solid #4DFF9F;
     }
 }
 
@@ -592,6 +730,16 @@ select.form-control:not([size]):not([multiple]) {
         height: 3.5rem;
         padding: .85rem;
     }
+
+    .swal2-popup button {
+        font-size: 1.2rem;
+        line-height: 2.45;
+    }
+
+    .swal2-popup.swal2-modal.swal2-icon-warning button.swal2-cancel,
+    .swal2-popup.swal2-modal.swal2-icon-warning button.swal2-confirm {
+        width: 9.5rem;
+    }
 }
 
 @media (max-width: 700px) and (min-height: 500px) {
@@ -648,6 +796,10 @@ select.form-control:not([size]):not([multiple]) {
     .swal2-popup button.swal2-confirm.swal2-styled {
         border: 0.1rem solid #4DFF9F;
     }
+
+    .swal2-popup .swal2-icon .swal2-icon-content {
+        margin-top: .3rem;
+    }
 }
 
 @media (max-width: 600px) and (min-height: 421px) {
@@ -676,6 +828,29 @@ select.form-control:not([size]):not([multiple]) {
     }
 }
 
+/* Surface Duo */
+@media (orientation: portrait) and (max-width: 540px) {
+    html {
+        font-size: 67.75%;
+    }
+
+    img#triangulos {
+        max-width: 100%;
+    }
+
+    .swal2-popup h2.swal2-title {
+        margin: 1rem 0 0.4rem 0;
+    }
+
+    .swal2-popup.swal2-modal.swal2-icon-warning button.swal2-cancel {
+        border: .185rem solid #FF4D4D;
+    }
+
+    .swal2-popup.swal2-modal.swal2-icon-warning button.swal2-confirm {
+        border: .185rem solid #4DFF9F;
+    }
+}
+
 @media (max-width: 500px) {
     html {
         font-size: 36.5%;
@@ -700,6 +875,17 @@ select.form-control:not([size]):not([multiple]) {
     }  
 }
 
+/* iPhone 6/7/8 Plus */
+@media (orientation: portrait) and (max-width: 414px) {
+    html {
+        font-size: 56.7%;
+    }
+
+    .swal2-popup button {
+        line-height: 2.424;
+    }
+}
+
 @media (max-width: 400px) {
     html {
         font-size: 30.5%;
@@ -707,6 +893,10 @@ select.form-control:not([size]):not([multiple]) {
 
     img#brasao {
         display: block;
+    }
+
+    .swal2-popup.swal2-icon-warning div.swal2-content {
+        font-size: 1.35rem;
     }
 }
 
@@ -722,27 +912,9 @@ select.form-control:not([size]):not([multiple]) {
     img#brasao {
         display: none;
     }  
-}
 
-/* Surface Duo */
-@media (orientation: portrait) and (max-width: 540px) {
-    html {
-        font-size: 67.75%;
-    }
-
-    img#triangulos {
-        max-width: 100%;
-    }
-
-    .swal2-popup h2.swal2-title {
-        margin: 1rem 0 0.4rem 0;
-    }
-}
-
-/* iPhone 6/7/8 Plus */
-@media (orientation: portrait) and (max-width: 414px) {
-    html {
-        font-size: 56.7%;
+    .swal2-popup.swal2-modal.swal2-icon-warning .swal2-icon {
+        border: .334rem solid #E5AE02;
     }
 }
 
@@ -781,5 +953,13 @@ select.form-control:not([size]):not([multiple]) {
 
     .swal2-header .swal2-icon {
         border: 0.35rem solid transparent;
+    }
+
+    .swal2-popup h2.swal2-title {
+        margin: 2rem 0 0.5rem 0;
+    }
+    
+    .swal2-popup.swal2-icon-warning div.swal2-content {
+        font-size: 1.402rem;
     }
 }

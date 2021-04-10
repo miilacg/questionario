@@ -11,6 +11,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Petrona&display=swap" rel="stylesheet">
 
         <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity = "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin = "anonymous">
         <link rel = "stylesheet" href = "login.css">
@@ -61,20 +62,43 @@
                         Swal.fire({
                             title: "Acesso negado",
                             text: "CPF incorreto ou não cadastrado",
-                            icon: 'error',        
+                            icon: 'error',    
+                            buttonsStyling: false, 
                         })
                     </script>
 
-                <?php  } else{ ?>
-                    <script type="text/javascript">
-                        Swal.fire({
-                            title: "Acesso negado",
-                            text: "CPF ou senha incorretos ou não cadastrado",
-                            icon: 'error',         
-                        })
-                    </script>
-                    
-                <?php }
+                <?php  } else { 
+                    if (($_SESSION['msg']) == "errorAdm") { ?>
+                        <script type="text/javascript">
+                            Swal.fire({
+                                title: "Acesso negado",
+                                text: "CPF ou senha incorretos ou não cadastrado",
+                                icon: 'error', 
+                                buttonsStyling: false,         
+                            })
+                        </script>
+                    <?php  } else { ?>
+                        <script type="text/javascript">   
+                            Swal.fire({
+                                title: "Você já respondeu a pesquisa",
+                                text: "Deseja responder novamente?",
+                                icon: 'warning', 
+                                reverseButtons: true,
+                                showCancelButton: true,
+                                cancelButtonText: 'Não',   
+                                showConfirmButton: true,
+                                confirmButtonText: 'Sim',
+                                buttonsStyling: false, 
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    <?php  if (($_SESSION['msg']) == "sup") { ?>
+                                        window.location.href = "http://www.google.com.br";
+                                    <?php  } ?>
+                                } 
+                            })
+                        </script>
+                    <?php }                     
+                }
 
                 unset ($_SESSION['msg']);
             }
