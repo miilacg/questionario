@@ -87,5 +87,5 @@
     
     mysqli_close($conn);
     
-    header ("Location: resultadosup.html");
+    header ("Location: ../resultado.html");
 ?>

@@ -97,5 +97,5 @@
     mysqli_close($conn);
     //session_destroy();
 
-    header ("Location: resultadotec.html");
+    header ("Location: ../resultado.html");
 ?>
