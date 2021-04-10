@@ -8,73 +8,44 @@
 	$_SESSION['cpf'] = $cpf;
     $_SESSION['curso'] = $curso;
     
-    if ($curso == "Tecnico"){
-        //criar conexao
-        $servidor = "localhost";
-        $usuario = "root";
-        $senha = "mila";
+    $servidor = "localhost";
+    $usuario = "root";
+    $senha = "mila";
+
+    if ($curso == "Tecnico"){   
         $dbname = "tecnico";
-
-        ini_set('default_charset', 'UTF-8'); //esta linha antes de criar a variavel conexao	
-        $conn = mysqli_connect($servidor,  $usuario, $senha, $dbname); //conexao com o bd
-        $conn->query("SET NAMES utf8"); // esta linha depois dela criada.
-
-        $login = "SELECT *
-                  FROM login
-                  WHERE cpf = '$cpf'";
-
-        $verifica = mysqli_query($conn, $login);
-        if (mysqli_num_rows($verifica) >= 1) {
-            header("Location: Tecnico/verificacaotec.php");
-        }else{           
-            $_SESSION['msg'] = "error";
-            header("Location: index.php");
-	   }
+        $url = "Tecnico/verificacaotec.php";
+    } else{
+        if ($curso == "Superior"){
+            $dbname = "superior";
+            $url = "Superior/verificacaosup.php";
+        } else {
+            if ($curso == "Administrador"){
+                $dbname = "administrador";
+                $url = "Administrador/selecaocurso.php";
+            }
+        }
     }
 
-    if ($curso == "Superior"){
-        //criar conexao
-        $servidor = "localhost";
-        $usuario = "root";
-        $senha = "mila";
-        $dbname = "superior";
+    //criar conexao
+    ini_set('default_charset', 'UTF-8'); //esta linha antes de criar a variavel conexao	
+    $conn = mysqli_connect($servidor,  $usuario, $senha, $dbname); //conexao com o bd
+    $conn->query("SET NAMES utf8"); // esta linha depois dela criada.
 
-        ini_set('default_charset', 'UTF-8'); //esta linha antes de criar a variavel conexao	
-        $conn = mysqli_connect($servidor,  $usuario, $senha, $dbname); //conexao com o bd
-        $conn->query("SET NAMES utf8"); // esta linha depois dela criada.
-        
-        $login = "SELECT *
-                  FROM login
-                  WHERE cpf = '$cpf'";
+    $login = "SELECT * FROM login WHERE cpf = '$cpf'";
 
-        $verifica = mysqli_query($conn, $login);
-        if (mysqli_num_rows($verifica) >= 1){
-            header("Location: Superior/verificacaosup.php");
+    $verifica = mysqli_query($conn, $login);
+
+
+    if (mysqli_num_rows($verifica) >= 1) {
+        header("Location: ".$url);
+    }else{
+        if ($curso == "Administrador"){
+            $_SESSION['msg'] = "errorAdm";
+            header("Location: index.php");
         }else{
             $_SESSION['msg'] = "error";
             header("Location: index.php");
-	   }
-    }
-    
-    if ($curso == "Administrador"){
-        //criar conexao
-        $servidor = "localhost";
-        $usuario = "root";
-        $senha = "mila";
-        $dbname = "administrador";
-
-        $conn = mysqli_connect($servidor,  $usuario, $senha, $dbname); //conexao com o bd
-
-        $login = "SELECT *
-                  FROM login
-                  WHERE cpf = '$cpf'";
-
-        $verifica = mysqli_query($conn, $login);
-        if (mysqli_num_rows($verifica) >= 1){
-            header("Location: Administrador/selecaocurso.php");
-        }else{
-		$_SESSION['msg'] = "errorAdm";
-		header("Location: index.php");
-	   }
+        }
     }
 ?>	
