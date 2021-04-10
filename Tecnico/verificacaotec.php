@@ -60,7 +60,8 @@
                         if (mysqli_num_rows($verifica_satisfacaotec) < 1){
                             header("Location: satisfacaotec.php");
                         }else{
-                            header("Location: fimtec.html");
+                            $_SESSION['msg'] = "respondidoTec";
+		                    header("Location: ../index.php");
                         }
                     }
                 }else{ //se respondeu a 22 e não respondeu a 35
@@ -122,7 +123,8 @@
                                         if (mysqli_num_rows($verifica_satisfacaotec) < 1){
                                             header("Location: satisfacaotec.php");
                                         }else{
-                                            header("Location: fimtec.html");
+                                            $_SESSION['msg'] = "respondidoTec";
+		                                    header("Location: ../index.php");
                                         }
                                     }
                                 }                                        

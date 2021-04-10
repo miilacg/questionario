@@ -60,7 +60,8 @@
                         if (mysqli_num_rows($verifica_satisfacaosup) < 1){
                             header("Location: satisfacaosup.php");
                         }else{
-                            header("Location: fimsup.html");
+                            $_SESSION['msg'] = "respondidoSup";
+		                    header("Location: ../index.php");
                         }
                     }
                 }else{
@@ -122,7 +123,8 @@
                                         if (mysqli_num_rows($verifica_satisfacaosup) < 1){
                                             header("Location: satisfacaosup.php");
                                         }else{
-                                            header("Location: fimsup.html");
+                                            $_SESSION['msg'] = "respondidoSup";
+		                                    header("Location: ../index.php");
                                         }
                                     }
                                 }                                        

@@ -12,7 +12,7 @@
         //criar conexao
         $servidor = "localhost";
         $usuario = "root";
-        $senha = "";
+        $senha = "mila";
         $dbname = "tecnico";
 
         ini_set('default_charset', 'UTF-8'); //esta linha antes de criar a variavel conexao	
@@ -24,10 +24,10 @@
                   WHERE cpf = '$cpf'";
 
         $verifica = mysqli_query($conn, $login);
-        if (mysqli_num_rows($verifica) >= 1){
+        if (mysqli_num_rows($verifica) >= 1) {
             header("Location: Tecnico/verificacaotec.php");
-        }else{
-            $_SESSION['msg'] = "<p style = 'color:red; font-family: courier new; font-size: 30px; text-align: center;'> Acesso negado </p>";
+        }else{           
+            $_SESSION['msg'] = "error";
             header("Location: index.php");
 	   }
     }
@@ -36,7 +36,7 @@
         //criar conexao
         $servidor = "localhost";
         $usuario = "root";
-        $senha = "";
+        $senha = "mila";
         $dbname = "superior";
 
         ini_set('default_charset', 'UTF-8'); //esta linha antes de criar a variavel conexao	
@@ -51,8 +51,8 @@
         if (mysqli_num_rows($verifica) >= 1){
             header("Location: Superior/verificacaosup.php");
         }else{
-		$_SESSION['msg'] = "<p style = 'color:red; font-family: courier new; font-size: 30px; text-align: center;'> Acesso negado </p>";
-		header("Location: index.php");
+            $_SESSION['msg'] = "error";
+            header("Location: index.php");
 	   }
     }
     
@@ -60,7 +60,7 @@
         //criar conexao
         $servidor = "localhost";
         $usuario = "root";
-        $senha = "";
+        $senha = "mila";
         $dbname = "administrador";
 
         $conn = mysqli_connect($servidor,  $usuario, $senha, $dbname); //conexao com o bd
@@ -73,7 +73,7 @@
         if (mysqli_num_rows($verifica) >= 1){
             header("Location: Administrador/selecaocurso.php");
         }else{
-		$_SESSION['msg'] = "<p style = 'color:red; font-family: courier new; font-size: 30px; text-align: center;'> Acesso negado </p>";
+		$_SESSION['msg'] = "errorAdm";
 		header("Location: index.php");
 	   }
     }

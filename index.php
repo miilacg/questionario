@@ -91,9 +91,13 @@
                                 buttonsStyling: false, 
                             }).then((result) => {
                                 if (result.isConfirmed) {
-                                    <?php  if (($_SESSION['msg']) == "sup") { ?>
-                                        window.location.href = "http://www.google.com.br";
-                                    <?php  } ?>
+                                    <?php if (($_SESSION['msg']) == "respondidoSup") { 
+                                        ?> window.location.href = "superior/dados_pessoaissup.php"; <?php 
+                                    } else { 
+                                        ?> window.location.href = "tecnico/dados_pessoaistec.php"; <?php
+                                    } ?>
+                                } else {
+                                    window.location.href = "resultado.html"; 
                                 } 
                             })
                         </script>
