@@ -35,7 +35,7 @@ appearance: textfield;
     position: fixed;
 }
 
-img#triangulos {
+img#triangles {
     max-width: 70%;
     height: 100%;
 }
@@ -141,7 +141,7 @@ select.form-control:not([size]):not([multiple]) {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-.btn#botao {
+.btn#button {
     --altura: 3.875rem;
     --fonte: 1.875rem;;
 
@@ -165,7 +165,7 @@ select.form-control:not([size]):not([multiple]) {
     color: #FFFFFF;
 }
 
-.btn#botao:hover {
+.btn#button:hover {
     background: #900500;
 }
 
@@ -561,7 +561,7 @@ select.form-control:not([size]):not([multiple]) {
         font-size: 130.75%;
     }
 
-    img#triangulos {
+    img#triangles {
         max-width: 100%;
     }
 
@@ -747,7 +747,7 @@ select.form-control:not([size]):not([multiple]) {
         font-size: 68.75%;
     }
 
-    img#triangulos {
+    img#triangles {
         max-width: 81%;
     }
 
@@ -807,7 +807,7 @@ select.form-control:not([size]):not([multiple]) {
         font-size: 56.75%;
     }
 
-    img#triangulos {
+    img#triangles {
         max-width: 81%;
     }
 
@@ -834,7 +834,7 @@ select.form-control:not([size]):not([multiple]) {
         font-size: 67.75%;
     }
 
-    img#triangulos {
+    img#triangles {
         max-width: 100%;
     }
 
@@ -866,7 +866,7 @@ select.form-control:not([size]):not([multiple]) {
         font-size: 42.5%;
     }
 
-    img#triangulos {
+    img#triangles {
         max-width: 74%;
     }
 
@@ -905,7 +905,7 @@ select.form-control:not([size]):not([multiple]) {
         font-size: 37.5%;
     }
 
-    img#triangulos {
+    img#triangles {
         max-width: 74%;
     }
 
