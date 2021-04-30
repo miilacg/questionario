@@ -7,7 +7,7 @@ use App\Entities\Login;
 
 class LoginService {
   public function authenticate($cpf, $modality){
-    $user = Login::where('cpf', $cpf);    
+    $user = Login::where('cpf', $cpf)->first();    
 
     if(!$user){
       return (object)(['status' => 'error', 'message' => 'CPF incorreto, tente novamente.']);

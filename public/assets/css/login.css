@@ -1,0 +1,907 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+}
+
+/*tiras as setinhas dos inputs*/
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
+}
+
+#background {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+}
+
+img#triangles {
+  max-width: 70%;
+  height: 100%;
+}
+
+img#brasao {
+  width: auto;
+  height: 38.75rem;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+main {
+  width: 33.5625rem;
+  height: 40.1875rem;
+  padding: 2.75rem 3.1875rem;
+  box-sizing: border-box;
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 3px 11px 19px rgba(0, 0, 0, 0.37);
+}
+
+.formulario {
+  margin: 2.3125rem auto;
+  padding: 0.5625rem 0;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 23.8125rem;
+  height: auto;
+}
+
+.formulario .form-group {
+  margin: 1.9375rem 0;
+}
+
+.formulario label {
+  margin-bottom: 0.4375rem;
+  padding-left: 0.9375rem;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  color: #000000;
+}
+
+.formulario input,
+.formulario select {
+  width: 100%;
+  height: 2.875rem;
+  padding: 0 0.9375rem;
+  background: #EBEBEB;
+  border: 0.125rem solid #E5DDDD;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-family: Roboto;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  display: flex;
+  align-items: center;
+  color: #667F92;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: 2.875rem;
+}
+
+.formulario input:-internal-autofill-selected {
+  background: #EBEBEB !important;
+}
+
+.form-control:focus {
+  font-family: Roboto;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  color: #667F92;
+  background-color: #EBEBEB;
+  border-color: #E5DDDD;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn#button {
+  --altura: 3.875rem;
+  --fonte: 1.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: calc((var(--altura) - var(--fonte))/2);
+  width: 13.5rem;
+  height: var(--altura);
+  background: #B70F0A;
+  border-radius: 0.3125rem;
+  border: 1px solid transparent;
+  font-family: "Exo 2", sans-serif;
+  font-size: var(--fonte);
+  line-height: 0;
+  color: #FFFFFF;
+}
+
+.btn#button:hover {
+  background: #900500;
+}
+
+/********************* Mensagem *********************/
+/********************* CARD *********************/
+.swal2-popup.swal2-modal.swal2-show {
+  height: 24.562rem;
+  padding: 2.05rem;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  z-index: 99999;
+  border-radius: 1.875rem;
+}
+
+.swal2-popup.swal2-modal.swal2-show.swal2-icon-warning .swal2-header {
+  padding: 0;
+}
+
+/********************* SIMBOLO ERRO *********************/
+.swal2-popup .swal2-icon {
+  font-family: "Petrona", serif;
+  margin: 2.125rem auto 0.125rem;
+}
+
+.swal2-popup .swal2-icon.swal2-warning {
+  margin: 0.8rem auto 0.125rem;
+}
+
+.swal2-popup .swal2-icon.swal2-icon-show.swal2-error {
+  margin: 2.125rem auto 0.125rem;
+  border-color: #ff3c3c;
+}
+
+.swal2-popup.swal2-modal.swal2-show .swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+  background-color: #ff3c3c;
+}
+
+.swal2-popup .swal2-icon.swal2-icon-show.swal2-warning {
+  border-color: #E5AE02;
+  color: #E5AE02;
+}
+
+.swal2-popup .swal2-icon .swal2-icon-content {
+  font-size: 5rem;
+  margin-top: 0.5rem;
+}
+
+/********************* TEXTOS *********************/
+.swal2-popup h2.swal2-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.25rem;
+  line-height: 1.23;
+  color: #000;
+  margin: 2.188rem 0 0.625rem 0;
+}
+
+.swal2-popup.swal2-modal.swal2-icon-warning h2.swal2-title {
+  font-size: 1.9rem;
+}
+
+.swal2-popup div.swal2-content {
+  color: #000;
+  font-size: 1.125rem;
+  line-height: 1.25;
+  opacity: 0.8;
+}
+
+/********************* BOTOES *********************/
+.swal2-popup.swal2-modal.swal2-icon-success.swal2-show .swal2-actions {
+  margin: 0px;
+}
+
+.swal2-popup.swal2-modal.swal2-icon-warning.swal2-show .swal2-actions {
+  margin: 2.25rem auto 0;
+}
+
+.swal2-popup button {
+  width: 12.625rem;
+  height: 3.25rem;
+  margin: 1.687rem auto;
+  border-radius: 0.625rem;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  font-weight: bold;
+  line-height: revert;
+  cursor: pointer;
+  background: white;
+  border: 0.125rem solid #4DFF9F;
+}
+
+.swal2-popup.swal2-modal.swal2-icon-warning button.swal2-confirm {
+  width: 9.9375rem;
+  margin: 0.687rem auto;
+  border: 0.125rem solid #4DFF9F;
+}
+
+.swal2-popup.swal2-modal.swal2-icon-warning button.swal2-cancel {
+  width: 9.9375rem;
+  margin: 0.687rem auto;
+  border: 0.125rem solid #FF4D4D;
+}
+
+.swal2-popup .swal2-actions:not(.swal2-loading) button.swal2-confirm:hover,
+.swal2-popup .swal2-actions:not(.swal2-loading) .swal2-confirm:active {
+  background: #4DFF9F;
+}
+
+.swal2-popup .swal2-actions:not(.swal2-loading) button.swal2-cancel:hover,
+.swal2-popup .swal2-actions:not(.swal2-loading) .swal2-cancel:active {
+  background: #FF4D4D;
+}
+
+.swal2-popup .swal2-confirm:focus,
+.swal2-popup .swal2-cancel:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+/********************* Responsividade *********************/
+@media (min-width: 1400px) {
+  html {
+    font-size: 106.25%;
+  }
+
+  .swal2-popup div.swal2-content {
+    font-size: 1.3rem;
+  }
+
+  .swal2-popup button {
+    border: 0.15rem solid #4DFF9F;
+  }
+
+  .swal2-popup.swal2-modal.swal2-icon-warning button.swal2-confirm {
+    border: 0.15rem solid #4DFF9F;
+  }
+
+  .swal2-popup.swal2-modal.swal2-icon-warning button.swal2-cancel {
+    border: 0.125rem solid #FF4D4D;
+  }
+}
+@media (min-width: 1400px) and (min-height: 950px) {
+  html {
+    font-size: 115.25%;
+  }
+
+  img#brasao {
+    display: none;
+  }
+}
+@media (min-width: 1500px) {
+  html {
+    font-size: 112.5%;
+  }
+
+  img#brasao {
+    display: block;
+  }
+
+  .formulario label {
+    margin-bottom: 0.2rem;
+  }
+}
+@media (min-width: 1500px) and (min-height: 1000px) {
+  html {
+    font-size: 130.5%;
+  }
+
+  img#brasao {
+    display: none;
+  }
+
+  .formulario input,
+.formulario select {
+    height: 3.3rem;
+    border-radius: 0.625rem;
+    font-size: 1.117rem;
+  }
+
+  select.form-control:not([size]):not([multiple]) {
+    height: 3.3rem;
+  }
+}
+@media (min-width: 1600px) {
+  html {
+    font-size: 118.75%;
+  }
+
+  img#brasao {
+    display: block;
+  }
+
+  .formulario input,
+.formulario select {
+    height: 2.9rem;
+    font-size: 1.05rem;
+  }
+
+  select.form-control:not([size]):not([multiple]) {
+    height: 2.9rem;
+  }
+
+  .swal2-popup button {
+    line-height: 2.7;
+    font-size: 1.1rem;
+  }
+
+  .swal2-popup.swal2-modal.swal2-icon-warning button.swal2-confirm {
+    line-height: 2.7;
+    font-size: 1.1rem;
+  }
+
+  .swal2-popup.swal2-modal.swal2-icon-warning button.swal2-cancel {
+    line-height: 2.8;
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 1600px) and (min-height: 1080px) {
+  html {
+    font-size: 140%;
+  }
+
+  img#brasao {
+    display: none;
+  }
+
+  .formulario input,
+.formulario select {
+    height: 3.3rem;
+    border-radius: 0.625rem;
+    font-size: 1.117rem;
+  }
+
+  select.form-control:not([size]):not([multiple]) {
+    height: 3.3rem;
+  }
+}
+@media (max-width: 1200px) {
+  html {
+    font-size: 93.75%;
+  }
+
+  .formulario input,
+.formulario select {
+    height: 2.9rem;
+    font-size: 1.05rem;
+  }
+
+  select.form-control:not([size]):not([multiple]) {
+    height: 2.9rem;
+  }
+
+  .swal2-popup.swal2-modal.swal2-show {
+    width: 30rem;
+    height: 24.562rem;
+  }
+
+  .swal2-popup .swal2-icon.swal2-warning {
+    margin: 1rem auto 0.125rem;
+  }
+
+  .swal2-popup h2.swal2-title {
+    margin: 2rem 0 0.625rem 0;
+  }
+
+  .swal2-popup.swal2-icon-warning div.swal2-content {
+    font-size: 1.3rem;
+  }
+
+  .swal2-popup div.swal2-content {
+    font-size: 1.23rem;
+  }
+}
+@media (max-width: 1200px) and (min-height: 860px) {
+  html {
+    font-size: 106.75%;
+  }
+
+  img#brasao {
+    display: none;
+  }
+
+  .formulario input, .formulario select {
+    height: 3.35rem;
+    border-radius: 0.63rem;
+    font-size: 1.13rem;
+  }
+
+  select.form-control:not([size]):not([multiple]) {
+    height: 3.35rem;
+  }
+}
+@media (max-width: 1100px) {
+  html {
+    font-size: 87.5%;
+  }
+
+  img#brasao {
+    display: block;
+  }
+
+  .formulario input, .formulario select {
+    height: 3.2rem;
+    font-size: 1.1rem;
+  }
+
+  select.form-control:not([size]):not([multiple]) {
+    height: 3.2rem;
+  }
+
+  .formulario label {
+    margin-bottom: 0.1rem;
+  }
+
+  .swal2-icon {
+    border: 0.28rem solid transparent;
+  }
+
+  .swal2-popup button {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 1100px) and (min-height: 815px) {
+  html {
+    font-size: 106.75%;
+  }
+
+  img#brasao {
+    display: none;
+  }
+
+  .swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+    top: 2.4rem;
+    height: 0.265rem;
+  }
+
+  .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left] {
+    left: 1.1rem;
+  }
+
+  .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right] {
+    right: 1.1rem;
+  }
+
+  .swal2-popup .swal2-icon.swal2-warning {
+    margin: 0.95rem auto 0.125rem;
+  }
+
+  .swal2-popup .swal2-icon .swal2-icon-content {
+    font-size: 4.8rem;
+  }
+
+  .swal2-popup h2.swal2-title {
+    margin: 2rem 0 0.625rem 0;
+  }
+
+  .swal2-popup button {
+    border: 0.18rem solid #4DFF9F;
+  }
+
+  .swal2-popup.swal2-modal.swal2-icon-warning button.swal2-confirm {
+    border: 0.18rem solid #4DFF9F;
+  }
+
+  .swal2-popup.swal2-modal.swal2-icon-warning button.swal2-cancel {
+    border: 0.18rem solid #FF4D4D;
+  }
+}
+/*iPad Pro*/
+@media (orientation: portrait) and (max-width: 1024px) {
+  html {
+    font-size: 130.75%;
+  }
+
+  img#triangles {
+    max-width: 100%;
+  }
+
+  .swal2-popup button.swal2-confirm.swal2-styled {
+    border: 0.15rem solid #4DFF9F;
+  }
+}
+@media (max-width: 1000px) {
+  html {
+    font-size: 79%;
+  }
+
+  img#brasao {
+    display: block;
+  }
+
+  .formulario label {
+    font-size: 1.26rem;
+  }
+
+  .swal2-popup.swal2-modal.swal2-show {
+    width: 28rem;
+    height: 23.5rem;
+  }
+
+  .swal2-popup h2.swal2-title {
+    margin: 2rem 0 0.4rem 0;
+  }
+
+  .swal2-popup.swal2-modal.swal2-icon-warning h2.swal2-title {
+    font-size: 1.75rem;
+  }
+
+  .swal2-popup.swal2-modal.swal2-icon-warning .swal2-icon {
+    border: 0.3rem solid #E5AE02;
+  }
+
+  .swal2-popup.swal2-modal.swal2-icon-warning button.swal2-cancel {
+    border: 0.15rem solid #FF4D4D;
+  }
+
+  .swal2-popup.swal2-modal.swal2-icon-warning button.swal2-confirm {
+    border: 0.15rem solid #4DFF9F;
+  }
+}
+@media (max-width: 1000px) and (min-height: 730px) {
+  html {
+    font-size: 97.75%;
+  }
+
+  img#brasao {
+    display: none;
+  }
+
+  .formulario input, .formulario select {
+    height: 3.5rem;
+    font-size: 1.2rem;
+  }
+
+  select.form-control:not([size]):not([multiple]) {
+    height: 3.5rem;
+  }
+}
+@media (max-width: 900px) {
+  html {
+    font-size: 71%;
+  }
+
+  img#brasao {
+    display: block;
+  }
+
+  .swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+    top: 2.4rem;
+    height: 0.29rem;
+  }
+
+  .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=light] {
+    right: 1.1rem;
+  }
+
+  .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right] {
+    right: 1.1rem;
+  }
+}
+@media (max-width: 900px) and (min-height: 635px) {
+  html {
+    font-size: 85.75%;
+  }
+
+  img#brasao {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  img#brasao {
+    display: block;
+  }
+
+  .formulario input,
+.formulario select {
+    border-radius: 0.75rem;
+    box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+  }
+}
+@media (max-width: 800px) and (min-height: 585px) {
+  html {
+    font-size: 78.75%;
+  }
+
+  img#brasao {
+    display: none;
+  }
+}
+/* iPad */
+@media (orientation: portrait) and (max-width: 768px) {
+  html {
+    font-size: 94.75%;
+  }
+
+  .formulario {
+    margin: 2.2rem auto;
+  }
+
+  .swal2-popup.swal2-modal.swal2-show {
+    width: 27.5rem;
+    height: 23.5rem;
+  }
+}
+@media (max-width: 700px) {
+  html {
+    font-size: 54.5%;
+  }
+
+  img#brasao {
+    display: block;
+  }
+
+  .formulario {
+    margin: 2rem auto;
+  }
+
+  .formulario label {
+    font-size: 1.35rem;
+  }
+
+  .formulario input, .formulario select {
+    border-radius: 0.8rem;
+    height: 3.5rem;
+    font-size: 1.25rem;
+  }
+
+  select.form-control:not([size]):not([multiple]) {
+    height: 3.5rem;
+    padding: 0.85rem;
+  }
+
+  .swal2-popup button {
+    font-size: 1.2rem;
+    line-height: 2.45;
+  }
+
+  .swal2-popup.swal2-modal.swal2-icon-warning button.swal2-cancel,
+.swal2-popup.swal2-modal.swal2-icon-warning button.swal2-confirm {
+    width: 9.5rem;
+  }
+}
+@media (max-width: 700px) and (min-height: 500px) {
+  html {
+    font-size: 68.75%;
+  }
+
+  img#triangles {
+    max-width: 81%;
+  }
+
+  img#brasao {
+    display: none;
+  }
+
+  .swal2-popup.swal2-modal.swal2-show {
+    width: 27.5rem;
+    height: 23rem;
+  }
+
+  .swal2-popup h2.swal2-title {
+    margin: 1.5rem 0 0.6rem 0;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 45.5%;
+  }
+
+  img#brasao {
+    display: block;
+  }
+
+  .formulario {
+    margin: 1.8rem auto;
+  }
+
+  .formulario label {
+    font-size: 1.48rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .formulario input, .formulario select {
+    height: 3.5rem;
+    font-size: 1.264rem;
+  }
+
+  select.form-control:not([size]):not([multiple]) {
+    height: 3.5rem;
+    padding: 0.85rem;
+  }
+
+  .swal2-popup button.swal2-confirm.swal2-styled {
+    border: 0.1rem solid #4DFF9F;
+  }
+
+  .swal2-popup .swal2-icon .swal2-icon-content {
+    margin-top: 0.3rem;
+  }
+}
+@media (max-width: 600px) and (min-height: 421px) {
+  html {
+    font-size: 56.75%;
+  }
+
+  img#triangles {
+    max-width: 81%;
+  }
+
+  img#brasao {
+    display: none;
+  }
+
+  .swal2-popup h2.swal2-title {
+    margin: 1.3rem 0 0.4rem 0;
+  }
+
+  .swal2-popup div.swal2-content {
+    font-size: 1.3rem;
+  }
+
+  .swal2-actions {
+    margin: 1rem auto 0;
+  }
+}
+/* Surface Duo */
+@media (orientation: portrait) and (max-width: 540px) {
+  html {
+    font-size: 67.75%;
+  }
+
+  img#triangles {
+    max-width: 100%;
+  }
+
+  .swal2-popup h2.swal2-title {
+    margin: 1rem 0 0.4rem 0;
+  }
+
+  .swal2-popup.swal2-modal.swal2-icon-warning button.swal2-cancel {
+    border: 0.185rem solid #FF4D4D;
+  }
+
+  .swal2-popup.swal2-modal.swal2-icon-warning button.swal2-confirm {
+    border: 0.185rem solid #4DFF9F;
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 36.5%;
+  }
+
+  img#brasao {
+    display: block;
+  }
+}
+@media (max-width: 500px) and (min-height: 335px) {
+  html {
+    font-size: 42.5%;
+  }
+
+  img#triangles {
+    max-width: 74%;
+  }
+
+  img#brasao {
+    display: none;
+  }
+}
+/* iPhone 6/7/8 Plus */
+@media (orientation: portrait) and (max-width: 414px) {
+  html {
+    font-size: 56.7%;
+  }
+
+  .swal2-popup button {
+    line-height: 2.424;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 30.5%;
+  }
+
+  img#brasao {
+    display: block;
+  }
+
+  .swal2-popup.swal2-icon-warning div.swal2-content {
+    font-size: 1.35rem;
+  }
+}
+@media (max-width: 400px) and (min-height: 270px) {
+  html {
+    font-size: 37.5%;
+  }
+
+  img#triangles {
+    max-width: 74%;
+  }
+
+  img#brasao {
+    display: none;
+  }
+
+  .swal2-popup.swal2-modal.swal2-icon-warning .swal2-icon {
+    border: 0.334rem solid #E5AE02;
+  }
+}
+/* iPhone X e 6/7/8 */
+@media (orientation: portrait) and (max-width: 375px) {
+  html {
+    font-size: 53.5%;
+  }
+
+  .swal2-popup div.swal2-content {
+    font-size: 1.327rem;
+  }
+}
+/* iPhone 5/SE */
+@media (orientation: portrait) and (max-width: 320px) {
+  html {
+    font-size: 44.5%;
+  }
+
+  .swal2-header .swal2-icon {
+    border: 0.3rem solid transparent;
+  }
+
+  .swal2-header .swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+    top: 2.4rem;
+    width: 2.98rem;
+  }
+}
+/* Galaxy Fold */
+@media (orientation: portrait) and (max-width: 280px) {
+  html {
+    font-size: 38.5%;
+  }
+
+  .swal2-header .swal2-icon {
+    border: 0.35rem solid transparent;
+  }
+
+  .swal2-popup h2.swal2-title {
+    margin: 2rem 0 0.5rem 0;
+  }
+
+  .swal2-popup.swal2-icon-warning div.swal2-content {
+    font-size: 1.402rem;
+  }
+}
