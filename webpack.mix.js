@@ -4,6 +4,7 @@ mix/*.js('resources/js/app.js', 'public/assets/js')
    .js('resources/js/argon-dashboard.js', 'public/assets/js')
    .js('resources/js/office/login.js', 'public/assets/js/office')*/
    .sass('resources/sass/login.scss', 'public/assets/css')
+   .sass('resources/sass/quiz.scss', 'public/assets/css')
    .sourceMaps();
 
   mix.webpackConfig({
