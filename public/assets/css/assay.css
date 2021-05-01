@@ -1,0 +1,152 @@
+h1 {
+  color: black;
+  font-family: courier new;
+  text-align: center;
+}
+
+h2 {
+  color: black;
+  font-family: arial;
+  text-align: center;
+}
+
+h5 {
+  color: black;
+  font-family: arial;
+  text-align: justify;
+}
+
+h6 {
+  color: black;
+  font-family: arial;
+  text-align: center;
+}
+
+label {
+  color: black;
+  font-family: arial;
+  font-size: 17px;
+  font-weight: bolder;
+}
+
+select {
+  font-size: 15px;
+  width: 197px;
+}
+
+.corpo {
+  color: #434343;
+  border-radius: 1px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.card-header {
+  background-color: #4fd8e8;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3));
+}
+
+.card-body {
+  width: 10opx;
+  text-align: justify;
+}
+
+.card-footer {
+  background-color: #4fd8e8;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3));
+}
+
+.form-control {
+  text-align: center;
+  font-size: 14px;
+  width: 53%;
+}
+
+.form-check {
+  font-size: 15px;
+}
+
+.table {
+  text-align: center;
+  font-size: 18px;
+}
+
+#botao {
+  background-color: #4fd8e8;
+  padding: 4px 30px 5px 30px;
+}
+
+.estado {
+  display: none;
+}
+
+.esconde {
+  display: none;
+}
+
+.esconde1 {
+  display: none;
+}
+
+.slider-wrapper {
+  display: inline-block;
+  width: 60%;
+  height: 360px;
+  padding: 5;
+}
+
+.slider-wrapper input {
+  width: 50%;
+  height: 40px;
+  margin: 0;
+  transform-origin: 75px 75px;
+}
+
+#q42 {
+  height: 340px;
+}
+
+#q59 {
+  height: 400px;
+}
+
+#q58 {
+  height: 340px;
+}
+
+#header-fixed {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+#header-fixed tbody {
+  display: block;
+  overflow: auto;
+  height: 500px;
+}
+
+#header-fixed th, #header-fixed td {
+  text-align: center;
+  vertical-align: middle;
+  width: 300px;
+}
+
+#header-fixed thead tr {
+  display: block;
+}
+
+#q50 {
+  height: 1500px;
+}
+
+#q51 {
+  height: 730px;
+}
+
+#q52 {
+  height: 400px;
+}

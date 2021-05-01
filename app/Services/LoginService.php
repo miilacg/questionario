@@ -18,7 +18,7 @@ class LoginService {
       if(!$userModality){
         return (object)(['status' => 'error', 'message' => 'Modalidade incorreta, tente novamente.']);
       } else {
-        return (object)(['status' => 'error', 'message' => 'Login efetuado com sucesso.']); 
+        return (object)(['status' => 'success', 'message' => 'Login efetuado com sucesso.']); 
       }
     }
   }

@@ -22,8 +22,12 @@ class LoginController extends Controller {
     $authentication = $this->loginService->authenticate($request->cpf, $request->modality);
     
     if($authentication->status == 'success'){
-      return redirect()->back()->with(['error' => $authentication->message]);
-    }else{
+      if($request->modality == 'Ciência da Computação'){
+        return redirect()->route('personalDataSuperior');
+      } else {
+        return redirect()->back()->with(['error' => $authentication->message]);
+      } 
+    } else {
       return redirect()->back()->with(['error' => $authentication->message]);
     } 
   }
