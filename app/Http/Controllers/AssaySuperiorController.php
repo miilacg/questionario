@@ -15,6 +15,6 @@ class AssaySuperiorController extends Controller {
   }
 
   public function personalData(){
-    return view('cienciaComputacao.dados_pessoais');
+    return view('cienciaComputacao.PersonalData');
   }
 }

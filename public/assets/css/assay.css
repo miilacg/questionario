@@ -1,13 +1,67 @@
-h1 {
-  color: black;
-  font-family: courier new;
-  text-align: center;
+:root {
+  --alturaBars: 1.125rem;
+  --alturaTriangles: 8.8125rem;
 }
 
-h2 {
-  color: black;
-  font-family: arial;
-  text-align: center;
+.assay {
+  flex-direction: column;
+}
+
+.header {
+  padding: 0;
+  margin: 0;
+  height: calc(var(--alturaTriangles) + var(--alturaBars));
+  font-family: "Exo 2", sans-serif;
+  font-style: normal;
+  color: #000000;
+}
+.header :first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header #logo {
+  width: 17.375rem;
+  height: auto;
+}
+.header #triangles {
+  width: auto;
+  height: var(--alturaTriangles);
+}
+.header h1 {
+  display: flex;
+  font-weight: bold;
+  font-size: 1.875rem;
+  line-height: 1.2;
+}
+.header h2 {
+  display: flex;
+  font-weight: 300;
+  font-size: 1.46875rem;
+  line-height: 1.2;
+}
+.header .bars {
+  display: flex;
+  width: 100%;
+  height: var(--alturaBars);
+}
+.header .bars .red {
+  width: var(--alturaBars);
+  height: 100%;
+  margin: 0 0.3125rem;
+  background: var(--red);
+}
+.header .bars .yellow {
+  width: var(--alturaBars);
+  height: 100%;
+  margin: 0 0.3125rem;
+  background: var(--yellow);
+}
+.header .bars .black {
+  width: 100%;
+  height: 100%;
+  margin: 0 0.3125rem;
+  background: black;
 }
 
 h5 {
@@ -45,17 +99,12 @@ select {
   margin: 0 auto;
 }
 
-.card-header {
-  background-color: #4fd8e8;
-  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3));
-}
-
 .card-body {
   width: 10opx;
   text-align: justify;
 }
 
-.card-footer {
+.footer {
   background-color: #4fd8e8;
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3));
 }
