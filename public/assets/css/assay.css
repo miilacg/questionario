@@ -8,9 +8,14 @@
 }
 
 .header {
-  padding: 0;
-  margin: 0;
+  width: 100%;
   height: calc(var(--alturaTriangles) + var(--alturaBars));
+  padding: 0 0 0 1.6875rem;
+  margin: 0;
+  background-color: white;
+  top: 0;
+  position: sticky;
+  z-index: 9;
   font-family: "Exo 2", sans-serif;
   font-style: normal;
   color: #000000;
@@ -18,11 +23,12 @@
 .header :first-child {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .header #logo {
   width: 17.375rem;
   height: auto;
+  margin-left: 1.875rem;
 }
 .header #triangles {
   width: auto;
@@ -40,28 +46,114 @@
   font-size: 1.46875rem;
   line-height: 1.2;
 }
-.header .bars {
+
+.bars {
   display: flex;
   width: 100%;
   height: var(--alturaBars);
 }
-.header .bars .red {
+.bars div {
+  margin: 0 0 0 0.625rem;
+}
+.bars .red {
   width: var(--alturaBars);
-  height: 100%;
-  margin: 0 0.3125rem;
+  margin: 0;
   background: var(--red);
 }
-.header .bars .yellow {
+.bars .yellow {
   width: var(--alturaBars);
-  height: 100%;
-  margin: 0 0.3125rem;
   background: var(--yellow);
 }
-.header .bars .black {
+.bars .black {
   width: 100%;
-  height: 100%;
-  margin: 0 0.3125rem;
   background: black;
+}
+
+main {
+  padding: 3.75rem 4.375rem 2.0625rem;
+  font-family: arial;
+}
+main .progress-border {
+  right: 77px;
+  bottom: 34px;
+  position: sticky;
+  z-index: 9;
+  width: 5.9375rem;
+  height: 5.9375rem;
+  border: 0.1875rem solid var(--yellow);
+  border-radius: 50%;
+  background: white;
+}
+main .progress-border .progress {
+  margin: auto;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: var(--yellow);
+}
+main .progress-border .progress p {
+  margin: auto;
+  font-family: "Exo 2", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: black;
+}
+main .form-group {
+  margin-bottom: 2.8125rem;
+}
+main label {
+  margin: 0;
+  padding-bottom: 0.625rem;
+  font-style: normal;
+  font-weight: bold;
+  color: black;
+  font-size: 1.0625rem;
+  line-height: 1.2;
+}
+main select.form-control,
+main input.form-control {
+  box-sizing: border-box;
+  width: 45%;
+  height: 2.375rem;
+  padding: 0.625rem 1rem;
+  background: white;
+  border: 0.0625rem solid #CED4DA;
+  border-radius: 0.25rem;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.875rem;
+  line-height: 1.15;
+  color: #495057;
+}
+main .form-check {
+  font-size: 0.9375rem;
+}
+main .form-check-input {
+  margin-top: 0.23rem;
+}
+main .buttons {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+main .buttons .btn {
+  width: 9.6875rem;
+  height: 2.9375rem;
+  margin: 0 0.875rem;
+  background: #B70F0A;
+  border-radius: 0.1875rem;
+  font-family: "Exo 2", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4375rem;
+  color: white;
+}
+main .buttons .btn.disabled:hover {
+  background: #B70F0A;
+}
+main .buttons .btn:hover {
+  background: #900500;
 }
 
 h5 {
@@ -76,57 +168,9 @@ h6 {
   text-align: center;
 }
 
-label {
-  color: black;
-  font-family: arial;
-  font-size: 17px;
-  font-weight: bolder;
-}
-
-select {
-  font-size: 15px;
-  width: 197px;
-}
-
-.corpo {
-  color: #434343;
-  border-radius: 1px;
-  background: #fff;
-  border: 1px solid #f3f3f3;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-  padding: 30px;
-  width: 95%;
-  margin: 0 auto;
-}
-
-.card-body {
-  width: 10opx;
-  text-align: justify;
-}
-
-.footer {
-  background-color: #4fd8e8;
-  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3));
-}
-
-.form-control {
-  text-align: center;
-  font-size: 14px;
-  width: 53%;
-}
-
-.form-check {
-  font-size: 15px;
-}
-
 .table {
   text-align: center;
   font-size: 18px;
-}
-
-#botao {
-  background-color: #4fd8e8;
-  padding: 4px 30px 5px 30px;
 }
 
 .estado {

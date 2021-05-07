@@ -26,35 +26,40 @@
 
   <body class="assay">
          
-      <div class="header">
-        <div>
-          <img id="logo" src="{{ asset('assets/img/logo.svg') }}">
+    <div class="header">
+      <div>
+        <img id="logo" src="{{ asset('assets/img/logo.svg') }}">
 
-          <div class="text">
-            <h1>Responda ao questionário abaixo</h1>
-            <h2>@yield('title')</h2>
-          </div>
-
-          <img id="triangles" src="{{ asset('assets/img/trianglesHeader.svg') }}">   
+        <div class="text">
+          <h1>Responda ao questionário abaixo</h1>
+          <h2>@yield('title')</h2>
         </div>
 
-        <div class="bars">
-          <div class="red"></div>
-          <div class="yellow"></div>
-          <div class="black"></div>
-        </div>
+        <img id="triangles" src="{{ asset('assets/img/trianglesHeader.svg') }}">   
       </div>
 
-      <div class="card text-center"> 
-     
-        @yield('content')
+      <div class="bars">
+        <div class="red"></div>
+        <div class="yellow"></div>
+        <div class="black"></div>
+      </div>
+    </div>
+
+    <main>     
+      @yield('content')   
       
-        <div class="bars">          
-          <div class="black"></div>
-          <div class="yellow"></div>
-          <div class="red"></div>
-        </div>                    
-      </div> 
+      <!-- <div class="progress-border">
+        <div class="progress">
+          <p class="progress-value">@yield('value')</p>
+        </div>
+      </div> -->
+    </main> 
+
+    <footer class="bars">          
+      <div class="black"></div>
+      <div class="yellow"></div>
+      <div class="red"></div>
+    </footer> 
      
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
