@@ -14,5 +14,4 @@ class Login extends Authenticatable {
   protected $table       = 'login';
 
   protected $fillable = ['cpf', 'modality'];
-
 }

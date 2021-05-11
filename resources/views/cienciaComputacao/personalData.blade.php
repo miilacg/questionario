@@ -137,7 +137,7 @@
                     
     <div class="form-group">
       <label>Adicione um e-mail para contato</label>
-      <input type="email" class="form-control" name="perg64" id="perg64" placeholder="Digite um e-mail valido"><br>
+      <input type="email" class="form-control" name="perg64" id="perg64" placeholder="Digite um e-mail valido">
     </div> 
 
     <div class="buttons">
