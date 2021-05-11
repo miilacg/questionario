@@ -25,7 +25,11 @@ class LoginController extends Controller {
       if($request->modality == 'Ciência da Computação'){
         return redirect()->route('personalDataSuperior');
       } else {
-        return redirect()->back()->with(['error' => $authentication->message]);
+        if($request->modality == 'Informática'){
+          return redirect()->route('personalDataTecnico');
+        } else {
+          return redirect()->back()->with(['error' => $authentication->message]);
+        }        
       } 
     } else {
       return redirect()->back()->with(['error' => $authentication->message]);

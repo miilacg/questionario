@@ -7,3 +7,6 @@ Route::post('/login/authenticate', ['as' => 'login.authenticate', 'uses' => 'App
 
 // Assay Computação Routes
 Route::get('/personalDataSuperior', ['as' => 'personalDataSuperior', 'uses' => 'App\Http\Controllers\AssaySuperiorController@personalData']);
+
+// Assay Informatica Routes
+Route::get('/personalDataTecnico', ['as' => 'personalDataTecnico', 'uses' => 'App\Http\Controllers\AssayTecnicoController@personalData']);
