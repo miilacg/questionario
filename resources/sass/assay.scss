@@ -89,11 +89,14 @@ main {
   font-family: arial;
 
   .progress-border {
-    right: 77px;
-    bottom: 34px;
+    display: flex;
     position: sticky;
     z-index: 9;
 
+    right: 4.8125rem;
+    bottom: 4.8125rem;    
+    margin: auto 0 0 auto;
+    
     width: 5.9375rem;
     height: 5.9375rem;
     border: .1875rem solid var(--yellow);
@@ -192,17 +195,6 @@ main {
 
 
 
-h5 {
-  color: black;
-  font-family: arial;
-  text-align: justify;
-}
-
-h6 {
-  color: black;
-  font-family: arial;
-  text-align: center;
-}
 
 .table {
   text-align: center;
