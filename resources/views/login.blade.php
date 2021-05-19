@@ -15,6 +15,7 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
     <!-- Styles -->
+    <link rel="stylesheet" href="{{ asset('assets/css/globals.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
 
      <!-- Favicon -->
@@ -44,10 +45,10 @@
           <div class="form-group">
             <label>Modalidade</label>
             <select id="modality" class="form-control" name="modality" required>
-                <option value="">Escolha a modalidade</option>
-                <option value="Informática">Técnico em Informática</option> 
-                <option value="Ciência da Computação">Ciência da Computação</option> 
-                <option value="Administrador">Gerente</option>
+              <option value="">Escolha a modalidade</option>
+              <option value="Informática">Técnico em Informática</option> 
+              <option value="Ciência da Computação">Ciência da Computação</option> 
+              <option value="Administrador">Gerente</option>
             </select>
           </div> 
         </div>                    
