@@ -11,3 +11,4 @@ Route::get('/knowledgeSuperior', ['as' => 'knowledgeSuperior', 'uses' => 'App\Ht
 
 // Assay Informatica Routes
 Route::get('/personalDataTecnico', ['as' => 'personalDataTecnico', 'uses' => 'App\Http\Controllers\AssayTecnicoController@personalData']);
+Route::get('/knowledgeTecnico', ['as' => 'knowledgeTecnico', 'uses' => 'App\Http\Controllers\AssayTecnicoController@knowledge']);

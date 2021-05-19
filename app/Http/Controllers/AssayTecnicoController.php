@@ -17,4 +17,8 @@ class AssayTecnicoController extends Controller {
   public function personalData(){
     return view('informatica.PersonalData');
   }
+
+  public function knowledge(){
+    return view('informatica.knowledge');
+  }
 }
