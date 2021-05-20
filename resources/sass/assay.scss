@@ -88,6 +88,85 @@ main {
 
   font-family: arial;
 
+  .form-group {
+    margin-bottom: 2.8125rem;
+  }
+
+  label {
+    margin: 0;
+    padding-bottom: 0.625rem;
+
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+    font-size: 1.0625rem;
+    line-height: 1.20;
+  }
+
+  label.subtitle {
+    font-weight: normal;
+    font-size: 1rem;
+  }
+
+  select.form-control,
+  input.form-control {
+    box-sizing: border-box;
+    width: 45%;
+    height: 2.375rem;
+    padding: .625rem 1rem;
+
+    background: white;
+    border: .0625rem solid #CED4DA;
+    border-radius: 0.25rem;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: .875rem;
+    line-height: 1.15;
+    color: #495057;
+  }
+
+  .form-check {
+    font-size: .9375rem;
+  }
+
+  .form-check-input {
+    margin-top: .23rem;
+  }
+
+  .table {
+    text-align: center;
+    font-size: 1.125rem;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin: 4rem auto 0;
+
+    .btn {
+      width: 9.6875rem;
+      height: 2.9375rem;
+      margin: 0 .875rem;
+      background: #B70F0A;
+      border-radius: .1875rem;
+  
+      font-family: 'Exo 2', sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.4375rem;
+      color: white;
+    }
+  
+    .btn.disabled:hover {
+      background: #B70F0A;
+    }
+  
+    .btn:hover {
+      background: #900500;
+    }
+  }  
+
   .progress-border {
     display: flex;
     position: sticky;
@@ -121,85 +200,13 @@ main {
         color: black;
       }
     }
-  }  
-
-  .form-group {
-    margin-bottom: 2.8125rem;
-  }
-
-  label {
-    margin: 0;
-    padding-bottom: 0.625rem;
-
-    font-style: normal;
-    font-weight: bold;
-    color: black;
-    font-size: 1.0625rem;
-    line-height: 1.20;
-  }
-
-  select.form-control,
-  input.form-control {
-    box-sizing: border-box;
-    width: 45%;
-    height: 2.375rem;
-    padding: .625rem 1rem;
-
-    background: white;
-    border: .0625rem solid #CED4DA;
-    border-radius: 0.25rem;
-
-    font-style: normal;
-    font-weight: bold;
-    font-size: .875rem;
-    line-height: 1.15;
-    color: #495057;
-  }
-
-  .form-check {
-    font-size: .9375rem;
-  }
-
-  .form-check-input {
-    margin-top: .23rem;
-  }
-
-  .buttons {
-    display: flex;
-    justify-content: center;
-    margin: 4rem auto 0;
-
-    .btn {
-      width: 9.6875rem;
-      height: 2.9375rem;
-      margin: 0 .875rem;
-      background: #B70F0A;
-      border-radius: .1875rem;
-  
-      font-family: 'Exo 2', sans-serif;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 1.4375rem;
-      color: white;
-    }
-  
-    .btn.disabled:hover {
-      background: #B70F0A;
-    }
-  
-    .btn:hover {
-      background: #900500;
-    }
-  }  
+  } 
 }
 
 
 
 
-.table {
-  text-align: center;
-  font-size: 18px;
-}
+
 
 .estado{
   display: none;

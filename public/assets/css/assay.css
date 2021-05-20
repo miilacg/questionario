@@ -73,6 +73,70 @@ main {
   padding: 3.75rem 4.375rem 2.0625rem;
   font-family: arial;
 }
+main .form-group {
+  margin-bottom: 2.8125rem;
+}
+main label {
+  margin: 0;
+  padding-bottom: 0.625rem;
+  font-style: normal;
+  font-weight: bold;
+  color: black;
+  font-size: 1.0625rem;
+  line-height: 1.2;
+}
+main label.subtitle {
+  font-weight: normal;
+  font-size: 1rem;
+}
+main select.form-control,
+main input.form-control {
+  box-sizing: border-box;
+  width: 45%;
+  height: 2.375rem;
+  padding: 0.625rem 1rem;
+  background: white;
+  border: 0.0625rem solid #CED4DA;
+  border-radius: 0.25rem;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.875rem;
+  line-height: 1.15;
+  color: #495057;
+}
+main .form-check {
+  font-size: 0.9375rem;
+}
+main .form-check-input {
+  margin-top: 0.23rem;
+}
+main .table {
+  text-align: center;
+  font-size: 1.125rem;
+}
+main .buttons {
+  display: flex;
+  justify-content: center;
+  margin: 4rem auto 0;
+}
+main .buttons .btn {
+  width: 9.6875rem;
+  height: 2.9375rem;
+  margin: 0 0.875rem;
+  background: #B70F0A;
+  border-radius: 0.1875rem;
+  font-family: "Exo 2", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4375rem;
+  color: white;
+}
+main .buttons .btn.disabled:hover {
+  background: #B70F0A;
+}
+main .buttons .btn:hover {
+  background: #900500;
+}
 main .progress-border {
   display: flex;
   position: sticky;
@@ -100,67 +164,6 @@ main .progress-border .progress p {
   font-weight: 500;
   font-size: 1.5rem;
   color: black;
-}
-main .form-group {
-  margin-bottom: 2.8125rem;
-}
-main label {
-  margin: 0;
-  padding-bottom: 0.625rem;
-  font-style: normal;
-  font-weight: bold;
-  color: black;
-  font-size: 1.0625rem;
-  line-height: 1.2;
-}
-main select.form-control,
-main input.form-control {
-  box-sizing: border-box;
-  width: 45%;
-  height: 2.375rem;
-  padding: 0.625rem 1rem;
-  background: white;
-  border: 0.0625rem solid #CED4DA;
-  border-radius: 0.25rem;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 0.875rem;
-  line-height: 1.15;
-  color: #495057;
-}
-main .form-check {
-  font-size: 0.9375rem;
-}
-main .form-check-input {
-  margin-top: 0.23rem;
-}
-main .buttons {
-  display: flex;
-  justify-content: center;
-  margin: 4rem auto 0;
-}
-main .buttons .btn {
-  width: 9.6875rem;
-  height: 2.9375rem;
-  margin: 0 0.875rem;
-  background: #B70F0A;
-  border-radius: 0.1875rem;
-  font-family: "Exo 2", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.4375rem;
-  color: white;
-}
-main .buttons .btn.disabled:hover {
-  background: #B70F0A;
-}
-main .buttons .btn:hover {
-  background: #900500;
-}
-
-.table {
-  text-align: center;
-  font-size: 18px;
 }
 
 .estado {

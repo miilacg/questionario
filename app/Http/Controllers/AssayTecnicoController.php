@@ -14,11 +14,15 @@ class AssayTecnicoController extends Controller {
     $this->loginService = $loginService;
   }
 
+  public function knowledge(){
+    return view('informatica.knowledge');
+  }
+
   public function personalData(){
     return view('informatica.PersonalData');
   }
 
-  public function knowledge(){
-    return view('informatica.knowledge');
+  public function professionalData(){
+    return view('informatica.professionalData');
   }
 }
