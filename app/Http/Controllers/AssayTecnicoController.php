@@ -22,6 +22,10 @@ class AssayTecnicoController extends Controller {
     return view('informatica.knowledge');
   }
 
+  public function leisureHealthCitizenchip() {
+    return view('informatica.leisureHealthCitizenchip');
+  }
+
   public function personalData(){
     return view('informatica.PersonalData');
   }
