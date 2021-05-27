@@ -13,7 +13,7 @@ class CreateLoginsTable extends Migration {
 			$table->string('nome', 60)->nullable(); //string funciona como varchar	
 
 			$table->timestamps();
-      $table->softDeletes();
+      		$table->softDeletes();
 		});
 	}
 
