@@ -14,6 +14,10 @@ class AssayTecnicoController extends Controller {
     $this->loginService = $loginService;
   }
 
+  public function company(){
+    return view('informatica.company');
+  }
+
   public function knowledge(){
     return view('informatica.knowledge');
   }

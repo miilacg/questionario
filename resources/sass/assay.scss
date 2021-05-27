@@ -7,6 +7,33 @@
   flex-direction: column;
 }
 
+.bars {
+  display: flex;
+
+  width: 100%;
+  height: var(--alturaBars);
+
+  div {
+    margin: 0 0 0 .625rem;
+  }
+
+  .red {
+    width: var(--alturaBars);
+    margin: 0;
+    background: var(--red);
+  }
+
+  .yellow {
+    width: var(--alturaBars);
+    background: var(--yellow);
+  }
+
+  .black {
+    width: 100%;
+    background: black;
+  }
+}
+
 .header {    
   width: 100%;
   height: calc(var(--alturaTriangles) + var(--alturaBars));
@@ -56,37 +83,16 @@
   }  
 }
 
-.bars {
-  display: flex;
-
-  width: 100%;
-  height: var(--alturaBars);
-
-  div {
-    margin: 0 0 0 .625rem;
-  }
-
-  .red {
-    width: var(--alturaBars);
-    margin: 0;
-    background: var(--red);
-  }
-
-  .yellow {
-    width: var(--alturaBars);
-    background: var(--yellow);
-  }
-
-  .black {
-    width: 100%;
-    background: black;
-  }
-}
-
 main {
   padding: 3.75rem 4.375rem 2.0625rem;
+  //height: calc(100% - 3 * var(--alturaBars) - var(--alturaTriangles));
+
 
   font-family: arial;
+
+  /*form {
+    height: 100%;
+  }*/
 
   .form-group {
     margin-bottom: 2.8125rem;
@@ -203,7 +209,14 @@ main {
   } 
 }
 
+footer.bars {
+  margin: 0;
+  padding: 0 1.6875rem;
 
+  div {
+    margin: 0 0.625rem 0 0;
+  }
+}
 
 
 

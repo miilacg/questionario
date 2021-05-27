@@ -14,7 +14,11 @@ class AssaySuperiorController extends Controller {
     $this->loginService = $loginService;
   }
 
-  public function knowledge(){
+  public function company(){
+    return view('cienciaComputacao.company');
+  }
+  
+  function knowledge(){
     return view('cienciaComputacao.knowledge');
   }
 
