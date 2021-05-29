@@ -37,4 +37,8 @@ class AssayTecnicoController extends Controller {
   public function professionalData(){
     return view('informatica.professionalData');
   }
+
+  public function satisfaction(){
+    return view('informatica.satisfaction');
+  }
 }

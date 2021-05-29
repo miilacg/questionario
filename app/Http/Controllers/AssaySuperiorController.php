@@ -37,4 +37,8 @@ class AssaySuperiorController extends Controller {
   public function professionalData(){
     return view('cienciaComputacao.professionalData');
   }
+
+  public function satisfaction(){
+    return view('cienciaComputacao.satisfaction');
+  }
 }
