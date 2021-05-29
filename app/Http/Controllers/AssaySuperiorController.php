@@ -22,6 +22,10 @@ class AssaySuperiorController extends Controller {
     return view('cienciaComputacao.knowledge');
   }
 
+  public function laborMarket() {
+    return view('cienciaComputacao.laborMarket');
+  }
+
   public function leisureHealthCitizenchip() {
     return view('cienciaComputacao.leisureHealthCitizenchip');
   }
