@@ -11,8 +11,9 @@ Route::get('/knowledgeSuperior', ['as' => 'knowledgeSuperior', 'uses' => 'App\Ht
 Route::get('/laborMarketSuperior', ['as' => 'laborMarketSuperior', 'uses' => 'App\Http\Controllers\AssaySuperiorController@laborMarket']);
 Route::get('/leisureHealthCitizenchipSuperior', ['as' => 'leisureHealthCitizenchipSuperior', 'uses' => 'App\Http\Controllers\AssaySuperiorController@leisureHealthCitizenchip']);
 Route::get('/personalDataSuperior', ['as' => 'personalDataSuperior', 'uses' => 'App\Http\Controllers\AssaySuperiorController@personalData']);
-Route::get('/satisfactionSuperior', ['as' => 'satisfactionSuperior', 'uses' => 'App\Http\Controllers\AssaySuperiorController@satisfaction']);
 Route::get('/professionalDataSuperior', ['as' => 'professionalDataSuperior', 'uses' => 'App\Http\Controllers\AssaySuperiorController@professionalData']);
+Route::get('/satisfactionSuperior', ['as' => 'satisfactionSuperior', 'uses' => 'App\Http\Controllers\AssaySuperiorController@satisfaction']);
+Route::get('/technologySuperior', ['as' => 'technologySuperior', 'uses' => 'App\Http\Controllers\AssaySuperiorController@technology']);
 
 // Assay Informatica Routes
 Route::get('/companyTecnico', ['as' => 'companyTecnico', 'uses' => 'App\Http\Controllers\AssayTecnicoController@company']);
@@ -21,3 +22,4 @@ Route::get('/leisureHealthCitizenchipTecnico', ['as' => 'leisureHealthCitizenchi
 Route::get('/personalDataTecnico', ['as' => 'personalDataTecnico', 'uses' => 'App\Http\Controllers\AssayTecnicoController@personalData']);
 Route::get('/professionalDataTecnico', ['as' => 'professionalDataTecnico', 'uses' => 'App\Http\Controllers\AssayTecnicoController@professionalData']);
 Route::get('/satisfactionTecnico', ['as' => 'satisfactionTecnico', 'uses' => 'App\Http\Controllers\AssayTecnicoController@satisfaction']);
+Route::get('/technologyTecnico', ['as' => 'technologyTecnico', 'uses' => 'App\Http\Controllers\AssayTecnicoController@technology']);

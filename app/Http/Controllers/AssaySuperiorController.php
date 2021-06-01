@@ -41,4 +41,8 @@ class AssaySuperiorController extends Controller {
   public function satisfaction(){
     return view('cienciaComputacao.satisfaction');
   }
+
+  public function technology(){
+    return view('cienciaComputacao.technology');
+  }
 }

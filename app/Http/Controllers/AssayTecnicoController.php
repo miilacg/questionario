@@ -41,4 +41,8 @@ class AssayTecnicoController extends Controller {
   public function satisfaction(){
     return view('informatica.satisfaction');
   }
+
+  public function technology(){
+    return view('informatica.technology');
+  }
 }
