@@ -74,6 +74,32 @@
       </script>
     @endif
 
+    @if(session('warning'))
+      <script type="text/javascript">
+        Swal.fire({
+          title: "Você já respondeu a pesquisa",
+          text: "Deseja responder novamente?",
+          icon: 'warning', 
+          reverseButtons: true,
+          showCancelButton: true,
+          cancelButtonText: 'Não',   
+          showConfirmButton: true,
+          confirmButtonText: 'Sim',
+          buttonsStyling: false, 
+        }).then((result) => {
+          if (result.isConfirmed) {
+            <?php if (session('respondidoSup')) { 
+              ?> window.location.href = "https://google.com.br"; <?php 
+            } else { 
+              ?> window.location.href = "https://twitter.com.br"; <?php
+            } ?>
+          } else {
+            window.location.href = "https://globoplay.globo.com"; 
+          } 
+        })
+      </script>
+    @endif
+    
     @if($errors->any())
       <?php 
           $error_list = "<ul>";
