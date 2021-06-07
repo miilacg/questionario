@@ -27,23 +27,23 @@
       <div class="form-group">
         <label>Quando foi o início da sua atividade profissional?</label>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="perg33" id="perg33" value="A"/>Antes de começar o técnico<br>
-          <input class="form-check-input" type="radio" name="perg33" id="perg33" value="B"/>Durante o técnico<br>
-          <input class="form-check-input" type="radio" name="perg33" id="perg33" value="C"/>Até um ano depois da formatura<br>
-          <input class="form-check-input" type="radio" name="perg33" id="perg33" value="D"/>1 a 3 anos depois da formatura<br>
-          <input class="form-check-input" type="radio" name="perg33" id="perg33" value="E"/>Mais de 3 anos depois da formatura
+          <input class="form-check-input" type="radio" name="perg33" id="perg33" value="92"/>Antes de começar o técnico<br>
+          <input class="form-check-input" type="radio" name="perg33" id="perg33" value="93"/>Durante o técnico<br>
+          <input class="form-check-input" type="radio" name="perg33" id="perg33" value="94"/>Até um ano depois da formatura<br>
+          <input class="form-check-input" type="radio" name="perg33" id="perg33" value="95"/>1 a 3 anos depois da formatura<br>
+          <input class="form-check-input" type="radio" name="perg33" id="perg33" value="96"/>Mais de 3 anos depois da formatura
         </div> 
       </div>
 
       <div class="form-group">                            
         <label>Como obteve o primeiro emprego?</label>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="perg34" id="perg34" value="A"/>Abriu uma empresa<br>
-          <input class="form-check-input" type="radio" name="perg34" id="perg34" value="B"/>Enviou currículo e foi selecionado<br>
-          <input class="form-check-input" type="radio" name="perg34" id="perg34" value="C"/>Fez estágio e foi admitido ao término do mesmo<br>
-          <input class="form-check-input" type="radio" name="perg34" id="perg34" value="D"/>Indicação de um amigo<br>
-          <input class="form-check-input" type="radio" name="perg34" id="perg34" value="E"/>Indicação de um professor<br>                     
-          <input class="form-check-input" type="radio" name="perg34" id="perg34" value="F"/>Outro
+          <input class="form-check-input" type="radio" name="perg34" id="perg34" value="121"/>Abriu uma empresa<br>
+          <input class="form-check-input" type="radio" name="perg34" id="perg34" value="122"/>Enviou currículo e foi selecionado<br>
+          <input class="form-check-input" type="radio" name="perg34" id="perg34" value="123"/>Fez estágio e foi admitido ao término do mesmo<br>
+          <input class="form-check-input" type="radio" name="perg34" id="perg34" value="124"/>Indicação de um amigo<br>
+          <input class="form-check-input" type="radio" name="perg34" id="perg34" value="125"/>Indicação de um professor<br>                     
+          <input class="form-check-input" type="radio" name="perg34" id="perg34" value="55"/>Outro
         </div>      
       </div>    
       
@@ -56,7 +56,7 @@
       </div>
     </div>
 
-    <div id="vinteesete" class="esconde">   
+    <div id="trintaSeis" class="esconde">   
       <div class="form-group">
         <label>Qual o seu vínculo empregatício?</label>
         <div class="form-check">
@@ -94,7 +94,7 @@
       </div>                         
     </div>
 
-    <div id="trinta" class="esconde">  
+    <div id="trintaNove" class="esconde">  
       <div class="form-group"> 
         <label>Qual cargo você ocupa?</label>
         <div class="form-check">

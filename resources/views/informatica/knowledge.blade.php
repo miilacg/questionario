@@ -15,7 +15,7 @@
       </div> 
     </div>
 
-    <div id="nove" class="form-group esconde">   
+    <div id="sessentaCinco" class="form-group esconde">   
       <label>Já concluiu outro curso técnico?</label>
       <div class="form-check">
         <input class="form-check-input" type="radio" name="perg65" id="perg65" value="97"/>Sim<br>
@@ -46,8 +46,8 @@
       <div class="form-check">
         <input class="form-check-input" type="radio" name="perg22" value="98" required/>Não<br>                        
         <input class="form-check-input" type="radio" name="perg22" value="110"/>Outro técnico<br>
-        <input class="form-check-input" type="radio" name="perg22" value="106"/>Pós-graduação<br>
         <input class="form-check-input" type="radio" name="perg22" value="111"/>Graduação<br>
+        <input class="form-check-input" type="radio" name="perg22" value="106"/>Pós-graduação<br>
         <input class="form-check-input" type="radio" name="perg22" value="107"/>Mestrado<br> 
         <input class="form-check-input" type="radio" name="perg22" value="108"/>Doutorado
       </div>
@@ -68,10 +68,10 @@
         <tbody> 
           <tr> 
             <td>Inglês</td> 
-            <td><input type="radio" name="perg23_1" value="112" required/></td>
-            <td><input type="radio" name="perg23_1" value="113"/></td>
-            <td><input type="radio" name="perg23_1" value="114"/></td>
-            <td><input type="radio" name="perg23_1" value="115"/></td> 
+            <td><input type="radio" name="perg23_2" value="112" required/></td>
+            <td><input type="radio" name="perg23_2" value="113"/></td>
+            <td><input type="radio" name="perg23_2" value="114"/></td>
+            <td><input type="radio" name="perg23_2" value="115"/></td>
           </tr> 
           <tr> 
             <td>Espanhol</td> 

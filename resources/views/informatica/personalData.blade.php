@@ -11,17 +11,7 @@
       <label>Ano de nascimento:</label>
       <select class="form-control" id="perg1" name="perg1" required><br>
         <option value="">Escolha uma opção</option> 
-        <option value="1">Antes de 1980</option>  
-        <option value="3">1980</option> 
-        <option value="4">1981</option> 
-        <option value="5">1982</option> 
-        <option value="6">1983</option> 
-        <option value="7">1984</option> 
-        <option value="8">1985</option> 
-        <option value="9">1986</option>
-        <option value="10">1987</option>
-        <option value="11">1988</option>
-        <option value="12">1989</option>
+        <option value="2">Antes de 1990</option>  
         <option value="13">1990</option> 
         <option value="14">1991</option> 
         <option value="15">1992</option> 
@@ -42,6 +32,7 @@
       <label>Ano de ingresso no curso:</label>
       <select class="form-control" id="perg2" name="perg2" onChange="testeConclusao1(perg2, perg3)" required><br>
         <option value="">Escolha uma opção</option>
+        <option value="34">2011</option>
         <option value="35">2012</option>
         <option value="36">2013</option>
         <option value="37">2014</option>
@@ -55,6 +46,7 @@
       <label>Ano de conclusão do curso:</label>
       <select class="form-control" id="perg3" name="perg3" onChange="testeConclusao(perg2, perg3)" required><br>
         <option value="">Escolha uma opção</option>
+        <option value="35">2012</option>
         <option value="36">2013</option>
         <option value="37">2014</option>
         <option value="38">2015</option>

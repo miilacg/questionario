@@ -122,7 +122,7 @@
 		<div class="form-group">
 			<label>Como foi atendida suas expectativas do curso em relação à formação profissional?</label>
 			<div class="form-check">
-				<input class="form-check-input" type="radio" name="perg60" value="215" required/>Péssimo<br>
+				<input class="form-check-input" type="radio" name="perg60" value="208" required/>Péssima<br>
 				<input class="form-check-input" type="radio" name="perg60" value="209"/>Ruim<br>
 				<input class="form-check-input" type="radio" name="perg60" value="210"/>Regular<br>
 				<input class="form-check-input" type="radio" name="perg60" value="211"/>Bom<br>

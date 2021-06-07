@@ -8,33 +8,33 @@
     {{ csrf_field() }}
    
     <div class="form-group">
-      <label>Ano de nascimento: </label>
+    <label>Ano de nascimento:</label>
       <select class="form-control" id="perg1" name="perg1" required><br>
         <option value="">Escolha uma opção</option> 
-        <option value="A">Antes de 1980</option>  
-        <option value="B">1980</option> 
-        <option value="C">1981</option> 
-        <option value="D">1982</option> 
-        <option value="E">1983</option> 
-        <option value="F">1984</option> 
-        <option value="G">1985</option> 
-        <option value="H">1986</option>
-        <option value="I">1987</option>
-        <option value="J">1988</option>
-        <option value="K">1989</option>
-        <option value="L">1990</option> 
-        <option value="M">1991</option> 
-        <option value="N">1992</option> 
-        <option value="O">1993</option> 
-        <option value="P">1994</option> 
-        <option value="Q">1995</option> 
-        <option value="R">1996</option> 
-        <option value="S">1997</option> 
-        <option value="T">1998</option> 
-        <option value="U">1999</option> 
-        <option value="V">2000</option> 
-        <option value="W">2001</option>
-        <option value="X">2002</option> 
+        <option value="1">Antes de 1980</option>  
+        <option value="3">1980</option> 
+        <option value="4">1981</option> 
+        <option value="5">1982</option> 
+        <option value="6">1983</option> 
+        <option value="7">1984</option> 
+        <option value="8">1985</option> 
+        <option value="9">1986</option>
+        <option value="10">1987</option>
+        <option value="11">1988</option>
+        <option value="12">1989</option>
+        <option value="13">1990</option> 
+        <option value="14">1991</option> 
+        <option value="15">1992</option> 
+        <option value="16">1993</option> 
+        <option value="17">1994</option> 
+        <option value="18">1995</option> 
+        <option value="19">1996</option> 
+        <option value="20">1997</option> 
+        <option value="21">1998</option> 
+        <option value="22">1999</option> 
+        <option value="23">2000</option> 
+        <option value="24">2001</option>
+        <option value="25">2002</option> 
       </select>
     </div>
 
