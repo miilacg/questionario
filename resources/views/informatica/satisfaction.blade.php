@@ -10,65 +10,65 @@
     <div class="form-group"> 
 			<label>Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha em cursar o técnico em informática</label>
 			<label class="subtitle">(Utilize o lado mais a esquerda para pouca influência na escolha e o mais a direita para muita influência)</label>
-			<div class="slider-wrapper" id="q49">
+			<div class="slider-wrapper" id="q71">
 				Curso fácil de entrar<br>
-				<input type="range" list="tickmarks" name="49A" min="1" max="5"/> 
+				<input type="range" list="tickmarks" name="perg71_125" min="1" max="5"/> 
 				<datalist id="tickmarks">
-					<option value="1">
-					<option value="2">
-					<option value="3">
-					<option value="4" >
-					<option value="5">
+					<option value="117">
+					<option value="118">
+					<option value="119">
+					<option value="126">
+					<option value="127">
 				</datalist><br>
               
 				Curso fácil de fazer<br>
-				<input type="range" list="tickmarks" name="49B" min="1" max="5"/> 
+				<input type="range" list="tickmarks" name="perg71_126" min="1" max="5"/> 
 				<datalist id="tickmarks">
-					<option value="1">
-					<option value="2">
-					<option value="3">
-					<option value="4" >
-					<option value="5">
+					<option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
 				</datalist><br>
 
 				Falta de outra opção<br>
-				<input type="range" list="tickmarks" name="49C" min="1" max="5"/> 
+				<input type="range" list="tickmarks" name="perg71_140" min="1" max="5"/> 
 				<datalist id="tickmarks">
-					<option value="1">
-					<option value="2">
-					<option value="3">
-					<option value="4">
-					<option value="5">
+					<option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
 				</datalist><br>		 
 
 				Interesse na área<br>
-				<input type="range" list="tickmarks" name="49D" min="1" max="5"/> 
+				<input type="range" list="tickmarks" name="perg71_127" min="1" max="5"/> 
 				<datalist id="tickmarks">
-					<option value="1">
-					<option value="2">
-					<option value="3">
-					<option value="4">
-					<option value="5">
+					<option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
 				</datalist><br>
                     
 				Mercado de trabalho<br>
-				<input type="range" list="tickmarks" name="49E" min="1" max="5"/> 
+				<input type="range" list="tickmarks" name="perg71_128" min="1" max="5"/> 
 				<datalist id="tickmarks">
-					<option value="1">
-					<option value="2">
-					<option value="3">
-					<option value="4">
-					<option value="5">
+					<option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
 				</datalist><br>
                     
 				Outras<br>
-				<input type="range" list="tickmarks" name="49F" min="1" max="5"/>
+				<input type="range" list="tickmarks" name="perg71_9" min="1" max="5"/>
 				<datalist id="tickmarks">
-					<option value="1">
-					<option value="2">
-					<option value="3">
-					<option value="4">
-					<option value="5">
+					<option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
 				</datalist><br>
 			</div>
     </div>
@@ -76,45 +76,45 @@
     <div class="form-group"> 
 			<label>Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha de estudar na Cedaf</label>
 			<label class="subtitle">(Utilize o lado mais a esquerda para pouca influência na escolha e o mais a direita para muita influência)</label>
-			<div class="slider-wrapper" id="q50">
+			<div class="slider-wrapper" id="q72">
 				Infraestrutura<br>
-				<input type="range" list="tickmarks" name="50A" min="1" max="5"/> 
+				<input type="range" list="tickmarks" name="perg72_130" min="1" max="5"/> 
 				<datalist id="tickmarks">
-					<option value="1">
-					<option value="2">
-					<option value="3">
-					<option value="4">
-					<option value="5">
+					<option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
 				</datalist><br>
                 
 				Localidade<br>
-				<input type="range" list="tickmarks" name="50B" min="1" max="5"/> 		
+				<input type="range" list="tickmarks" name="perg72_131" min="1" max="5"/> 		
 				<datalist id="tickmarks">
-					<option value="1">
-					<option value="2">
-					<option value="3">
-					<option value="4">
-					<option value="5">
+					<option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
 				</datalist><br>
 					
 				Menor nota para entrar<br>
-				<input type="range" list="tickmarks" name="50C" min="1" max="5"/> 
+				<input type="range" list="tickmarks" name="perg72_132" min="1" max="5"/> 
 				<datalist id="tickmarks">
-					<option value="1">
-					<option value="2">
-					<option value="3">
-					<option value="4">
-					<option value="5">
+					<option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
 				</datalist><br>
                 
 				Outras<br>
-				<input type="range" list="tickmarks" name="50D" min="1" max="5"/>
+				<input type="range" list="tickmarks" name="perg72_9" min="1" max="5"/>
 				<datalist id="tickmarks">
-					<option value="1">
-					<option value="2">
-					<option value="3">
-					<option value="4">
-					<option value="5">
+					<option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
 				</datalist><br>
 			</div> 
     </div>
@@ -122,47 +122,38 @@
 		<div class="form-group">
 			<label>Como foi atendida suas expectativas do curso em relação à formação profissional?</label>
 			<div class="form-check">
-				<input class="form-check-input" type="radio" name="perg51" value="A" required/>Péssimo<br>
-				<input class="form-check-input" type="radio" name="perg51" value="B"/>Ruim<br>
-				<input class="form-check-input" type="radio" name="perg51" value="C"/>Regular<br>
-				<input class="form-check-input" type="radio" name="perg51" value="D"/>Bom<br>
-				<input class="form-check-input" type="radio" name="perg51" value="E"/>Ótimo
+				<input class="form-check-input" type="radio" name="perg60" value="215" required/>Péssimo<br>
+				<input class="form-check-input" type="radio" name="perg60" value="209"/>Ruim<br>
+				<input class="form-check-input" type="radio" name="perg60" value="210"/>Regular<br>
+				<input class="form-check-input" type="radio" name="perg60" value="211"/>Bom<br>
+				<input class="form-check-input" type="radio" name="perg60" value="212"/>Ótimo
 			</div>   
 		</div>                     
 
 		<div class="form-group">
-			<label>As disciplinas especifícas proporcionaram formação adequada para o bom desempenho da atividade profissional?</label>
-			<div class="form-check">
-				<input class="form-check-input" type="radio" name="perg52" value="A" required/>Um pouco<br>
-				<input class="form-check-input" type="radio" name="perg52" value="B"/>Muito<br>
-				<input class="form-check-input" type="radio" name="perg52" value="C"/>Não
-			</div>      
-		</div>   
-
-		<div class="form-group">
 			<label>As disciplinas específicas foram adequadas para o bom desempenho da atividade profissional?</label>
 			<div class="form-check">
-				<input class="form-check-input" type="radio" name="perg52" value="A" required/>Um pouco<br>
-				<input class="form-check-input" type="radio" name="perg52" value="B"/>Muito<br>
-				<input class="form-check-input" type="radio" name="perg52" value="C"/>Não
-			</div>   
-		</div>    
+				<input class="form-check-input" type="radio" name="perg61" value="213" required/>Um pouco<br>
+				<input class="form-check-input" type="radio" name="perg61" value="214"/>Muito<br>
+				<input class="form-check-input" type="radio" name="perg61" value="98"/>Não
+			</div>      
+		</div>      
 
 		<div class="form-group">     
 			<label>Vocâ acha que o estágio de pelo menos 150h (além das disciplinas obrigatórias) deve ser obrigatório para receber o diploma do curso?</label>
 			<div class="form-check">
-				<input class="form-check-input" type="radio" name="perg53" value="A" required/>Sim<br>
-				<input class="form-check-input" type="radio" name="perg53" value="B"/>Não<br>
-				<input class="form-check-input" type="radio" name="perg53" value="C"/>Indiferente
+				<input class="form-check-input" type="radio" name="perg73" value="97" required/>Sim<br>
+				<input class="form-check-input" type="radio" name="perg73" value="98"/>Não<br>
+				<input class="form-check-input" type="radio" name="perg73" value="99"/>Indiferente
 			</div>  
 		</div>
 
 		<div class="form-group">                      
 			<label for = "perg54">Você acha que o curso deve ter 120h em atividades complementares obrigatórias? Essas atividades são relacionadas à informática, mas realizadas fora do horário de aula e para isso haveria a diminuição de 120h das disciplinas normais do curso.</label>
 			<div class="form-check">
-				<input class="form-check-input" type="radio" name="perg54" value="A" required/>Sim<br>
-				<input class="form-check-input" type="radio" name="perg54" value="B"/>Não<br>
-				<input class="form-check-input" type="radio" name="perg54" value="C"/>Indiferente
+				<input class="form-check-input" type="radio" name="perg74" value="97" required/>Sim<br>
+				<input class="form-check-input" type="radio" name="perg74" value="98"/>Não<br>
+				<input class="form-check-input" type="radio" name="perg74" value="99"/>Indiferente
 			</div>
 		</div>
 
@@ -182,43 +173,43 @@
 				<tbody>
 					<tr>
 						<td>Aulas</td>			
-						<td><input type="radio" name="55A" value="A" required/></td>
-						<td><input type="radio" name="55A" value="B"/></td>
-						<td><input type="radio" name="55A" value="C"/></td>
-						<td><input type="radio" name="55A" value="D"/></td>
-						<td><input type="radio" name="55A" value="E"/></td>	
+						<td><input type="radio" name="perg62_134" value="215" required/></td>
+						<td><input type="radio" name="perg62_134" value="209"/></td>
+						<td><input type="radio" name="perg62_134" value="99"/></td>
+						<td><input type="radio" name="perg62_134" value="211"/></td>
+						<td><input type="radio" name="perg62_134" value="212"/></td>	
 					</tr>
 					<tr>
 						<td>Laboratórios</td>			
-						<td><input type="radio" name="55B" value="A" required/></td>
-						<td><input type="radio" name="55B" value="B"/></td>
-						<td><input type="radio" name="55B" value="C"/></td>
-						<td><input type="radio" name="55B" value="D"/></td>
-						<td><input type="radio" name="55B" value="E"/></td>	
+						<td><input type="radio" name="perg62_136" value="215" required/></td>
+						<td><input type="radio" name="perg62_136" value="209"/></td>
+						<td><input type="radio" name="perg62_136" value="99"/></td>
+						<td><input type="radio" name="perg62_136" value="211"/></td>
+						<td><input type="radio" name="perg62_136" value="212"/></td>
 					</tr>
 					<tr>
 						<td>Biblioteca</td>			
-						<td><input type="radio" name="55C" value="A" required/></td>
-						<td><input type="radio" name="55C" value="B"/></td>
-						<td><input type="radio" name="55C" value="C"/></td>
-						<td><input type="radio" name="55C" value="D"/></td>
-						<td><input type="radio" name="55C" value="E"/></td>	
+						<td><input type="radio" name="perg62_135" value="215" required/></td>
+						<td><input type="radio" name="perg62_135" value="209"/></td>
+						<td><input type="radio" name="perg62_135" value="99"/></td>
+						<td><input type="radio" name="perg62_135" value="211"/></td>
+						<td><input type="radio" name="perg62_135" value="212"/></td>
 					</tr>
 					<tr>
 						<td>Salas de aula</td>			
-						<td><input type="radio" name="55D" value="A" required/></td>
-						<td><input type="radio" name="55D" value="B"/></td>
-						<td><input type="radio" name="55D" value="C"/></td>
-						<td><input type="radio" name="55D" value="D"/></td>
-						<td><input type="radio" name="55D" value="E"/></td>	
+						<td><input type="radio" name="perg62_137" value="215" required/></td>
+						<td><input type="radio" name="perg62_137" value="209"/></td>
+						<td><input type="radio" name="perg62_137" value="99"/></td>
+						<td><input type="radio" name="perg62_137" value="211"/></td>
+						<td><input type="radio" name="perg62_137" value="212"/></td>	
 					</tr>
 					<tr>
 						<td>Outras dependências</td>			
-						<td><input type="radio" name="55E" value="A" required/></td>
-						<td><input type="radio" name="55E" value="B"/></td>
-						<td><input type="radio" name="55E" value="C"/></td>
-						<td><input type="radio" name="55E" value="D"/></td>
-						<td><input type="radio" name="55E" value="E"/></td>	
+						<td><input type="radio" name="perg62_138" value="215" required/></td>
+						<td><input type="radio" name="perg62_138" value="209"/></td>
+						<td><input type="radio" name="perg62_138" value="99"/></td>
+						<td><input type="radio" name="perg62_138" value="211"/></td>
+						<td><input type="radio" name="perg62_138" value="212"/></td>
 					</tr>
 				</tbody>
 			</table>
@@ -227,11 +218,11 @@
 		<div class="form-group">		
 			<label>Como você avalia a importância dessa pesquisa?</label>
 			<div class="form-check">
-				<input class="form-check-input" type="radio" name="perg56" value="A" required/>Muito importante<br>
-				<input class="form-check-input" type="radio" name="perg56" value="B"/>Importante<br>
-				<input class="form-check-input" type="radio" name="perg56" value="C"/>Indiferete<br>
-				<input class="form-check-input" type="radio" name="perg56" value="D"/>Pouco importante<br>
-				<input class="form-check-input" type="radio" name="perg56" value="E"/>Sem importância
+				<input class="form-check-input" type="radio" name="perg63" value="216" required/>Muito importante<br>
+				<input class="form-check-input" type="radio" name="perg63" value="217"/>Importante<br>
+				<input class="form-check-input" type="radio" name="perg63" value="99"/>Indiferete<br>
+				<input class="form-check-input" type="radio" name="perg63" value="218"/>Pouco importante<br>
+				<input class="form-check-input" type="radio" name="perg63" value="219"/>Sem importância
 			</div>      
 		</div>              
              
