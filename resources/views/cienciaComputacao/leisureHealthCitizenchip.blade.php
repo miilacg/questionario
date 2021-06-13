@@ -28,8 +28,7 @@
       <div class="form-check">
         <input class="form-check-input" type="radio" name="perg55" value="201" required/>Menos de 2 horas<br>
         <input class="form-check-input" type="radio" name="perg55" value="202"/>2 a 4 horas<br>
-        <input class="form-check-input" type="radio" name="perg55" value="203"/>4 a 6 horas<br>
-        <input class="form-check-input" type="radio" name="perg55" value="205"/>6 a 8 horas<br>
+        <input class="form-check-input" type="radio" name="perg55" value="204"/>5 a 7 horas<br>
         <input class="form-check-input" type="radio" name="perg55" value="206"/>8 a 10 horas<br>
         <input class="form-check-input" type="radio" name="perg55" value="207"/>Mais de 10 horas
       </div> 

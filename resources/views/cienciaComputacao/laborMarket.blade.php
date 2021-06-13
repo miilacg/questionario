@@ -459,6 +459,14 @@
 						<td><input type="radio" name="perg49_69" value="199"/></td>
 					</tr>
 					<tr>
+						<td>Projeto de software orientado à dados</td>
+						<td><input type="radio" name="perg49_70" value="195" required/></td>
+						<td><input type="radio" name="perg49_70" value="196"/></td>
+						<td><input type="radio" name="perg49_70" value="197"/></td>
+						<td><input type="radio" name="perg49_70" value="198"/></td>
+						<td><input type="radio" name="perg49_70" value="199"/></td>
+					</tr>
+					<tr>
 						<td>Projeto e análise de algoritmos</td>
 						<td><input type="radio" name="perg49_71" value="195" required/></td>
 						<td><input type="radio" name="perg49_71" value="196"/></td>

@@ -149,7 +149,7 @@
 		</div>
 
 		<div class="form-group">                      
-			<label for = "perg54">Você acha que o curso deve ter 120h em atividades complementares obrigatórias? Essas atividades são relacionadas à informática, mas realizadas fora do horário de aula e para isso haveria a diminuição de 120h das disciplinas normais do curso.</label>
+			<label>Você acha que o curso deve ter 120h em atividades complementares obrigatórias? Essas atividades são relacionadas à informática, mas realizadas fora do horário de aula e para isso haveria a diminuição de 120h das disciplinas normais do curso.</label>
 			<div class="form-check">
 				<input class="form-check-input" type="radio" name="perg74" value="97" required/>Sim<br>
 				<input class="form-check-input" type="radio" name="perg74" value="98"/>Não<br>

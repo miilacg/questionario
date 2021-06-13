@@ -10,8 +10,8 @@
     <div class="form-group">
       <label>Você já trabalhou?</label>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="perg32" value="97" onChange="abre68()" required/>Sim<br>
-        <input class="form-check-input" type="radio" name="perg32" value="98" onChange="abre68()"/>Não
+        <input class="form-check-input" type="radio" name="perg32" value="97" onChange="abre33()" required/>Sim<br>
+        <input class="form-check-input" type="radio" name="perg32" value="98" onChange="abre33()"/>Não
       </div>     
     </div>  
                           
@@ -19,8 +19,8 @@
       <div class="form-group">
         <label>Quando foi o início da sua atividade profissional?</label>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="perg33" id="perg33" value="92"/>Antes de começar o técnico<br>
-          <input class="form-check-input" type="radio" name="perg33" id="perg33" value="93"/>Durante o técnico<br>
+          <input class="form-check-input" type="radio" name="perg33" id="perg33" value="90"/>Antes de começar a graduação<br>
+          <input class="form-check-input" type="radio" name="perg33" id="perg33" value="91"/>Durante a graduação<br>
           <input class="form-check-input" type="radio" name="perg33" id="perg33" value="94"/>Até um ano depois da formatura<br>
           <input class="form-check-input" type="radio" name="perg33" id="perg33" value="95"/>1 a 3 anos depois da formatura<br>
           <input class="form-check-input" type="radio" name="perg33" id="perg33" value="96"/>Mais de 3 anos depois da formatura
