@@ -11,233 +11,234 @@
       <label>Com qual frequência você utiliza as seguintes linguagens de programação no seu trabalho?</label>
       <label class="subtitle">(Utilize o lado mais a esquerda para pouca utilizada e o mais a direita para muita utilizada)</label>
       <div class="slider-wrapper" id="q50">
-        Java<br>
-        <input type="range" list="tickmarks" name="50A" min="1" max="5"> 
+        .Net<br>
+        <input type="range" list="tickmarks" name="perg50_83" min="1" max="5"/>
         <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-        </datalist><br>
-
-        JavaScript<br>
-        <input type="range" list="tickmarks" name="50B" min="1" max="5"> 
-        <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-        </datalist><br>
-                
-        Python<br>
-        <input type="range" list="tickmarks" name="50C" min="1" max="5"/>
-        <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-        </datalist><br>
-                
-        C<br>
-        <input type="range" list="tickmarks" name="50D" min="1" max="5"/>
-        <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-        </datalist><br>
-                
-        C++<br>
-        <input type="range" list="tickmarks" name="50E" min="1" max="5"/> 
-        <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-        </datalist><br>
-        
-        C#<br>
-        <input type="range" list="tickmarks" name="50F" min="1" max="5"/>
-        <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-        </datalist><br>
-                
-        Ruby<br>
-        <input type="range" list="tickmarks" name="50G" min="1" max="5"/>
-        <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-        </datalist><br>
-        
-        PHP<br>
-        <input type="range" list="tickmarks" name="50H" min="1" max="5"/>
-        <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-        </datalist><br>
-                
-        R<br>
-        <input type="range" list="tickmarks" name="50I" min="1" max="5"/>
-        <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-        </datalist><br>
-        
-        Objective-C<br>
-        <input type="range" list="tickmarks" name="50J" min="1" max="5"/> 
-        <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-        </datalist><br>
-                
-        Kotlin<br>
-        <input type="range" list="tickmarks" name="50K" min="1" max="5"/>
-        <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-        </datalist><br>
-        
-        Delphi<br>
-        <input type="range" list="tickmarks" name="50L" min="1" max="5"/>
-        <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-        </datalist><br>
-        
-        TypeScript<br>
-        <input type="range" list="tickmarks" name="50M" min="1" max="5"/>
-        <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-        </datalist><br>
-                
-        Go<br>
-        <input type="range" list="tickmarks" name="50N" min="1" max="5"/>
-        <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
         </datalist><br>
         
         ASP<br>
-        <input type="range" list="tickmarks" name="50O" min="1" max="5"/>
+        <input type="range" list="tickmarks" name="perg50_84" min="1" max="5"/>
         <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
+        </datalist><br>
+       
+        Assembly<br>
+        <input type="range" list="tickmarks" name="perg50_85" min="1" max="5"/> 
+        <datalist id="tickmarks">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
+        </datalist><br>
+       
+        C<br>
+        <input type="range" list="tickmarks" name="perg50_86" min="1" max="5"/>
+        <datalist id="tickmarks">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
+        </datalist><br>
+
+        C++<br>
+        <input type="range" list="tickmarks" name="perg50_87" min="1" max="5"/> 
+        <datalist id="tickmarks">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
         </datalist><br>
         
-        Pascal<br>
-        <input type="range" list="tickmarks" name="50P" min="1" max="5"/>
+        C#<br>
+        <input type="range" list="tickmarks" name="perg50_88" min="1" max="5"/>
         <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
+        </datalist><br>
+ 
+        Cobol<br>
+        <input type="range" list="tickmarks" name="perg50_89" min="1" max="5"/> 
+        <datalist id="tickmarks">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
+        </datalist><br>
+
+        Delphi<br>
+        <input type="range" list="tickmarks" name="perg50_90" min="1" max="5"/>
+        <datalist id="tickmarks">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
+        </datalist><br>
+        
+        Go<br>
+        <input type="range" list="tickmarks" name="perg50_91" min="1" max="5"/>
+        <datalist id="tickmarks">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
+        </datalist><br>
+        
+        Java<br>
+        <input type="range" list="tickmarks" name="perg50_92" min="1" max="5"> 
+        <datalist id="tickmarks">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
+        </datalist><br>
+
+        JavaScript<br>
+        <input type="range" list="tickmarks" name="perg50_93" min="1" max="5"> 
+        <datalist id="tickmarks">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
         </datalist><br>
                 
-        Visul Basic<br><input type="range" list="tickmarks" name="50Q" min="1" max="5"/>
+        Kotlin<br>
+        <input type="range" list="tickmarks" name="perg50_94" min="1" max="5"/>
         <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
         </datalist><br>
-        
-        .Net<br>
-        <input type="range" list="tickmarks" name="50R" min="1" max="5"/>
-        <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-        </datalist><br>
-        
-        Assembly<br>
-        <input type="range" list="tickmarks" name="50S" min="1" max="5"/> 
-        <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-        </datalist><br>
-        
-        Cobol<br>
-        <input type="range" list="tickmarks" name="50T" min="1" max="5"/> 
-        <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-        </datalist><br>
-        
+
         ML<br>
-        <input type="range" list="tickmarks" name="50U" min="1" max="5"/> 
+        <input type="range" list="tickmarks" name="perg50_95" min="1" max="5"/> 
         <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
+        </datalist><br>
+
+        Objective-C<br>
+        <input type="range" list="tickmarks" name="perg50_96" min="1" max="5"/> 
+        <datalist id="tickmarks">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
+        </datalist><br>
+                
+        Pascal<br>
+        <input type="range" list="tickmarks" name="perg50_97" min="1" max="5"/>
+        <datalist id="tickmarks">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
+        </datalist><br>
+
+        PHP<br>
+        <input type="range" list="tickmarks" name="perg50_98" min="1" max="5"/>
+        <datalist id="tickmarks">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
+        </datalist><br>
+
+        Python<br>
+        <input type="range" list="tickmarks" name="perg50_99" min="1" max="5"/>
+        <datalist id="tickmarks">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
+        </datalist><br>
+                
+        R<br>
+        <input type="range" list="tickmarks" name="perg50_100" min="1" max="5"/>
+        <datalist id="tickmarks">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
+        </datalist><br>
+
+        Ruby<br>
+        <input type="range" list="tickmarks" name="perg50_101" min="1" max="5"/>
+        <datalist id="tickmarks">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
+        </datalist><br>
+                   
+        TypeScript<br>
+        <input type="range" list="tickmarks" name="perg50_102" min="1" max="5"/>
+        <datalist id="tickmarks">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
+        </datalist><br>
+                       
+        Visul Basic<br>
+        <input type="range" list="tickmarks" name="perg50_103" min="1" max="5"/>
+        <datalist id="tickmarks">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
         </datalist><br>
                 
         Verilog<br>
-        <input type="range" list="tickmarks" name="50V" min="1" max="5"/> 
+        <input type="range" list="tickmarks" name="perg50_104" min="1" max="5"/> 
         <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
         </datalist><br>
         
         Outras<br>
-        <input type="range" list="tickmarks" name="50W" min="1" max="5"/>
+        <input type="range" list="tickmarks" name="perg50_9" min="1" max="5"/>
         <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
         </datalist><br>
       </div>
     </div>
@@ -246,114 +247,114 @@
       <label>Com qual frequência você utiliza os seguintes SGBD no seu trabalho?</label>
       <label class="subtitle">(Utilize o lado mais a esquerda para pouco utilizado e o mais a direita para muito utilizado)</label>
       <div class="slider-wrapper" id="q51">
-        Mysql<br>
-        <input type="range" list="tickmarks" name="51A" min="1" max="5"/> 
+        Db2<br>
+        <input type="range" list="tickmarks" name="perg51_105" min="1" max="5"/>
         <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
+        </datalist><br>
+        
+        Cache<br>
+        <input type="range" list="tickmarks" name="perg51_106" min="1" max="5"/> 	
+        <datalist id="tickmarks">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
+        </datalist><br>
+ 
+        Microsoft Acces<br>
+        <input type="range" list="tickmarks" name="perg51_107" min="1" max="5"/>
+        <datalist id="tickmarks">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
+        </datalist><br>
+
+        Microsoft Sql Server<br>
+        <input type="range" list="tickmarks" name="perg51_108" min="1" max="5"/>
+        <datalist id="tickmarks">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
+        </datalist><br>
+
+        MongoDB<br>
+        <input type="range" list="tickmarks" name="perg51_109" min="1" max="5"/> 
+        <datalist id="tickmarks">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
+        </datalist><br>
+
+        Mysql<br>
+        <input type="range" list="tickmarks" name="perg51_110" min="1" max="5"/> 
+        <datalist id="tickmarks">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
         </datalist><br>
                 
         Oracle<br>
-        <input type="range" list="tickmarks" name="51B" min="1" max="5"/> 
+        <input type="range" list="tickmarks" name="perg51_111" min="1" max="5"/> 
         <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-        </datalist><br>
-        
-        Microsoft Sql Server<br>
-        <input type="range" list="tickmarks" name="51C" min="1" max="5"/>
-        <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-        </datalist><br>
-                  
-        PostgreSQL<br>
-        <input type="range" list="tickmarks" name="51D" min="1" max="5"/> 
-        <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-        </datalist><br>
-        
-        MongoDB<br>
-        <input type="range" list="tickmarks" name="51E" min="1" max="5"/> 
-        <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-        </datalist><br>
-        
-        Db2<br>
-        <input type="range" list="tickmarks" name="51F" min="1" max="5"/>
-        <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-        </datalist><br>
-        
-        Microsoft Acces<br>
-        <input type="range" list="tickmarks" name="51G" min="1" max="5"/>
-        <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-        </datalist><br>
-        
-        Teradata<br>
-        <input type="range" list="tickmarks" name="51H" min="1" max="5"/> 
-        <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
         </datalist><br>
         
         Paradx<br>
-        <input type="range" list="tickmarks" name="51I" min="1" max="5"/> 	
+        <input type="range" list="tickmarks" name="perg51_112" min="1" max="5"/> 	
         <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
         </datalist><br>
-                
-        Cache<br>
-        <input type="range" list="tickmarks" name="51J" min="1" max="5"/> 	
+
+        PostgreSQL<br>
+        <input type="range" list="tickmarks" name="perg51_113" min="1" max="5"/> 
         <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
         </datalist><br>
-        
+                 
+        Teradata<br>
+        <input type="range" list="tickmarks" name="perg51_114" min="1" max="5"/> 
+        <datalist id="tickmarks">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
+        </datalist><br>
+          
         Outros<br>
-        <input type="range" list="tickmarks" name="51K" min="1" max="5"/>
+        <input type="range" list="tickmarks" name="perg51_115" min="1" max="5"/>
         <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
         </datalist><br>
       </div>
     </div>
@@ -362,64 +363,54 @@
       <label>Com qual frequência você utiliza os seguintes sistemas operacionais no seu trabalho?</label>
       <label class="subtitle">(Utilize o lado mais a esquerda para pouco utilizado e o mais a direita para muito utilizado)</label>
       <div class="slider-wrapper" id="q52">
-        Windows<br>
-        <input type="range" list="tickmarks" name="52A" min="1" max="5"/> 
-        <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-        </datalist><br>
-                
         Linux<br>
-        <input type="range" list="tickmarks" name="52B" min="1" max="5"/> 
+        <input type="range" list="tickmarks" name="perg52_116" min="1" max="5"/> 
         <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
         </datalist><br>
         
         MacOS<br>
-        <input type="range" list="tickmarks" name="52C" min="1" max="5"/> 
+        <input type="range" list="tickmarks" name="perg52_117" min="1" max="5"/> 
         <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
         </datalist><br>
         
         Netware<br>
-        <input type="range" list="tickmarks" name="52D" min="1" max="5"/> 
+        <input type="range" list="tickmarks" name="perg52_118" min="1" max="5"/> 
         <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
         </datalist><br>
-                
-        Unix<br>
-        <input type="range" list="tickmarks" name="52E" min="1" max="5"/>
+        
+        Windows<br>
+        <input type="range" list="tickmarks" name="perg52_119" min="1" max="5"/> 
         <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
         </datalist><br>
         
         Outros<br>
-        <input type="range" list="tickmarks" name="52F" min="1" max="5"/>
+        <input type="range" list="tickmarks" name="perg52_115" min="1" max="5"/>
         <datalist id="tickmarks">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
+          <option value="117">
+          <option value="118">
+          <option value="119">
+          <option value="126">
+          <option value="127">
         </datalist><br>
       </div>
     </div>
