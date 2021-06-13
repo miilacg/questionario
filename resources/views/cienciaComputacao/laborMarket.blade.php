@@ -25,57 +25,57 @@
 				<tbody>
 					<tr>
 						<td>Intituição de ensino</td>			
-						<td><input type="radio" name="47A" value="A" required/></td>
-						<td><input type="radio" name="47A" value="B"/></td>
-						<td><input type="radio" name="47A" value="C"/></td>
-						<td><input type="radio" name="47A" value="D"/></td>
-						<td><input type="radio" name="47A" value="E"/></td>
-						<td><input type="radio" name="47A" value="F"/></td>		
+						<td><input type="radio" name="perg47_10" value="117" required/></td>
+						<td><input type="radio" name="perg47_10" value="118"/></td>
+						<td><input type="radio" name="perg47_10" value="119"/></td>
+						<td><input type="radio" name="perg47_10" value="126"/></td>
+						<td><input type="radio" name="perg47_10" value="127"/></td>
+						<td><input type="radio" name="perg47_10" value="200"/></td>		
 					</tr>
 					<tr>
 						<td>Trabalho em equipe</td>
-						<td><input type="radio" name="47B" value="A" required/></td>
-						<td><input type="radio" name="47B" value="B"/></td>
-						<td><input type="radio" name="47B" value="C"/></td>
-						<td><input type="radio" name="47B" value="D"/></td>
-						<td><input type="radio" name="47B" value="E"/></td>
-						<td><input type="radio" name="47B" value="F"/></td>	
+						<td><input type="radio" name="perg47_11" value="117" required/></td>
+						<td><input type="radio" name="perg47_11" value="118"/></td>
+						<td><input type="radio" name="perg47_11" value="119"/></td>
+						<td><input type="radio" name="perg47_11" value="126"/></td>
+						<td><input type="radio" name="perg47_11" value="127"/></td>
+						<td><input type="radio" name="perg47_11" value="200"/></td>	
 					</tr>
 					<tr>
 						<td>Experiência no mercado</td>
-						<td><input type="radio" name="47C" value="A" required/></td>
-						<td><input type="radio" name="47C" value="B"/></td>
-						<td><input type="radio" name="47C" value="C"/></td>
-						<td><input type="radio" name="47C" value="D"/></td>
-						<td><input type="radio" name="47C" value="E"/></td>
-						<td><input type="radio" name="47C" value="F"/></td>		
+						<td><input type="radio" name="perg47_12" value="117" required/></td>
+						<td><input type="radio" name="perg47_12" value="118"/></td>
+						<td><input type="radio" name="perg47_12" value="119"/></td>
+						<td><input type="radio" name="perg47_12" value="126"/></td>
+						<td><input type="radio" name="perg47_12" value="127"/></td>
+						<td><input type="radio" name="perg47_12" value="200"/></td>			
 					</tr>
 					<tr>	
 						<td>Fluência em línguas</td>
-						<td><input type="radio" name="47D" value="A" required/></td>
-						<td><input type="radio" name="47D" value="B"/></td>
-						<td><input type="radio" name="47D" value="C"/></td>
-						<td><input type="radio" name="47D" value="D"/></td>
-						<td><input type="radio" name="47D" value="E"/></td>
-						<td><input type="radio" name="47D" value="F"/></td>		
+						<td><input type="radio" name="perg47_13" value="117" required/></td>
+						<td><input type="radio" name="perg47_13" value="118"/></td>
+						<td><input type="radio" name="perg47_13" value="119"/></td>
+						<td><input type="radio" name="perg47_13" value="126"/></td>
+						<td><input type="radio" name="perg47_13" value="127"/></td>
+						<td><input type="radio" name="perg47_13" value="200"/></td>		
 					</tr>
 					<tr>	
 						<td>Disponibilidade para trabalhar horas extras</td>
-						<td><input type="radio" name="47E" value="A" required/></td>
-						<td><input type="radio" name="47E" value="B"/></td>
-						<td><input type="radio" name="47E" value="C"/></td>
-						<td><input type="radio" name="47E" value="D"/></td>
-						<td><input type="radio" name="47E" value="E"/></td>
-						<td><input type="radio" name="47E" value="F"/></td>		
-					</tr>				
+						<td><input type="radio" name="perg47_14" value="117" required/></td>
+						<td><input type="radio" name="perg47_14" value="118"/></td>
+						<td><input type="radio" name="perg47_14" value="119"/></td>
+						<td><input type="radio" name="perg47_14" value="126"/></td>
+						<td><input type="radio" name="perg47_14" value="127"/></td>
+						<td><input type="radio" name="perg47_14" value="200"/></td>		
+					</tr>					
 					<tr>	
 						<td>Mestrado / Doutorado / Especialização</td>
-						<td><input type="radio" name="47F" value="A" required/></td>
-						<td><input type="radio" name="47F" value="B"/></td>
-						<td><input type="radio" name="47F" value="C"/></td>
-						<td><input type="radio" name="47F" value="D"/></td>
-						<td><input type="radio" name="47F" value="E"/></td>
-						<td><input type="radio" name="47F" value="F"/></td>	
+						<td><input type="radio" name="perg47_15" value="117" required/></td>
+						<td><input type="radio" name="perg47_15" value="118"/></td>
+						<td><input type="radio" name="perg47_15" value="119"/></td>
+						<td><input type="radio" name="perg47_15" value="126"/></td>
+						<td><input type="radio" name="perg47_15" value="127"/></td>
+						<td><input type="radio" name="perg47_15" value="200"/></td>	
 					</tr>
 				</tbody>
 			</table>
@@ -98,75 +98,75 @@
 				<tbody>
 					<tr>
 						<td>Adaptação às mudanças</td>			
-						<td><input type="radio" name="48A" value="A" required/></td>
-						<td><input type="radio" name="48A" value="B"/></td>
-						<td><input type="radio" name="48A" value="C"/></td>
-						<td><input type="radio" name="48A" value="D"/></td>
-						<td><input type="radio" name="48A" value="E"/></td>		
+						<td><input type="radio" name="perg48_16" value="117" required/></td>
+						<td><input type="radio" name="perg48_16" value="118"/></td>
+						<td><input type="radio" name="perg48_16" value="119"/></td>
+						<td><input type="radio" name="perg48_16" value="126"/></td>
+						<td><input type="radio" name="perg48_16" value="127"/></td>	
 					</tr>
 					<tr>
 						<td>Aprendizado de novas técnicas</td>
-						<td><input type="radio" name="48B" value="A" required/></td>
-						<td><input type="radio" name="48B" value="B"/></td>
-						<td><input type="radio" name="48B" value="C"/></td>
-						<td><input type="radio" name="48B" value="D"/></td>
-						<td><input type="radio" name="48B" value="E"/></td>	
+						<td><input type="radio" name="perg48_17" value="117" required/></td>
+						<td><input type="radio" name="perg48_17" value="118"/></td>
+						<td><input type="radio" name="perg48_17" value="119"/></td>
+						<td><input type="radio" name="perg48_17" value="126"/></td>
+						<td><input type="radio" name="perg48_17" value="127"/></td>
 					</tr>
 					<tr>
 						<td>Aptidão empreendedora</td>
-						<td><input type="radio" name="48C" value="A" required/></td>
-						<td><input type="radio" name="48C" value="B"/></td>
-						<td><input type="radio" name="48C" value="C"/></td>
-						<td><input type="radio" name="48C" value="D"/></td>
-						<td><input type="radio" name="48C" value="E"/></td>		
+						<td><input type="radio" name="perg48_18" value="117" required/></td>
+						<td><input type="radio" name="perg48_18" value="118"/></td>
+						<td><input type="radio" name="perg48_18" value="119"/></td>
+						<td><input type="radio" name="perg48_18" value="126"/></td>
+						<td><input type="radio" name="perg48_18" value="127"/></td>	
 					</tr>
 					<tr>	
 						<td>Capacidade analítica</td>
-						<td><input type="radio" name="48D" value="A" required/></td>
-						<td><input type="radio" name="48D" value="B"/></td>
-						<td><input type="radio" name="48D" value="C"/></td>
-						<td><input type="radio" name="48D" value="D"/></td>
-						<td><input type="radio" name="48D" value="E"/></td>		
+						<td><input type="radio" name="perg48_19" value="117" required/></td>
+						<td><input type="radio" name="perg48_19" value="118"/></td>
+						<td><input type="radio" name="perg48_19" value="119"/></td>
+						<td><input type="radio" name="perg48_19" value="126"/></td>
+						<td><input type="radio" name="perg48_19" value="127"/></td>	
 					</tr>
 					<tr>	
 						<td>Criatividade</td>
-						<td><input type="radio" name="48E" value="A" required/></td>
-						<td><input type="radio" name="48E" value="B"/></td>
-						<td><input type="radio" name="48E" value="C"/></td>
-						<td><input type="radio" name="48E" value="D"/></td>
-						<td><input type="radio" name="48E" value="E"/></td>		
+						<td><input type="radio" name="perg48_20" value="117" required/></td>
+						<td><input type="radio" name="perg48_20" value="118"/></td>
+						<td><input type="radio" name="perg48_20" value="119"/></td>
+						<td><input type="radio" name="perg48_20" value="126"/></td>
+						<td><input type="radio" name="perg48_20" value="127"/></td>	
 					</tr>				
 					<tr>	
 						<td>Eficiência na produção</td>
-						<td><input type="radio" name="48F" value="A" required/></td>
-						<td><input type="radio" name="48F" value="B"/></td>
-						<td><input type="radio" name="48F" value="C"/></td>
-						<td><input type="radio" name="48F" value="D"/></td>
-						<td><input type="radio" name="48F" value="E"/></td>	
+						<td><input type="radio" name="perg48_21" value="117" required/></td>
+						<td><input type="radio" name="perg48_21" value="118"/></td>
+						<td><input type="radio" name="perg48_21" value="119"/></td>
+						<td><input type="radio" name="perg48_21" value="126"/></td>
+						<td><input type="radio" name="perg48_21" value="127"/></td>	
 					</tr>
 					<tr>	
 						<td>Liderança</td>
-						<td><input type="radio" name="48G" value="A" required/></td>
-						<td><input type="radio" name="48G" value="B"/></td>
-						<td><input type="radio" name="48G" value="C"/></td>
-						<td><input type="radio" name="48G" value="D"/></td>
-						<td><input type="radio" name="48G" value="E"/></td>	
+						<td><input type="radio" name="perg48_22" value="117" required/></td>
+						<td><input type="radio" name="perg48_22" value="118"/></td>
+						<td><input type="radio" name="perg48_22" value="119"/></td>
+						<td><input type="radio" name="perg48_22" value="126"/></td>
+						<td><input type="radio" name="perg48_22" value="127"/></td>
 					</tr>
 					<tr>	
 						<td>Visão ampla de organização</td>
-						<td><input type="radio" name="48H" value="A" required/></td>
-						<td><input type="radio" name="48H" value="B"/></td>
-						<td><input type="radio" name="48H" value="C"/></td>
-						<td><input type="radio" name="48H" value="D"/></td>
-						<td><input type="radio" name="48H" value="E"/></td>	
+						<td><input type="radio" name="perg48_23" value="117" required/></td>
+						<td><input type="radio" name="perg48_23" value="118"/></td>
+						<td><input type="radio" name="perg48_23" value="119"/></td>
+						<td><input type="radio" name="perg48_23" value="126"/></td>
+						<td><input type="radio" name="perg48_23" value="127"/></td>
 					</tr>
 					<tr>	
 						<td>Visão de novas tendências</td>
-						<td><input type="radio" name="48I" value="A" required/></td>
-						<td><input type="radio" name="48I" value="B"/></td>
-						<td><input type="radio" name="48I" value="C"/></td>
-						<td><input type="radio" name="48I" value="D"/></td>
-						<td><input type="radio" name="48I" value="E"/></td>	
+						<td><input type="radio" name="perg48_24" value="117" required/></td>
+						<td><input type="radio" name="perg48_24" value="118"/></td>
+						<td><input type="radio" name="perg48_24" value="119"/></td>
+						<td><input type="radio" name="perg48_24" value="126"/></td>
+						<td><input type="radio" name="perg48_24" value="127"/></td>
 					</tr>
 				</tbody>
 			</table>
@@ -188,347 +188,347 @@
 				<tbody>
 					<tr>
 						<td>Algoritmo e estrutura de dados</td>	
-						<td><input type="radio" name="49A" value="A" required/></td>
-						<td><input type="radio" name="49A" value="B"/></td>
-						<td><input type="radio" name="49A" value="C"/></td>
-						<td><input type="radio" name="49A" value="D"/></td>
-						<td><input type="radio" name="49A" value="E"/></td>	
+						<td><input type="radio" name="perg49_25" value="195" required/></td>
+						<td><input type="radio" name="perg49_25" value="196"/></td>
+						<td><input type="radio" name="perg49_25" value="197"/></td>
+						<td><input type="radio" name="perg49_25" value="198"/></td>
+						<td><input type="radio" name="perg49_25" value="199"/></td>	
 					</tr>
 					<tr>
 						<td>Arquitetura de software</td>		
-						<td><input type="radio" name="49B" value="A" required/></td>
-						<td><input type="radio" name="49B" value="B"/></td>
-						<td><input type="radio" name="49B" value="C"/></td>
-						<td><input type="radio" name="49B" value="D"/></td>
-						<td><input type="radio" name="49B" value="E"/></td>	
+						<td><input type="radio" name="perg49_27" value="195" required/></td>
+						<td><input type="radio" name="perg49_27" value="196"/></td>
+						<td><input type="radio" name="perg49_27" value="197"/></td>
+						<td><input type="radio" name="perg49_27" value="198"/></td>
+						<td><input type="radio" name="perg49_27" value="199"/></td>	
 					</tr>
 					<tr>
-						<td>Banco de dados</td>	
-						<td><input type="radio" name="49C" value="A" required/></td>
-						<td><input type="radio" name="49C" value="B"/></td>
-						<td><input type="radio" name="49C" value="C"/></td>
-						<td><input type="radio" name="49C" value="D"/></td>
-						<td><input type="radio" name="49C" value="E"/></td>
+						<td>Banco de dados</td>		
+						<td><input type="radio" name="perg49_28" value="195" required/></td>
+						<td><input type="radio" name="perg49_28" value="196"/></td>
+						<td><input type="radio" name="perg49_28" value="197"/></td>
+						<td><input type="radio" name="perg49_28" value="198"/></td>
+						<td><input type="radio" name="perg49_28" value="199"/></td>
 					</tr>
 					<tr>
 						<td>Cálculo diferencial e integral</td>	
-						<td><input type="radio" name="49D" value="A" required/></td>
-						<td><input type="radio" name="49D" value="B"/></td>
-						<td><input type="radio" name="49D" value="C"/></td>
-						<td><input type="radio" name="49D" value="D"/></td>
-						<td><input type="radio" name="49D" value="E"/></td>
+						<td><input type="radio" name="perg49_29" value="195" required/></td>
+						<td><input type="radio" name="perg49_29" value="196"/></td>
+						<td><input type="radio" name="perg49_29" value="197"/></td>
+						<td><input type="radio" name="perg49_29" value="198"/></td>
+						<td><input type="radio" name="perg49_29" value="199"/></td>	
 					</tr>
 					<tr>
 						<td>Compiladores</td>		
-						<td><input type="radio" name="49E" value="A" required/></td>
-						<td><input type="radio" name="49E" value="B"/></td>
-						<td><input type="radio" name="49E" value="C"/></td>
-						<td><input type="radio" name="49E" value="D"/></td>
-						<td><input type="radio" name="49E" value="E"/></td>	
+						<td><input type="radio" name="perg49_30" value="195" required/></td>
+						<td><input type="radio" name="perg49_30" value="196"/></td>
+						<td><input type="radio" name="perg49_30" value="197"/></td>
+						<td><input type="radio" name="perg49_30" value="198"/></td>
+						<td><input type="radio" name="perg49_30" value="199"/></td>		
 					</tr>
 					<tr>
 						<td>Computador e sociedade</td>		
-						<td><input type="radio" name="49F" value="A" required/></td>
-						<td><input type="radio" name="49F" value="B"/></td>
-						<td><input type="radio" name="49F" value="C"/></td>
-						<td><input type="radio" name="49F" value="D"/></td>
-						<td><input type="radio" name="49F" value="E"/></td>
+						<td><input type="radio" name="perg49_31" value="195" required/></td>
+						<td><input type="radio" name="perg49_31" value="196"/></td>
+						<td><input type="radio" name="perg49_31" value="197"/></td>
+						<td><input type="radio" name="perg49_31" value="198"/></td>
+						<td><input type="radio" name="perg49_31" value="199"/></td>	
 					</tr>
 					<tr>
-						<td>Contabilidade</td>
-						<td><input type="radio" name="49G" value="A" required/></td>
-						<td><input type="radio" name="49G" value="B"/></td>
-						<td><input type="radio" name="49G" value="C"/></td>
-						<td><input type="radio" name="49G" value="D"/></td>
-						<td><input type="radio" name="49G" value="E"/></td>	
+						<td>Contabilidade</td>	
+						<td><input type="radio" name="perg49_32" value="195" required/></td>
+						<td><input type="radio" name="perg49_32" value="196"/></td>
+						<td><input type="radio" name="perg49_32" value="197"/></td>
+						<td><input type="radio" name="perg49_32" value="198"/></td>
+						<td><input type="radio" name="perg49_32" value="199"/></td>
 					</tr>
 					<tr>
 						<td>Economia</td>		
-						<td><input type="radio" name="49H" value="A" required/></td>
-						<td><input type="radio" name="49H" value="B"/></td>
-						<td><input type="radio" name="49H" value="C"/></td>
-						<td><input type="radio" name="49H" value="D"/></td>
-						<td><input type="radio" name="49H" value="E"/></td>
+						<td><input type="radio" name="perg49_33" value="195" required/></td>
+						<td><input type="radio" name="perg49_33" value="196"/></td>
+						<td><input type="radio" name="perg49_33" value="197"/></td>
+						<td><input type="radio" name="perg49_33" value="198"/></td>
+						<td><input type="radio" name="perg49_33" value="199"/></td>	
 					</tr>
 					<tr>
 						<td>Empreendedorismo e inovação</td>	
-						<td><input type="radio" name="49I" value="A" required/></td>
-						<td><input type="radio" name="49I" value="B"/></td>
-						<td><input type="radio" name="49I" value="C"/></td>
-						<td><input type="radio" name="49I" value="D"/></td>
-						<td><input type="radio" name="49I" value="E"/></td>	
+						<td><input type="radio" name="perg49_34" value="195" required/></td>
+						<td><input type="radio" name="perg49_34" value="196"/></td>
+						<td><input type="radio" name="perg49_34" value="197"/></td>
+						<td><input type="radio" name="perg49_34" value="198"/></td>
+						<td><input type="radio" name="perg49_34" value="199"/></td>	
 					</tr>
 					<tr>
 						<td>Engenharia de software</td>			
-						<td><input type="radio" name="49K" value="A" required/></td>
-						<td><input type="radio" name="49K" value="B"/></td>
-						<td><input type="radio" name="49K" value="C"/></td>
-						<td><input type="radio" name="49K" value="D"/></td>
-						<td><input type="radio" name="49K" value="E"/></td>	
+						<td><input type="radio" name="perg49_35" value="195" required/></td>
+						<td><input type="radio" name="perg49_35" value="196"/></td>
+						<td><input type="radio" name="perg49_35" value="197"/></td>
+						<td><input type="radio" name="perg49_35" value="198"/></td>
+						<td><input type="radio" name="perg49_35" value="199"/></td>
 					</tr>
 					<tr>
 						<td>Fisica</td>			
-						<td><input type="radio" name="49L" value="A" required/></td>
-						<td><input type="radio" name="49L" value="B"/></td>
-						<td><input type="radio" name="49L" value="C"/></td>
-						<td><input type="radio" name="49L" value="D"/></td>
-						<td><input type="radio" name="49L" value="E"/></td>		
+						<td><input type="radio" name="perg49_37" value="195" required/></td>
+						<td><input type="radio" name="perg49_37" value="196"/></td>
+						<td><input type="radio" name="perg49_37" value="197"/></td>
+						<td><input type="radio" name="perg49_37" value="198"/></td>
+						<td><input type="radio" name="perg49_37" value="199"/></td>		
 					</tr>
 					<tr>
 						<td>Fundamentos da teoria da computação</td>			
-						<td><input type="radio" name="49M" value="A" required/></td>
-						<td><input type="radio" name="49M" value="B"/></td>
-						<td><input type="radio" name="49M" value="C"/></td>
-						<td><input type="radio" name="49M" value="D"/></td>
-						<td><input type="radio" name="49M" value="E"/></td>	
+						<td><input type="radio" name="perg49_39" value="195" required/></td>
+						<td><input type="radio" name="perg49_39" value="196"/></td>
+						<td><input type="radio" name="perg49_39" value="197"/></td>
+						<td><input type="radio" name="perg49_39" value="198"/></td>
+						<td><input type="radio" name="perg49_39" value="199"/></td>	
 					</tr>
 					<tr>
 						<td>Geometria analitica e algebra linear</td>
-						<td><input type="radio" name="49N" value="A" required/></td>
-						<td><input type="radio" name="49N" value="B"/></td>
-						<td><input type="radio" name="49N" value="C"/></td>
-						<td><input type="radio" name="49N" value="D"/></td>
-						<td><input type="radio" name="49N" value="E"/></td>		
+						<td><input type="radio" name="perg49_40" value="195" required/></td>
+						<td><input type="radio" name="perg49_40" value="196"/></td>
+						<td><input type="radio" name="perg49_40" value="197"/></td>
+						<td><input type="radio" name="perg49_40" value="198"/></td>
+						<td><input type="radio" name="perg49_40" value="199"/></td>		
 					</tr>
 					<tr>
 						<td>Gestão ambiental</td>
-						<td><input type="radio" name="49O" value="A" required/></td>
-						<td><input type="radio" name="49O" value="B"/></td>
-						<td><input type="radio" name="49O" value="C"/></td>
-						<td><input type="radio" name="49O" value="D"/></td>
-						<td><input type="radio" name="49O" value="E"/></td>		
+						<td><input type="radio" name="perg49_41" value="195" required/></td>
+						<td><input type="radio" name="perg49_41" value="196"/></td>
+						<td><input type="radio" name="perg49_41" value="197"/></td>
+						<td><input type="radio" name="perg49_41" value="198"/></td>
+						<td><input type="radio" name="perg49_41" value="199"/></td>		
 					</tr>
 					<tr>
 						<td>Gestão da diversidade nas organizações</td>			
-						<td><input type="radio" name="49P" value="A" required/></td>
-						<td><input type="radio" name="49P" value="B"/></td>
-						<td><input type="radio" name="49P" value="C"/></td>
-						<td><input type="radio" name="49P" value="D"/></td>
-						<td><input type="radio" name="49P" value="E"/></td>	
+						<td><input type="radio" name="perg49_42" value="195" required/></td>
+						<td><input type="radio" name="perg49_42" value="196"/></td>
+						<td><input type="radio" name="perg49_42" value="197"/></td>
+						<td><input type="radio" name="perg49_42" value="198"/></td>
+						<td><input type="radio" name="perg49_42" value="199"/></td>	
 					</tr>
 					<tr>
 						<td>Gestão de projetos</td>	
-						<td><input type="radio" name="49Q" value="A" required/></td>
-						<td><input type="radio" name="49Q" value="B"/></td>
-						<td><input type="radio" name="49Q" value="C"/></td>
-						<td><input type="radio" name="49Q" value="D"/></td>
-						<td><input type="radio" name="49Q" value="E"/></td>	
+						<td><input type="radio" name="perg49_44" value="195" required/></td>
+						<td><input type="radio" name="perg49_44" value="196"/></td>
+						<td><input type="radio" name="perg49_44" value="197"/></td>
+						<td><input type="radio" name="perg49_44" value="198"/></td>
+						<td><input type="radio" name="perg49_44" value="199"/></td>	
 					</tr>
 					<tr>
 						<td>Gestão, recuperação e análise de informações (Topicos II)</td>			
-						<td><input type="radio" name="49R" value="A" required/></td>
-						<td><input type="radio" name="49R" value="B"/></td>
-						<td><input type="radio" name="49R" value="C"/></td>
-						<td><input type="radio" name="49R" value="D"/></td>
-						<td><input type="radio" name="49R" value="E"/></td>	
+						<td><input type="radio" name="perg49_43" value="195" required/></td>
+						<td><input type="radio" name="perg49_43" value="196"/></td>
+						<td><input type="radio" name="perg49_43" value="197"/></td>
+						<td><input type="radio" name="perg49_43" value="198"/></td>
+						<td><input type="radio" name="perg49_43" value="199"/></td>	
 					</tr>
 					<tr>
 						<td>Inglês</td>			
-						<td><input type="radio" name="49S" value="A" required/></td>
-						<td><input type="radio" name="49S" value="B"/></td>
-						<td><input type="radio" name="49S" value="C"/></td>
-						<td><input type="radio" name="49S" value="D"/></td>
-						<td><input type="radio" name="49S" value="E"/></td>	
+						<td><input type="radio" name="perg49_1" value="195" required/></td>
+						<td><input type="radio" name="perg49_1" value="196"/></td>
+						<td><input type="radio" name="perg49_1" value="197"/></td>
+						<td><input type="radio" name="perg49_1" value="198"/></td>
+						<td><input type="radio" name="perg49_1" value="199"/></td>
 					</tr>
 					<tr>
 						<td>Iniciação a estatística</td>		
-						<td><input type="radio" name="49T" value="A" required/></td>
-						<td><input type="radio" name="49T" value="B"/></td>
-						<td><input type="radio" name="49T" value="C"/></td>
-						<td><input type="radio" name="49T" value="D"/></td>
-						<td><input type="radio" name="49T" value="E"/></td>	
+						<td><input type="radio" name="perg49_45" value="195" required/></td>
+						<td><input type="radio" name="perg49_45" value="196"/></td>
+						<td><input type="radio" name="perg49_45" value="197"/></td>
+						<td><input type="radio" name="perg49_45" value="198"/></td>
+						<td><input type="radio" name="perg49_45" value="199"/></td>	
 					</tr>
 					<tr>
 						<td>Introdução à ciência dos dados (Tópicos I)</td>
-						<td><input type="radio" name="49U" value="A" required/></td>
-						<td><input type="radio" name="49U" value="B"/></td>
-						<td><input type="radio" name="49U" value="C"/></td>
-						<td><input type="radio" name="49U" value="D"/></td>
-						<td><input type="radio" name="49U" value="E"/></td>
+						<td><input type="radio" name="perg49_48" value="195" required/></td>
+						<td><input type="radio" name="perg49_48" value="196"/></td>
+						<td><input type="radio" name="perg49_48" value="197"/></td>
+						<td><input type="radio" name="perg49_48" value="198"/></td>
+						<td><input type="radio" name="perg49_48" value="199"/></td>
 					</tr>
 					<tr>
 						<td>Introdução aos sistemas lógicos e digitais</td>			
-						<td><input type="radio" name="49V" value="A" required/></td>
-						<td><input type="radio" name="49V" value="B"/></td>
-						<td><input type="radio" name="49V" value="C"/></td>
-						<td><input type="radio" name="49V" value="D"/></td>
-						<td><input type="radio" name="49V" value="E"/></td>	
+						<td><input type="radio" name="perg49_50" value="195" required/></td>
+						<td><input type="radio" name="perg49_50" value="196"/></td>
+						<td><input type="radio" name="perg49_50" value="197"/></td>
+						<td><input type="radio" name="perg49_50" value="198"/></td>
+						<td><input type="radio" name="perg49_50" value="199"/></td>
 					</tr>
 					<tr>
 						<td>Libras</td>			
-						<td><input type="radio" name="49W" value="A" required/></td>
-						<td><input type="radio" name="49W" value="B"/></td>
-						<td><input type="radio" name="49W" value="C"/></td>
-						<td><input type="radio" name="49W" value="D"/></td>
-						<td><input type="radio" name="49W" value="E"/></td>		
+						<td><input type="radio" name="perg49_53" value="195" required/></td>
+						<td><input type="radio" name="perg49_53" value="196"/></td>
+						<td><input type="radio" name="perg49_53" value="197"/></td>
+						<td><input type="radio" name="perg49_53" value="198"/></td>
+						<td><input type="radio" name="perg49_53" value="199"/></td>		
 					</tr>
 					<tr>
 						<td>Linguagem de programação</td>		
-						<td><input type="radio" name="49X" value="A" required/></td>
-						<td><input type="radio" name="49X" value="B"/></td>
-						<td><input type="radio" name="49X" value="C"/></td>
-						<td><input type="radio" name="49X" value="D"/></td>
-						<td><input type="radio" name="49X" value="E"/></td>	
-					</tr>
-					<tr>
-						<td>Meta-heurística</td>		
-						<td><input type="radio" name="49Y" value="A" required/></td>
-						<td><input type="radio" name="49Y" value="B"/></td>
-						<td><input type="radio" name="49Y" value="C"/></td>
-						<td><input type="radio" name="49Y" value="D"/></td>
-						<td><input type="radio" name="49Y" value="E"/></td>	
-					</tr>
+						<td><input type="radio" name="perg49_54" value="195" required/></td>
+						<td><input type="radio" name="perg49_54" value="196"/></td>
+						<td><input type="radio" name="perg49_54" value="197"/></td>
+						<td><input type="radio" name="perg49_54" value="198"/></td>
+						<td><input type="radio" name="perg49_54" value="199"/></td>	
+					</tr>					
 					<tr>
 						<td>Matemática discreta</td>	
-						<td><input type="radio" name="49Z" value="A" required/></td>
-						<td><input type="radio" name="49Z" value="B"/></td>
-						<td><input type="radio" name="49Z" value="C"/></td>
-						<td><input type="radio" name="49Z" value="D"/></td>
-						<td><input type="radio" name="49Z" value="E"/></td>
+						<td><input type="radio" name="perg49_56" value="195" required/></td>
+						<td><input type="radio" name="perg49_56" value="196"/></td>
+						<td><input type="radio" name="perg49_56" value="197"/></td>
+						<td><input type="radio" name="perg49_56" value="198"/></td>
+						<td><input type="radio" name="perg49_56" value="199"/></td>
 					</tr>
 					<tr>
 						<td>Matemática financeira</td>			
-						<td><input type="radio" name="49AA" value="A" required/></td>
-						<td><input type="radio" name="49AA" value="B"/></td>
-						<td><input type="radio" name="49AA" value="C"/></td>
-						<td><input type="radio" name="49AA" value="D"/></td>
-						<td><input type="radio" name="49AA" value="E"/></td>	
+						<td><input type="radio" name="perg49_57" value="195" required/></td>
+						<td><input type="radio" name="perg49_57" value="196"/></td>
+						<td><input type="radio" name="perg49_57" value="197"/></td>
+						<td><input type="radio" name="perg49_57" value="198"/></td>
+						<td><input type="radio" name="perg49_57" value="199"/></td>	
+					</tr>
+					<tr>
+						<td>Meta-heurística</td>		
+						<td><input type="radio" name="perg49_58" value="195" required/></td>
+						<td><input type="radio" name="perg49_58" value="196"/></td>
+						<td><input type="radio" name="perg49_58" value="197"/></td>
+						<td><input type="radio" name="perg49_58" value="198"/></td>
+						<td><input type="radio" name="perg49_58" value="199"/></td>
 					</tr>
 					<tr>
 						<td>O ser e as organizações</td>		
-						<td><input type="radio" name="49AB" value="A" required/></td>
-						<td><input type="radio" name="49AB" value="B"/></td>
-						<td><input type="radio" name="49AB" value="C"/></td>
-						<td><input type="radio" name="49AB" value="D"/></td>
-						<td><input type="radio" name="49AB" value="E"/></td>	
+						<td><input type="radio" name="perg49_59" value="195" required/></td>
+						<td><input type="radio" name="perg49_59" value="196"/></td>
+						<td><input type="radio" name="perg49_59" value="197"/></td>
+						<td><input type="radio" name="perg49_59" value="198"/></td>
+						<td><input type="radio" name="perg49_59" value="199"/></td>	
 					</tr>
 					<tr>
 						<td>Organização de computadores</td>
-						<td><input type="radio" name="49AC" value="A" required/></td>
-						<td><input type="radio" name="49AC" value="B"/></td>
-						<td><input type="radio" name="49AC" value="C"/></td>
-						<td><input type="radio" name="49AC" value="D"/></td>
-						<td><input type="radio" name="49AC" value="E"/></td>	
+						<td><input type="radio" name="perg49_60" value="195" required/></td>
+						<td><input type="radio" name="perg49_60" value="196"/></td>
+						<td><input type="radio" name="perg49_60" value="197"/></td>
+						<td><input type="radio" name="perg49_60" value="198"/></td>
+						<td><input type="radio" name="perg49_60" value="199"/></td>	
 					</tr>
 					<tr>
 						<td>Pesquisa operacional</td>
-						<td><input type="radio" name="49AD" value="A" required/></td>
-						<td><input type="radio" name="49AD" value="B"/></td>
-						<td><input type="radio" name="49AD" value="C"/></td>
-						<td><input type="radio" name="49AD" value="D"/></td>
-						<td><input type="radio" name="49AD" value="E"/></td>	
+						<td><input type="radio" name="perg49_62" value="195" required/></td>
+						<td><input type="radio" name="perg49_62" value="196"/></td>
+						<td><input type="radio" name="perg49_62" value="197"/></td>
+						<td><input type="radio" name="perg49_62" value="198"/></td>
+						<td><input type="radio" name="perg49_62" value="199"/></td>	
 					</tr>
 					<tr>
 						<td>Português instrumental</td>
-						<td><input type="radio" name="49AE" value="A" required/></td>
-						<td><input type="radio" name="49AE" value="B"/></td>
-						<td><input type="radio" name="49AE" value="C"/></td>
-						<td><input type="radio" name="49AE" value="D"/></td>
-						<td><input type="radio" name="49AE" value="E"/></td>	
+						<td><input type="radio" name="perg49_63" value="195" required/></td>
+						<td><input type="radio" name="perg49_63" value="196"/></td>
+						<td><input type="radio" name="perg49_63" value="197"/></td>
+						<td><input type="radio" name="perg49_63" value="198"/></td>
+						<td><input type="radio" name="perg49_63" value="199"/></td>	
 					</tr>
 					<tr>
 						<td>Processamento digital de imagens</td>
-						<td><input type="radio" name="49AF" value="A" required/></td>
-						<td><input type="radio" name="49AF" value="B"/></td>
-						<td><input type="radio" name="49AF" value="C"/></td>
-						<td><input type="radio" name="49AF" value="D"/></td>
-						<td><input type="radio" name="49AF" value="E"/></td>
+						<td><input type="radio" name="perg49_64" value="195" required/></td>
+						<td><input type="radio" name="perg49_64" value="196"/></td>
+						<td><input type="radio" name="perg49_64" value="197"/></td>
+						<td><input type="radio" name="perg49_64" value="198"/></td>
+						<td><input type="radio" name="perg49_64" value="199"/></td>
 					</tr>
 					<tr>
-						<td>Programação</td>
-						<td><input type="radio" name="49AG" value="A" required/></td>
-						<td><input type="radio" name="49AG" value="B"/></td>
-						<td><input type="radio" name="49AG" value="C"/></td>
-						<td><input type="radio" name="49AG" value="D"/></td>
-						<td><input type="radio" name="49AG" value="E"/></td>
+						<td>Programação</td>			
+						<td><input type="radio" name="perg49_65" value="195" required/></td>
+						<td><input type="radio" name="perg49_65" value="196"/></td>
+						<td><input type="radio" name="perg49_65" value="197"/></td>
+						<td><input type="radio" name="perg49_65" value="198"/></td>
+						<td><input type="radio" name="perg49_65" value="199"/></td>
 					</tr>
 					<tr>
 						<td>Programação orientada a objeto</td>
-						<td><input type="radio" name="49AH" value="A" required/></td>
-						<td><input type="radio" name="49AH" value="B"/></td>
-						<td><input type="radio" name="49AH" value="C"/></td>
-						<td><input type="radio" name="49AH" value="D"/></td>
-						<td><input type="radio" name="49AH" value="E"/></td>
+						<td><input type="radio" name="perg49_66" value="195" required/></td>
+						<td><input type="radio" name="perg49_66" value="196"/></td>
+						<td><input type="radio" name="perg49_66" value="197"/></td>
+						<td><input type="radio" name="perg49_66" value="198"/></td>
+						<td><input type="radio" name="perg49_66" value="199"/></td>
 					</tr>
 					<tr>
 						<td>Projeto de sistemas para web</td>
-						<td><input type="radio" name="49AI" value="A" required/></td>
-						<td><input type="radio" name="49AI" value="B"/></td>
-						<td><input type="radio" name="49AI" value="C"/></td>
-						<td><input type="radio" name="49AI" value="D"/></td>
-						<td><input type="radio" name="49AI" value="E"/></td>
+						<td><input type="radio" name="perg49_69" value="195" required/></td>
+						<td><input type="radio" name="perg49_69" value="196"/></td>
+						<td><input type="radio" name="perg49_69" value="197"/></td>
+						<td><input type="radio" name="perg49_69" value="198"/></td>
+						<td><input type="radio" name="perg49_69" value="199"/></td>
 					</tr>
 					<tr>
 						<td>Projeto e análise de algoritmos</td>
-						<td><input type="radio" name="49AJ" value="A" required/></td>
-						<td><input type="radio" name="49AJ" value="B"/></td>
-						<td><input type="radio" name="49AJ" value="C"/></td>
-						<td><input type="radio" name="49AJ" value="D"/></td>
-						<td><input type="radio" name="49AJ" value="E"/></td>
+						<td><input type="radio" name="perg49_71" value="195" required/></td>
+						<td><input type="radio" name="perg49_71" value="196"/></td>
+						<td><input type="radio" name="perg49_71" value="197"/></td>
+						<td><input type="radio" name="perg49_71" value="198"/></td>
+						<td><input type="radio" name="perg49_71" value="199"/></td>
 					</tr>
 					<tr>
-						<td>Redes de computadores</td>
-						<td><input type="radio" name="49AK" value="A" required/></td>
-						<td><input type="radio" name="49AK" value="B"/></td>
-						<td><input type="radio" name="49AK" value="C"/></td>
-						<td><input type="radio" name="49AK" value="D"/></td>
-						<td><input type="radio" name="49AK" value="E"/></td>
+						<td>Redes de computadores</td>	
+						<td><input type="radio" name="perg49_73" value="195" required/></td>
+						<td><input type="radio" name="perg49_73" value="196"/></td>
+						<td><input type="radio" name="perg49_73" value="197"/></td>
+						<td><input type="radio" name="perg49_73" value="198"/></td>
+						<td><input type="radio" name="perg49_73" value="199"/></td>
 					</tr>
 					<tr>
 						<td>Sistemas distribuídos e paralelos</td>
-						<td><input type="radio" name="49AL" value="A" required/></td>
-						<td><input type="radio" name="49AL" value="B"/></td>
-						<td><input type="radio" name="49AL" value="C"/></td>
-						<td><input type="radio" name="49AL" value="D"/></td>
-						<td><input type="radio" name="49AL" value="E"/></td>
+						<td><input type="radio" name="perg49_74" value="195" required/></td>
+						<td><input type="radio" name="perg49_74" value="196"/></td>
+						<td><input type="radio" name="perg49_74" value="197"/></td>
+						<td><input type="radio" name="perg49_74" value="198"/></td>
+						<td><input type="radio" name="perg49_74" value="199"/></td>
 					</tr>
 					<tr>
 						<td>Sistemas embarcados</td>
-						<td><input type="radio" name="49AM" value="A" required/></td>
-						<td><input type="radio" name="49AM" value="B"/></td>
-						<td><input type="radio" name="49AM" value="C"/></td>
-						<td><input type="radio" name="49AM" value="D"/></td>
-						<td><input type="radio" name="49AM" value="E"/></td>
+						<td><input type="radio" name="perg49_75" value="195" required/></td>
+						<td><input type="radio" name="perg49_75" value="196"/></td>
+						<td><input type="radio" name="perg49_75" value="197"/></td>
+						<td><input type="radio" name="perg49_75" value="198"/></td>
+						<td><input type="radio" name="perg49_75" value="199"/></td>
 					</tr>
 					<tr>
 						<td>Sistemas operacionais</td>
-						<td><input type="radio" name="49AN" value="A" required/></td>
-						<td><input type="radio" name="49AN" value="B"/></td>
-						<td><input type="radio" name="49AN" value="C"/></td>
-						<td><input type="radio" name="49AN" value="D"/></td>
-						<td><input type="radio" name="49AN" value="E"/></td>
+						<td><input type="radio" name="perg49_76" value="195" required/></td>
+						<td><input type="radio" name="perg49_76" value="196"/></td>
+						<td><input type="radio" name="perg49_76" value="197"/></td>
+						<td><input type="radio" name="perg49_76" value="198"/></td>
+						<td><input type="radio" name="perg49_76" value="199"/></td>
 					</tr>
 					<tr>
 						<td>Teoria e modelo de grafos</td>
-						<td><input type="radio" name="49AO" value="A" required/></td>
-						<td><input type="radio" name="49AO" value="B"/></td>
-						<td><input type="radio" name="49AO" value="C"/></td>
-						<td><input type="radio" name="49AO" value="D"/></td>
-						<td><input type="radio" name="49AO" value="E"/></td>
+						<td><input type="radio" name="perg49_77" value="195" required/></td>
+						<td><input type="radio" name="perg49_77" value="196"/></td>
+						<td><input type="radio" name="perg49_77" value="197"/></td>
+						<td><input type="radio" name="perg49_77" value="198"/></td>
+						<td><input type="radio" name="perg49_77" value="199"/></td>
 					</tr>
 					<tr>
 						<td>Teoria geral da administração</td>
-						<td><input type="radio" name="49AP" value="A" required/></td>
-						<td><input type="radio" name="49AP" value="B"/></td>
-						<td><input type="radio" name="49AP" value="C"/></td>
-						<td><input type="radio" name="49AP" value="D"/></td>
-						<td><input type="radio" name="49AP" value="E"/></td>
+						<td><input type="radio" name="perg49_78" value="195" required/></td>
+						<td><input type="radio" name="perg49_78" value="196"/></td>
+						<td><input type="radio" name="perg49_78" value="197"/></td>
+						<td><input type="radio" name="perg49_78" value="198"/></td>
+						<td><input type="radio" name="perg49_78" value="199"/></td>
 					</tr>
 					<tr>
 						<td>Tópicos especiais III</td>
-						<td><input type="radio" name="49AQ" value="A" required/></td>
-						<td><input type="radio" name="49AQ" value="B"/></td>
-						<td><input type="radio" name="49AQ" value="C"/></td>
-						<td><input type="radio" name="49AQ" value="D"/></td>
-						<td><input type="radio" name="49AQ" value="E"/></td>
+						<td><input type="radio" name="perg49_79" value="195" required/></td>
+						<td><input type="radio" name="perg49_79" value="196"/></td>
+						<td><input type="radio" name="perg49_79" value="197"/></td>
+						<td><input type="radio" name="perg49_79" value="198"/></td>
+						<td><input type="radio" name="perg49_79" value="199"/></td>
 					</tr>
 					<tr>
 						<td>Tópicos especiais IV</td>
-						<td><input type="radio" name="49AR" value="A" required/></td>
-						<td><input type="radio" name="49AR" value="B"/></td>
-						<td><input type="radio" name="49AR" value="C"/></td>
-						<td><input type="radio" name="49AR" value="D"/></td>
-						<td><input type="radio" name="49AR" value="E"/></td>
+						<td><input type="radio" name="perg49_80" value="195" required/></td>
+						<td><input type="radio" name="perg49_80" value="196"/></td>
+						<td><input type="radio" name="perg49_80" value="197"/></td>
+						<td><input type="radio" name="perg49_80" value="198"/></td>
+						<td><input type="radio" name="perg49_80" value="199"/></td>
 					</tr>
 				</tbody>
 			</table>

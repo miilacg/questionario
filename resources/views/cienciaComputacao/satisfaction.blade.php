@@ -8,11 +8,11 @@
     {{ csrf_field() }}
 
     <div class="form-group"> 
-			<label>Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha em cursar o técnico em informática</label>
+			<label>Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha em cursar o Bacharel em Ciência da Computação</label>
 			<label class="subtitle">(Utilize o lado mais a esquerda para pouca influência na escolha e o mais a direita para muita influência)</label>
-			<div class="slider-wrapper" id="q71">
+			<div class="slider-wrapper" id="q58">
 				Curso fácil de entrar<br>
-				<input type="range" list="tickmarks" name="perg71_125" min="1" max="5"/> 
+				<input type="range" list="tickmarks" name="perg58_125" min="1" max="5"/> 
 				<datalist id="tickmarks">
 					<option value="117">
 					<option value="118">
@@ -22,7 +22,7 @@
 				</datalist><br>
               
 				Curso fácil de fazer<br>
-				<input type="range" list="tickmarks" name="perg71_126" min="1" max="5"/> 
+				<input type="range" list="tickmarks" name="perg58_126" min="1" max="5"/> 
 				<datalist id="tickmarks">
 					<option value="117">
           <option value="118">
@@ -32,7 +32,7 @@
 				</datalist><br>
                     
 				Falta de outra opção<br>
-				<input type="range" list="tickmarks" name="perg71_140" min="1" max="5"/> 
+				<input type="range" list="tickmarks" name="perg58_140" min="1" max="5"/> 
 				<datalist id="tickmarks">
 					<option value="117">
           <option value="118">
@@ -42,7 +42,7 @@
 				</datalist><br>		 
 
 				Interesse na área<br>
-				<input type="range" list="tickmarks" name="perg71_127" min="1" max="5"/> 
+				<input type="range" list="tickmarks" name="perg58_127" min="1" max="5"/> 
 				<datalist id="tickmarks">
 					<option value="117">
           <option value="118">
@@ -52,7 +52,7 @@
 				</datalist><br>
                     
 				Mercado de trabalho<br>
-				<input type="range" list="tickmarks" name="perg71_128" min="1" max="5"/> 
+				<input type="range" list="tickmarks" name="perg58_128" min="1" max="5"/> 
 				<datalist id="tickmarks">
 					<option value="117">
           <option value="118">
@@ -62,7 +62,7 @@
 				</datalist><br>
                     
 				Outras<br>
-				<input type="range" list="tickmarks" name="perg71_9" min="1" max="5"/>
+				<input type="range" list="tickmarks" name="perg58_9" min="1" max="5"/>
 				<datalist id="tickmarks">
 					<option value="117">
           <option value="118">
@@ -74,11 +74,11 @@
     </div>
 
     <div class="form-group"> 
-			<label>Classifique as opções abaixo de acordo com o grau de influência dela na sua escolha de estudar na Cedaf</label>
+			<label>Classifique as opções abaixo de acordo com o grau de influência dela na sua Universidade Federal de Viçosa - Campus Florestal</label>
 			<label class="subtitle">(Utilize o lado mais a esquerda para pouca influência na escolha e o mais a direita para muita influência)</label>
-			<div class="slider-wrapper" id="q72">
+			<div class="slider-wrapper" id="q59">
 				Infraestrutura<br>
-				<input type="range" list="tickmarks" name="perg72_130" min="1" max="5"/> 
+				<input type="range" list="tickmarks" name="perg59_130" min="1" max="5"/> 
 				<datalist id="tickmarks">
 					<option value="117">
           <option value="118">
@@ -88,7 +88,7 @@
 				</datalist><br>
 				
 				Custo de vida<br>
-				<input type="range" list="tickmarks" name="perg72_129" min="1" max="5"/> 
+				<input type="range" list="tickmarks" name="perg59_129" min="1" max="5"/> 
 				<datalist id="tickmarks">
 					<option value="117">
           <option value="118">
@@ -98,7 +98,7 @@
 				</datalist><br>
                 
 				Localidade<br>
-				<input type="range" list="tickmarks" name="perg72_131" min="1" max="5"/> 		
+				<input type="range" list="tickmarks" name="perg59_131" min="1" max="5"/> 		
 				<datalist id="tickmarks">
 					<option value="117">
           <option value="118">
@@ -108,7 +108,7 @@
 				</datalist><br>
 					
 				Menor nota para entrar<br>
-				<input type="range" list="tickmarks" name="perg72_132" min="1" max="5"/> 
+				<input type="range" list="tickmarks" name="perg59_132" min="1" max="5"/> 
 				<datalist id="tickmarks">
 					<option value="117">
           <option value="118">
@@ -118,7 +118,7 @@
 				</datalist><br>
 					
 				Possibilidade de bolsa<br>
-				<input type="range" list="tickmarks" name="perg72_133" min="1" max="5"/> 
+				<input type="range" list="tickmarks" name="perg59_133" min="1" max="5"/> 
 				<datalist id="tickmarks">
 					<option value="117">
           <option value="118">
@@ -128,7 +128,7 @@
 				</datalist><br>
                 
 				Outras<br>
-				<input type="range" list="tickmarks" name="perg72_9" min="1" max="5"/>
+				<input type="range" list="tickmarks" name="perg59_9" min="1" max="5"/>
 				<datalist id="tickmarks">
 					<option value="117">
           <option value="118">
