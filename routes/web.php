@@ -5,6 +5,9 @@
 Route::get('/', ['as' => 'login', 'uses' => 'App\Http\Controllers\LoginController@index']);
 Route::post('/login/authenticate', ['as' => 'login.authenticate', 'uses' => 'App\Http\Controllers\LoginController@authenticate']);
 
+// Resultado Routes
+Route::get('/resultado', ['as' => 'resultado', 'uses' => 'App\Http\Controllers\GeneralController@result']);
+
 // Assay Computação Routes
 Route::get('/companySuperior', ['as' => 'companySuperior', 'uses' => 'App\Http\Controllers\AssaySuperiorController@company']);
 Route::get('/knowledgeSuperior', ['as' => 'knowledgeSuperior', 'uses' => 'App\Http\Controllers\AssaySuperiorController@knowledge']);
