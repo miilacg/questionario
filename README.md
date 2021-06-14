@@ -10,7 +10,7 @@
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- CSS
+- SCSS
 - HTML
 - JavaScript
 - PHP / Laravel
@@ -22,7 +22,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Sistema web para coleta e análise de dados de alunos egressos (SCADA-E) dos seguintes cursos: técnico em informatica e bacharel em ciencia da computação, ambos da UFV - Campus Florestal
+Sistema web para coleta e análise de dados de alunos egressos (SCADA-E) dos seguintes cursos: técnico em informatica e bacharel em ciencia da computação, ambos da UFV - Campus Florestal.
 
 
 
