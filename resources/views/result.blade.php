@@ -24,10 +24,12 @@
     <title>SCADA-E | Resultado</title>     
 
 		<style>
-			h1 {
-				text-align: center;
+			h1 {				
 				margin: auto;
-				font-size: 3.5rem;
+				font-family: 'Exo 2', sans-serif;
+				text-align: center;
+				font-size: 4.5rem;
+				font-weight: 500;
 			}
 
 			main {
